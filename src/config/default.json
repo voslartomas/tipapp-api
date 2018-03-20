@@ -1,0 +1,10 @@
+{
+  "port": 7300,
+  "logging": {
+    "level": "debug"
+  },
+  "swagger": {
+    "enabled": true,
+    "config_path": "./definitions/swagger.json"
+  }
+}

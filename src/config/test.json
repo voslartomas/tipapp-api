@@ -1,0 +1,9 @@
+{
+  "logging": {
+    "level": "fatal"
+  },
+  "port": 7301,
+  "swagger": {
+    "config_path": "./src/definitions/swagger.json"
+  }
+}
