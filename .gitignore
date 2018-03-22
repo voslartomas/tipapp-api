@@ -36,3 +36,6 @@ crashlytics-build.properties
 fabric.properties
 build/
 newrelic_agent.log
+src/definitions/swagger.json
+src/definitions/swagger.yaml
+package-lock.json
