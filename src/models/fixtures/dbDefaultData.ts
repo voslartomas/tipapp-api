@@ -3,38 +3,38 @@ module.exports = {
   BettingLeagues: [
     {
       name: 'Stanley Cup 2018',
-      sport: 2,  
-      isActive: true,  
+      sport: 2,
+      isActive: true,
       isTheMostActive: true,
       seasonFrom: 2017,
-      seasonTo: 2018,  
+      seasonTo: 2018,
       isFinished: false
     },
     {
       name: 'MS Hokej Dánsko 2018',
-      sport: 2,  
-      isActive: true,  
+      sport: 2,
+      isActive: true,
       isTheMostActive: false,
       seasonFrom: 2017,
-      seasonTo: 2018,  
+      seasonTo: 2018,
       isFinished: false
     },
     {
       name: 'MS Fotbal Rusko 2018',
-      sport: 1,  
-      isActive: true,  
+      sport: 1,
+      isActive: true,
       isTheMostActive: false,
       seasonFrom: 2017,
-      seasonTo: 2018,  
+      seasonTo: 2018,
       isFinished: false
     },
     {
       name: 'ME Chorvatsko 2018',
-      sport: 3,  
-      isActive: true,  
+      sport: 3,
+      isActive: true,
       isTheMostActive: false,
       seasonFrom: 2017,
-      seasonTo: 2018,  
+      seasonTo: 2018,
       isFinished: true
     }
   ],
@@ -55,7 +55,7 @@ module.exports = {
     },
     {
       bettingLeague: 1,
-      //gameNumber: 2,
+      // gameNumber: 2,
       dateTime: '2017-11-29 21:00:00',
       homeTeam: 3,
       awayTeam: 4,
@@ -68,7 +68,7 @@ module.exports = {
     },
     {
       bettingLeague: 1,
-      //gameNumber: 3,
+      // gameNumber: 3,
       dateTime: '2017-12-29 20:00:00',
       homeTeam: 1,
       awayTeam: 3,
@@ -81,7 +81,7 @@ module.exports = {
     },
     {
       bettingLeague: 1,
-      //gameNumber: 3,
+      // gameNumber: 3,
       dateTime: '2017-12-29 20:00:00',
       homeTeam: 2,
       awayTeam: 4,
@@ -94,12 +94,12 @@ module.exports = {
     },
     {
       bettingLeague: 1,
-      //gameNumber: 3,
+      // gameNumber: 3,
       dateTime: '2017-12-30 20:00:00',
       homeTeam: 1,
       awayTeam: 4,
-      //homeScore: 5,
-      //awayScore: 2,
+      // homeScore: 5,
+      // awayScore: 2,
       overtime: false,
       shotout: false,
       winner: 1,
@@ -363,36 +363,36 @@ module.exports = {
     {
       bettingLeagueId: 1,
       specialBetId: 1,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
-      specialBetResult: "PIT"
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
+      specialBetResult: 'PIT'
     },
     {
       bettingLeagueId: 1,
       specialBetId: 2,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
-      specialBetResult: "PIT" 
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
+      specialBetResult: 'PIT'
     },
     {
       bettingLeagueId: 1,
       specialBetId: 2,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
-      specialBetResult: "CHI" 
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
+      specialBetResult: 'CHI'
     },
     {
       bettingLeagueId: 1,
       specialBetId: 4,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
-      specialBetResult: '5' 
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
+      specialBetResult: '5'
     },
     {
       bettingLeagueId: 1,
       specialBetId: 5,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBetResult: '851'
     },
     {
@@ -764,8 +764,8 @@ module.exports = {
       specialBetId: 1,
       bettingLeagueId: 1,
       userId: 1,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBet: 'PIT',
       dateTime: '2018-02-03 04:05:02'
     },
@@ -773,8 +773,8 @@ module.exports = {
       specialBetId: 2,
       bettingLeagueId: 1,
       userId: 1,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBet: 'PIT',
       dateTime: '2018-02-03 04:05:02'
     },
@@ -782,8 +782,8 @@ module.exports = {
       specialBetId: 2,
       bettingLeagueId: 1,
       userId: 1,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBet: 'VAN',
       dateTime: '2018-02-03 07:05:02'
     },
@@ -791,8 +791,8 @@ module.exports = {
       specialBetId: 4,
       bettingLeagueId: 1,
       userId: 1,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBet: '6',
       dateTime: '2018-02-03 06:05:02'
     },
@@ -800,8 +800,8 @@ module.exports = {
       specialBetId: 5,
       bettingLeagueId: 1,
       userId: 1,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBet: '683',
       dateTime: '2018-02-03 05:05:02'
     },
@@ -828,8 +828,8 @@ module.exports = {
       specialBetId: 1,
       bettingLeagueId: 1,
       userId: 2,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBet: 'CHI',
       dateTime: '2018-02-03 04:05:02'
     },
@@ -837,8 +837,8 @@ module.exports = {
       specialBetId: 2,
       bettingLeagueId: 1,
       userId: 2,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBet: 'PIT',
       dateTime: '2018-02-03 04:05:02'
     },
@@ -846,8 +846,8 @@ module.exports = {
       specialBetId: 2,
       bettingLeagueId: 1,
       userId: 2,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBet: 'CHI',
       dateTime: '2018-02-03 07:06:02'
     },
@@ -855,8 +855,8 @@ module.exports = {
       specialBetId: 4,
       bettingLeagueId: 1,
       userId: 2,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBet: '1',
       dateTime: '2018-02-03 06:15:02'
     },
@@ -864,8 +864,8 @@ module.exports = {
       specialBetId: 5,
       bettingLeagueId: 1,
       userId: 2,
-      seriesHomeTeam: null,
-      seriesAwayTeam: null,
+      seriesHomeTeam: undefined,
+      seriesAwayTeam: undefined,
       specialBet: '777',
       dateTime: '2018-02-04 05:05:02'
     },
@@ -887,7 +887,7 @@ module.exports = {
       specialBet: '4-3',
       dateTime: '2018-02-04 05:05:02'
     }
-    
+
   ]
 
 }

@@ -20,5 +20,45 @@
         "acquire": 30000,
         "idle": 10000
       }
+  },
+  "points": {
+    "hockey": {
+      "matchWinner": 4,
+      "exactScore": 8,
+      "goalsOfOneTeam": 1,
+      "goalsDifference": 2,
+      "scorer": 6,
+      "bestScorer": 2,
+      "nhlSeries": 8,
+      "nhlSeriesWithGames": 14,
+      "nhlConference": 20,
+      "nhlWinner": 40,
+      "nhlMvp": 30,
+      "wcGroup": 20,
+      "wcLast": 20,
+      "wcWinner": 40,
+      "wcScorer": 30,
+      "wcGoalkeeper": 30,
+      "wcMvp": 30,
+      "wcExactTotalGoals": 50,
+      "wcTotalGoals": 20
+    },
+    "football": {
+      "matchWinner": 3,
+      "matchWinnerWithDifference": 4,
+      "draw": 4,
+      "exactScore": 6,
+      "scorer": 5,
+      "bestScorer": 3,
+      "groupAdvanced": 8,
+      "groupWinner": 12,
+      "semifinalist": 16,
+      "finalist": 20,
+      "winner": 25,
+      "bestScorer": 25,
+      "bestPlayer": 25,
+      "totalExactGoals": 30,
+      "totalGoals": 15
+    }
   }
 }

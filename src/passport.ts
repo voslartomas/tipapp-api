@@ -1,14 +1,13 @@
-'use strict'
 const bCrypt = require('bcrypt-nodejs')
 const LocalStrategy = require('passport-local').Strategy
 
 module.exports = (passport, userModel) => {
-    
-  passport.serializeUser((userModel, done) => done(null, userModel.id))
+
+  passport.serializeUser((userModel, done) => done(undefined, userModel.id))
 
   passport.deserializeUser(async (id, done) => {
     const user = await userModel.findById(id)
-    user ? done(null, user.get()) : done(user.errors, null)
+    user ? done(undefined, user.get()) : done(user.errors, undefined)
   })
 
   passport.use('local-signup', new LocalStrategy(
@@ -21,7 +20,7 @@ module.exports = (passport, userModel) => {
 
     async (req, username, password, done)  => {
 
-      const generateHash = password => bCrypt.hashSync(password, bCrypt.genSaltSync(8), null)
+      const generateHash = password => bCrypt.hashSync(password, bCrypt.genSaltSync(8), undefined)
 
         const userNick = await userModel.findOne({
           where: { username: username }
@@ -32,10 +31,10 @@ module.exports = (passport, userModel) => {
         })
 
         if (userNick || userEmail) {
-          if(userNick){
-            return done(null, false, { message: 'Username is already taken' })
+          if (userNick) {
+            return done(undefined, false, { message: 'Username is already taken' })
           } else {
-            return done(null, false, { message: 'Email address is already taken' })
+            return done(undefined, false, { message: 'Email address is already taken' })
           }
         } else {
           const userPassword = generateHash(password)
@@ -47,7 +46,7 @@ module.exports = (passport, userModel) => {
           }
 
           await userModel.create(data).then((newUser, created) => {
-            newUser ? done(null, newUser) : done(null, false)
+            newUser ? done(undefined, newUser) : done(undefined, false)
           })
         }
     }
@@ -69,16 +68,16 @@ module.exports = (passport, userModel) => {
           }
         })
         if (!user) {
-          return done(null, false, { message: 'Username does not exist' })
+          return done(undefined, false, { message: 'Username does not exist' })
         }
         if (!isValidPassword(user.password, password)) {
-          return done(null, false, { message: 'Incorrect password.' })
+          return done(undefined, false, { message: 'Incorrect password.' })
         }
         const userInfo = user.get()
-          return done(null, userInfo)
+          return done(undefined, userInfo)
         } catch (err) {
-          console.log("Error:", err)
-          return done(null, false, { message: 'Something went wrong with your Signin' })
+          console.log('Error:', err)
+          return done(undefined, false, { message: 'Something went wrong with your Signin' })
         }
     }
   ))
