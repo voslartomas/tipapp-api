@@ -8,6 +8,9 @@ import { Server as RestServer } from 'typescript-rest'
 import routes from './routes'
 import loggerMiddleware from './middlewares/logger'
 
+const models = require('./models')
+const dbDataSync = require('./utils/dbDataSync')
+
 export class Server {
 
   private app: express.Application
@@ -25,6 +28,16 @@ export class Server {
     if (config.get('swagger.enabled')) {
       RestServer.swagger(this.app, `${config.get('swagger.config_path')}`, '/api-docs', `localhost:${config.get('port')}`, ['http'])
     }
+
+    models.sequelize.sync()
+      .then(() => console.log('Nice! Database looks fine'))
+      .then(() => dbDataSync(models)) // TODO: just for first initialization
+      .then(() => console.log('Nice! Default data has been synced with DB'))
+      .catch(err => {
+    console.log(err, 'Something went wrong with the Database Update!')
+    throw err
+    })
+
   }
 
   public getApp() {
