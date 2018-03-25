@@ -6,10 +6,8 @@ import { Inject } from 'typescript-ioc'
 import AppLogger from './services/logger'
 import { Server as RestServer } from 'typescript-rest'
 import routes from './routes'
+import { Sequelize } from 'sequelize-typescript'
 import loggerMiddleware from './middlewares/logger'
-
-const models = require('./models')
-const dbDataSync = require('./utils/dbDataSync')
 
 export class Server {
 
@@ -29,15 +27,17 @@ export class Server {
       RestServer.swagger(this.app, `${config.get('swagger.config_path')}`, '/api-docs', `localhost:${config.get('port')}`, ['http'])
     }
 
-    models.sequelize.sync()
-      .then(() => console.log('Nice! Database looks fine'))
-      .then(() => dbDataSync(models)) // TODO: just for first initialization
-      .then(() => console.log('Nice! Default data has been synced with DB'))
-      .catch(err => {
-    console.log(err, 'Something went wrong with the Database Update!')
-    throw err
-    })
+    const sequelize = new Sequelize(config.db)
+    console.log(__dirname + '/models/*.model.ts')
+    sequelize.addModels([__dirname + '/models/*.model.js'])
 
+    sequelize.authenticate()
+
+    sequelize.sync({force: true}).then(() => {
+      console.log('synced')
+    }).catch((e) => {
+      console.error(e)
+    })
   }
 
   public getApp() {
