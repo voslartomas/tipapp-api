@@ -28,10 +28,7 @@ export class Server {
     }
 
     const sequelize = new Sequelize(config.db)
-    console.log(__dirname + '/models/*.model.ts')
     sequelize.addModels([__dirname + '/models/*.model.js'])
-
-    sequelize.authenticate()
 
     sequelize.sync({force: true}).then(() => {
       console.log('synced')
