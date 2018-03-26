@@ -1,6 +1,52 @@
 {
 	"basePath": "/",
-	"definitions": {},
+	"definitions": {
+		"IUser": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"email": {
+					"type": "string",
+					"description": ""
+				},
+				"firstname": {
+					"type": "string",
+					"description": ""
+				},
+				"lastname": {
+					"type": "string",
+					"description": ""
+				},
+				"username": {
+					"type": "string",
+					"description": ""
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"email",
+				"firstname",
+				"lastname",
+				"username",
+				"createdAt",
+				"updatedAt"
+			]
+		}
+	},
 	"info": {
 		"license": {
 			"name": "MIT"
@@ -132,7 +178,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"type": "object"
+								"$ref": "#/definitions/IUser"
 							}
 						}
 					}
@@ -151,7 +197,7 @@
 					"200": {
 						"description": "Ok",
 						"schema": {
-							"type": "object"
+							"$ref": "#/definitions/IUser"
 						}
 					}
 				},
