@@ -31,7 +31,7 @@ export class Server {
     sequelize.addModels([__dirname + '/models/*.model.js'])
 
     sequelize.sync().then(() => {
-      console.log('synced')
+
     }).catch((e) => {
       console.error(e)
     })

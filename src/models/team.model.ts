@@ -3,11 +3,7 @@ import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
 @Table({
   timestamps: true,
 })
-export default class User extends Model<User> {
-  @PrimaryKey
-  @Column
-  id: number
-
+export default class Team extends Model<Team> {
   @Column
   czName: string
 

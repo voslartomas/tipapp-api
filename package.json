@@ -13,7 +13,8 @@
     "copyStatic": "cp -r ./src/config ./build/ && cp -r ./src/definitions ./build/",
     "generateDocs": "./node_modules/.bin/swaggerGen -c swaggerConfig.json",
     "build": "rm -rf ./build && tsc && npm run tslint && npm run copyStatic && npm run generateDocs",
-    "dev": "./node_modules/.bin/nodemon | bunyan -o short"
+    "dev": "./node_modules/.bin/nodemon | bunyan -o short",
+    "fixtures": "npm run build && cd ./build && node ./importFixtures.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/voslartomas/tipapp-api#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "bunyan": "^1.8.12",
     "bunyan-middleware": "^0.8.0",
     "config": "^1.29.4",

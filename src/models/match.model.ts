@@ -4,11 +4,6 @@ import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
   timestamps: true,
 })
 export default class Match extends Model<Match> {
-
-  @PrimaryKey
-  @Column
-  id: number
-
   @Column
   bettingLeague: number
 

@@ -4,11 +4,6 @@ import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
   timestamps: true,
 })
 export default class BettingLeague extends Model<BettingLeague> {
-
-  @PrimaryKey
-  @Column
-  id: number
-
   @Column
   name: string
 

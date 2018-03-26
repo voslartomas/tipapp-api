@@ -4,10 +4,6 @@ import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
   timestamps: true,
 })
 export default class UserSetting extends Model<UserSetting> {
-  @PrimaryKey
-  @Column
-  id: number
-
   @Column
   userId: number
 

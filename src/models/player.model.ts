@@ -4,10 +4,6 @@ import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
   timestamps: true,
 })
 export default class Player extends Model<Player> {
-  @PrimaryKey
-  @Column
-  id: number
-
   @Column
   firstName: string
 

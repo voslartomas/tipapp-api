@@ -4,10 +4,6 @@ import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
   timestamps: true,
 })
 export default class UserSpecialBet extends Model<UserSpecialBet> {
-  @PrimaryKey
-  @Column
-  id: number
-
   @Column
   specialBetId: number
 
