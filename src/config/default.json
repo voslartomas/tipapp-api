@@ -8,7 +8,7 @@
     "config_path": "./definitions/swagger.json"
   },
   "db": {
-      "storage": "neymar.sqlite",
+      "storage": "../neymar.sqlite",
       "databaseName": "neymar.sqlite",
       "username": "root",
       "password": "",
