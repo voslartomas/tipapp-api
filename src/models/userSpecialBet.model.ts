@@ -1,4 +1,4 @@
-import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
+import { Table, Column, Model, PrimaryKey, DataType } from 'sequelize-typescript'
 
 @Table({
   timestamps: true,
@@ -22,6 +22,6 @@ export default class UserSpecialBet extends Model<UserSpecialBet> {
   @Column
   specialBet: number
 
-  @Column
+  @Column(DataType.DATE)
   dateTime: Date
 }

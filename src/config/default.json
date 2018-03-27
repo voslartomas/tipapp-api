@@ -14,6 +14,7 @@
       "password": "",
       "host": "localhost",
       "dialect": "sqlite",
+      "modelPath": "/../models/*.model.js",
       "pool": {
         "max": 5,
         "min": 0,

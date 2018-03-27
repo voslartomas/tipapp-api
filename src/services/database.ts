@@ -7,6 +7,6 @@ export default class Database extends Sequelize {
   constructor() {
     super(config.db)
 
-    this.addModels([__dirname + '/../models/*.model.js'])
+    this.addModels([__dirname + config.db.modelPath])
   }
 }

@@ -1,4 +1,4 @@
-import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
+import { Table, Column, Model, PrimaryKey, DataType } from 'sequelize-typescript'
 
 @Table({
   timestamps: true,
@@ -10,7 +10,7 @@ export default class Match extends Model<Match> {
   @Column
   gameNumber: number
 
-  @Column
+  @Column(DataType.DATE)
   dateTime: Date
 
   @Column
