@@ -5,5 +5,10 @@
   "port": 7301,
   "swagger": {
     "config_path": "./src/definitions/swagger.json"
+  },
+  "db": {
+      "storage": "test-db.sqlite",
+      "databaseName": "test-db.sqlite",
+      "modelPath": "/../models/*.model.ts"
   }
 }

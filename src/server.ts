@@ -6,7 +6,9 @@ import { Inject } from 'typescript-ioc'
 import AppLogger from './services/logger'
 import { Server as RestServer } from 'typescript-rest'
 import routes from './routes'
+import { Sequelize } from 'sequelize-typescript'
 import loggerMiddleware from './middlewares/logger'
+import Database from './services/database'
 
 export class Server {
 
@@ -14,6 +16,9 @@ export class Server {
   private server: http.Server = undefined
   @Inject
   private logger: AppLogger
+
+  @Inject
+  private database: Database
 
   constructor() {
     this.app = express()
@@ -25,6 +30,12 @@ export class Server {
     if (config.get('swagger.enabled')) {
       RestServer.swagger(this.app, `${config.get('swagger.config_path')}`, '/api-docs', `localhost:${config.get('port')}`, ['http'])
     }
+
+    this.database.sync().then(() => {
+
+    }).catch((e) => {
+      console.error(e)
+    })
   }
 
   public getApp() {

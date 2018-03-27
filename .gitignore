@@ -1,4 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
+test-db.sqlite
+neymar.sqlite
 logs
 *.log
 npm-debug.log*
