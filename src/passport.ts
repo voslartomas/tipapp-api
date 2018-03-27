@@ -42,6 +42,7 @@ module.exports = (passport, userModel) => {
             password: userPassword,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
+            mobileNumber: req.body.mobileNumber,
             email: req.body.email.toLowerCase()
           }
 

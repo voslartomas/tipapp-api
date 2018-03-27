@@ -16,11 +16,12 @@ export class LoginController {
   @Path('/register')
   @POST
   /**
-   * @param {string} email      User's email address
-   * @param {string} username   Username
-   * @param {string} firstname  Firstname
-   * @param {string} lastname   Lastname
-   * @param {string} password   Passoword (should confirm password as well)
+   * @param {string} email        User's email address
+   * @param {string} username     Username
+   * @param {string} firstname    Firstname
+   * @param {string} lastname     Lastname
+   * @param {string} mobileNumber Mobile number
+   * @param {string} password     Passoword (should confirm password as well)
    * @return
    */
   register(
@@ -28,6 +29,7 @@ export class LoginController {
     @FormParam('username') username: string,
     @FormParam('firstname') firstname: string,
     @FormParam('lastname') lastname: string,
+    @FormParam('mobileNumber') mobileNumber: string,
     @FormParam('password') password: string
   ): string {
     return 'pong'

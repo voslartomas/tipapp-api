@@ -4,6 +4,7 @@ export interface IUser {
   firstname: string,
   lastname: string,
   username: string,
+  mobileNumber: string,
   createdAt: Date,
   updatedAt: Date
 }

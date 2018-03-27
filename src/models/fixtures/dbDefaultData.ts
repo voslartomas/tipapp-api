@@ -503,6 +503,7 @@ module.exports = {
       lastName: 'Talaš',
       username: 'admin',
       email: 'rotakt@gmail.com',
+      mobileNumber: '724724724',
       password: '12345'
     },
     {
@@ -510,6 +511,7 @@ module.exports = {
       lastName: 'Novák',
       username: 'user',
       email: 'rotakt@hotmail.com',
+      mobileNumber: '724724725',
       password: '12345'
     },
     {
@@ -517,6 +519,7 @@ module.exports = {
       lastName: 'Nový',
       username: 'user1',
       email: 'ahoj@seznam.com',
+      mobileNumber: '724724726',
       password: '12345'
     },
     {
@@ -524,6 +527,7 @@ module.exports = {
       lastName: 'Janíček',
       username: 'user2',
       email: 'ahoj2@seznam.com',
+      mobileNumber: '724724727',
       password: '12345'
     },
     {
@@ -531,6 +535,7 @@ module.exports = {
       lastName: 'Lidumilový',
       username: 'user3',
       email: 'ahoj3@seznam.com',
+      mobileNumber: '724724728',
       password: '12345'
     }
   ],
