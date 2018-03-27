@@ -24,6 +24,10 @@
 					"type": "string",
 					"description": ""
 				},
+				"mobileNumber": {
+					"type": "string",
+					"description": ""
+				},
 				"createdAt": {
 					"type": "string",
 					"format": "date-time",
@@ -42,6 +46,7 @@
 				"firstname",
 				"lastname",
 				"username",
+				"mobileNumber",
 				"createdAt",
 				"updatedAt"
 			]
@@ -153,6 +158,13 @@
 						"description": "",
 						"in": "formData",
 						"name": "lastname",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"description": "",
+						"in": "formData",
+						"name": "mobileNumber",
 						"required": true,
 						"type": "string"
 					},

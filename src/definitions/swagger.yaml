@@ -18,6 +18,9 @@ definitions:
             username:
                 type: string
                 description: ""
+            mobileNumber:
+                type: string
+                description: ""
             createdAt:
                 type: string
                 format: date-time
@@ -33,6 +36,7 @@ definitions:
             - firstname
             - lastname
             - username
+            - mobileNumber
             - createdAt
             - updatedAt
 info:
@@ -115,6 +119,12 @@ paths:
                     description: ""
                     in: formData
                     name: lastname
+                    required: true
+                    type: string
+                -
+                    description: ""
+                    in: formData
+                    name: mobileNumber
                     required: true
                     type: string
                 -

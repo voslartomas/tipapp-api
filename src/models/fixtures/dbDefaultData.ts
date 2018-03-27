@@ -152,8 +152,8 @@ module.exports = {
 
   Players: [
     {
-      firstName: 'Tomáš',
-      lastName: 'Plekanec',
+      firstname: 'Tomáš',
+      lastname: 'Plekanec',
       team: 1,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -164,8 +164,8 @@ module.exports = {
       seasonAssists: 31
     },
     {
-      firstName: 'Brendan',
-      lastName: 'Gallagher',
+      firstname: 'Brendan',
+      lastname: 'Gallagher',
       team: 1,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -176,8 +176,8 @@ module.exports = {
       seasonAssists: 15
     },
     {
-      firstName: 'John',
-      lastName: 'Tavares',
+      firstname: 'John',
+      lastname: 'Tavares',
       team: 2,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -188,8 +188,8 @@ module.exports = {
       seasonAssists: 45
     },
     {
-      firstName: 'Brook',
-      lastName: 'Nelson',
+      firstname: 'Brook',
+      lastname: 'Nelson',
       team: 2,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -200,8 +200,8 @@ module.exports = {
       seasonAssists: 26
     },
     {
-      firstName: 'Sidney',
-      lastName: 'Crosby',
+      firstname: 'Sidney',
+      lastname: 'Crosby',
       team: 3,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -212,8 +212,8 @@ module.exports = {
       seasonAssists: 31
     },
     {
-      firstName: 'Jevgenij',
-      lastName: 'Malkin',
+      firstname: 'Jevgenij',
+      lastname: 'Malkin',
       team: 3,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -224,8 +224,8 @@ module.exports = {
       seasonAssists: 25
     },
     {
-      firstName: 'Connor',
-      lastName: 'McDavid',
+      firstname: 'Connor',
+      lastname: 'McDavid',
       team: 4,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -236,8 +236,8 @@ module.exports = {
       seasonAssists: 45
     },
     {
-      firstName: 'Milan',
-      lastName: 'Lucic',
+      firstname: 'Milan',
+      lastname: 'Lucic',
       team: 4,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -248,8 +248,8 @@ module.exports = {
       seasonAssists: 11
     },
     {
-      firstName: 'Neymar',
-      lastName: '',
+      firstname: 'Neymar',
+      lastname: '',
       team: 5,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -259,8 +259,8 @@ module.exports = {
       seasonGoals: 6
     },
     {
-      firstName: 'Ezequiel',
-      lastName: 'Garay',
+      firstname: 'Ezequiel',
+      lastname: 'Garay',
       team: 6,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -270,8 +270,8 @@ module.exports = {
       seasonGoals: 2
     },
     {
-      firstName: 'Thomas',
-      lastName: 'Müller',
+      firstname: 'Thomas',
+      lastname: 'Müller',
       team: 7,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -281,8 +281,8 @@ module.exports = {
       seasonGoals: 6
     },
     {
-      firstName: 'Didier',
-      lastName: 'Drogba',
+      firstname: 'Didier',
+      lastname: 'Drogba',
       team: 8,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -499,40 +499,40 @@ module.exports = {
 
   Users: [
     {
-      firstName: 'Roman',
-      lastName: 'Talaš',
+      firstname: 'Roman',
+      lastname: 'Talaš',
       username: 'admin',
       email: 'rotakt@gmail.com',
       mobileNumber: '724724724',
       password: '12345'
     },
     {
-      firstName: 'Petr',
-      lastName: 'Novák',
+      firstname: 'Petr',
+      lastname: 'Novák',
       username: 'user',
       email: 'rotakt@hotmail.com',
       mobileNumber: '724724725',
       password: '12345'
     },
     {
-      firstName: 'Martin',
-      lastName: 'Nový',
+      firstname: 'Martin',
+      lastname: 'Nový',
       username: 'user1',
       email: 'ahoj@seznam.com',
       mobileNumber: '724724726',
       password: '12345'
     },
     {
-      firstName: 'Miroslav',
-      lastName: 'Janíček',
+      firstname: 'Miroslav',
+      lastname: 'Janíček',
       username: 'user2',
       email: 'ahoj2@seznam.com',
       mobileNumber: '724724727',
       password: '12345'
     },
     {
-      firstName: 'Lidumil',
-      lastName: 'Lidumilový',
+      firstname: 'Lidumil',
+      lastname: 'Lidumilový',
       username: 'user3',
       email: 'ahoj3@seznam.com',
       mobileNumber: '724724728',

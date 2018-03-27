@@ -8,7 +8,7 @@ export default class User extends Model<User> {
   firstname: string
 
   @Column
-  lastName: string
+  lastname: string
 
   @Column
   username: string

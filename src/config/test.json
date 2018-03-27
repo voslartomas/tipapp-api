@@ -1,6 +1,6 @@
 {
   "logging": {
-    "level": "fatal"
+    "level": "error"
   },
   "port": 7301,
   "swagger": {
