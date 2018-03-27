@@ -166,7 +166,7 @@ paths:
                     name: user
                     required: true
                     schema:
-                        $ref: '#/definitions/IUser'
+                        type: object
     '/api/users/{id}':
         get:
             operationId: UsersGetUser
@@ -212,7 +212,7 @@ paths:
                     name: user
                     required: true
                     schema:
-                        $ref: '#/definitions/IUser'
+                        type: object
         delete:
             operationId: UsersDeleteUser
             produces:
@@ -229,5 +229,23 @@ paths:
                     required: true
                     type: number
                     format: double
+    '/api/users/username/{username}':
+        get:
+            operationId: UsersGetUserUN
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IUser'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: username
+                    required: true
+                    type: string
 swagger: '2.0'
 securityDefinitions: {}

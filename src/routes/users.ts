@@ -34,6 +34,22 @@ export default class UsersController {
     }
   }
 
+  @GET
+  @Path('/username/:username')
+  async getUserUN(@PathParam('username') username: string): Promise<IUser> {
+    try {
+      const user = await this.database.models.User.findOne({where: {username}})
+
+      if (!user) {
+        throw new Error('not found')
+      }
+
+      return user
+    } catch (e) {
+      throw new Errors.NotFoundError('User not found.')
+    }
+  }
+
   @POST
   // TODO fix user: IUser, error while running tests
   async createUser(user: any): Promise<IUser> {
