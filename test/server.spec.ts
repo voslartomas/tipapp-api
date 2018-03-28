@@ -3,6 +3,8 @@ import { Server } from '../src/server'
 import * as request from 'supertest'
 import { Server as RestServer, HttpMethod } from 'typescript-rest'
 
+jest.mock('../src/services/database')
+
 describe('App server', () => {
   it('it should start and stop server', async () => {
     const server = new Server()
