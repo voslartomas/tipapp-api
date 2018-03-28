@@ -5,25 +5,25 @@ import { Table, Column, Model, PrimaryKey, DataType } from 'sequelize-typescript
 })
 export default class Match extends Model<Match> {
   @Column
-  bettingLeague: number
+  bettingLeague: string
 
   @Column
-  gameNumber: number
+  gameNumber: string
 
   @Column(DataType.DATE)
   dateTime: Date
 
   @Column
-  homeTeam: number
+  homeTeam: string
 
   @Column
-  awayTeam: number
+  awayTeam: string
 
   @Column
-  homeScore: number
+  homeScore: string
 
   @Column
-  awayScore: number
+  awayScore: string
 
   @Column
   overtime: boolean
