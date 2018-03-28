@@ -4,58 +4,58 @@ import Database from '../services/database'
 import UserBet from '../models/userBet.model'
 import { IUserBet } from '../types/models.d'
 
-@Path('/api/userBets')
+@Path('/api/user-bets')
 export default class UserBetsController {
 
-    @Inject
-    private database: Database
+  @Inject
+  private database: Database
 
-    @GET
-    async getUserBets(): Promise<IUserBet[]> {
-      return await this.database.models.UserBet.findAll({})
+  @GET
+  async getUserBets(): Promise<IUserBet[]> {
+    return await this.database.models.UserBet.findAll({})
+  }
+
+  @GET
+  @Path(':id')
+  async getUserBet(@PathParam('id') userBetId: number): Promise<IUserBet> {
+    try {
+      const userBet = await this.database.models.UserBet.findById(userBetId)
+
+      if (!userBet) {
+        throw new Error('not found')
+      }
+
+      return userBet
+    } catch (e) {
+      throw new Errors.NotFoundError('User bet not found.')
     }
+  }
 
-    @GET
-    @Path(':id')
-    async getUserBet(@PathParam('id') userBetID: number): Promise<IUserBet> {
-        try {
-        const userBet = await this.database.models.UserBet.findById(userBetID)
+  @POST
+  async createUserBet(usetBet: any): Promise<IUserBet> {
+    return await this.database.models.UserBet.create(usetBet)
+  }
 
-        if (!userBet) {
-            throw new Error('not found')
-        }
+  @PUT
+  @Path(':id')
+  async updateUserBet(@PathParam('id') userBetId: number, userBet: any): Promise<IUserBet> {
+    const dbUserBet = await this.database.models.UserBet.findById(userBetId)
 
-        return userBet
-        } catch (e) {
-        throw new Errors.NotFoundError('User not found.')
-        }
+    if (dbUserBet) {
+      return await dbUserBet.update(userBet)
+    } else {
+      return await this.database.models.UserBet.create(userBet)
     }
+  }
 
-    @POST
-    async createUserBet(usetBet: any): Promise<IUserBet> {
-        return await this.database.models.UserBet.create(usetBet)
+  @DELETE
+  @Path(':id')
+  async deleteUserBet(@PathParam('id') userBetId: number): Promise<void> {
+    const dbUserBet = await this.database.models.UserBet.findById(userBetId)
+
+    if (dbUserBet) {
+      await dbUserBet.destroy()
     }
-
-    @PUT
-    @Path(':id')
-    async updateUserBet(@PathParam('id') userBetID: number, usetBet: any): Promise<IUserBet> {
-        const dbUserBet = await this.database.models.UserBet.findById(userBetID)
-
-        if (dbUserBet) {
-        return await dbUserBet.update(usetBet)
-        } else {
-        return await this.database.models.UserBet.create(usetBet)
-        }
-    }
-
-    @DELETE
-    @Path(':id')
-    async deleteUserBet(@PathParam('id') userBetID: number): Promise<void> {
-        const dbUserBet = await this.database.models.UserBet.findById(userBetID)
-
-        if (dbUserBet) {
-        await dbUserBet.destroy()
-        }
-    }
+  }
 
 }

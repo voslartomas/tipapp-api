@@ -4,58 +4,58 @@ import Database from '../services/database'
 import SpecialBetResult from '../models/specialBetResult.model'
 import { ISpecialBetResult } from '../types/models.d'
 
-@Path('/api/specBetResults')
+@Path('/api/special-bet-results')
 export default class SpecialBetResultsController {
 
-    @Inject
-    private database: Database
+  @Inject
+  private database: Database
 
-    @GET
-    async getSpecialBetResults(): Promise<ISpecialBetResult[]> {
-      return await this.database.models.SpecialBetResult.findAll({})
+  @GET
+  async getSpecialBetResults(): Promise<ISpecialBetResult[]> {
+    return await this.database.models.SpecialBetResult.findAll({})
+  }
+
+  @GET
+  @Path(':id')
+  async getSpecialBetResult(@PathParam('id') specialBetResultId: number): Promise<ISpecialBetResult> {
+    try {
+      const specialBetResult = await this.database.models.SpecialBetResult.findById(specialBetResultId)
+
+      if (!specialBetResult) {
+        throw new Error('not found')
+      }
+
+      return specialBetResult
+    } catch (e) {
+      throw new Errors.NotFoundError('Special bet result not found.')
     }
+  }
 
-    @GET
-    @Path(':id')
-    async getSpecialBetResult(@PathParam('id') specialBetResultID: number): Promise<ISpecialBetResult> {
-        try {
-        const user = await this.database.models.SpecialBetResult.findById(specialBetResultID)
+  @POST
+  async createSpecialBet(specialBetResult: any): Promise<ISpecialBetResult> {
+    return await this.database.models.SpecialBetResult.create(specialBetResult)
+  }
 
-        if (!user) {
-            throw new Error('not found')
-        }
+  @PUT
+  @Path(':id')
+  async updateSpecialBet(@PathParam('id') specialBetResultId: number, specialBetResult: any): Promise<ISpecialBetResult> {
+    const dbSpecialBetResult = await this.database.models.SpecialBetResult.findById(specialBetResultId)
 
-        return user
-        } catch (e) {
-        throw new Errors.NotFoundError('User not found.')
-        }
+    if (dbSpecialBetResult) {
+      return await dbSpecialBetResult.update(specialBetResult)
+    } else {
+      return await this.database.models.SpecialBetResult.create(specialBetResult)
     }
+  }
 
-    @POST
-    async createSpecialBet(specialBetResult: any): Promise<ISpecialBetResult> {
-        return await this.database.models.SpecialBetResult.create(specialBetResult)
+  @DELETE
+  @Path(':id')
+  async deleteSpecialBet(@PathParam('id') specialBetResultId: number): Promise<void> {
+    const dbSpecialBetResult = await this.database.models.SpecialBetResult.findById(specialBetResultId)
+
+    if (dbSpecialBetResult) {
+      await dbSpecialBetResult.destroy()
     }
-
-    @PUT
-    @Path(':id')
-    async updateSpecialBet(@PathParam('id') specialBetResultID: number, specialBetResult: any): Promise<ISpecialBetResult> {
-        const dbSpecialBetResult = await this.database.models.SpecialBetResult.findById(specialBetResultID)
-
-        if (dbSpecialBetResult) {
-        return await dbSpecialBetResult.update(specialBetResult)
-        } else {
-        return await this.database.models.SpecialBetResult.create(specialBetResult)
-        }
-    }
-
-    @DELETE
-    @Path(':id')
-    async deleteSpecialBet(@PathParam('id') specialBetResultID: number): Promise<void> {
-        const dbSpecialBetResult = await this.database.models.SpecialBetResult.findById(specialBetResultID)
-
-        if (dbSpecialBetResult) {
-        await dbSpecialBetResult.destroy()
-        }
-    }
+  }
 
 }

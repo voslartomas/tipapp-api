@@ -120,7 +120,7 @@
 				"isEvaluated"
 			]
 		},
-		"IBettingLeague": {
+		"ILeague": {
 			"description": "",
 			"properties": {
 				"id": {
@@ -1011,9 +1011,9 @@
 				]
 			}
 		},
-		"/api/betLeagues": {
+		"/api/leagues": {
 			"get": {
-				"operationId": "BetLeaguesGetBetLeagues",
+				"operationId": "LeaguesGetLeagues",
 				"produces": [
 					"application/json"
 				],
@@ -1023,7 +1023,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/IBettingLeague"
+								"$ref": "#/definitions/ILeague"
 							}
 						}
 					}
@@ -1032,7 +1032,7 @@
 				"parameters": []
 			},
 			"post": {
-				"operationId": "BetLeaguesCreateBetLeague",
+				"operationId": "LeaguesCreateLeague",
 				"produces": [
 					"application/json"
 				],
@@ -1040,7 +1040,7 @@
 					"200": {
 						"description": "Ok",
 						"schema": {
-							"$ref": "#/definitions/IBettingLeague"
+							"$ref": "#/definitions/ILeague"
 						}
 					}
 				},
@@ -1052,7 +1052,7 @@
 					{
 						"description": "",
 						"in": "body",
-						"name": "bet",
+						"name": "league",
 						"required": true,
 						"schema": {
 							"type": "object"
@@ -1061,9 +1061,9 @@
 				]
 			}
 		},
-		"/api/betLeagues/{id}": {
+		"/api/leagues/{id}": {
 			"get": {
-				"operationId": "BetLeaguesGetBetLeague",
+				"operationId": "LeaguesGetLeague",
 				"produces": [
 					"application/json"
 				],
@@ -1071,7 +1071,7 @@
 					"200": {
 						"description": "Ok",
 						"schema": {
-							"$ref": "#/definitions/IBettingLeague"
+							"$ref": "#/definitions/ILeague"
 						}
 					}
 				},
@@ -1088,7 +1088,7 @@
 				]
 			},
 			"put": {
-				"operationId": "BetLeaguesUpdateBetLeague",
+				"operationId": "LeaguesUpdateLeague",
 				"produces": [
 					"application/json"
 				],
@@ -1096,7 +1096,7 @@
 					"200": {
 						"description": "Ok",
 						"schema": {
-							"$ref": "#/definitions/IBettingLeague"
+							"$ref": "#/definitions/ILeague"
 						}
 					}
 				},
@@ -1116,7 +1116,7 @@
 					{
 						"description": "",
 						"in": "body",
-						"name": "bet",
+						"name": "league",
 						"required": true,
 						"schema": {
 							"type": "object"
@@ -1125,7 +1125,7 @@
 				]
 			},
 			"delete": {
-				"operationId": "BetLeaguesDeleteBetLeague",
+				"operationId": "LeaguesDeleteBetLeague",
 				"produces": [
 					"text/html"
 				],
@@ -1147,7 +1147,7 @@
 				]
 			}
 		},
-		"/api/matchScorers": {
+		"/api/match-scorers": {
 			"get": {
 				"operationId": "MatchScoresGetMatchScorers",
 				"produces": [
@@ -1197,7 +1197,7 @@
 				]
 			}
 		},
-		"/api/matchScorers/{id}": {
+		"/api/match-scorers/{id}": {
 			"get": {
 				"operationId": "MatchScoresGetMatchScorer",
 				"produces": [
@@ -1419,7 +1419,7 @@
 				]
 			}
 		},
-		"/api/specBets": {
+		"/api/special-bets": {
 			"get": {
 				"operationId": "SpecialBetsGetSpecialBets",
 				"produces": [
@@ -1469,7 +1469,7 @@
 				]
 			}
 		},
-		"/api/specBets/{id}": {
+		"/api/special-bets/{id}": {
 			"get": {
 				"operationId": "SpecialBetsGetSpecialBet",
 				"produces": [
@@ -1555,7 +1555,7 @@
 				]
 			}
 		},
-		"/api/specBetResults": {
+		"/api/special-bet-results": {
 			"get": {
 				"operationId": "SpecialBetResultsGetSpecialBetResults",
 				"produces": [
@@ -1605,7 +1605,7 @@
 				]
 			}
 		},
-		"/api/specBetResults/{id}": {
+		"/api/special-bet-results/{id}": {
 			"get": {
 				"operationId": "SpecialBetResultsGetSpecialBetResult",
 				"produces": [
@@ -1963,7 +1963,7 @@
 				]
 			}
 		},
-		"/api/userBets": {
+		"/api/user-bets": {
 			"get": {
 				"operationId": "UserBetsGetUserBets",
 				"produces": [
@@ -2013,7 +2013,7 @@
 				]
 			}
 		},
-		"/api/userBets/{id}": {
+		"/api/user-bets/{id}": {
 			"get": {
 				"operationId": "UserBetsGetUserBet",
 				"produces": [
@@ -2068,7 +2068,7 @@
 					{
 						"description": "",
 						"in": "body",
-						"name": "usetBet",
+						"name": "userBet",
 						"required": true,
 						"schema": {
 							"type": "object"
@@ -2099,7 +2099,7 @@
 				]
 			}
 		},
-		"/api/userPayments": {
+		"/api/user-payments": {
 			"get": {
 				"operationId": "UserPaymentsGetUserPayments",
 				"produces": [
@@ -2149,7 +2149,7 @@
 				]
 			}
 		},
-		"/api/userPayments/{id}": {
+		"/api/user-payments/{id}": {
 			"get": {
 				"operationId": "UserPaymentsGetUserPayment",
 				"produces": [
@@ -2235,7 +2235,7 @@
 				]
 			}
 		},
-		"/api/userRequests": {
+		"/api/user-requests": {
 			"get": {
 				"operationId": "UserRequestsGetUserRequests",
 				"produces": [
@@ -2285,7 +2285,7 @@
 				]
 			}
 		},
-		"/api/userRequests/{id}": {
+		"/api/user-requests/{id}": {
 			"get": {
 				"operationId": "UserRequestsGetUserRequest",
 				"produces": [
@@ -2371,7 +2371,7 @@
 				]
 			}
 		},
-		"/api/userSettings": {
+		"/api/user-settings": {
 			"get": {
 				"operationId": "UserSettingsGetUserSettings",
 				"produces": [
@@ -2421,7 +2421,7 @@
 				]
 			}
 		},
-		"/api/userSettings/{id}": {
+		"/api/user-settings/{id}": {
 			"get": {
 				"operationId": "UserSettingsGetUserSetting",
 				"produces": [
@@ -2507,7 +2507,7 @@
 				]
 			}
 		},
-		"/api/userSpecBets": {
+		"/api/user-special-bets": {
 			"get": {
 				"operationId": "UserSpecialBetsGetUserSpecialBets",
 				"produces": [
@@ -2557,7 +2557,7 @@
 				]
 			}
 		},
-		"/api/userSpecBets/{id}": {
+		"/api/user-special-bets/{id}": {
 			"get": {
 				"operationId": "UserSpecialBetsGetUserSpecialBet",
 				"produces": [

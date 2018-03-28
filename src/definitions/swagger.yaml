@@ -93,7 +93,7 @@ definitions:
             - shotout
             - winner
             - isEvaluated
-    IBettingLeague:
+    ILeague:
         description: ""
         properties:
             id:
@@ -755,9 +755,9 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/betLeagues:
+    /api/leagues:
         get:
-            operationId: BetLeaguesGetBetLeagues
+            operationId: LeaguesGetLeagues
             produces:
                 - application/json
             responses:
@@ -766,18 +766,18 @@ paths:
                     schema:
                         type: array
                         items:
-                            $ref: '#/definitions/IBettingLeague'
+                            $ref: '#/definitions/ILeague'
             description: ""
             parameters: []
         post:
-            operationId: BetLeaguesCreateBetLeague
+            operationId: LeaguesCreateLeague
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/IBettingLeague'
+                        $ref: '#/definitions/ILeague'
             description: ""
             consumes:
                 - application/json
@@ -785,20 +785,20 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: bet
+                    name: league
                     required: true
                     schema:
                         type: object
-    '/api/betLeagues/{id}':
+    '/api/leagues/{id}':
         get:
-            operationId: BetLeaguesGetBetLeague
+            operationId: LeaguesGetLeague
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/IBettingLeague'
+                        $ref: '#/definitions/ILeague'
             description: ""
             parameters:
                 -
@@ -809,14 +809,14 @@ paths:
                     type: number
                     format: double
         put:
-            operationId: BetLeaguesUpdateBetLeague
+            operationId: LeaguesUpdateLeague
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/IBettingLeague'
+                        $ref: '#/definitions/ILeague'
             description: ""
             consumes:
                 - application/json
@@ -831,12 +831,12 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: bet
+                    name: league
                     required: true
                     schema:
                         type: object
         delete:
-            operationId: BetLeaguesDeleteBetLeague
+            operationId: LeaguesDeleteBetLeague
             produces:
                 - text/html
             responses:
@@ -851,7 +851,7 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/matchScorers:
+    /api/match-scorers:
         get:
             operationId: MatchScoresGetMatchScorers
             produces:
@@ -885,7 +885,7 @@ paths:
                     required: true
                     schema:
                         type: object
-    '/api/matchScorers/{id}':
+    '/api/match-scorers/{id}':
         get:
             operationId: MatchScoresGetMatchScorer
             produces:
@@ -1043,7 +1043,7 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/specBets:
+    /api/special-bets:
         get:
             operationId: SpecialBetsGetSpecialBets
             produces:
@@ -1077,7 +1077,7 @@ paths:
                     required: true
                     schema:
                         type: object
-    '/api/specBets/{id}':
+    '/api/special-bets/{id}':
         get:
             operationId: SpecialBetsGetSpecialBet
             produces:
@@ -1139,7 +1139,7 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/specBetResults:
+    /api/special-bet-results:
         get:
             operationId: SpecialBetResultsGetSpecialBetResults
             produces:
@@ -1173,7 +1173,7 @@ paths:
                     required: true
                     schema:
                         type: object
-    '/api/specBetResults/{id}':
+    '/api/special-bet-results/{id}':
         get:
             operationId: SpecialBetResultsGetSpecialBetResult
             produces:
@@ -1427,7 +1427,7 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/userBets:
+    /api/user-bets:
         get:
             operationId: UserBetsGetUserBets
             produces:
@@ -1461,7 +1461,7 @@ paths:
                     required: true
                     schema:
                         type: object
-    '/api/userBets/{id}':
+    '/api/user-bets/{id}':
         get:
             operationId: UserBetsGetUserBet
             produces:
@@ -1503,7 +1503,7 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: usetBet
+                    name: userBet
                     required: true
                     schema:
                         type: object
@@ -1523,7 +1523,7 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/userPayments:
+    /api/user-payments:
         get:
             operationId: UserPaymentsGetUserPayments
             produces:
@@ -1557,7 +1557,7 @@ paths:
                     required: true
                     schema:
                         type: object
-    '/api/userPayments/{id}':
+    '/api/user-payments/{id}':
         get:
             operationId: UserPaymentsGetUserPayment
             produces:
@@ -1619,7 +1619,7 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/userRequests:
+    /api/user-requests:
         get:
             operationId: UserRequestsGetUserRequests
             produces:
@@ -1653,7 +1653,7 @@ paths:
                     required: true
                     schema:
                         type: object
-    '/api/userRequests/{id}':
+    '/api/user-requests/{id}':
         get:
             operationId: UserRequestsGetUserRequest
             produces:
@@ -1715,7 +1715,7 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/userSettings:
+    /api/user-settings:
         get:
             operationId: UserSettingsGetUserSettings
             produces:
@@ -1749,7 +1749,7 @@ paths:
                     required: true
                     schema:
                         type: object
-    '/api/userSettings/{id}':
+    '/api/user-settings/{id}':
         get:
             operationId: UserSettingsGetUserSetting
             produces:
@@ -1811,7 +1811,7 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/userSpecBets:
+    /api/user-special-bets:
         get:
             operationId: UserSpecialBetsGetUserSpecialBets
             produces:
@@ -1845,7 +1845,7 @@ paths:
                     required: true
                     schema:
                         type: object
-    '/api/userSpecBets/{id}':
+    '/api/user-special-bets/{id}':
         get:
             operationId: UserSpecialBetsGetUserSpecialBet
             produces:

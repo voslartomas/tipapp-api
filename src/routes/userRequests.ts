@@ -4,58 +4,58 @@ import Database from '../services/database'
 import UserRequest from '../models/userRequest.model'
 import { IUserRequest } from '../types/models.d'
 
-@Path('/api/userRequests')
+@Path('/api/user-requests')
 export default class UserRequestsController {
 
-    @Inject
-    private database: Database
+  @Inject
+  private database: Database
 
-    @GET
-    async getUserRequests(): Promise<IUserRequest[]> {
-      return await this.database.models.UserRequest.findAll({})
+  @GET
+  async getUserRequests(): Promise<IUserRequest[]> {
+    return await this.database.models.UserRequest.findAll({})
+  }
+
+  @GET
+  @Path(':id')
+  async getUserRequest(@PathParam('id') userRequestId: number): Promise<IUserRequest> {
+    try {
+      const userRequest = await this.database.models.UserRequest.findById(userRequestId)
+
+      if (!userRequest) {
+        throw new Error('not found')
+      }
+
+      return userRequest
+    } catch (e) {
+      throw new Errors.NotFoundError('User request not found.')
     }
+  }
 
-    @GET
-    @Path(':id')
-    async getUserRequest(@PathParam('id') userRequestID: number): Promise<IUserRequest> {
-        try {
-        const user = await this.database.models.UserRequest.findById(userRequestID)
+  @POST
+  async createUserRequest(userRequest: any): Promise<IUserRequest> {
+    return await this.database.models.UserRequest.create(userRequest)
+  }
 
-        if (!user) {
-            throw new Error('not found')
-        }
+  @PUT
+  @Path(':id')
+  async updateUserRequest(@PathParam('id') userRequestId: number, userRequest: any): Promise<IUserRequest> {
+    const dbUserRequest = await this.database.models.UserRequest.findById(userRequestId)
 
-        return user
-        } catch (e) {
-        throw new Errors.NotFoundError('User not found.')
-        }
+    if (dbUserRequest) {
+      return await dbUserRequest.update(userRequest)
+    } else {
+      return await this.database.models.UserRequest.create(userRequest)
     }
+  }
 
-    @POST
-    async createUserRequest(userRequest: any): Promise<IUserRequest> {
-        return await this.database.models.UserRequest.create(userRequest)
+  @DELETE
+  @Path(':id')
+  async deleteUserRequest(@PathParam('id') userRequestId: number): Promise<void> {
+    const dbUserRequest = await this.database.models.UserRequest.findById(userRequestId)
+
+    if (dbUserRequest) {
+      await dbUserRequest.destroy()
     }
-
-    @PUT
-    @Path(':id')
-    async updateUserRequest(@PathParam('id') userRequestID: number, userRequest: any): Promise<IUserRequest> {
-        const dbUserRequest = await this.database.models.UserRequest.findById(userRequestID)
-
-        if (dbUserRequest) {
-        return await dbUserRequest.update(userRequest)
-        } else {
-        return await this.database.models.UserRequest.create(userRequest)
-        }
-    }
-
-    @DELETE
-    @Path(':id')
-    async deleteUserRequest(@PathParam('id') userRequestID: number): Promise<void> {
-        const dbUserRequest = await this.database.models.UserRequest.findById(userRequestID)
-
-        if (dbUserRequest) {
-        await dbUserRequest.destroy()
-        }
-    }
+  }
 
 }

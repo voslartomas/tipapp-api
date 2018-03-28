@@ -4,58 +4,58 @@ import Database from '../services/database'
 import UserPayment from '../models/userPayment.model'
 import { IUserPayment } from '../types/models.d'
 
-@Path('/api/userPayments')
+@Path('/api/user-payments')
 export default class UserPaymentsController {
 
-    @Inject
-    private database: Database
+  @Inject
+  private database: Database
 
-    @GET
-    async getUserPayments(): Promise<IUserPayment[]> {
-      return await this.database.models.UserPayment.findAll({})
+  @GET
+  async getUserPayments(): Promise<IUserPayment[]> {
+    return await this.database.models.UserPayment.findAll({})
+  }
+
+  @GET
+  @Path(':id')
+  async getUserPayment(@PathParam('id') userPaymentId: number): Promise<IUserPayment> {
+    try {
+      const userPayment = await this.database.models.UserPayment.findById(userPaymentId)
+
+      if (!userPayment) {
+        throw new Error('not found')
+      }
+
+      return userPayment
+    } catch (e) {
+      throw new Errors.NotFoundError('User payment not found.')
     }
+  }
 
-    @GET
-    @Path(':id')
-    async getUserPayment(@PathParam('id') userPaymentID: number): Promise<IUserPayment> {
-        try {
-        const user = await this.database.models.UserPayment.findById(userPaymentID)
+  @POST
+  async createUserPayment(userPayment: any): Promise<IUserPayment> {
+    return await this.database.models.UserPayment.create(userPayment)
+  }
 
-        if (!user) {
-            throw new Error('not found')
-        }
+  @PUT
+  @Path(':id')
+  async updateUserPayment(@PathParam('id') userPaymentId: number, userPayment: any): Promise<IUserPayment> {
+    const dbUserPayment = await this.database.models.UserPayment.findById(userPaymentId)
 
-        return user
-        } catch (e) {
-        throw new Errors.NotFoundError('User not found.')
-        }
+    if (dbUserPayment) {
+      return await dbUserPayment.update(userPayment)
+    } else {
+      return await this.database.models.UserPayment.create(userPayment)
     }
+  }
 
-    @POST
-    async createUserPayment(userPayment: any): Promise<IUserPayment> {
-        return await this.database.models.UserPayment.create(userPayment)
+  @DELETE
+  @Path(':id')
+  async deleteUserPayment(@PathParam('id') userPaymentId: number): Promise<void> {
+    const dbUserPayment = await this.database.models.UserPayment.findById(userPaymentId)
+
+    if (dbUserPayment) {
+      await dbUserPayment.destroy()
     }
-
-    @PUT
-    @Path(':id')
-    async updateUserPayment(@PathParam('id') userPaymentID: number, userPayment: any): Promise<IUserPayment> {
-        const dbUserPayment = await this.database.models.UserPayment.findById(userPaymentID)
-
-        if (dbUserPayment) {
-        return await dbUserPayment.update(userPayment)
-        } else {
-        return await this.database.models.UserPayment.create(userPayment)
-        }
-    }
-
-    @DELETE
-    @Path(':id')
-    async deleteUserPayment(@PathParam('id') userPaymentID: number): Promise<void> {
-        const dbUserPayment = await this.database.models.UserPayment.findById(userPaymentID)
-
-        if (dbUserPayment) {
-        await dbUserPayment.destroy()
-        }
-    }
+  }
 
 }

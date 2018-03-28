@@ -4,57 +4,57 @@ import Database from '../services/database'
 import MatchScorer from '../models/matchScorer.model'
 import { IMatchScorer } from '../types/models.d'
 
-@Path('/api/matchScorers')
+@Path('/api/match-scorers')
 export default class MatchScoresController {
-    @Inject
-    private database: Database
+  @Inject
+  private database: Database
 
-    @GET
-    async getMatchScorers(): Promise<IMatchScorer[]> {
-        return await this.database.models.MatchScorer.findAll({})
+  @GET
+  async getMatchScorers(): Promise<IMatchScorer[]> {
+    return await this.database.models.MatchScorer.findAll({})
+  }
+
+  @GET
+  @Path(':id')
+  async getMatchScorer(@PathParam('id') matchScorerId: number): Promise<IMatchScorer> {
+    try {
+      const matchScorer = await this.database.models.MatchScorer.findById(matchScorerId)
+
+      if (!matchScorer) {
+        throw new Error('not found')
+      }
+
+      return matchScorer
+    } catch (e) {
+      throw new Errors.NotFoundError('Match scorer not found.')
     }
+  }
 
-    @GET
-    @Path(':id')
-    async getMatchScorer(@PathParam('id') matchScorerId: number): Promise<IMatchScorer> {
-        try {
-        const matchScorer = await this.database.models.MatchScorer.findById(matchScorerId, {})
+  @POST
+  async createMatchScorer(matchScorer: any): Promise<IMatchScorer> {
+    return await this.database.models.MatchScorer.create(matchScorer)
+  }
 
-        if (!matchScorer) {
-            throw new Error('not found')
-        }
+  @PUT
+  @Path(':id')
+  async updateMatchScorer(@PathParam('id') matchScorerId: number, matchScorer: any): Promise<IMatchScorer> {
+    const dbMatchScorer = await this.database.models.MatchScorer.findById(matchScorerId)
 
-        return matchScorer
-        } catch (e) {
-        throw new Errors.NotFoundError('User not found.')
-        }
+    if (dbMatchScorer) {
+      return await dbMatchScorer.update(matchScorer)
+    } else {
+      return await this.database.models.MatchScorer.create(matchScorer)
     }
+  }
 
-    @POST
-    async createMatchScorer(matchScorer: any): Promise<IMatchScorer> {
-        return await this.database.models.MatchScorer.create(matchScorer)
+  @DELETE
+  @Path(':id')
+  async deleteMatchScorer(@PathParam('id') matchScorerId: number): Promise<void> {
+    const dbMatchScorer = await this.database.models.MatchScorer.findById(matchScorerId)
+
+    if (dbMatchScorer) {
+      await dbMatchScorer.destroy()
     }
-
-    @PUT
-    @Path(':id')
-    async updateMatchScorer(@PathParam('id') matchScorerId: number, matchScorer: any): Promise<IMatchScorer> {
-        const dbMatchScorer = await this.database.models.MatchScorer.findById(matchScorerId)
-
-        if (dbMatchScorer) {
-        return await dbMatchScorer.update(matchScorer)
-        } else {
-        return await this.database.models.MatchScorer.create(matchScorer)
-        }
-    }
-
-    @DELETE
-    @Path(':id')
-    async deleteMatchScorer(@PathParam('id') matchScorerId: number): Promise<void> {
-        const dbMatchScorer = await this.database.models.MatchScorer.findById(matchScorerId)
-
-        if (dbMatchScorer) {
-        await dbMatchScorer.destroy()
-        }
-    }
+  }
 
 }

@@ -22,7 +22,7 @@ export interface IMatch {
   winner: boolean,
   isEvaluated: boolean
 }
-export interface IBettingLeague {
+export interface ILeague {
   id: string,
   name: string
   sport: string

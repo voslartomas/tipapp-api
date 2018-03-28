@@ -2,7 +2,7 @@ import { PingController } from './ping'
 import { LoginController } from './login'
 import UsersController from './users'
 import MachesController from './matches'
-import BetLeaguesController from './bettingLeagues'
+import LeaguesController from './leagues'
 import MatchScoresController from './matchScorers'
 import PlayersController from './players'
 import SpecialBetsController from './specialBets'
@@ -20,7 +20,7 @@ export default [
   LoginController,
   UsersController,
   MachesController,
-  BetLeaguesController,
+  LeaguesController,
   MatchScoresController,
   PlayersController,
   SpecialBetsController,

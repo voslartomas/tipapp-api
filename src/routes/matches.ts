@@ -6,55 +6,55 @@ import { IMatch } from '../types/models.d'
 
 @Path('/api/matches')
 export default class MachesController {
-    @Inject
-    private database: Database
+  @Inject
+  private database: Database
 
-    @GET
-    async getMatches(): Promise<IMatch[]> {
-      return await this.database.models.Match.findAll({})
+  @GET
+  async getMatches(): Promise<IMatch[]> {
+    return await this.database.models.Match.findAll({})
+  }
+
+  @GET
+  @Path(':id')
+  async getMatch(@PathParam('id') matchId: number): Promise<IMatch> {
+    try {
+      const match = await this.database.models.Match.findById(matchId)
+
+      if (!match) {
+        throw new Error('not found')
+      }
+
+      return match
+    } catch (e) {
+      throw new Errors.NotFoundError('Match not found.')
     }
+  }
 
-    @GET
-    @Path(':id')
-    async getMatch(@PathParam('id') matchId: number): Promise<IMatch> {
-        try {
-        const user = await this.database.models.Match.findById(matchId)
+  @POST
+  async createMatch(match: any): Promise<IMatch> {
+    return await this.database.models.Match.create(match)
+  }
 
-        if (!user) {
-            throw new Error('not found')
-        }
+  @PUT
+  @Path(':id')
+  async updateMatch(@PathParam('id') matchId: number, match: any): Promise<IMatch> {
+    const dbMatch = await this.database.models.Match.findById(matchId)
 
-        return user
-        } catch (e) {
-        throw new Errors.NotFoundError('User not found.')
-        }
+    if (dbMatch) {
+      return await dbMatch.update(match)
+    } else {
+      return await this.database.models.Match.create(match)
     }
+  }
 
-    @POST
-    async createMatch(match: any): Promise<IMatch> {
-        return await this.database.models.Match.create(match)
+  @DELETE
+  @Path(':id')
+  async deleteMatch(@PathParam('id') matchId: number): Promise<void> {
+    const dbMatch = await this.database.models.Match.findById(matchId)
+
+    if (dbMatch) {
+      await dbMatch.destroy()
     }
-
-    @PUT
-    @Path(':id')
-    async updateMatch(@PathParam('id') matchID: number, match: any): Promise<IMatch> {
-        const dbMatch = await this.database.models.Match.findById(matchID)
-
-        if (dbMatch) {
-        return await dbMatch.update(match)
-        } else {
-        return await this.database.models.Match.create(match)
-        }
-    }
-
-    @DELETE
-    @Path(':id')
-    async deleteMatch(@PathParam('id') matchID: number): Promise<void> {
-        const dbMatch = await this.database.models.Match.findById(matchID)
-
-        if (dbMatch) {
-        await dbMatch.destroy()
-        }
-    }
+  }
 
 }

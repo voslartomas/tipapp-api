@@ -6,55 +6,55 @@ import { IPlayer } from '../types/models.d'
 
 @Path('/api/players')
 export default class PlayersController {
-    @Inject
-    private database: Database
+  @Inject
+  private database: Database
 
-    @GET
-    async getPlayers(): Promise<IPlayer[]> {
-        return await this.database.models.Player.findAll({})
+  @GET
+  async getPlayers(): Promise<IPlayer[]> {
+    return await this.database.models.Player.findAll({})
+  }
+
+  @GET
+  @Path(':id')
+  async getPlayer(@PathParam('id') playerId: number): Promise<IPlayer> {
+    try {
+      const player = await this.database.models.Player.findById(playerId, {})
+
+      if (!player) {
+        throw new Error('not found')
+      }
+
+      return player
+    } catch (e) {
+      throw new Errors.NotFoundError('Player not found.')
     }
+  }
 
-    @GET
-    @Path(':id')
-    async getPlayer(@PathParam('id') playerId: number): Promise<IPlayer> {
-        try {
-        const player = await this.database.models.Player.findById(playerId, {})
+  @POST
+  async createPlayer(player: any): Promise<IPlayer> {
+    return await this.database.models.Player.create(player)
+  }
 
-        if (!player) {
-            throw new Error('not found')
-        }
+  @PUT
+  @Path(':id')
+  async updatePlayer(@PathParam('id') playerId: number, player: any): Promise<IPlayer> {
+    const dbPlayer = await this.database.models.Player.findById(playerId)
 
-        return player
-        } catch (e) {
-        throw new Errors.NotFoundError('User not found.')
-        }
+    if (dbPlayer) {
+      return await dbPlayer.update(player)
+    } else {
+      return await this.database.models.Player.create(player)
     }
+  }
 
-    @POST
-    async createPlayer(player: any): Promise<IPlayer> {
-        return await this.database.models.Player.create(player)
+  @DELETE
+  @Path(':id')
+  async deletePlayer(@PathParam('id') playerId: number): Promise<void> {
+    const dbPlayer = await this.database.models.Player.findById(playerId)
+
+    if (dbPlayer) {
+      await dbPlayer.destroy()
     }
-
-    @PUT
-    @Path(':id')
-    async updatePlayer(@PathParam('id') playerId: number, player: any): Promise<IPlayer> {
-        const dbPlayer = await this.database.models.Player.findById(playerId)
-
-        if (dbPlayer) {
-        return await dbPlayer.update(player)
-        } else {
-        return await this.database.models.Player.create(player)
-        }
-    }
-
-    @DELETE
-    @Path(':id')
-    async deletePlayer(@PathParam('id') playerId: number): Promise<void> {
-        const dbPlayer = await this.database.models.Player.findById(playerId)
-
-        if (dbPlayer) {
-        await dbPlayer.destroy()
-        }
-    }
+  }
 
 }
