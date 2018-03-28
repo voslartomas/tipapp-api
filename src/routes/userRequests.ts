@@ -32,7 +32,6 @@ export default class UserRequestsController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createUserRequest(userRequest: any): Promise<IUserRequest> {
         return await this.database.models.UserRequest.create(userRequest)
     }

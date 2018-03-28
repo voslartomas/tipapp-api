@@ -31,7 +31,6 @@ export default class MachesController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createMatch(match: any): Promise<IMatch> {
         return await this.database.models.Match.create(match)
     }

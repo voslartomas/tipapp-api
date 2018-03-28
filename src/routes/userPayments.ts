@@ -32,7 +32,6 @@ export default class UserPaymentsController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createUserPayment(userPayment: any): Promise<IUserPayment> {
         return await this.database.models.UserPayment.create(userPayment)
     }

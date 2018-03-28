@@ -31,7 +31,6 @@ export default class PlayersController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createPlayer(player: any): Promise<IPlayer> {
         return await this.database.models.Player.create(player)
     }

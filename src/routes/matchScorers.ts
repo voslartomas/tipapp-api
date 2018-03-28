@@ -31,7 +31,6 @@ export default class MatchScoresController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createMatchScorer(matchScorer: any): Promise<IMatchScorer> {
         return await this.database.models.MatchScorer.create(matchScorer)
     }

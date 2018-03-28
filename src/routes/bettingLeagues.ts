@@ -1,9 +1,8 @@
 import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest'
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
-import Match from '../models/match.model'
+import BettingLeague from '../models/bettingLeague.model'
 import { IBettingLeague } from '../types/models.d'
-import async from '../utils/dbDataSync'
 
 @Path('/api/betLeagues')
 export default class BetLeaguesController {
@@ -32,9 +31,8 @@ export default class BetLeaguesController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createBetLeague(bet: any): Promise<IBettingLeague> {
-        return await this.database.models.User.create(bet)
+        return await this.database.models.BettingLeague.create(bet)
     }
 
     @PUT
@@ -45,14 +43,14 @@ export default class BetLeaguesController {
         if (dbUser) {
         return await dbUser.update(bet)
         } else {
-        return await this.database.models.User.create(bet)
+        return await this.database.models.BettingLeague.create(bet)
         }
     }
 
     @DELETE
     @Path(':id')
     async deleteBetLeague(@PathParam('id') betId: number): Promise<void> {
-        const dbUser = await this.database.models.User.findById(betId)
+        const dbUser = await this.database.models.BettingLeague.findById(betId)
 
         if (dbUser) {
         await dbUser.destroy()

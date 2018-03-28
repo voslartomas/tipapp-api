@@ -32,7 +32,6 @@ export default class UserSettingsController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createUserSetting(userSetting: any): Promise<IUserSetting> {
         return await this.database.models.UserSetting.create(userSetting)
     }

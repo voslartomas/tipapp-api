@@ -32,7 +32,6 @@ export default class TeamsController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createTeam(team: any): Promise<ITeam> {
         return await this.database.models.Team.create(team)
     }

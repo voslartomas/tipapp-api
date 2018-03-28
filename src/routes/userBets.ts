@@ -32,7 +32,6 @@ export default class UserBetsController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createUserBet(usetBet: any): Promise<IUserBet> {
         return await this.database.models.UserBet.create(usetBet)
     }

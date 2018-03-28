@@ -32,7 +32,6 @@ export default class SpecialBetResultsController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createSpecialBet(specialBetResult: any): Promise<ISpecialBetResult> {
         return await this.database.models.SpecialBetResult.create(specialBetResult)
     }

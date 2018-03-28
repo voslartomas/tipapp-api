@@ -32,7 +32,6 @@ export default class SportsController {
     }
 
     @POST
-    // TODO fix user: IUser, error while running tests
     async createSport(sport: any): Promise<ISport> {
         return await this.database.models.Sport.create(sport)
     }
