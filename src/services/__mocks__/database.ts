@@ -1,6 +1,3 @@
-// jest.mock('../../src/services/database')
-// const Database = require('../../src/services/database')
-
 export default class Database {
   public models = {
     User: {
@@ -30,5 +27,4 @@ export default class Database {
       resolve('done')
     })
   }
-
-})
+}
