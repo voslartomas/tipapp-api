@@ -685,14 +685,14 @@
 					{
 						"description": "",
 						"in": "formData",
-						"name": "firstname",
+						"name": "firstName",
 						"required": true,
 						"type": "string"
 					},
 					{
 						"description": "",
 						"in": "formData",
-						"name": "lastname",
+						"name": "lastName",
 						"required": true,
 						"type": "string"
 					},
