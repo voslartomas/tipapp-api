@@ -35,6 +35,17 @@ export default async (models) => {
     }).error(err => e = err)
   }
 
+  for (const a of data.BettingLeagues) {
+    await models.League.findOrCreate({
+      where: { name: a.name,
+        sportId: a.sport,
+        seasonTo: a.seasonTo,
+        seasonFrom: a.seasonFrom
+      },
+      defaults: a
+    }).error(err => e = err)
+  }
+
   for (const a of data.Matches) {
     await models.Match.findOrCreate({
       where: { gameNumber: a.gameNumber },
@@ -46,17 +57,6 @@ export default async (models) => {
     a.password = await bCrypt.hashSync(a.password, bCrypt.genSaltSync(8), undefined)
     await models.User.findOrCreate({
       where: { username: a.username },
-      defaults: a
-    }).error(err => e = err)
-  }
-
-  for (const a of data.BettingLeagues) {
-    await models.League.findOrCreate({
-      where: { name: a.name,
-        sport: a.sport,
-        seasonTo: a.seasonTo,
-        seasonFrom: a.seasonFrom
-      },
       defaults: a
     }).error(err => e = err)
   }

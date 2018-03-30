@@ -3,7 +3,7 @@ module.exports = {
   BettingLeagues: [
     {
       name: 'Stanley Cup 2018',
-      sport: 2,
+      sportId: 2,
       isActive: true,
       isTheMostActive: true,
       seasonFrom: 2017,
@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       name: 'MS Hokej Dánsko 2018',
-      sport: 2,
+      sportId: 2,
       isActive: true,
       isTheMostActive: false,
       seasonFrom: 2017,
@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       name: 'MS Fotbal Rusko 2018',
-      sport: 1,
+      sportId: 1,
       isActive: true,
       isTheMostActive: false,
       seasonFrom: 2017,
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       name: 'ME Chorvatsko 2018',
-      sport: 3,
+      sportId: 3,
       isActive: true,
       isTheMostActive: false,
       seasonFrom: 2017,
@@ -41,11 +41,11 @@ module.exports = {
 
   Matches: [
     {
-      bettingLeague: 1,
+      leagueId: 1,
       gameNumber: 1,
       dateTime: '2017-11-29 20:00:00',
-      homeTeam: 1,
-      awayTeam: 2,
+      homeTeamId: 1,
+      awayTeamId: 2,
       homeScore: 5,
       awayScore: 2,
       overtime: false,
@@ -54,11 +54,11 @@ module.exports = {
       isEvaluated: true
     },
     {
-      bettingLeague: 1,
+      leagueId: 1,
       // gameNumber: 2,
       dateTime: '2017-11-29 21:00:00',
-      homeTeam: 3,
-      awayTeam: 4,
+      homeTeamId: 3,
+      awayTeamId: 4,
       homeScore: 3,
       awayScore: 3,
       overtime: true,
@@ -67,11 +67,11 @@ module.exports = {
       isEvaluated: true
     },
     {
-      bettingLeague: 1,
+      leagueId: 1,
       // gameNumber: 3,
       dateTime: '2017-12-29 20:00:00',
-      homeTeam: 1,
-      awayTeam: 3,
+      homeTeamId: 1,
+      awayTeamId: 3,
       homeScore: 2,
       awayScore: 4,
       overtime: false,
@@ -80,11 +80,11 @@ module.exports = {
       isEvaluated: false
     },
     {
-      bettingLeague: 1,
+      leagueId: 1,
       // gameNumber: 3,
       dateTime: '2017-12-29 20:00:00',
-      homeTeam: 2,
-      awayTeam: 4,
+      homeTeamId: 2,
+      awayTeamId: 4,
       homeScore: 5,
       awayScore: 5,
       overtime: false,
@@ -93,11 +93,11 @@ module.exports = {
       isEvaluated: true
     },
     {
-      bettingLeague: 1,
+      leagueId: 1,
       // gameNumber: 3,
       dateTime: '2017-12-30 20:00:00',
-      homeTeam: 1,
-      awayTeam: 4,
+      homeTeamId: 1,
+      awayTeamId: 4,
       // homeScore: 5,
       // awayScore: 2,
       overtime: false,

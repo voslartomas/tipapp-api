@@ -1,11 +1,17 @@
-import { Table, Column, Model, PrimaryKey, DataType } from 'sequelize-typescript'
+import { Table, Column, Model, ForeignKey, BelongsTo, DataType } from 'sequelize-typescript'
+import League from './league.model'
+import Team from './team.model'
 
 @Table({
   timestamps: true,
 })
 export default class Match extends Model<Match> {
   @Column
-  bettingLeague: string
+  @ForeignKey(() => League)
+  leagueId: number
+
+  @BelongsTo(() => League)
+  league: League
 
   @Column
   gameNumber: string
@@ -13,11 +19,19 @@ export default class Match extends Model<Match> {
   @Column(DataType.DATE)
   dateTime: Date
 
+  @ForeignKey(() => Team)
   @Column
-  homeTeam: string
+  homeTeamId: number
 
+  @BelongsTo(() => Team)
+  homeTeam: Team
+
+  @ForeignKey(() => Team)
   @Column
-  awayTeam: string
+  awayTeamId: number
+
+  @BelongsTo(() => Team)
+  awayTeam: Team
 
   @Column
   homeScore: string
