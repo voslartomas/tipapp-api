@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User request API GET /user-requests should return list of user-requests 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`User request API GET /user-requests/1 should return 200 when user is in db 1`] = `
+Object {
+  "testData": "shared",
+}
+`;
+
+exports[`User request API POST /user-requests should return 200 1`] = `
+Object {
+  "accepted": true,
+  "userId": 1,
+}
+`;
+
+exports[`User request API PUT /user-requests should return 200 and creates new user if does not exist already 1`] = `
+Object {
+  "accepted": true,
+  "userId": 1,
+}
+`;
+
+exports[`User request API PUT /user-requests should return 204 1`] = `Object {}`;

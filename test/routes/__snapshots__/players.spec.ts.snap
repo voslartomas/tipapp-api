@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player API GET /players should return list of players 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`Player API GET /players/1 should return 200 when user is in db 1`] = `
+Object {
+  "testData": "shared",
+}
+`;
+
+exports[`Player API POST /players should return 200 1`] = `
+Object {
+  "name": "Jaromir Jar",
+}
+`;
+
+exports[`Player API PUT /players should return 200 and creates new user if does not exist already 1`] = `
+Object {
+  "username": "Sidney Crosby",
+}
+`;
+
+exports[`Player API PUT /players should return 204 1`] = `Object {}`;

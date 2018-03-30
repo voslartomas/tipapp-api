@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/voslartomas/tipapp-api#readme",
   "dependencies": {
+    "@types/es6-promise": "^3.3.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "bunyan": "^1.8.12",
