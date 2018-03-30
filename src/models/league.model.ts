@@ -3,7 +3,7 @@ import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
 @Table({
   timestamps: true,
 })
-export default class BettingLeague extends Model<BettingLeague> {
+export default class League extends Model<League> {
   @Column
   name: string
 

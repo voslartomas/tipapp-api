@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match scorer API GET /match-scorers should return list of match-scorers 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`Match scorer API GET /match-scorers/1 should return 200 when user is in db 1`] = `
+Object {
+  "testData": "shared",
+}
+`;
+
+exports[`Match scorer API POST /match-scorers should return 200 1`] = `
+Object {
+  "numberOfGoals": 3,
+  "scorerId": 1,
+}
+`;
+
+exports[`Match scorer API PUT /match-scorers should return 200 and creates new user if does not exist already 1`] = `
+Object {
+  "numberOfGoals": 32,
+  "scrorerId": 1,
+}
+`;
+
+exports[`Match scorer API PUT /match-scorers should return 204 1`] = `Object {}`;

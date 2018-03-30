@@ -51,7 +51,7 @@ export default async (models) => {
   }
 
   for (const a of data.BettingLeagues) {
-    await models.BettingLeague.findOrCreate({
+    await models.League.findOrCreate({
       where: { name: a.name,
         sport: a.sport,
         seasonTo: a.seasonTo,

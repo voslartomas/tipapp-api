@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sport API GET /sports should return list of sports 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`Sport API GET /sports/1 should return 200 when user is in db 1`] = `
+Object {
+  "testData": "shared",
+}
+`;
+
+exports[`Sport API POST /sports should return 200 1`] = `
+Object {
+  "name": "Ledni hok",
+}
+`;
+
+exports[`Sport API PUT /sports should return 200 and creates new user if does not exist already 1`] = `
+Object {
+  "username": "Hazena",
+}
+`;
+
+exports[`Sport API PUT /sports should return 204 1`] = `Object {}`;

@@ -18,8 +18,8 @@ export class LoginController {
   /**
    * @param {string} email        User's email address
    * @param {string} username     Username
-   * @param {string} firstname    Firstname
-   * @param {string} lastname     Lastname
+   * @param {string} firstName    First name
+   * @param {string} lastName     Last name
    * @param {string} mobileNumber Mobile number
    * @param {string} password     Passoword (should confirm password as well)
    * @return
@@ -27,8 +27,8 @@ export class LoginController {
   register(
     @FormParam('email') email: string,
     @FormParam('username') username: string,
-    @FormParam('firstname') firstname: string,
-    @FormParam('lastname') lastname: string,
+    @FormParam('firstName') firstName: string,
+    @FormParam('lastName') lastName: string,
     @FormParam('mobileNumber') mobileNumber: string,
     @FormParam('password') password: string
   ): string {

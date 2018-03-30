@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User API GET /users should return list of users 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`User API GET /users/1 should return 200 when user is in db 1`] = `
+Object {
+  "testData": "shared",
+}
+`;
+
+exports[`User API GET /users/username/admin should return 200 when user is in db 1`] = `Object {}`;
+
+exports[`User API POST /users should return 200 1`] = `
+Object {
+  "firstName": "John",
+  "username": "regular",
+}
+`;
+
+exports[`User API PUT /users should return 200 and creates new user if does not exist already 1`] = `
+Object {
+  "firstName": "John",
+  "username": "new regular",
+}
+`;
+
+exports[`User API PUT /users should return 204 1`] = `Object {}`;

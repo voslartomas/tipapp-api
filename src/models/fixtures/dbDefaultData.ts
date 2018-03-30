@@ -152,8 +152,8 @@ module.exports = {
 
   Players: [
     {
-      firstname: 'Tomáš',
-      lastname: 'Plekanec',
+      firstName: 'Tomáš',
+      lastName: 'Plekanec',
       team: 1,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -164,8 +164,8 @@ module.exports = {
       seasonAssists: 31
     },
     {
-      firstname: 'Brendan',
-      lastname: 'Gallagher',
+      firstName: 'Brendan',
+      lastName: 'Gallagher',
       team: 1,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -176,8 +176,8 @@ module.exports = {
       seasonAssists: 15
     },
     {
-      firstname: 'John',
-      lastname: 'Tavares',
+      firstName: 'John',
+      lastName: 'Tavares',
       team: 2,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -188,8 +188,8 @@ module.exports = {
       seasonAssists: 45
     },
     {
-      firstname: 'Brook',
-      lastname: 'Nelson',
+      firstName: 'Brook',
+      lastName: 'Nelson',
       team: 2,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -200,8 +200,8 @@ module.exports = {
       seasonAssists: 26
     },
     {
-      firstname: 'Sidney',
-      lastname: 'Crosby',
+      firstName: 'Sidney',
+      lastName: 'Crosby',
       team: 3,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -212,8 +212,8 @@ module.exports = {
       seasonAssists: 31
     },
     {
-      firstname: 'Jevgenij',
-      lastname: 'Malkin',
+      firstName: 'Jevgenij',
+      lastName: 'Malkin',
       team: 3,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -224,8 +224,8 @@ module.exports = {
       seasonAssists: 25
     },
     {
-      firstname: 'Connor',
-      lastname: 'McDavid',
+      firstName: 'Connor',
+      lastName: 'McDavid',
       team: 4,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -236,8 +236,8 @@ module.exports = {
       seasonAssists: 45
     },
     {
-      firstname: 'Milan',
-      lastname: 'Lucic',
+      firstName: 'Milan',
+      lastName: 'Lucic',
       team: 4,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -248,8 +248,8 @@ module.exports = {
       seasonAssists: 11
     },
     {
-      firstname: 'Neymar',
-      lastname: '',
+      firstName: 'Neymar',
+      lastName: '',
       team: 5,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -259,8 +259,8 @@ module.exports = {
       seasonGoals: 6
     },
     {
-      firstname: 'Ezequiel',
-      lastname: 'Garay',
+      firstName: 'Ezequiel',
+      lastName: 'Garay',
       team: 6,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -270,8 +270,8 @@ module.exports = {
       seasonGoals: 2
     },
     {
-      firstname: 'Thomas',
-      lastname: 'Müller',
+      firstName: 'Thomas',
+      lastName: 'Müller',
       team: 7,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -281,8 +281,8 @@ module.exports = {
       seasonGoals: 6
     },
     {
-      firstname: 'Didier',
-      lastname: 'Drogba',
+      firstName: 'Didier',
+      lastName: 'Drogba',
       team: 8,
       seasonFrom: 2017,
       seasonTo: 2018,

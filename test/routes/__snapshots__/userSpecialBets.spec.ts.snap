@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User special bet API GET /user-special-bets should return list of user-special-bets 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`User special bet API GET /user-special-bets/1 should return 200 when user is in db 1`] = `
+Object {
+  "testData": "shared",
+}
+`;
+
+exports[`User special bet API POST /user-special-bets should return 200 1`] = `
+Object {
+  "specialBet": 3,
+  "userId": 1,
+}
+`;
+
+exports[`User special bet API PUT /user-special-bets should return 200 and creates new user if does not exist already 1`] = `
+Object {
+  "specialBet": 4,
+  "userId": 3,
+}
+`;
+
+exports[`User special bet API PUT /user-special-bets should return 204 1`] = `Object {}`;

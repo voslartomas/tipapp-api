@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`League API GET /leagues should return list of leagues 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`League API GET /leagues/1 should return 200 when user is in db 1`] = `
+Object {
+  "testData": "shared",
+}
+`;
+
+exports[`League API POST /leagues should return 200 1`] = `
+Object {
+  "name": "NHL",
+}
+`;
+
+exports[`League API PUT /leagues should return 200 and creates new user if does not exist already 1`] = `
+Object {
+  "username": "NHL 2019",
+}
+`;
+
+exports[`League API PUT /leagues should return 204 1`] = `Object {}`;

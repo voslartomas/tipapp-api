@@ -50,6 +50,541 @@
 				"createdAt",
 				"updatedAt"
 			]
+		},
+		"IMatch": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"bettingLeague": {
+					"type": "string",
+					"description": ""
+				},
+				"gameNumber": {
+					"type": "string",
+					"description": ""
+				},
+				"dateTime": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"homeTeam": {
+					"type": "string",
+					"description": ""
+				},
+				"awayTeam": {
+					"type": "string",
+					"description": ""
+				},
+				"homeScore": {
+					"type": "string",
+					"description": ""
+				},
+				"awayScore": {
+					"type": "string",
+					"description": ""
+				},
+				"overtime": {
+					"type": "boolean",
+					"description": ""
+				},
+				"shotout": {
+					"type": "boolean",
+					"description": ""
+				},
+				"winner": {
+					"type": "boolean",
+					"description": ""
+				},
+				"isEvaluated": {
+					"type": "boolean",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"bettingLeague",
+				"gameNumber",
+				"dateTime",
+				"homeTeam",
+				"awayTeam",
+				"homeScore",
+				"awayScore",
+				"overtime",
+				"shotout",
+				"winner",
+				"isEvaluated"
+			]
+		},
+		"ILeague": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"name": {
+					"type": "string",
+					"description": ""
+				},
+				"sport": {
+					"type": "string",
+					"description": ""
+				},
+				"isActive": {
+					"type": "boolean",
+					"description": ""
+				},
+				"isTheMostActive": {
+					"type": "boolean",
+					"description": ""
+				},
+				"seasonFrom": {
+					"type": "string",
+					"description": ""
+				},
+				"seasonTo": {
+					"type": "string",
+					"description": ""
+				},
+				"isFinished": {
+					"type": "boolean",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"name",
+				"sport",
+				"isActive",
+				"isTheMostActive",
+				"seasonFrom",
+				"seasonTo",
+				"isFinished"
+			]
+		},
+		"IMatchScorer": {
+			"description": "",
+			"properties": {
+				"matchId": {
+					"type": "string",
+					"description": ""
+				},
+				"scorerId": {
+					"type": "string",
+					"description": ""
+				},
+				"numberOfGoals": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"matchId",
+				"scorerId",
+				"numberOfGoals"
+			]
+		},
+		"IPlayer": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"firstName": {
+					"type": "string",
+					"description": ""
+				},
+				"lastName": {
+					"type": "string",
+					"description": ""
+				},
+				"team": {
+					"type": "string",
+					"description": ""
+				},
+				"seasonFrom": {
+					"type": "string",
+					"description": ""
+				},
+				"seasonTo": {
+					"type": "string",
+					"description": ""
+				},
+				"bestScorer": {
+					"type": "string",
+					"description": ""
+				},
+				"isActive": {
+					"type": "boolean",
+					"description": ""
+				},
+				"seasonGames": {
+					"type": "string",
+					"description": ""
+				},
+				"seasonGoals": {
+					"type": "string",
+					"description": ""
+				},
+				"seasonAssists": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"firstName",
+				"lastName",
+				"team",
+				"seasonFrom",
+				"seasonTo",
+				"bestScorer",
+				"isActive",
+				"seasonGames",
+				"seasonGoals",
+				"seasonAssists"
+			]
+		},
+		"ISpecialBet": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"key": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"key"
+			]
+		},
+		"ISpecialBetResult": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"bettingLeagueId": {
+					"type": "string",
+					"description": ""
+				},
+				"specialBetId": {
+					"type": "string",
+					"description": ""
+				},
+				"seriesHomeTeam": {
+					"type": "string",
+					"description": ""
+				},
+				"seriesAwayTeam": {
+					"type": "string",
+					"description": ""
+				},
+				"specialBetResult": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"bettingLeagueId",
+				"specialBetId",
+				"seriesHomeTeam",
+				"seriesAwayTeam",
+				"specialBetResult"
+			]
+		},
+		"ISport": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"czName": {
+					"type": "string",
+					"description": ""
+				},
+				"engName": {
+					"type": "string",
+					"description": ""
+				},
+				"value": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"czName",
+				"engName",
+				"value"
+			]
+		},
+		"ITeam": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"czName": {
+					"type": "string",
+					"description": ""
+				},
+				"engName": {
+					"type": "string",
+					"description": ""
+				},
+				"value": {
+					"type": "string",
+					"description": ""
+				},
+				"shortcut": {
+					"type": "string",
+					"description": ""
+				},
+				"sport": {
+					"type": "string",
+					"description": ""
+				},
+				"league": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"czName",
+				"engName",
+				"value",
+				"shortcut",
+				"sport",
+				"league"
+			]
+		},
+		"IUserBet": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"matchId": {
+					"type": "string",
+					"description": ""
+				},
+				"userId": {
+					"type": "string",
+					"description": ""
+				},
+				"dateTime": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"homeScore": {
+					"type": "string",
+					"description": ""
+				},
+				"awayScore": {
+					"type": "string",
+					"description": ""
+				},
+				"homeWinner": {
+					"type": "boolean",
+					"description": ""
+				},
+				"scorer": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"matchId",
+				"userId",
+				"dateTime",
+				"homeScore",
+				"awayScore",
+				"homeWinner",
+				"scorer"
+			]
+		},
+		"IUserPayment": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"userId": {
+					"type": "string",
+					"description": ""
+				},
+				"bettingLeagueId": {
+					"type": "string",
+					"description": ""
+				},
+				"paid": {
+					"type": "boolean",
+					"description": ""
+				},
+				"displayed": {
+					"type": "boolean",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"userId",
+				"bettingLeagueId",
+				"paid",
+				"displayed"
+			]
+		},
+		"IUserRequest": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"userId": {
+					"type": "string",
+					"description": ""
+				},
+				"bettingLeagueId": {
+					"type": "string",
+					"description": ""
+				},
+				"decided": {
+					"type": "boolean",
+					"description": ""
+				},
+				"accepted": {
+					"type": "boolean",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"userId",
+				"bettingLeagueId",
+				"decided",
+				"accepted"
+			]
+		},
+		"IUserSetting": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"userId": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"bettingLeagueId": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"emailBetNotification": {
+					"type": "boolean",
+					"description": ""
+				},
+				"emailRankingNotification": {
+					"type": "boolean",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"userId",
+				"bettingLeagueId",
+				"emailBetNotification",
+				"emailRankingNotification"
+			]
+		},
+		"IUserSpecialBet": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"specialBetId": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"bettingLeagueId": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"userId": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"seriesHomeTeam": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"seriesAwayTeam": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"specialBet": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"dateTime": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"specialBetId",
+				"bettingLeagueId",
+				"userId",
+				"seriesHomeTeam",
+				"seriesAwayTeam",
+				"specialBet",
+				"dateTime"
+			]
 		}
 	},
 	"info": {
@@ -150,14 +685,14 @@
 					{
 						"description": "",
 						"in": "formData",
-						"name": "firstname",
+						"name": "firstName",
 						"required": true,
 						"type": "string"
 					},
 					{
 						"description": "",
 						"in": "formData",
-						"name": "lastname",
+						"name": "lastName",
 						"required": true,
 						"type": "string"
 					},
@@ -336,6 +871,1774 @@
 						"name": "username",
 						"required": true,
 						"type": "string"
+					}
+				]
+			}
+		},
+		"/api/matches": {
+			"get": {
+				"operationId": "MachesGetMatches",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IMatch"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "MachesCreateMatch",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IMatch"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "match",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/matches/{id}": {
+			"get": {
+				"operationId": "MachesGetMatch",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IMatch"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "MachesUpdateMatch",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IMatch"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "match",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "MachesDeleteMatch",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/leagues": {
+			"get": {
+				"operationId": "LeaguesGetLeagues",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ILeague"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "LeaguesCreateLeague",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ILeague"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "league",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/leagues/{id}": {
+			"get": {
+				"operationId": "LeaguesGetLeague",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ILeague"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "LeaguesUpdateLeague",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ILeague"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "league",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "LeaguesDeleteBetLeague",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/match-scorers": {
+			"get": {
+				"operationId": "MatchScoresGetMatchScorers",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IMatchScorer"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "MatchScoresCreateMatchScorer",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IMatchScorer"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "matchScorer",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/match-scorers/{id}": {
+			"get": {
+				"operationId": "MatchScoresGetMatchScorer",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IMatchScorer"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "MatchScoresUpdateMatchScorer",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IMatchScorer"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "matchScorer",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "MatchScoresDeleteMatchScorer",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/players": {
+			"get": {
+				"operationId": "PlayersGetPlayers",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IPlayer"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "PlayersCreatePlayer",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IPlayer"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "player",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/players/{id}": {
+			"get": {
+				"operationId": "PlayersGetPlayer",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IPlayer"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "PlayersUpdatePlayer",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IPlayer"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "player",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "PlayersDeletePlayer",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/special-bets": {
+			"get": {
+				"operationId": "SpecialBetsGetSpecialBets",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ISpecialBet"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "SpecialBetsCreateSpecialBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ISpecialBet"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "specialBet",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/special-bets/{id}": {
+			"get": {
+				"operationId": "SpecialBetsGetSpecialBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ISpecialBet"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "SpecialBetsUpdateSpecialBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ISpecialBet"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "specialBet",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "SpecialBetsDeleteSpecialBet",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/special-bet-results": {
+			"get": {
+				"operationId": "SpecialBetResultsGetSpecialBetResults",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ISpecialBetResult"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "SpecialBetResultsCreateSpecialBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ISpecialBetResult"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "specialBetResult",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/special-bet-results/{id}": {
+			"get": {
+				"operationId": "SpecialBetResultsGetSpecialBetResult",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ISpecialBetResult"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "SpecialBetResultsUpdateSpecialBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ISpecialBetResult"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "specialBetResult",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "SpecialBetResultsDeleteSpecialBet",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/sports": {
+			"get": {
+				"operationId": "SportsGetSports",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ISport"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "SportsCreateSport",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ISport"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "sport",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/sports/{id}": {
+			"get": {
+				"operationId": "SportsGetSport",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ISport"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "SportsUpdateSport",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ISport"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "sport",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "SportsDeleteSport",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/teams": {
+			"get": {
+				"operationId": "TeamsGetTeams",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ITeam"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "TeamsCreateTeam",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ITeam"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "team",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/teams/{id}": {
+			"get": {
+				"operationId": "TeamsGetTeam",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ITeam"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "TeamsUpdateTeam",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ITeam"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "team",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "TeamsDeleteTeam",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/user-bets": {
+			"get": {
+				"operationId": "UserBetsGetUserBets",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IUserBet"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "UserBetsCreateUserBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserBet"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "usetBet",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/user-bets/{id}": {
+			"get": {
+				"operationId": "UserBetsGetUserBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserBet"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "UserBetsUpdateUserBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserBet"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "userBet",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "UserBetsDeleteUserBet",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/user-payments": {
+			"get": {
+				"operationId": "UserPaymentsGetUserPayments",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IUserPayment"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "UserPaymentsCreateUserPayment",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserPayment"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "userPayment",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/user-payments/{id}": {
+			"get": {
+				"operationId": "UserPaymentsGetUserPayment",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserPayment"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "UserPaymentsUpdateUserPayment",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserPayment"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "userPayment",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "UserPaymentsDeleteUserPayment",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/user-requests": {
+			"get": {
+				"operationId": "UserRequestsGetUserRequests",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IUserRequest"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "UserRequestsCreateUserRequest",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserRequest"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "userRequest",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/user-requests/{id}": {
+			"get": {
+				"operationId": "UserRequestsGetUserRequest",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserRequest"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "UserRequestsUpdateUserRequest",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserRequest"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "userRequest",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "UserRequestsDeleteUserRequest",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/user-settings": {
+			"get": {
+				"operationId": "UserSettingsGetUserSettings",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IUserSetting"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "UserSettingsCreateUserSetting",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserSetting"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "userSetting",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/user-settings/{id}": {
+			"get": {
+				"operationId": "UserSettingsGetUserSetting",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserSetting"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "UserSettingsUpdateUserSetting",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserSetting"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "userSetting",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "UserSettingsDeleteUserSetting",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/user-special-bets": {
+			"get": {
+				"operationId": "UserSpecialBetsGetUserSpecialBets",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IUserSpecialBet"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "UserSpecialBetsCreateUserSpecialBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserSpecialBet"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "userSpecialBet",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/user-special-bets/{id}": {
+			"get": {
+				"operationId": "UserSpecialBetsGetUserSpecialBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserSpecialBet"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "UserSpecialBetsUpdateUserSpecialBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserSpecialBet"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "userSpecialBet",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "UserSpecialBetsDeleteUserSpecialBet",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
 					}
 				]
 			}

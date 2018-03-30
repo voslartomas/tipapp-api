@@ -38,7 +38,7 @@ export default class UsersController {
   @Path('/username/:username')
   async getUserUN(@PathParam('username') username: string): Promise<IUser> {
     try {
-      const user = await this.database.models.User.findOne({where: {username}})
+      const user = await this.database.models.User.findOne({ where: { username } })
 
       if (!user) {
         throw new Error('not found')

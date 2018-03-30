@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match API GET /matches should return list of matches 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`Match API GET /matches/1 should return 200 when user is in db 1`] = `
+Object {
+  "testData": "shared",
+}
+`;
+
+exports[`Match API POST /matches should return 200 1`] = `
+Object {
+  "name": "Regular match",
+}
+`;
+
+exports[`Match API PUT /matches should return 200 and creates new user if does not exist already 1`] = `
+Object {
+  "username": "Good match",
+}
+`;
+
+exports[`Match API PUT /matches should return 204 1`] = `Object {}`;
