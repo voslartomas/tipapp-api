@@ -11,7 +11,7 @@ export default class UserSpecialBet extends Model<UserSpecialBet> {
   specialBetId: number
 
   @BelongsTo(() => SpecialBet)
-  specialBetI: SpecialBet
+  specialBet: SpecialBet
 
   @Column
   @ForeignKey(() => User)
@@ -34,8 +34,7 @@ export default class UserSpecialBet extends Model<UserSpecialBet> {
   seriesAwayTeam: number
 
   @Column
-  @ForeignKey(() => SpecialBet)
-  specialBet: number
+  value: number
 
   @Column(DataType.DATE)
   dateTime: Date
