@@ -1,4 +1,5 @@
-import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
+import { Table, Column, Model, PrimaryKey, BelongsTo, ForeignKey } from 'sequelize-typescript'
+import Sport from './sport.model'
 
 @Table({
   timestamps: true,
@@ -7,8 +8,12 @@ export default class League extends Model<League> {
   @Column
   name: string
 
+  @ForeignKey(() => Sport)
   @Column
-  sport: number
+  sportId: number
+
+  @BelongsTo(() => Sport)
+  sport: Sport
 
   @Column
   isActive: boolean
