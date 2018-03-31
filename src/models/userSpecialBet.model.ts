@@ -28,13 +28,19 @@ export default class UserSpecialBet extends Model<UserSpecialBet> {
   league: League
 
   @Column
-  seriesHomeTeam: number
+  seriesHomeTeamId: number
 
   @Column
-  seriesAwayTeam: number
+  seriesAwayTeamId: number
 
   @Column
-  value: number
+  seriesHomeTeamBet: number
+
+  @Column
+  seriesAwayTeamBet: number
+
+  @Column
+  value: string
 
   @Column(DataType.DATE)
   dateTime: Date

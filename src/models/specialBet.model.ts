@@ -6,5 +6,4 @@ import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
 export default class SpecialBet extends Model<SpecialBet> {
   @Column
   key: string
-
 }

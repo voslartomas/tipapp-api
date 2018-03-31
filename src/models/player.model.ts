@@ -25,7 +25,7 @@ export default class Player extends Model<Player> {
   seasonTo: number
 
   @Column
-  bestScorer: number
+  bestScorer: boolean
 
   @Column
   isActive: boolean

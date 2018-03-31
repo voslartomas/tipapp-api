@@ -21,12 +21,18 @@ export default class SpecialBetResult extends Model<SpecialBetResult> {
   specialBet: SpecialBet
 
   @Column
-  seriesHomeTeam: number
-
-  @Column
-  seriesAwayTeam: number
-
-  @Column
   specialBetResult: string
+
+  @Column
+  seriesHomeTeamId: number
+
+  @Column
+  seriesAwayTeamId: number
+
+  @Column
+  seriesHomeTeamResult: number
+
+  @Column
+  seriesAwayTeamResult: number
 
 }

@@ -33,5 +33,5 @@ export default class UserBet extends Model<UserBet> {
   homeWinner: boolean
 
   @Column
-  scorer: number
+  scorerId: number
 }

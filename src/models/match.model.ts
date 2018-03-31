@@ -14,7 +14,7 @@ export default class Match extends Model<Match> {
   league: League
 
   @Column
-  gameNumber: string
+  gameNumber: number
 
   @Column(DataType.DATE)
   dateTime: Date
@@ -34,10 +34,10 @@ export default class Match extends Model<Match> {
   awayTeam: Team
 
   @Column
-  homeScore: string
+  homeScore: number
 
   @Column
-  awayScore: string
+  awayScore: number
 
   @Column
   overtime: boolean
@@ -46,7 +46,7 @@ export default class Match extends Model<Match> {
   shotout: boolean
 
   @Column
-  winner: boolean
+  homeWinner: boolean
 
   @Column
   isEvaluated: boolean

@@ -126,10 +126,8 @@ export default async (models) => {
         leagueId: a.bettingLeagueId,
         specialBetId: a.specialBetId,
         userId: a.userId,
-        // if(a.specialBetId === 3) {
-        seriesHomeTeam: a.seriesHomeTeam,
-        seriesAwayTeam: a.seriesAwayTeam
-        // }
+        seriesHomeTeamId: a.seriesHomeTeamId,
+        seriesAwayTeamId: a.seriesAwayTeamId
       },
       defaults: a
     }).error(err => e = err)
@@ -140,11 +138,8 @@ export default async (models) => {
       where: {
         leagueId: a.leagueId,
         specialBetId: a.specialBetId,
-        // if(a.specialBetId === 3) {
-        seriesHomeTeam: a.seriesHomeTeam,
-        seriesAwayTeam: a.seriesAwayTeam
-        // }
-
+        seriesHomeTeamId: a.seriesHomeTeamId,
+        seriesAwayTeamId: a.seriesAwayTeamId
       },
       defaults: a
     }).error(err => e = err)

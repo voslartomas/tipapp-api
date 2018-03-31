@@ -1,5 +1,84 @@
+export interface IMatch {
+  id: number,
+  leagueId: number,
+  gameNumber: number,
+  dateTime: Date,
+  homeTeamId: number,
+  awayTeamId: number,
+  homeScore: number,
+  awayScore: number,
+  overtime: boolean,
+  shotout: boolean,
+  homeWinner: boolean,
+  isEvaluated: boolean
+}
+
+export interface ILeague {
+  id: number,
+  name: string
+  sportId: number
+  isActive: boolean
+  isTheMostActive: boolean
+  seasonFrom: number
+  seasonTo: number
+  isFinished: boolean
+}
+
+export interface IMatchScorer {
+  matchId: number
+  scorerId: number
+  numberOfGoals: number
+}
+
+export interface IPlayer {
+  id: string
+  firstName: string
+  lastName: string
+  teamId: number
+  seasonFrom: number
+  seasonTo: number
+  bestScorer: boolean
+  isActive: boolean
+  seasonGames: number
+  seasonGoals: number
+  seasonAssists: number
+}
+
+export interface ISpecialBet {
+  id: number
+  key: string
+}
+
+export interface ISpecialBetResult {
+  id: number
+  leagueId: number
+  specialBetId: number
+  specialBetResult: string
+  seriesHomeTeamId: number
+  seriesAwayTeamId: number
+  seriesHomeTeamResult: number
+  seriesAwayTeamResult: number
+}
+
+export interface ISport {
+  id: number
+  czName: string
+  engName: string
+  value: string
+}
+
+export interface ITeam {
+  id: number
+  czName: string
+  engName: string
+  value: string
+  shortcut: string
+  sportId: number
+  leagueId: number
+}
+
 export interface IUser {
-  id: string,
+  id: number,
   email: string,
   firstname: string,
   lastname: string,
@@ -8,113 +87,51 @@ export interface IUser {
   createdAt: Date,
   updatedAt: Date
 }
-export interface IMatch {
-  id: string,
-  bettingLeague: string,
-  gameNumber: string,
-  dateTime: Date,
-  homeTeam: string,
-  awayTeam: string,
-  homeScore: string,
-  awayScore: string,
-  overtime: boolean,
-  shotout: boolean,
-  winner: boolean,
-  isEvaluated: boolean
-}
-export interface ILeague {
-  id: string,
-  name: string
-  sport: string
-  isActive: boolean
-  isTheMostActive: boolean
-  seasonFrom: string
-  seasonTo: string
-  isFinished: boolean
-}
-export interface IMatchScorer {
-  matchId: string
-  scorerId: string
-  numberOfGoals: string
-}
-export interface IPlayer {
-  id: string
-  firstName: string
-  lastName: string
-  team: string
-  seasonFrom: string
-  seasonTo: string
-  bestScorer: string
-  isActive: boolean
-  seasonGames: string
-  seasonGoals: string
-  seasonAssists: string
-}
-export interface ISpecialBet {
-  id: string
-  key: string
-}
-export interface ISpecialBetResult {
-  id: string
-  leagueId: string
-  specialBetId: string
-  seriesHomeTeam: string
-  seriesAwayTeam: string
-  specialBetResult: string
-}
-export interface ISport {
-  id: string
-  czName: string
-  engName: string
-  value: string
-}
-export interface ITeam {
-  id: string
-  czName: string
-  engName: string
-  value: string
-  shortcut: string
-  sport: string
-  league: string
-}
+
 export interface IUserBet {
-  id: string
-  matchId: string
-  userId: string
+  id: number
+  matchId: number
+  userId: number
   dateTime: Date
-  homeScore: string
-  awayScore: string
+  homeScore: number
+  awayScore: number
   homeWinner: boolean
-  scorer: string
+  scorerId: number
 }
+
 export interface IUserPayment {
-  id: string
-  userId: string
-  leagueId: string
+  id: number
+  userId: number
+  leagueId: number
   paid: boolean
   displayed: boolean
 }
+
 export interface IUserRequest {
-  id: string
-  userId: string
-  leagueId: string
+  id: number
+  userId: number
+  leagueId: number
   decided: boolean
   accepted: boolean
 }
+
 export interface IUserSetting {
-  id: string
+  id: number
   userId: number
   leagueId: number
   emailBetNotification: boolean
   emailRankingNotification: boolean
 }
+
 export interface IUserSpecialBet {
-  id: string
+  id: number
   specialBetId: number
   leagueId: number
   userId: number
-  seriesHomeTeam: number
-  seriesAwayTeam: number
-  specialBet: number
+  seriesHomeTeamId: number
+  seriesAwayTeamId: number
+  seriesHomeTeamBet: number
+  seriesAwayTeamBet: number
+  value: string
   dateTime: Date
 }

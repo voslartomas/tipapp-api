@@ -50,7 +50,7 @@ module.exports = {
       awayScore: 2,
       overtime: false,
       shotout: false,
-      winner: 1,
+      homeWinner: true,
       isEvaluated: true
     },
     {
@@ -63,7 +63,7 @@ module.exports = {
       awayScore: 3,
       overtime: true,
       shotout: false,
-      winner: 2,
+      homeWinner: false,
       isEvaluated: true
     },
     {
@@ -76,7 +76,7 @@ module.exports = {
       awayScore: 4,
       overtime: false,
       shotout: false,
-      winner: 1,
+      homeWinner: true,
       isEvaluated: false
     },
     {
@@ -89,7 +89,7 @@ module.exports = {
       awayScore: 5,
       overtime: false,
       shotout: true,
-      winner: 1,
+      homeWinner: true,
       isEvaluated: true
     },
     {
@@ -102,7 +102,7 @@ module.exports = {
       // awayScore: 2,
       overtime: false,
       shotout: false,
-      winner: 1,
+      homeWinner: true,
       isEvaluated: false
     },
   ],
@@ -363,51 +363,65 @@ module.exports = {
     {
       leagueId: 1,
       specialBetId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBetResult: 'PIT'
+      specialBetResult: 'PIT',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamResult: undefined,
+      seriesAwayTeamResult: undefined
     },
     {
       leagueId: 1,
       specialBetId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBetResult: 'PIT'
+      specialBetResult: 'PIT',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamResult: undefined,
+      seriesAwayTeamResult: undefined
     },
     {
       leagueId: 1,
       specialBetId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBetResult: 'CHI'
+      specialBetResult: 'CHI',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamResult: undefined,
+      seriesAwayTeamResult: undefined
     },
     {
       leagueId: 1,
       specialBetId: 4,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBetResult: '5'
+      specialBetResult: '5',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamResult: undefined,
+      seriesAwayTeamResult: undefined
     },
     {
       leagueId: 1,
       specialBetId: 5,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBetResult: '851'
+      specialBetResult: '851',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamResult: undefined,
+      seriesAwayTeamResult: undefined
     },
     {
       leagueId: 1,
       specialBetId: 3,
-      seriesHomeTeam: 1,
-      seriesAwayTeam: 2,
-      specialBetResult: '4-3'
+      specialBetResult: undefined,
+      seriesHomeTeamId: 1,
+      seriesAwayTeamId: 2,
+      seriesHomeTeamResult: 4,
+      seriesAwayTeamResult: 3
     },
     {
       leagueId: 1,
       specialBetId: 3,
-      seriesHomeTeam: 2,
-      seriesAwayTeam: 4,
-      specialBetResult: '2-4'
+      specialBetResult: undefined,
+      seriesHomeTeamId: 2,
+      seriesAwayTeamId: 4,
+      seriesHomeTeamResult: 2,
+      seriesAwayTeamResult: 4
     }
   ],
 
@@ -435,24 +449,24 @@ module.exports = {
       engName: 'Montreal Canadiens',
       value: 'montreal',
       shortcut: 'MTL',
-      sport: 2,
-      league: 1
+      sportId: 2,
+      leagueId: 1
     },
     {
       czName: 'New York Islanders',
       engName: 'New York Islanders',
       value: 'islanders',
       shortcut: 'NYI',
-      sport: 2,
-      league: 1
+      sportId: 2,
+      leagueId: 1
     },
     {
       czName: 'Pittsburgh Penguins',
       engName: 'Pittsburgh Penguins',
       value: 'pittsburgh',
       shortcut: 'PIT',
-      sport: 2,
-      league: 1
+      sportId: 2,
+      leagueId: 1
     },
     {
       name: 'Edmonton Oilers',
@@ -460,16 +474,16 @@ module.exports = {
       engName: 'Edmonton Oilers',
       value: 'edmonton',
       shortcut: 'EDM',
-      sport: 2,
-      league: 1
+      sportId: 2,
+      leagueId: 1
     },
     {
       czName: 'Brazílie',
       engName: 'Brasil',
       value: 'brasil',
       shortcut: 'BRA',
-      sport: 1,
-      league: 2
+      sportId: 1,
+      leagueId: 2
     },
     {
       czName: 'Argentina',
@@ -484,16 +498,16 @@ module.exports = {
       engName: 'Germany',
       value: 'germany',
       shortcut: 'GER',
-      sport: 1,
-      league: 2
+      sportId: 1,
+      leagueId: 2
     },
     {
       czName: 'Pobřeží Slonoviny',
       engName: "Côte d'Ivoire",
       value: 'coteDIvoire',
       shortcut: 'CIV',
-      sport: 1,
-      league: 2
+      sportId: 1,
+      leagueId: 2
     }
   ],
 
@@ -556,7 +570,7 @@ module.exports = {
       homeScore: 5,
       awayScore: 1,
       homeWinner: true,
-      scorer: 1,
+      scorerId: 1,
     },
     {
       matchId: 2,
@@ -565,7 +579,7 @@ module.exports = {
       homeScore: 3,
       awayScore: 3,
       homeWinner: true,
-      scorer: 2,
+      scorerId: 2,
     },
     {
       matchId: 3,
@@ -574,7 +588,7 @@ module.exports = {
       homeScore: 2,
       awayScore: 3,
       homeWinner: false,
-      scorer: 6,
+      scorerId: 6,
     },
     {
       matchId: 4,
@@ -583,7 +597,7 @@ module.exports = {
       homeScore: 5,
       awayScore: 2,
       homeWinner: true,
-      scorer: 7,
+      scorerId: 7,
     },
     {
       matchId: 5,
@@ -592,7 +606,7 @@ module.exports = {
       homeScore: 2,
       awayScore: 3,
       homeWinner: false,
-      scorer: 8,
+      scorerId: 8,
     },
 
     {
@@ -602,7 +616,7 @@ module.exports = {
       homeScore: 5,
       awayScore: 1,
       homeWinner: true,
-      scorer: 1,
+      scorerId: 1,
     },
     {
       matchId: 2,
@@ -611,7 +625,7 @@ module.exports = {
       homeScore: 2,
       awayScore: 2,
       homeWinner: true,
-      scorer: 2,
+      scorerId: 2,
     },
     {
       matchId: 3,
@@ -620,7 +634,7 @@ module.exports = {
       homeScore: 2,
       awayScore: 1,
       homeWinner: true,
-      scorer: 6,
+      scorerId: 6,
     },
     {
       matchId: 4,
@@ -629,7 +643,7 @@ module.exports = {
       homeScore: 5,
       awayScore: 5,
       homeWinner: true,
-      scorer: 7,
+      scorerId: 7,
     },
     {
       matchId: 5,
@@ -638,7 +652,7 @@ module.exports = {
       homeScore: 2,
       awayScore: 4,
       homeWinner: false,
-      scorer: 8,
+      scorerId: 8,
     }
 
   ],
@@ -777,63 +791,77 @@ module.exports = {
       specialBetId: 1,
       leagueId: 1,
       userId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'PIT',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamBet: undefined,
+      seriesAwayTeamBet: undefined,
+      value: 'PIT',
       dateTime: '2018-02-03 04:05:02'
     },
     {
       specialBetId: 2,
       leagueId: 1,
       userId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'PIT',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamBet: undefined,
+      seriesAwayTeamBet: undefined,
+      value: 'PIT',
       dateTime: '2018-02-03 04:05:02'
     },
     {
       specialBetId: 2,
       leagueId: 1,
       userId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'VAN',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamBet: undefined,
+      seriesAwayTeamBet: undefined,
+      value: 'VAN',
       dateTime: '2018-02-03 07:05:02'
     },
     {
       specialBetId: 4,
       leagueId: 1,
       userId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: '6',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamBet: undefined,
+      seriesAwayTeamBet: undefined,
+      value: '6',
       dateTime: '2018-02-03 06:05:02'
     },
     {
       specialBetId: 5,
       leagueId: 1,
       userId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: '683',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamBet: undefined,
+      seriesAwayTeamBet: undefined,
+      value: '683',
       dateTime: '2018-02-03 05:05:02'
     },
     {
       specialBetId: 3,
       leagueId: 1,
       userId: 1,
-      seriesHomeTeam: 1,
-      seriesAwayTeam: 2,
-      specialBet: '4-3',
+      seriesHomeTeamId: 1,
+      seriesAwayTeamId: 2,
+      seriesHomeTeamBet: 4,
+      seriesAwayTeamBet: 3,
+      value: undefined,
       dateTime: '2018-02-03 05:05:02'
     },
     {
       specialBetId: 3,
       leagueId: 1,
       userId: 1,
-      seriesHomeTeam: 2,
-      seriesAwayTeam: 4,
-      specialBet: '4-1',
+      seriesHomeTeamId: 2,
+      seriesAwayTeamId: 4,
+      seriesHomeTeamBet: 4,
+      seriesAwayTeamBet: 1,
+      value: undefined,
       dateTime: '2018-02-03 05:05:02'
     },
 
@@ -841,63 +869,77 @@ module.exports = {
       specialBetId: 1,
       leagueId: 1,
       userId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'CHI',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamBet: undefined,
+      seriesAwayTeamBet: undefined,
+      value: 'CHI',
       dateTime: '2018-02-03 04:05:02'
     },
     {
       specialBetId: 2,
       leagueId: 1,
       userId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'PIT',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamBet: undefined,
+      seriesAwayTeamBet: undefined,
+      value: 'PIT',
       dateTime: '2018-02-03 04:05:02'
     },
     {
       specialBetId: 2,
       leagueId: 1,
       userId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'CHI',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamBet: undefined,
+      seriesAwayTeamBet: undefined,
+      value: 'CHI',
       dateTime: '2018-02-03 07:06:02'
     },
     {
       specialBetId: 4,
       leagueId: 1,
       userId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: '1',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamBet: undefined,
+      seriesAwayTeamBet: undefined,
+      value: '1',
       dateTime: '2018-02-03 06:15:02'
     },
     {
       specialBetId: 5,
       leagueId: 1,
       userId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: '777',
+      seriesHomeTeamId: undefined,
+      seriesAwayTeamId: undefined,
+      seriesHomeTeamBet: undefined,
+      seriesAwayTeamBet: undefined,
+      value: '777',
       dateTime: '2018-02-04 05:05:02'
     },
     {
       specialBetId: 3,
       leagueId: 1,
       userId: 2,
-      seriesHomeTeam: 1,
-      seriesAwayTeam: 2,
-      specialBet: '1-4',
+      seriesHomeTeamId: 1,
+      seriesAwayTeamId: 2,
+      seriesHomeTeamBet: 1,
+      seriesAwayTeamBet: 4,
+      value: undefined,
       dateTime: '2018-02-03 05:05:03'
     },
     {
       specialBetId: 3,
       leagueId: 1,
       userId: 2,
-      seriesHomeTeam: 2,
-      seriesAwayTeam: 4,
-      specialBet: '4-3',
+      seriesHomeTeamId: 2,
+      seriesAwayTeamId: 4,
+      seriesHomeTeamBet: 4,
+      seriesAwayTeamBet: 3,
+      value: undefined,
       dateTime: '2018-02-04 05:05:02'
     }
 
