@@ -1,3 +1,14 @@
+export interface ILeague {
+  id: number,
+  name: string
+  sportId: number
+  isActive: boolean
+  isTheMostActive: boolean
+  seasonFrom: number
+  seasonTo: number
+  isFinished: boolean
+}
+
 export interface IMatch {
   id: number,
   leagueId: number,
@@ -11,17 +22,6 @@ export interface IMatch {
   shotout: boolean,
   homeWinner: boolean,
   isEvaluated: boolean
-}
-
-export interface ILeague {
-  id: number,
-  name: string
-  sportId: number
-  isActive: boolean
-  isTheMostActive: boolean
-  seasonFrom: number
-  seasonTo: number
-  isFinished: boolean
 }
 
 export interface IMatchScorer {
