@@ -56,9 +56,9 @@
       "groupWinner": 12,
       "semifinalist": 16,
       "finalist": 20,
-      "winner": 25,
-      "bestScorer": 25,
-      "bestPlayer": 25,
+      "tournamentWinner": 25,
+      "tournamentBestScorer": 25,
+      "tournamentBestPlayer": 25,
       "totalExactGoals": 30,
       "totalGoals": 15
     }
