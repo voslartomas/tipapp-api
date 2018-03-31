@@ -154,7 +154,7 @@ module.exports = {
     {
       firstName: 'Tomáš',
       lastName: 'Plekanec',
-      team: 1,
+      teamId: 1,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -166,7 +166,7 @@ module.exports = {
     {
       firstName: 'Brendan',
       lastName: 'Gallagher',
-      team: 1,
+      teamId: 1,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -178,7 +178,7 @@ module.exports = {
     {
       firstName: 'John',
       lastName: 'Tavares',
-      team: 2,
+      teamId: 2,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -190,7 +190,7 @@ module.exports = {
     {
       firstName: 'Brook',
       lastName: 'Nelson',
-      team: 2,
+      teamId: 2,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -202,7 +202,7 @@ module.exports = {
     {
       firstName: 'Sidney',
       lastName: 'Crosby',
-      team: 3,
+      teamId: 3,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -214,7 +214,7 @@ module.exports = {
     {
       firstName: 'Jevgenij',
       lastName: 'Malkin',
-      team: 3,
+      teamId: 3,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -226,7 +226,7 @@ module.exports = {
     {
       firstName: 'Connor',
       lastName: 'McDavid',
-      team: 4,
+      teamId: 4,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -238,7 +238,7 @@ module.exports = {
     {
       firstName: 'Milan',
       lastName: 'Lucic',
-      team: 4,
+      teamId: 4,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -250,7 +250,7 @@ module.exports = {
     {
       firstName: 'Neymar',
       lastName: '',
-      team: 5,
+      teamId: 5,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -261,7 +261,7 @@ module.exports = {
     {
       firstName: 'Ezequiel',
       lastName: 'Garay',
-      team: 6,
+      teamId: 6,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -272,7 +272,7 @@ module.exports = {
     {
       firstName: 'Thomas',
       lastName: 'Müller',
-      team: 7,
+      teamId: 7,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -283,7 +283,7 @@ module.exports = {
     {
       firstName: 'Didier',
       lastName: 'Drogba',
-      team: 8,
+      teamId: 8,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
