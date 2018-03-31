@@ -436,7 +436,7 @@ module.exports = {
       value: 'montreal',
       shortcut: 'MTL',
       sport: 2,
-      league: 'NHL'
+      league: 1
     },
     {
       czName: 'New York Islanders',
@@ -444,7 +444,7 @@ module.exports = {
       value: 'islanders',
       shortcut: 'NYI',
       sport: 2,
-      league: 'NHL'
+      league: 1
     },
     {
       czName: 'Pittsburgh Penguins',
@@ -452,7 +452,7 @@ module.exports = {
       value: 'pittsburgh',
       shortcut: 'PIT',
       sport: 2,
-      league: 'NHL'
+      league: 1
     },
     {
       name: 'Edmonton Oilers',
@@ -461,7 +461,7 @@ module.exports = {
       value: 'edmonton',
       shortcut: 'EDM',
       sport: 2,
-      league: 'NHL'
+      league: 1
     },
     {
       czName: 'Brazílie',
@@ -469,7 +469,7 @@ module.exports = {
       value: 'brasil',
       shortcut: 'BRA',
       sport: 1,
-      league: 'WCF'
+      league: 2
     },
     {
       czName: 'Argentina',
@@ -477,7 +477,7 @@ module.exports = {
       value: 'argentina',
       shortcut: 'ARG',
       sport: 1,
-      league: 'WCF'
+      league: 2
     },
     {
       czName: 'Německo',
@@ -485,7 +485,7 @@ module.exports = {
       value: 'germany',
       shortcut: 'GER',
       sport: 1,
-      league: 'WCF'
+      league: 2
     },
     {
       czName: 'Pobřeží Slonoviny',
@@ -493,7 +493,7 @@ module.exports = {
       value: 'coteDIvoire',
       shortcut: 'CIV',
       sport: 1,
-      league: 'WCF'
+      league: 2
     }
   ],
 

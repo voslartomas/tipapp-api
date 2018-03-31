@@ -13,11 +13,23 @@ export default async (models) => {
     }).error(err => e = err)
   }
 
+  for (const a of data.BettingLeagues) {
+    await models.League.findOrCreate({
+      where: { name: a.name,
+        sportId: a.sport,
+        seasonTo: a.seasonTo,
+        seasonFrom: a.seasonFrom
+      },
+      defaults: a
+    }).error(err => e = err)
+  }
+
   for (const a of data.Teams) {
     await models.Team.findOrCreate({
       where: { czName: a.czName,
         value: a.value,
-        league: a.league
+        leagueId: a.league,
+        sportId: a.sport
       },
       defaults: a
     }).error(err => e = err)
@@ -28,17 +40,6 @@ export default async (models) => {
       where: { firstName: a.firstName,
         lastName: a.lastName,
         teamId: a.teamId,
-        seasonTo: a.seasonTo,
-        seasonFrom: a.seasonFrom
-      },
-      defaults: a
-    }).error(err => e = err)
-  }
-
-  for (const a of data.BettingLeagues) {
-    await models.League.findOrCreate({
-      where: { name: a.name,
-        sportId: a.sport,
         seasonTo: a.seasonTo,
         seasonFrom: a.seasonFrom
       },
