@@ -27,7 +27,7 @@ export default async (models) => {
     await models.Player.findOrCreate({
       where: { firstName: a.firstName,
         lastName: a.lastName,
-        team: a.team,
+        teamId: a.teamId,
         seasonTo: a.seasonTo,
         seasonFrom: a.seasonFrom
       },
@@ -136,7 +136,7 @@ export default async (models) => {
   for (const a of data.SpecialBetsResults) {
     await models.SpecialBetResult.findOrCreate({
       where: {
-        bettingLeagueId: a.bettingLeagueId,
+        leagueId: a.leagueId,
         specialBetId: a.specialBetId,
         // if(a.specialBetId === 3) {
         seriesHomeTeam: a.seriesHomeTeam,
