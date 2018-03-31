@@ -361,49 +361,49 @@ module.exports = {
 
   SpecialBetsResults: [
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
       specialBetResult: 'PIT'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
       specialBetResult: 'PIT'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
       specialBetResult: 'CHI'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 4,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
       specialBetResult: '5'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 5,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
       specialBetResult: '851'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 3,
       seriesHomeTeam: 1,
       seriesAwayTeam: 2,
       specialBetResult: '4-3'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 3,
       seriesHomeTeam: 2,
       seriesAwayTeam: 4,
