@@ -9,6 +9,7 @@ import routes from './routes'
 import { Sequelize } from 'sequelize-typescript'
 import loggerMiddleware from './middlewares/logger'
 import Database from './services/database'
+import JWTPassport from './security/passport'
 
 export class Server {
 
@@ -20,10 +21,17 @@ export class Server {
   @Inject
   private database: Database
 
+  @Inject
+  private jwtPassport: JWTPassport
+
   constructor() {
     this.app = express()
     this.logger = undefined
     this.config()
+
+    this.app.get('*', (req, res, next) => {
+      this.jwtPassport.getPassport().authenticate('jwt', { session: false })(req, res, next)
+    })
 
     RestServer.buildServices(this.app, ...routes)
 
@@ -31,9 +39,7 @@ export class Server {
       RestServer.swagger(this.app, `${config.get('swagger.config_path')}`, '/api-docs', `localhost:${config.get('port')}`, ['http'])
     }
 
-    this.database.sync().then(() => {
-
-    }).catch((e) => {
+    this.database.sync().then(() => {}).catch((e) => {
       console.error(e)
     })
   }
@@ -47,6 +53,7 @@ export class Server {
    */
   private config(): void {
     this.app.use(loggerMiddleware(this.logger))
+    this.app.use(this.jwtPassport.getPassport().initialize())
   }
 
   /**

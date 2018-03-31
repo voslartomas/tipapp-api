@@ -1,15 +1,24 @@
 import { Path, POST, FormParam } from 'typescript-rest'
+import { Inject } from 'typescript-ioc'
+const jwt = require('jsonwebtoken')
+import Database from '../services/database'
 
 @Path('/')
 export class LoginController {
+  @Inject
+  private database: Database
+
   @Path('/login')
   @POST
   /**
-   * @param  {string}  username Username
-   * @param  {string}  password User's password
-   * @return {string}           Generated jwt token
+   * @param  {string}  user Username
+   * @return {string}       Generated jwt token
    */
-  login(@FormParam('username') username: string, @FormParam('password') password: string): string {
+  async login(user: any): Promise<string> {
+    console.log(user)
+
+    const dbUser = await this.database.models.User.findOne({ where: {username: user.username} })
+    console.log(dbUser)
     return 'pong'
   }
 

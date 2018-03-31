@@ -629,22 +629,17 @@
 				},
 				"description": "",
 				"consumes": [
-					"application/x-www-form-urlencoded"
+					"application/json"
 				],
 				"parameters": [
 					{
 						"description": "",
-						"in": "formData",
-						"name": "username",
+						"in": "body",
+						"name": "user",
 						"required": true,
-						"type": "string"
-					},
-					{
-						"description": "",
-						"in": "formData",
-						"name": "password",
-						"required": true,
-						"type": "string"
+						"schema": {
+							"type": "object"
+						}
 					}
 				]
 			}
