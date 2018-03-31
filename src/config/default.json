@@ -22,6 +22,7 @@
         "idle": 10000
       }
   },
+  "security": true,
   "points": {
     "hockey": {
       "matchWinner": 4,

@@ -1,6 +1,6 @@
 {
   "logging": {
-    "level": "fatal"
+    "level": "error"
   },
   "port": 7301,
   "swagger": {
@@ -10,5 +10,6 @@
       "storage": "test-db.sqlite",
       "databaseName": "test-db.sqlite",
       "modelPath": "/../models/*.model.ts"
-  }
+  },
+  "security": false
 }

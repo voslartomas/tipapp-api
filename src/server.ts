@@ -29,9 +29,27 @@ export class Server {
     this.logger = undefined
     this.config()
 
-    this.app.get('*', (req, res, next) => {
-      this.jwtPassport.getPassport().authenticate('jwt', { session: false })(req, res, next)
-    })
+    if (config.get('security')) {
+      this.app.get('*', (req, res, next) => {
+        this.jwtPassport.getPassport().authenticate('jwt', { session: false })(req, res, next)
+      })
+
+      this.app.post('*', (req, res, next) => {
+        if (req.originalUrl === '/login') {
+          return next()
+        }
+
+        this.jwtPassport.getPassport().authenticate('jwt', { session: false })(req, res, next)
+      })
+
+      this.app.put('*', (req, res, next) => {
+        this.jwtPassport.getPassport().authenticate('jwt', { session: false })(req, res, next)
+      })
+
+      this.app.delete('*', (req, res, next) => {
+        this.jwtPassport.getPassport().authenticate('jwt', { session: false })(req, res, next)
+      })
+    }
 
     RestServer.buildServices(this.app, ...routes)
 

@@ -7,17 +7,19 @@ import Database from '../services/database'
 export default class JWTPassport {
   private passport
 
+  private jwtOptions: any = {}
+
   @Inject
   private database: Database
 
   constructor() {
     const ExtractJwt = passportJWT.ExtractJwt
     const JwtStrategy = passportJWT.Strategy
-    const jwtOptions = {}
-    jwtOptions['jwtFromRequest'] = ExtractJwt.fromAuthHeaderAsBearerToken()
-    jwtOptions['secretOrKey'] = 'tipapp-fjroeko45872mci485,fj'
 
-    const strategy = new JwtStrategy(jwtOptions, async (jwt_payload, next) => {
+    this.jwtOptions['jwtFromRequest'] = ExtractJwt.fromAuthHeaderAsBearerToken()
+    this.jwtOptions['secretOrKey'] = 'tipapp-fjroeko45872mci485,fj'
+
+    const strategy = new JwtStrategy(this.jwtOptions, async (jwt_payload, next) => {
       const user = await this.database.models.User.findById(jwt_payload.id)
       if (user) {
         next(undefined, user)
@@ -34,6 +36,10 @@ export default class JWTPassport {
       const user = await this.database.models.User.findById(id)
       user ? done(undefined, user.get()) : done(user.errors, undefined)
     })
+  }
+
+  getJwtOptions(): any {
+    return this.jwtOptions
   }
 
   getPassport(): any {
