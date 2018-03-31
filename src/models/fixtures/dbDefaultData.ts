@@ -3,7 +3,7 @@ module.exports = {
   BettingLeagues: [
     {
       name: 'Stanley Cup 2018',
-      sport: 2,
+      sportId: 2,
       isActive: true,
       isTheMostActive: true,
       seasonFrom: 2017,
@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       name: 'MS Hokej Dánsko 2018',
-      sport: 2,
+      sportId: 2,
       isActive: true,
       isTheMostActive: false,
       seasonFrom: 2017,
@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       name: 'MS Fotbal Rusko 2018',
-      sport: 1,
+      sportId: 1,
       isActive: true,
       isTheMostActive: false,
       seasonFrom: 2017,
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       name: 'ME Chorvatsko 2018',
-      sport: 3,
+      sportId: 3,
       isActive: true,
       isTheMostActive: false,
       seasonFrom: 2017,
@@ -41,11 +41,11 @@ module.exports = {
 
   Matches: [
     {
-      bettingLeague: 1,
+      leagueId: 1,
       gameNumber: 1,
       dateTime: '2017-11-29 20:00:00',
-      homeTeam: 1,
-      awayTeam: 2,
+      homeTeamId: 1,
+      awayTeamId: 2,
       homeScore: 5,
       awayScore: 2,
       overtime: false,
@@ -54,11 +54,11 @@ module.exports = {
       isEvaluated: true
     },
     {
-      bettingLeague: 1,
+      leagueId: 1,
       // gameNumber: 2,
       dateTime: '2017-11-29 21:00:00',
-      homeTeam: 3,
-      awayTeam: 4,
+      homeTeamId: 3,
+      awayTeamId: 4,
       homeScore: 3,
       awayScore: 3,
       overtime: true,
@@ -67,11 +67,11 @@ module.exports = {
       isEvaluated: true
     },
     {
-      bettingLeague: 1,
+      leagueId: 1,
       // gameNumber: 3,
       dateTime: '2017-12-29 20:00:00',
-      homeTeam: 1,
-      awayTeam: 3,
+      homeTeamId: 1,
+      awayTeamId: 3,
       homeScore: 2,
       awayScore: 4,
       overtime: false,
@@ -80,11 +80,11 @@ module.exports = {
       isEvaluated: false
     },
     {
-      bettingLeague: 1,
+      leagueId: 1,
       // gameNumber: 3,
       dateTime: '2017-12-29 20:00:00',
-      homeTeam: 2,
-      awayTeam: 4,
+      homeTeamId: 2,
+      awayTeamId: 4,
       homeScore: 5,
       awayScore: 5,
       overtime: false,
@@ -93,11 +93,11 @@ module.exports = {
       isEvaluated: true
     },
     {
-      bettingLeague: 1,
+      leagueId: 1,
       // gameNumber: 3,
       dateTime: '2017-12-30 20:00:00',
-      homeTeam: 1,
-      awayTeam: 4,
+      homeTeamId: 1,
+      awayTeamId: 4,
       // homeScore: 5,
       // awayScore: 2,
       overtime: false,
@@ -154,7 +154,7 @@ module.exports = {
     {
       firstName: 'Tomáš',
       lastName: 'Plekanec',
-      team: 1,
+      teamId: 1,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -166,7 +166,7 @@ module.exports = {
     {
       firstName: 'Brendan',
       lastName: 'Gallagher',
-      team: 1,
+      teamId: 1,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -178,7 +178,7 @@ module.exports = {
     {
       firstName: 'John',
       lastName: 'Tavares',
-      team: 2,
+      teamId: 2,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -190,7 +190,7 @@ module.exports = {
     {
       firstName: 'Brook',
       lastName: 'Nelson',
-      team: 2,
+      teamId: 2,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -202,7 +202,7 @@ module.exports = {
     {
       firstName: 'Sidney',
       lastName: 'Crosby',
-      team: 3,
+      teamId: 3,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -214,7 +214,7 @@ module.exports = {
     {
       firstName: 'Jevgenij',
       lastName: 'Malkin',
-      team: 3,
+      teamId: 3,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -226,7 +226,7 @@ module.exports = {
     {
       firstName: 'Connor',
       lastName: 'McDavid',
-      team: 4,
+      teamId: 4,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -238,7 +238,7 @@ module.exports = {
     {
       firstName: 'Milan',
       lastName: 'Lucic',
-      team: 4,
+      teamId: 4,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -250,7 +250,7 @@ module.exports = {
     {
       firstName: 'Neymar',
       lastName: '',
-      team: 5,
+      teamId: 5,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -261,7 +261,7 @@ module.exports = {
     {
       firstName: 'Ezequiel',
       lastName: 'Garay',
-      team: 6,
+      teamId: 6,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: false,
@@ -272,7 +272,7 @@ module.exports = {
     {
       firstName: 'Thomas',
       lastName: 'Müller',
-      team: 7,
+      teamId: 7,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -283,7 +283,7 @@ module.exports = {
     {
       firstName: 'Didier',
       lastName: 'Drogba',
-      team: 8,
+      teamId: 8,
       seasonFrom: 2017,
       seasonTo: 2018,
       bestScorer: true,
@@ -361,49 +361,49 @@ module.exports = {
 
   SpecialBetsResults: [
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
       specialBetResult: 'PIT'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
       specialBetResult: 'PIT'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
       specialBetResult: 'CHI'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 4,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
       specialBetResult: '5'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 5,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
       specialBetResult: '851'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 3,
       seriesHomeTeam: 1,
       seriesAwayTeam: 2,
       specialBetResult: '4-3'
     },
     {
-      bettingLeagueId: 1,
+      leagueId: 1,
       specialBetId: 3,
       seriesHomeTeam: 2,
       seriesAwayTeam: 4,
@@ -436,7 +436,7 @@ module.exports = {
       value: 'montreal',
       shortcut: 'MTL',
       sport: 2,
-      league: 'NHL'
+      league: 1
     },
     {
       czName: 'New York Islanders',
@@ -444,7 +444,7 @@ module.exports = {
       value: 'islanders',
       shortcut: 'NYI',
       sport: 2,
-      league: 'NHL'
+      league: 1
     },
     {
       czName: 'Pittsburgh Penguins',
@@ -452,7 +452,7 @@ module.exports = {
       value: 'pittsburgh',
       shortcut: 'PIT',
       sport: 2,
-      league: 'NHL'
+      league: 1
     },
     {
       name: 'Edmonton Oilers',
@@ -461,7 +461,7 @@ module.exports = {
       value: 'edmonton',
       shortcut: 'EDM',
       sport: 2,
-      league: 'NHL'
+      league: 1
     },
     {
       czName: 'Brazílie',
@@ -469,7 +469,7 @@ module.exports = {
       value: 'brasil',
       shortcut: 'BRA',
       sport: 1,
-      league: 'WCF'
+      league: 2
     },
     {
       czName: 'Argentina',
@@ -477,7 +477,7 @@ module.exports = {
       value: 'argentina',
       shortcut: 'ARG',
       sport: 1,
-      league: 'WCF'
+      league: 2
     },
     {
       czName: 'Německo',
@@ -485,7 +485,7 @@ module.exports = {
       value: 'germany',
       shortcut: 'GER',
       sport: 1,
-      league: 'WCF'
+      league: 2
     },
     {
       czName: 'Pobřeží Slonoviny',
@@ -493,7 +493,7 @@ module.exports = {
       value: 'coteDIvoire',
       shortcut: 'CIV',
       sport: 1,
-      league: 'WCF'
+      league: 2
     }
   ],
 
@@ -646,49 +646,49 @@ module.exports = {
   UserPayments: [
     {
       userId: 1,
-      bettingLeagueId: 1,
+      leagueId: 1,
       paid: true,
       displayed: true
     },
     {
       userId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       paid: true,
       displayed: true
     },
     {
       userId: 3,
-      bettingLeagueId: 1,
+      leagueId: 1,
       paid: false,
       displayed: true
     },
     {
       userId: 4,
-      bettingLeagueId: 1,
+      leagueId: 1,
       paid: false,
       displayed: true
     },
     {
       userId: 1,
-      bettingLeagueId: 2,
+      leagueId: 2,
       paid: true,
       displayed: true
     },
     {
       userId: 2,
-      bettingLeagueId: 2,
+      leagueId: 2,
       paid: false,
       displayed: true
     },
     {
       userId: 3,
-      bettingLeagueId: 3,
+      leagueId: 3,
       paid: true,
       displayed: false
     },
     {
       userId: 4,
-      bettingLeagueId: 3,
+      leagueId: 3,
       paid: false,
       displayed: false
     }
@@ -697,49 +697,49 @@ module.exports = {
   UserRequests: [
     {
      userId: '1',
-     bettingLeagueId: '1',
+     leagueId: '1',
      decided: false,
      accepted: false
     },
     {
       userId: '2',
-      bettingLeagueId: '1',
+      leagueId: '1',
       decided: true,
       accepted: true
     },
     {
       userId: '3',
-      bettingLeagueId: '1',
+      leagueId: '1',
       decided: true,
       accepted: false
     },
     {
       userId: '4',
-      bettingLeagueId: '1',
+      leagueId: '1',
       decided: false,
       accepted: false
     },
     {
       userId: '1',
-      bettingLeagueId: '3',
+      leagueId: '3',
       decided: false,
       accepted: false
     },
     {
       userId: '2',
-      bettingLeagueId: '3',
+      leagueId: '3',
       decided: true,
       accepted: true
     },
     {
       userId: '3',
-      bettingLeagueId: '3',
+      leagueId: '3',
       decided: true,
       accepted: false
     },
     {
       userId: '4',
-      bettingLeagueId: '3',
+      leagueId: '3',
       decided: false,
       accepted: false
     }
@@ -748,25 +748,25 @@ module.exports = {
   UserSettings: [
     {
       userId: 1,
-      bettingLeagueId: 1,
+      leagueId: 1,
       emailBetNotification: true,
       emailRankingNotification: true
     },
     {
       userId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       emailBetNotification: true,
       emailRankingNotification: false
     },
     {
       userId: 3,
-      bettingLeagueId: 2,
+      leagueId: 2,
       emailBetNotification: false,
       emailRankingNotification: false
     },
     {
       userId: 4,
-      bettingLeagueId: 2,
+      leagueId: 2,
       emailBetNotification: false,
       emailRankingNotification: true
     },
@@ -775,7 +775,7 @@ module.exports = {
   UserSpecialBets: [
     {
       specialBetId: 1,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -784,7 +784,7 @@ module.exports = {
     },
     {
       specialBetId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -793,7 +793,7 @@ module.exports = {
     },
     {
       specialBetId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -802,7 +802,7 @@ module.exports = {
     },
     {
       specialBetId: 4,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -811,7 +811,7 @@ module.exports = {
     },
     {
       specialBetId: 5,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -820,7 +820,7 @@ module.exports = {
     },
     {
       specialBetId: 3,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: 1,
       seriesAwayTeam: 2,
@@ -829,7 +829,7 @@ module.exports = {
     },
     {
       specialBetId: 3,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: 2,
       seriesAwayTeam: 4,
@@ -839,7 +839,7 @@ module.exports = {
 
     {
       specialBetId: 1,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -848,7 +848,7 @@ module.exports = {
     },
     {
       specialBetId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -857,7 +857,7 @@ module.exports = {
     },
     {
       specialBetId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -866,7 +866,7 @@ module.exports = {
     },
     {
       specialBetId: 4,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -875,7 +875,7 @@ module.exports = {
     },
     {
       specialBetId: 5,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -884,7 +884,7 @@ module.exports = {
     },
     {
       specialBetId: 3,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: 1,
       seriesAwayTeam: 2,
@@ -893,7 +893,7 @@ module.exports = {
     },
     {
       specialBetId: 3,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: 2,
       seriesAwayTeam: 4,

@@ -1,4 +1,5 @@
-import { Table, Column, Model, PrimaryKey } from 'sequelize-typescript'
+import { Table, Column, Model, PrimaryKey, BelongsTo, ForeignKey } from 'sequelize-typescript'
+import Team from './team.model'
 
 @Table({
   timestamps: true,
@@ -11,7 +12,11 @@ export default class Player extends Model<Player> {
   lastName: string
 
   @Column
-  team: number
+  @ForeignKey(() => Team)
+  teamId: number
+
+  @BelongsTo(() => Team)
+  team: Team
 
   @Column
   seasonFrom: number

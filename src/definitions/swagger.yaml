@@ -215,7 +215,7 @@ definitions:
             id:
                 type: string
                 description: ""
-            bettingLeagueId:
+            leagueId:
                 type: string
                 description: ""
             specialBetId:
@@ -233,7 +233,7 @@ definitions:
         type: object
         required:
             - id
-            - bettingLeagueId
+            - leagueId
             - specialBetId
             - seriesHomeTeam
             - seriesAwayTeam
@@ -339,7 +339,7 @@ definitions:
             userId:
                 type: string
                 description: ""
-            bettingLeagueId:
+            leagueId:
                 type: string
                 description: ""
             paid:
@@ -352,7 +352,7 @@ definitions:
         required:
             - id
             - userId
-            - bettingLeagueId
+            - leagueId
             - paid
             - displayed
     IUserRequest:
@@ -364,7 +364,7 @@ definitions:
             userId:
                 type: string
                 description: ""
-            bettingLeagueId:
+            leagueId:
                 type: string
                 description: ""
             decided:
@@ -377,7 +377,7 @@ definitions:
         required:
             - id
             - userId
-            - bettingLeagueId
+            - leagueId
             - decided
             - accepted
     IUserSetting:
@@ -390,7 +390,7 @@ definitions:
                 type: number
                 format: double
                 description: ""
-            bettingLeagueId:
+            leagueId:
                 type: number
                 format: double
                 description: ""
@@ -404,7 +404,7 @@ definitions:
         required:
             - id
             - userId
-            - bettingLeagueId
+            - leagueId
             - emailBetNotification
             - emailRankingNotification
     IUserSpecialBet:
@@ -417,7 +417,7 @@ definitions:
                 type: number
                 format: double
                 description: ""
-            bettingLeagueId:
+            leagueId:
                 type: number
                 format: double
                 description: ""
@@ -445,7 +445,7 @@ definitions:
         required:
             - id
             - specialBetId
-            - bettingLeagueId
+            - leagueId
             - userId
             - seriesHomeTeam
             - seriesAwayTeam

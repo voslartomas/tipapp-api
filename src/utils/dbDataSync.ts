@@ -13,11 +13,23 @@ export default async (models) => {
     }).error(err => e = err)
   }
 
+  for (const a of data.BettingLeagues) {
+    await models.League.findOrCreate({
+      where: { name: a.name,
+        sportId: a.sport,
+        seasonTo: a.seasonTo,
+        seasonFrom: a.seasonFrom
+      },
+      defaults: a
+    }).error(err => e = err)
+  }
+
   for (const a of data.Teams) {
     await models.Team.findOrCreate({
       where: { czName: a.czName,
         value: a.value,
-        league: a.league
+        leagueId: a.league,
+        sportId: a.sport
       },
       defaults: a
     }).error(err => e = err)
@@ -27,7 +39,7 @@ export default async (models) => {
     await models.Player.findOrCreate({
       where: { firstName: a.firstName,
         lastName: a.lastName,
-        team: a.team,
+        teamId: a.teamId,
         seasonTo: a.seasonTo,
         seasonFrom: a.seasonFrom
       },
@@ -51,17 +63,6 @@ export default async (models) => {
     }).error(err => e = err)
   }
 
-  for (const a of data.BettingLeagues) {
-    await models.League.findOrCreate({
-      where: { name: a.name,
-        sport: a.sport,
-        seasonTo: a.seasonTo,
-        seasonFrom: a.seasonFrom
-      },
-      defaults: a
-    }).error(err => e = err)
-  }
-
   for (const a of data.SpecialBets) {
     await models.SpecialBet.findOrCreate({
       where: { key: a.key },
@@ -73,7 +74,7 @@ export default async (models) => {
     await models.UserPayment.findOrCreate({
       where: {
         userId: a.userId,
-        bettingLeagueId: a.bettingLeagueId
+        leagueId: a.leagueId
       },
       defaults: a
     }).error(err => e = err)
@@ -83,7 +84,7 @@ export default async (models) => {
     await models.UserRequest.findOrCreate({
       where: {
         userId: a.userId,
-        bettingLeagueId: a.bettingLeagueId
+        leagueId: a.bettingLeagueId
       },
       defaults: a
     }).error(err => e = err)
@@ -93,7 +94,7 @@ export default async (models) => {
     await models.UserSetting.findOrCreate({
       where: {
         userId: a.userId,
-        bettingLeagueId: a.bettingLeagueId
+        leagueId: a.bettingLeagueId
       },
       defaults: a
     }).error(err => e = err)
@@ -122,7 +123,7 @@ export default async (models) => {
   for (const a of data.UserSpecialBets) {
     await models.UserSpecialBet.findOrCreate({
       where: {
-        bettingLeagueId: a.bettingLeagueId,
+        leagueId: a.bettingLeagueId,
         specialBetId: a.specialBetId,
         userId: a.userId,
         // if(a.specialBetId === 3) {
@@ -137,7 +138,7 @@ export default async (models) => {
   for (const a of data.SpecialBetsResults) {
     await models.SpecialBetResult.findOrCreate({
       where: {
-        bettingLeagueId: a.bettingLeagueId,
+        leagueId: a.leagueId,
         specialBetId: a.specialBetId,
         // if(a.specialBetId === 3) {
         seriesHomeTeam: a.seriesHomeTeam,
