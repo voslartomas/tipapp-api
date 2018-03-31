@@ -8,7 +8,7 @@ export default class UserSpecialBet extends Model<UserSpecialBet> {
   specialBetId: number
 
   @Column
-  bettingLeagueId: number
+  leagueId: number
 
   @Column
   userId: number

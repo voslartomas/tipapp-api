@@ -8,7 +8,7 @@ export default class UserSetting extends Model<UserSetting> {
   userId: number
 
   @Column
-  bettingLeagueId: number
+  leagueId: number
 
   @Column
   emailBetNotification: boolean

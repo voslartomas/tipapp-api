@@ -8,7 +8,7 @@ export default class UserRequest extends Model<UserRequest> {
   userId: number
 
   @Column
-  bettingLeagueId: number
+  leagueId: number
 
   @Column
   decided: boolean

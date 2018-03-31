@@ -56,7 +56,7 @@ export interface ISpecialBet {
 }
 export interface ISpecialBetResult {
   id: string
-  bettingLeagueId: string
+  leagueId: string
   specialBetId: string
   seriesHomeTeam: string
   seriesAwayTeam: string
@@ -90,28 +90,28 @@ export interface IUserBet {
 export interface IUserPayment {
   id: string
   userId: string
-  bettingLeagueId: string
+  leagueId: string
   paid: boolean
   displayed: boolean
 }
 export interface IUserRequest {
   id: string
   userId: string
-  bettingLeagueId: string
+  leagueId: string
   decided: boolean
   accepted: boolean
 }
 export interface IUserSetting {
   id: string
   userId: number
-  bettingLeagueId: number
+  leagueId: number
   emailBetNotification: boolean
   emailRankingNotification: boolean
 }
 export interface IUserSpecialBet {
   id: string
   specialBetId: number
-  bettingLeagueId: number
+  leagueId: number
   userId: number
   seriesHomeTeam: number
   seriesAwayTeam: number

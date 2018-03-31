@@ -279,7 +279,7 @@
 					"type": "string",
 					"description": ""
 				},
-				"bettingLeagueId": {
+				"leagueId": {
 					"type": "string",
 					"description": ""
 				},
@@ -303,7 +303,7 @@
 			"type": "object",
 			"required": [
 				"id",
-				"bettingLeagueId",
+				"leagueId",
 				"specialBetId",
 				"seriesHomeTeam",
 				"seriesAwayTeam",
@@ -441,7 +441,7 @@
 					"type": "string",
 					"description": ""
 				},
-				"bettingLeagueId": {
+				"leagueId": {
 					"type": "string",
 					"description": ""
 				},
@@ -458,7 +458,7 @@
 			"required": [
 				"id",
 				"userId",
-				"bettingLeagueId",
+				"leagueId",
 				"paid",
 				"displayed"
 			]
@@ -474,7 +474,7 @@
 					"type": "string",
 					"description": ""
 				},
-				"bettingLeagueId": {
+				"leagueId": {
 					"type": "string",
 					"description": ""
 				},
@@ -491,7 +491,7 @@
 			"required": [
 				"id",
 				"userId",
-				"bettingLeagueId",
+				"leagueId",
 				"decided",
 				"accepted"
 			]
@@ -508,7 +508,7 @@
 					"format": "double",
 					"description": ""
 				},
-				"bettingLeagueId": {
+				"leagueId": {
 					"type": "number",
 					"format": "double",
 					"description": ""
@@ -526,7 +526,7 @@
 			"required": [
 				"id",
 				"userId",
-				"bettingLeagueId",
+				"leagueId",
 				"emailBetNotification",
 				"emailRankingNotification"
 			]
@@ -543,7 +543,7 @@
 					"format": "double",
 					"description": ""
 				},
-				"bettingLeagueId": {
+				"leagueId": {
 					"type": "number",
 					"format": "double",
 					"description": ""
@@ -578,7 +578,7 @@
 			"required": [
 				"id",
 				"specialBetId",
-				"bettingLeagueId",
+				"leagueId",
 				"userId",
 				"seriesHomeTeam",
 				"seriesAwayTeam",

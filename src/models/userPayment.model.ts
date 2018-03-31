@@ -8,7 +8,7 @@ export default class UserPayment extends Model<UserPayment> {
   userId: number
 
   @Column
-  bettingLeagueId: number
+  leagueId: number
 
   @Column
   paid: boolean

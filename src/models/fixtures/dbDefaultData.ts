@@ -638,49 +638,49 @@ module.exports = {
   UserPayments: [
     {
       userId: 1,
-      bettingLeagueId: 1,
+      leagueId: 1,
       paid: true,
       displayed: true
     },
     {
       userId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       paid: true,
       displayed: true
     },
     {
       userId: 3,
-      bettingLeagueId: 1,
+      leagueId: 1,
       paid: false,
       displayed: true
     },
     {
       userId: 4,
-      bettingLeagueId: 1,
+      leagueId: 1,
       paid: false,
       displayed: true
     },
     {
       userId: 1,
-      bettingLeagueId: 2,
+      leagueId: 2,
       paid: true,
       displayed: true
     },
     {
       userId: 2,
-      bettingLeagueId: 2,
+      leagueId: 2,
       paid: false,
       displayed: true
     },
     {
       userId: 3,
-      bettingLeagueId: 3,
+      leagueId: 3,
       paid: true,
       displayed: false
     },
     {
       userId: 4,
-      bettingLeagueId: 3,
+      leagueId: 3,
       paid: false,
       displayed: false
     }
@@ -689,49 +689,49 @@ module.exports = {
   UserRequests: [
     {
      userId: '1',
-     bettingLeagueId: '1',
+     leagueId: '1',
      decided: false,
      accepted: false
     },
     {
       userId: '2',
-      bettingLeagueId: '1',
+      leagueId: '1',
       decided: true,
       accepted: true
     },
     {
       userId: '3',
-      bettingLeagueId: '1',
+      leagueId: '1',
       decided: true,
       accepted: false
     },
     {
       userId: '4',
-      bettingLeagueId: '1',
+      leagueId: '1',
       decided: false,
       accepted: false
     },
     {
       userId: '1',
-      bettingLeagueId: '3',
+      leagueId: '3',
       decided: false,
       accepted: false
     },
     {
       userId: '2',
-      bettingLeagueId: '3',
+      leagueId: '3',
       decided: true,
       accepted: true
     },
     {
       userId: '3',
-      bettingLeagueId: '3',
+      leagueId: '3',
       decided: true,
       accepted: false
     },
     {
       userId: '4',
-      bettingLeagueId: '3',
+      leagueId: '3',
       decided: false,
       accepted: false
     }
@@ -740,25 +740,25 @@ module.exports = {
   UserSettings: [
     {
       userId: 1,
-      bettingLeagueId: 1,
+      leagueId: 1,
       emailBetNotification: true,
       emailRankingNotification: true
     },
     {
       userId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       emailBetNotification: true,
       emailRankingNotification: false
     },
     {
       userId: 3,
-      bettingLeagueId: 2,
+      leagueId: 2,
       emailBetNotification: false,
       emailRankingNotification: false
     },
     {
       userId: 4,
-      bettingLeagueId: 2,
+      leagueId: 2,
       emailBetNotification: false,
       emailRankingNotification: true
     },
@@ -767,7 +767,7 @@ module.exports = {
   UserSpecialBets: [
     {
       specialBetId: 1,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -776,7 +776,7 @@ module.exports = {
     },
     {
       specialBetId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -785,7 +785,7 @@ module.exports = {
     },
     {
       specialBetId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -794,7 +794,7 @@ module.exports = {
     },
     {
       specialBetId: 4,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -803,7 +803,7 @@ module.exports = {
     },
     {
       specialBetId: 5,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -812,7 +812,7 @@ module.exports = {
     },
     {
       specialBetId: 3,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: 1,
       seriesAwayTeam: 2,
@@ -821,7 +821,7 @@ module.exports = {
     },
     {
       specialBetId: 3,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 1,
       seriesHomeTeam: 2,
       seriesAwayTeam: 4,
@@ -831,7 +831,7 @@ module.exports = {
 
     {
       specialBetId: 1,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -840,7 +840,7 @@ module.exports = {
     },
     {
       specialBetId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -849,7 +849,7 @@ module.exports = {
     },
     {
       specialBetId: 2,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -858,7 +858,7 @@ module.exports = {
     },
     {
       specialBetId: 4,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -867,7 +867,7 @@ module.exports = {
     },
     {
       specialBetId: 5,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: undefined,
       seriesAwayTeam: undefined,
@@ -876,7 +876,7 @@ module.exports = {
     },
     {
       specialBetId: 3,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: 1,
       seriesAwayTeam: 2,
@@ -885,7 +885,7 @@ module.exports = {
     },
     {
       specialBetId: 3,
-      bettingLeagueId: 1,
+      leagueId: 1,
       userId: 2,
       seriesHomeTeam: 2,
       seriesAwayTeam: 4,
