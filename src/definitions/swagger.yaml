@@ -481,70 +481,15 @@ paths:
                         type: string
             description: ""
             consumes:
-                - application/x-www-form-urlencoded
+                - application/json
             parameters:
                 -
                     description: ""
-                    in: formData
-                    name: username
+                    in: body
+                    name: user
                     required: true
-                    type: string
-                -
-                    description: ""
-                    in: formData
-                    name: password
-                    required: true
-                    type: string
-    /register:
-        post:
-            operationId: LoginRegister
-            produces:
-                - text/html
-            responses:
-                '200':
-                    description: Ok
                     schema:
-                        type: string
-            description: ""
-            consumes:
-                - application/x-www-form-urlencoded
-            parameters:
-                -
-                    description: ""
-                    in: formData
-                    name: email
-                    required: true
-                    type: string
-                -
-                    description: ""
-                    in: formData
-                    name: username
-                    required: true
-                    type: string
-                -
-                    description: ""
-                    in: formData
-                    name: firstName
-                    required: true
-                    type: string
-                -
-                    description: ""
-                    in: formData
-                    name: lastName
-                    required: true
-                    type: string
-                -
-                    description: ""
-                    in: formData
-                    name: mobileNumber
-                    required: true
-                    type: string
-                -
-                    description: ""
-                    in: formData
-                    name: password
-                    required: true
-                    type: string
+                        type: object
     /api/users:
         get:
             operationId: UsersGetUsers

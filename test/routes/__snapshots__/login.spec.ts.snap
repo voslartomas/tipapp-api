@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login API POST /login should return 200 and JWT token 1`] = `Object {}`;
+
+exports[`Login API POST /login should return 500 when user not found 1`] = `Object {}`;
+
+exports[`Login API POST /login should return 500 when user type wrong password 1`] = `Object {}`;

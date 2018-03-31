@@ -537,6 +537,14 @@ module.exports = {
       email: 'ahoj3@seznam.com',
       mobileNumber: '724724728',
       password: '12345'
+    },
+    {
+      firstname: 'Tomas',
+      lastname: 'Voslar',
+      username: 'tvoslar',
+      email: 't.voslar@gmail.com',
+      mobileNumber: '-',
+      password: 'test'
     }
   ],
 

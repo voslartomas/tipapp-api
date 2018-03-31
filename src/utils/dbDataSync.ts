@@ -55,7 +55,8 @@ export default async (models) => {
   }
 
   for (const a of data.Users) {
-    a.password = await bCrypt.hashSync(a.password, bCrypt.genSaltSync(8), undefined)
+    a.salt = bCrypt.genSaltSync(8)
+    a.password = await bCrypt.hashSync(a.password, a.salt, undefined)
     await models.User.findOrCreate({
       where: { username: a.username },
       defaults: a
