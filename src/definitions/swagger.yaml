@@ -1214,6 +1214,27 @@ paths:
                     required: true
                     schema:
                         type: object
+    '/api/sports/{sportId}/leagues':
+        get:
+            operationId: SportsGetLeagues
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/ILeague'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: sportId
+                    required: true
+                    type: number
+                    format: double
     '/api/sports/{id}':
         get:
             operationId: SportsGetSport

@@ -10,6 +10,7 @@ import { Sequelize } from 'sequelize-typescript'
 import loggerMiddleware from './middlewares/logger'
 import Database from './services/database'
 import JWTPassport from './security/passport'
+import * as cors from 'cors'
 
 export class Server {
 
@@ -28,6 +29,12 @@ export class Server {
     this.app = express()
     this.logger = undefined
     this.config()
+
+    this.app.use(function(req, res, next) {
+      res.header('Access-Control-Allow-Origin', '*')
+      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
+      next()
+    })
 
     if (config.get('security')) {
       this.app.get('*', (req, res, next) => {
@@ -72,6 +79,18 @@ export class Server {
   private config(): void {
     this.app.use(loggerMiddleware(this.logger))
     this.app.use(this.jwtPassport.getPassport().initialize())
+
+    const options: cors.CorsOptions = {
+      allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'],
+      credentials: true,
+      methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
+      origin: 'http://localhost:3000',
+      preflightContinue: false
+    }
+
+    this.app.use(cors(options))
+
+    this.app.options('*', cors(options))
   }
 
   /**

@@ -2,7 +2,7 @@ import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import Sport from '../models/sport.model'
-import { ISport } from '../types/models.d'
+import { ISport, ILeague } from '../types/models.d'
 
 @Path('/api/sports')
 export default class SportsController {
@@ -13,6 +13,12 @@ export default class SportsController {
   @GET
   async getSports(): Promise<ISport[]> {
     return await this.database.models.Sport.findAll({})
+  }
+
+  @GET
+  @Path('/:sportId/leagues')
+  async getLeagues(@PathParam('sportId') sportId: number): Promise<ILeague[]> {
+    return await this.database.models.League.findAll({where: {sportId: sportId}})
   }
 
   @GET
