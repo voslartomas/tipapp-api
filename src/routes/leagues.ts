@@ -3,6 +3,8 @@ import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import League from '../models/league.model'
 import { ILeague } from '../types/models.d'
+import { IMatch } from '../types/models'
+import Match from '../models/match.model'
 
 @Path('/api/leagues')
 export default class LeaguesController {
@@ -12,6 +14,12 @@ export default class LeaguesController {
   @GET
   async getLeagues(): Promise<ILeague[]> {
     return await this.database.models.League.findAll({})
+  }
+
+  @GET
+  @Path('/:leagueId/matches')
+  async getMatches(@PathParam('leagueId') leagueId: number): Promise<IMatch[]> {
+    return await this.database.models.Match.findAll({where: {leagueId: leagueId}})
   }
 
   @GET

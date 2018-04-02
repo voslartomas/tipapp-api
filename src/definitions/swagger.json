@@ -992,6 +992,36 @@
 				]
 			}
 		},
+		"/api/leagues/{leagueId}/matches": {
+			"get": {
+				"operationId": "LeaguesGetMatches",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IMatch"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
 		"/api/leagues/{id}": {
 			"get": {
 				"operationId": "LeaguesGetLeague",
