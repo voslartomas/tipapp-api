@@ -30,10 +30,11 @@ export default class LeaguesController {
     const teams = await this.database.models.Team.findAll({where: { leagueId}})
     let players = []
     for (const team in teams) {
-      const teamPlayers = await this.database.models.Player.findAll({where: { teamId: team.id}})
+      const teamPlayers = await this.database.models.Player.findAll({where: { teamId: teams[team].id}})
       players = players.concat(teamPlayers)
     }
-    return await this.database.models.Player.findAll({where: {teamId: leagueId}})
+
+    return players
   }
 
   @GET
