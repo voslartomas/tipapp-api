@@ -23,7 +23,7 @@ export default class LeaguesController {
   async getMatches(@PathParam('leagueId') leagueId: number): Promise<IMatch[]> {
     return await this.database.models.Match.findAll({include: [
       {model: this.database.models.Team, as: 'homeTeam'},
-      {model: this.database.models.Team, as: 'awayTeam'} ], where: {leagueId: leagueId}})
+      {model: this.database.models.Team, as: 'awayTeam'}], where: {leagueId: leagueId}})
   }
 
   @GET
@@ -38,7 +38,8 @@ export default class LeaguesController {
     const teams = await this.database.models.Team.findAll({where: { leagueId}})
     let players = []
     for (const team in teams) {
-      const teamPlayers = await this.database.models.Player.findAll({where: { teamId: teams[team].id}})
+      const teamPlayers = await this.database.models.Player.findAll({include: [
+        {model: this.database.models.Team, as: 'team'}], where: { teamId: teams[team].id}})
       players = players.concat(teamPlayers)
     }
 
