@@ -168,6 +168,49 @@
 				"isFinished"
 			]
 		},
+		"ITeam": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"czName": {
+					"type": "string",
+					"description": ""
+				},
+				"engName": {
+					"type": "string",
+					"description": ""
+				},
+				"value": {
+					"type": "string",
+					"description": ""
+				},
+				"shortcut": {
+					"type": "string",
+					"description": ""
+				},
+				"sport": {
+					"type": "string",
+					"description": ""
+				},
+				"league": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"czName",
+				"engName",
+				"value",
+				"shortcut",
+				"sport",
+				"league"
+			]
+		},
 		"IPlayer": {
 			"description": "",
 			"properties": {
@@ -336,49 +379,6 @@
 				"czName",
 				"engName",
 				"value"
-			]
-		},
-		"ITeam": {
-			"description": "",
-			"properties": {
-				"id": {
-					"type": "string",
-					"description": ""
-				},
-				"czName": {
-					"type": "string",
-					"description": ""
-				},
-				"engName": {
-					"type": "string",
-					"description": ""
-				},
-				"value": {
-					"type": "string",
-					"description": ""
-				},
-				"shortcut": {
-					"type": "string",
-					"description": ""
-				},
-				"sport": {
-					"type": "string",
-					"description": ""
-				},
-				"league": {
-					"type": "string",
-					"description": ""
-				}
-			},
-			"type": "object",
-			"required": [
-				"id",
-				"czName",
-				"engName",
-				"value",
-				"shortcut",
-				"sport",
-				"league"
 			]
 		},
 		"IUserBet": {
@@ -1005,6 +1005,36 @@
 							"type": "array",
 							"items": {
 								"$ref": "#/definitions/IMatch"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/leagues/{leagueId}/teams": {
+			"get": {
+				"operationId": "LeaguesGetTeams",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ITeam"
 							}
 						}
 					}
