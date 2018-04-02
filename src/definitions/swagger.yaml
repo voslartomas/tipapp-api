@@ -130,23 +130,39 @@ definitions:
             - seasonFrom
             - seasonTo
             - isFinished
-    IMatchScorer:
+    ITeam:
         description: ""
         properties:
-            matchId:
+            id:
                 type: string
                 description: ""
-            scorerId:
+            czName:
                 type: string
                 description: ""
-            numberOfGoals:
+            engName:
+                type: string
+                description: ""
+            value:
+                type: string
+                description: ""
+            shortcut:
+                type: string
+                description: ""
+            sport:
+                type: string
+                description: ""
+            league:
                 type: string
                 description: ""
         type: object
         required:
-            - matchId
-            - scorerId
-            - numberOfGoals
+            - id
+            - czName
+            - engName
+            - value
+            - shortcut
+            - sport
+            - league
     IPlayer:
         description: ""
         properties:
@@ -196,6 +212,23 @@ definitions:
             - seasonGames
             - seasonGoals
             - seasonAssists
+    IMatchScorer:
+        description: ""
+        properties:
+            matchId:
+                type: string
+                description: ""
+            scorerId:
+                type: string
+                description: ""
+            numberOfGoals:
+                type: string
+                description: ""
+        type: object
+        required:
+            - matchId
+            - scorerId
+            - numberOfGoals
     ISpecialBet:
         description: ""
         properties:
@@ -259,39 +292,6 @@ definitions:
             - czName
             - engName
             - value
-    ITeam:
-        description: ""
-        properties:
-            id:
-                type: string
-                description: ""
-            czName:
-                type: string
-                description: ""
-            engName:
-                type: string
-                description: ""
-            value:
-                type: string
-                description: ""
-            shortcut:
-                type: string
-                description: ""
-            sport:
-                type: string
-                description: ""
-            league:
-                type: string
-                description: ""
-        type: object
-        required:
-            - id
-            - czName
-            - engName
-            - value
-            - shortcut
-            - sport
-            - league
     IUserBet:
         description: ""
         properties:
@@ -734,6 +734,69 @@ paths:
                     required: true
                     schema:
                         type: object
+    '/api/leagues/{leagueId}/matches':
+        get:
+            operationId: LeaguesGetMatches
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/IMatch'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: leagueId
+                    required: true
+                    type: number
+                    format: double
+    '/api/leagues/{leagueId}/teams':
+        get:
+            operationId: LeaguesGetTeams
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/ITeam'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: leagueId
+                    required: true
+                    type: number
+                    format: double
+    '/api/leagues/{leagueId}/players':
+        get:
+            operationId: LeaguesGetPlayers
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/IPlayer'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: leagueId
+                    required: true
+                    type: number
+                    format: double
     '/api/leagues/{id}':
         get:
             operationId: LeaguesGetLeague
