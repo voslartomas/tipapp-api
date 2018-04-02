@@ -130,23 +130,6 @@ definitions:
             - seasonFrom
             - seasonTo
             - isFinished
-    IMatchScorer:
-        description: ""
-        properties:
-            matchId:
-                type: string
-                description: ""
-            scorerId:
-                type: string
-                description: ""
-            numberOfGoals:
-                type: string
-                description: ""
-        type: object
-        required:
-            - matchId
-            - scorerId
-            - numberOfGoals
     IPlayer:
         description: ""
         properties:
@@ -196,6 +179,23 @@ definitions:
             - seasonGames
             - seasonGoals
             - seasonAssists
+    IMatchScorer:
+        description: ""
+        properties:
+            matchId:
+                type: string
+                description: ""
+            scorerId:
+                type: string
+                description: ""
+            numberOfGoals:
+                type: string
+                description: ""
+        type: object
+        required:
+            - matchId
+            - scorerId
+            - numberOfGoals
     ISpecialBet:
         description: ""
         properties:
@@ -746,6 +746,27 @@ paths:
                         type: array
                         items:
                             $ref: '#/definitions/IMatch'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: leagueId
+                    required: true
+                    type: number
+                    format: double
+    '/api/leagues/{leagueId}/players':
+        get:
+            operationId: LeaguesGetPlayers
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/IPlayer'
             description: ""
             parameters:
                 -
