@@ -483,7 +483,7 @@ module.exports = {
       value: 'brasil',
       shortcut: 'BRA',
       sportId: 1,
-      leagueId: 2
+      leagueId: 3
     },
     {
       czName: 'Argentina',
@@ -491,7 +491,7 @@ module.exports = {
       value: 'argentina',
       shortcut: 'ARG',
       sport: 1,
-      league: 2
+      league: 3
     },
     {
       czName: 'Německo',
@@ -499,7 +499,7 @@ module.exports = {
       value: 'germany',
       shortcut: 'GER',
       sportId: 1,
-      leagueId: 2
+      leagueId: 3
     },
     {
       czName: 'Pobřeží Slonoviny',
@@ -507,7 +507,7 @@ module.exports = {
       value: 'coteDIvoire',
       shortcut: 'CIV',
       sportId: 1,
-      leagueId: 2
+      leagueId: 3
     }
   ],
 
