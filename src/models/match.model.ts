@@ -23,14 +23,14 @@ export default class Match extends Model<Match> {
   @Column
   homeTeamId: number
 
-  @BelongsTo(() => Team)
+  @BelongsTo(() => Team, 'homeTeamId')
   homeTeam: Team
 
   @ForeignKey(() => Team)
   @Column
   awayTeamId: number
 
-  @BelongsTo(() => Team)
+  @BelongsTo(() => Team, 'awayTeamId')
   awayTeam: Team
 
   @Column
