@@ -3,6 +3,7 @@ import Sport from './sport.model'
 
 @Table({
   timestamps: true,
+  paranoid: true,
 })
 export default class League extends Model<League> {
   @Column
