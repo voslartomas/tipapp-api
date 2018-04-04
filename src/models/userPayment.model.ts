@@ -1,11 +1,14 @@
-import { Table, Column, Model, PrimaryKey, ForeignKey, BelongsTo } from 'sequelize-typescript'
+import { Table, Column, Model, ForeignKey, BelongsTo, AllowNull, Is, Default } from 'sequelize-typescript'
 import User from './user.model'
 import League from './league.model'
+import { isBoolean, isNumeric } from '../utils/modelValidation'
 
 @Table({
   timestamps: true,
 })
 export default class UserPayment extends Model<UserPayment> {
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
   @Column
   @ForeignKey(() => User)
   userId: number
@@ -13,6 +16,8 @@ export default class UserPayment extends Model<UserPayment> {
   @BelongsTo(() => User)
   user: User
 
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
   @Column
   @ForeignKey(() => League)
   leagueId: number
@@ -20,9 +25,15 @@ export default class UserPayment extends Model<UserPayment> {
   @BelongsTo(() => League)
   league: League
 
+  @AllowNull(false)
+  @Is('isBoolean', value => isBoolean(value))
+  @Default(false)
   @Column
   paid: boolean
 
+  @AllowNull(false)
+  @Is('isBoolean', value => isBoolean(value))
+  @Default(false)
   @Column
   displayed: boolean
 }

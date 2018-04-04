@@ -43,7 +43,7 @@ module.exports = {
     {
       leagueId: 1,
       gameNumber: 1,
-      dateTime: '2017-11-29 20:00:00',
+      dateTime: new Date(2017, 11, 29, 20,  0o0, 0o0),
       homeTeamId: 1,
       awayTeamId: 2,
       homeScore: 5,
@@ -56,7 +56,7 @@ module.exports = {
     {
       leagueId: 1,
       // gameNumber: 2,
-      dateTime: '2017-11-29 21:00:00',
+      dateTime: new Date(2017, 11, 29, 21,  0o0, 0o0),
       homeTeamId: 3,
       awayTeamId: 4,
       homeScore: 3,
@@ -69,7 +69,7 @@ module.exports = {
     {
       leagueId: 1,
       // gameNumber: 3,
-      dateTime: '2017-12-29 20:00:00',
+      dateTime: new Date(2017, 12, 29, 20,  0o0, 0o0),
       homeTeamId: 1,
       awayTeamId: 3,
       homeScore: 2,
@@ -82,7 +82,7 @@ module.exports = {
     {
       leagueId: 1,
       // gameNumber: 3,
-      dateTime: '2017-12-29 20:00:00',
+      dateTime: new Date(2017, 12, 29, 20,  0o0, 0o0),
       homeTeamId: 2,
       awayTeamId: 4,
       homeScore: 5,
@@ -95,7 +95,7 @@ module.exports = {
     {
       leagueId: 1,
       // gameNumber: 3,
-      dateTime: '2017-12-30 20:00:00',
+      dateTime: new Date(2017, 11, 30, 20,  0o0, 0o0),
       homeTeamId: 1,
       awayTeamId: 4,
       // homeScore: 5,
@@ -249,7 +249,7 @@ module.exports = {
     },
     {
       firstName: 'Neymar',
-      lastName: '',
+      lastName: 'Brazilec',
       teamId: 5,
       seasonFrom: 2017,
       seasonTo: 2018,
@@ -557,8 +557,8 @@ module.exports = {
       lastname: 'Voslar',
       username: 'tvoslar',
       email: 't.voslar@gmail.com',
-      mobileNumber: '-',
-      password: 'test'
+      mobileNumber: '724724728',
+      password: '724724729'
     }
   ],
 
@@ -566,7 +566,7 @@ module.exports = {
     {
       matchId: 1,
       userId: 1,
-      dateTime: '2016-08-09 04:05:03',
+      dateTime: new Date(2016, 8, 9, 0o4,  0o5, 0o3),
       homeScore: 5,
       awayScore: 1,
       homeWinner: true,
@@ -575,7 +575,7 @@ module.exports = {
     {
       matchId: 2,
       userId: 1,
-      dateTime: '2016-08-09 04:05:03',
+        dateTime: new Date(2016, 8, 9, 0o4,  0o5, 0o3),
       homeScore: 3,
       awayScore: 3,
       homeWinner: true,
@@ -584,7 +584,7 @@ module.exports = {
     {
       matchId: 3,
       userId: 1,
-      dateTime: '2016-08-09 04:05:05',
+      dateTime: new Date(2016, 8, 9, 0o4,  0o5, 0o5),
       homeScore: 2,
       awayScore: 3,
       homeWinner: false,
@@ -593,7 +593,7 @@ module.exports = {
     {
       matchId: 4,
       userId: 1,
-      dateTime: '2016-08-09 04:05:04',
+      dateTime: new Date(2016, 8, 9, 0o4,  0o5, 0o4),
       homeScore: 5,
       awayScore: 2,
       homeWinner: true,
@@ -602,7 +602,7 @@ module.exports = {
     {
       matchId: 5,
       userId: 1,
-      dateTime: '2016-08-09 04:05:02',
+      dateTime: new Date(2016, 8, 9, 0o4,  0o5, 0o2),
       homeScore: 2,
       awayScore: 3,
       homeWinner: false,
@@ -612,7 +612,7 @@ module.exports = {
     {
       matchId: 1,
       userId: 2,
-      dateTime: '2016-08-09 04:06:03',
+      dateTime: new Date(2016, 8, 9, 0o4,  0o5, 0o3),
       homeScore: 5,
       awayScore: 1,
       homeWinner: true,
@@ -621,7 +621,7 @@ module.exports = {
     {
       matchId: 2,
       userId: 2,
-      dateTime: '2016-08-09 04:05:03',
+      dateTime: new Date(2016, 8, 9, 0o4,  0o5, 0o3),
       homeScore: 2,
       awayScore: 2,
       homeWinner: true,
@@ -630,7 +630,7 @@ module.exports = {
     {
       matchId: 3,
       userId: 2,
-      dateTime: '2016-08-09 04:07:05',
+      dateTime: new Date(2016, 8, 9, 0o4,  0o5, 11),
       homeScore: 2,
       awayScore: 1,
       homeWinner: true,
@@ -639,7 +639,7 @@ module.exports = {
     {
       matchId: 4,
       userId: 2,
-      dateTime: '2016-08-09 04:15:04',
+      dateTime: new Date(2016, 8, 9, 0o4,  0o5, 12),
       homeScore: 5,
       awayScore: 5,
       homeWinner: true,
@@ -648,7 +648,7 @@ module.exports = {
     {
       matchId: 5,
       userId: 2,
-      dateTime: '2016-08-09 04:11:02',
+      dateTime: new Date(2016, 8, 9, 0o4,  0o5, 13),
       homeScore: 2,
       awayScore: 4,
       homeWinner: false,
@@ -710,50 +710,50 @@ module.exports = {
 
   UserRequests: [
     {
-     userId: '1',
-     leagueId: '1',
+     userId: 1,
+     leagueId: 1,
      decided: false,
      accepted: false
     },
     {
-      userId: '2',
-      leagueId: '1',
+      userId: 2,
+      leagueId: 1,
       decided: true,
       accepted: true
     },
     {
-      userId: '3',
-      leagueId: '1',
+      userId: 3,
+      leagueId: 1,
       decided: true,
       accepted: false
     },
     {
-      userId: '4',
-      leagueId: '1',
+      userId: 4,
+      leagueId: 1,
       decided: false,
       accepted: false
     },
     {
-      userId: '1',
-      leagueId: '3',
+      userId: 1,
+      leagueId: 3,
       decided: false,
       accepted: false
     },
     {
-      userId: '2',
-      leagueId: '3',
+      userId: 2,
+      leagueId: 3,
       decided: true,
       accepted: true
     },
     {
-      userId: '3',
-      leagueId: '3',
+      userId: 3,
+      leagueId: 3,
       decided: true,
       accepted: false
     },
     {
-      userId: '4',
-      leagueId: '3',
+      userId: 4,
+      leagueId: 3,
       decided: false,
       accepted: false
     }
@@ -796,7 +796,7 @@ module.exports = {
       seriesHomeTeamBet: undefined,
       seriesAwayTeamBet: undefined,
       value: 'PIT',
-      dateTime: '2018-02-03 04:05:02'
+      dateTime: new Date(2018, 1, 3, 0o5,  0o5, 11),
     },
     {
       specialBetId: 2,
@@ -807,7 +807,7 @@ module.exports = {
       seriesHomeTeamBet: undefined,
       seriesAwayTeamBet: undefined,
       value: 'PIT',
-      dateTime: '2018-02-03 04:05:02'
+      dateTime: new Date(2018, 2, 1, 0o5,  0o5, 11),
     },
     {
       specialBetId: 2,
@@ -818,7 +818,7 @@ module.exports = {
       seriesHomeTeamBet: undefined,
       seriesAwayTeamBet: undefined,
       value: 'VAN',
-      dateTime: '2018-02-03 07:05:02'
+      dateTime: new Date(2018, 2, 4, 0o5,  0o5, 11),
     },
     {
       specialBetId: 4,
@@ -829,7 +829,7 @@ module.exports = {
       seriesHomeTeamBet: undefined,
       seriesAwayTeamBet: undefined,
       value: '6',
-      dateTime: '2018-02-03 06:05:02'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 19),
     },
     {
       specialBetId: 5,
@@ -840,7 +840,7 @@ module.exports = {
       seriesHomeTeamBet: undefined,
       seriesAwayTeamBet: undefined,
       value: '683',
-      dateTime: '2018-02-03 05:05:02'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 11),
     },
     {
       specialBetId: 3,
@@ -851,7 +851,7 @@ module.exports = {
       seriesHomeTeamBet: 4,
       seriesAwayTeamBet: 3,
       value: undefined,
-      dateTime: '2018-02-03 05:05:02'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 17),
     },
     {
       specialBetId: 3,
@@ -862,7 +862,7 @@ module.exports = {
       seriesHomeTeamBet: 4,
       seriesAwayTeamBet: 1,
       value: undefined,
-      dateTime: '2018-02-03 05:05:02'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 18),
     },
 
     {
@@ -874,7 +874,7 @@ module.exports = {
       seriesHomeTeamBet: undefined,
       seriesAwayTeamBet: undefined,
       value: 'CHI',
-      dateTime: '2018-02-03 04:05:02'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 17),
     },
     {
       specialBetId: 2,
@@ -885,7 +885,7 @@ module.exports = {
       seriesHomeTeamBet: undefined,
       seriesAwayTeamBet: undefined,
       value: 'PIT',
-      dateTime: '2018-02-03 04:05:02'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 16),
     },
     {
       specialBetId: 2,
@@ -896,7 +896,7 @@ module.exports = {
       seriesHomeTeamBet: undefined,
       seriesAwayTeamBet: undefined,
       value: 'CHI',
-      dateTime: '2018-02-03 07:06:02'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 15),
     },
     {
       specialBetId: 4,
@@ -907,7 +907,7 @@ module.exports = {
       seriesHomeTeamBet: undefined,
       seriesAwayTeamBet: undefined,
       value: '1',
-      dateTime: '2018-02-03 06:15:02'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 14),
     },
     {
       specialBetId: 5,
@@ -918,7 +918,7 @@ module.exports = {
       seriesHomeTeamBet: undefined,
       seriesAwayTeamBet: undefined,
       value: '777',
-      dateTime: '2018-02-04 05:05:02'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 13),
     },
     {
       specialBetId: 3,
@@ -929,7 +929,7 @@ module.exports = {
       seriesHomeTeamBet: 1,
       seriesAwayTeamBet: 4,
       value: undefined,
-      dateTime: '2018-02-03 05:05:03'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 12),
     },
     {
       specialBetId: 3,
@@ -940,7 +940,7 @@ module.exports = {
       seriesHomeTeamBet: 4,
       seriesAwayTeamBet: 3,
       value: undefined,
-      dateTime: '2018-02-04 05:05:02'
+      dateTime: new Date(2018, 2, 3, 0o5,  0o5, 11),
     }
 
   ]
