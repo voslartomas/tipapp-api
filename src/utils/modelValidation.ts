@@ -15,8 +15,14 @@ export const isString = (value) => {
 }
 
 export const isNumeric = (value) => {
-  if (Number(parseInt(value)) !== value) {
+  if (/^-?\d+$/.test(value) !== true) {
     throw new Error(`${value} is not a numeric.`)
+  }
+}
+
+export const isYear = (value) => {
+  if (value.toString().trim().length !== 4) {
+    throw new Error(`Length of ${value} is 4 as expected.`)
   }
 }
 

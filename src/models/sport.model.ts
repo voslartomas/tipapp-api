@@ -17,8 +17,7 @@ export default class Sport extends Model<Sport> {
   @Column
   engName: string
 
-  @AllowNull(false)
-  @NotEmpty
+  @AllowNull(true)
   @Is('isString', value => isString(value))
   @Column
   value: string

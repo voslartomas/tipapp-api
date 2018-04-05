@@ -1,6 +1,6 @@
 import { Table, Column, Model, BelongsTo, ForeignKey, Length, AllowNull, NotEmpty, Is, Default } from 'sequelize-typescript'
 import Team from './team.model'
-import { isBoolean, isNumeric, isString } from '../utils/modelValidation'
+import { isBoolean, isNumeric, isString, isYear } from '../utils/modelValidation'
 
 @Table({
   timestamps: true,
@@ -31,11 +31,13 @@ export default class Player extends Model<Player> {
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
+  @Is('isValidYear', value => isYear(value))
   @Column
   seasonFrom: number
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
+  @Is('isValidYear', value => isYear(value))
   @Column
   seasonTo: number
 

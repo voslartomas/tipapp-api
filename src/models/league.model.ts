@@ -1,6 +1,6 @@
-import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, NotEmpty, Is, Length } from 'sequelize-typescript'
+import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, NotEmpty, Is, Length, Default } from 'sequelize-typescript'
 import Sport from './sport.model'
-import { isString, isNumeric, isBoolean } from  '../utils/modelValidation'
+import { isString, isNumeric, isBoolean, isYear } from  '../utils/modelValidation'
 
 @Table({
   timestamps: true,
@@ -25,26 +25,31 @@ export default class League extends Model<League> {
 
   @AllowNull(false)
   @Is('isBoolean', value => isBoolean(value))
+  @Default(false)
   @Column
   isActive: boolean
 
   @AllowNull(true)
   @Is('isBoolean', value => isBoolean(value))
+  @Default(false)
   @Column
   isTheMostActive: boolean
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
+  @Is('isValidYear', value => isYear(value))
   @Column
   seasonFrom: number
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
+  @Is('isValidYear', value => isYear(value))
   @Column
   seasonTo: number
 
   @AllowNull(true)
   @Is('isBoolean', value => isBoolean(value))
+  @Default(false)
   @Column
   isFinished: boolean
 }

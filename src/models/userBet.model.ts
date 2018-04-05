@@ -1,4 +1,4 @@
-import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, Is } from 'sequelize-typescript'
+import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, Is, Default } from 'sequelize-typescript'
 import Match from './match.model'
 import User from './user.model'
 import Player from './player.model'
@@ -43,6 +43,7 @@ export default class UserBet extends Model<UserBet> {
   awayScore: number
 
   @AllowNull(false)
+  @Default(true)
   @Is('isBoolean', value => isBoolean(value))
   @Column
   homeWinner: boolean
