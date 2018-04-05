@@ -26,7 +26,7 @@ export default class Player extends Model<Player> {
   @ForeignKey(() => Team)
   teamId: number
 
-  @BelongsTo(() => Team)
+  @BelongsTo(() => Team, 'teamId')
   team: Team
 
   @AllowNull(false)

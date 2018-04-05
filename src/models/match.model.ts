@@ -32,7 +32,7 @@ export default class Match extends Model<Match> {
   @Column
   homeTeamId: number
 
-  @BelongsTo(() => Team)
+  @BelongsTo(() => Team, 'homeTeamId')
   homeTeam: Team
 
   @AllowNull(false)
@@ -41,7 +41,7 @@ export default class Match extends Model<Match> {
   @Column
   awayTeamId: number
 
-  @BelongsTo(() => Team)
+  @BelongsTo(() => Team, 'awayTeamId')
   awayTeam: Team
 
   @AllowNull(true)

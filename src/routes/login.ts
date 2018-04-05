@@ -27,7 +27,6 @@ export class LoginController {
     }
 
     const passwordHash = await bCrypt.hashSync(user.password, dbUser.salt, undefined)
-    console.log(passwordHash)
     if (passwordHash !== dbUser.password) {
       throw new Error('Invalid user password')
     }
