@@ -34,8 +34,8 @@ export interface ILeagueSpecialBetSingle {
   id: number
   leagueId: number
   specialBetSingleId: number
-  specialBetTeamResult: number
-  specialBetPlayerResult: number
+  specialBetTeamResultId: number
+  specialBetPlayerResultId: number
   specialBetValue: number
   dateTime: Date
 }
@@ -115,6 +115,7 @@ export interface IUser {
     lastName: string
     username: string
     mobileNumber: string
+    password: string
 }
 
 export interface IUserBet {
