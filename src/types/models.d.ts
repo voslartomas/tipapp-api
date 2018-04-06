@@ -20,19 +20,24 @@ export interface ILeaguePlayer {
 }
 
 export interface ILeagueSpecialBetSerie {
-    id: number
-    leagueId: number
-    homeTeamId: number
-    awayTeamId: number
-    homeTeamScore: number
-    awayTeamScore: number
+  id: number
+  leagueId: number
+  specialBetSerieId: number
+  homeTeamId: number
+  awayTeamId: number
+  homeTeamScore: number
+  awayTeamScore: number
+  dateTime: Date
 }
 
 export interface ILeagueSpecialBetSingle {
-    id: number
-    leagueId: number
-    specialBetSingleId: number
-    result: string
+  id: number
+  leagueId: number
+  specialBetSingleId: number
+  specialBetTeamResult: number
+  specialBetPlayerResult: number
+  specialBetValue: number
+  dateTime: Date
 }
 
 export interface ILeagueTeam {
@@ -51,7 +56,7 @@ export interface ILeagueUser {
 
 export interface IMatch {
     id: string
-    bettingLeagueId: number
+    leagueId: number
     gameNumber: number
     dateTime: Date
     homeTeamId: number
@@ -79,7 +84,6 @@ export interface IPlayer {
 
 export interface ISpecialBetSerie {
   id: number
-  sportId: number
   bestOf: number
   name: string
 }
@@ -87,12 +91,7 @@ export interface ISpecialBetSerie {
 export interface ISpecialBetSingle {
     id: number
     sportId: number
-    specialBetTypeId: number
-    name: string
-}
-
-export interface ISpecialBetType {
-    id: number
+    specialBetType: number
     name: string
 }
 
@@ -126,7 +125,7 @@ export interface IUserBet {
   homeScore: number
   awayScore: number
   homeWinner: boolean
-  scorer: number
+  scorerId: number
 }
 
 export interface IUserRequest {
