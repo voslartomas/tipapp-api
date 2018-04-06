@@ -162,6 +162,14 @@ module.exports = {
             specialBetPlayerResultId: 1,
             specialBetValueId: undefined,
             dateTime: '2018-02-03 04:05:02'
+        },
+        {
+          leagueId: 1,
+          specialBetSingleId: 4,
+          specialBetTeamResultId: undefined,
+          specialBetPlayerResultId: 1,
+          specialBetValueId: undefined,
+          dateTime: '2018-02-03 04:05:02'
         }
     ],
 
@@ -196,7 +204,7 @@ module.exports = {
         {
             leagueId: 1,
             specialBetSerieId: 2,
-            homeTeamId: 2,
+            homeTeamId: 3,
             awayTeamId: 4,
             homeTeamScore: 4,
             awayTeamScore: 2,
@@ -301,7 +309,7 @@ module.exports = {
       awayScore: 2,
       overtime: false,
       shootout: false,
-      homeWinner: 1,
+      homeWinner: true,
       isEvaluated: true
     },
     {
@@ -314,7 +322,7 @@ module.exports = {
       awayScore: 3,
       overtime: true,
       shootout: false,
-      homeWinner: 2,
+      homeWinner: false,
       isEvaluated: true
     },
     {
@@ -327,7 +335,7 @@ module.exports = {
       awayScore: 4,
       overtime: false,
       shootout: false,
-      homeWinner: 1,
+      homeWinner: true,
       isEvaluated: false
     },
     {
@@ -340,7 +348,7 @@ module.exports = {
       awayScore: 5,
       overtime: false,
       shootout: true,
-      homeWinner: 1,
+      homeWinner: true,
       isEvaluated: true
     },
     {
@@ -353,7 +361,7 @@ module.exports = {
       // awayScore: 2,
       overtime: false,
       shootout: false,
-      homeWinner: 1,
+      homeWinner: true,
       isEvaluated: false
     },
   ],
@@ -700,7 +708,7 @@ module.exports = {
       lastName: 'Voslar',
       username: 'tvoslar',
       email: 't.voslar@gmail.com',
-      mobileNumber: '-',
+      mobileNumber: '728888999',
       password: 'test'
     }
   ],
@@ -853,7 +861,7 @@ module.exports = {
 
   UserSettings: [
     {
-      userId: 1,
+      leagueId: 1,
       leagueUserId: 1,
       emailBetNotification: true,
       emailBetNotificationValue: 1,
@@ -861,7 +869,7 @@ module.exports = {
       emailRankingNotificationValue: 1
     },
     {
-      userId: 2,
+      leagueId: 2,
       leagueUserId: 1,
       emailBetNotification: true,
       emailBetNotificationValue: 2,
@@ -869,7 +877,7 @@ module.exports = {
       emailRankingNotificationValue: 0
     },
     {
-      userId: 3,
+      leagueId: 3,
       leagueUserId: 2,
       emailBetNotification: false,
       emailBetNotificationValue: 3,
@@ -877,7 +885,7 @@ module.exports = {
       emailRankingNotificationValue: 3
     },
     {
-      userId: 4,
+      leagueId: 4,
       leagueUserId: 2,
       emailBetNotification: false,
       emailBetNotificationValue: 4,

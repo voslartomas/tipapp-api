@@ -5,15 +5,14 @@ import MachesController from './matches'
 import LeaguesController from './leagues'
 import MatchScoresController from './matchScorers'
 import PlayersController from './players'
-import SpecialBetsController from './specialBets'
-import SpecialBetResultsController from './specialBetResults'
+import SpecialBetsSeriesController from './specialBetSeries'
+import SpecialBetSinglesController from './specialBetsSingles'
 import SportsController from './sports'
 import TeamsController from './teams'
 import UserBetsController from './userBets'
-import UserPaymentsController from './userPayments'
 import UserRequestsController from './userRequests'
 import UserSettingsController from './userSettings'
-import UserSpecialBetsController from './userSpecialBets'
+import UserSpecialBetSinglesController from './userSpecialBets'
 
 export default [
   PingController,
@@ -23,13 +22,12 @@ export default [
   LeaguesController,
   MatchScoresController,
   PlayersController,
-  SpecialBetsController,
-  SpecialBetResultsController,
+  SpecialBetsSeriesController,
+  SpecialBetSinglesController,
   SportsController,
   TeamsController,
   UserBetsController,
-  UserPaymentsController,
   UserRequestsController,
   UserSettingsController,
-  UserSpecialBetsController
+  UserSpecialBetSinglesController
 ]

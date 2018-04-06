@@ -1,8 +1,8 @@
 import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest'
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
-import SpecialBetResult from '../models/specialBetResult.model'
-import { ISpecialBetResult } from '../types/models.d'
+import SpecialBetResult from '../models/specialBetSerie.model'
+import { ISpecialBetSerie } from '../types/models.d'
 
 @Path('/api/special-bet-results')
 export default class SpecialBetResultsController {
@@ -11,13 +11,13 @@ export default class SpecialBetResultsController {
   private database: Database
 
   @GET
-  async getSpecialBetResults(): Promise<ISpecialBetResult[]> {
+  async getSpecialBetResults(): Promise<ISpecialBetSerie[]> {
     return await this.database.models.SpecialBetResult.findAll({})
   }
 
   @GET
   @Path(':id')
-  async getSpecialBetResult(@PathParam('id') specialBetResultId: number): Promise<ISpecialBetResult> {
+  async getSpecialBetResult(@PathParam('id') specialBetResultId: number): Promise<ISpecialBetSerie> {
     try {
       const specialBetResult = await this.database.models.SpecialBetResult.findById(specialBetResultId)
 
@@ -32,13 +32,13 @@ export default class SpecialBetResultsController {
   }
 
   @POST
-  async createSpecialBet(specialBetResult: any): Promise<ISpecialBetResult> {
+  async createSpecialBet(specialBetResult: any): Promise<ISpecialBetSerie> {
     return await this.database.models.SpecialBetResult.create(specialBetResult)
   }
 
   @PUT
   @Path(':id')
-  async updateSpecialBet(@PathParam('id') specialBetResultId: number, specialBetResult: any): Promise<ISpecialBetResult> {
+  async updateSpecialBet(@PathParam('id') specialBetResultId: number, specialBetResult: any): Promise<ISpecialBetSerie> {
     const dbSpecialBetResult = await this.database.models.SpecialBetResult.findById(specialBetResultId)
 
     if (dbSpecialBetResult) {

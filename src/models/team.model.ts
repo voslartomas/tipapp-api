@@ -14,7 +14,6 @@ export default class Team extends Model<Team> {
   name: string
 
   @AllowNull(true)
-  @NotEmpty
   @Is('isString', value => isString(value))
   @Column
   nickname: string
