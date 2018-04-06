@@ -2,9 +2,11 @@ import { Table, Column, Model, ForeignKey, BelongsTo, Is, Default, AllowNull } f
 import League from './league.model'
 import Team from './team.model'
 import { isBoolean, isNumeric, isDate } from '../utils/modelValidation'
+import LeagueTeam from './leagueTeam.model'
 
 @Table({
   timestamps: true,
+  paranoid: true
 })
 export default class Match extends Model<Match> {
   @AllowNull(false)
@@ -28,21 +30,21 @@ export default class Match extends Model<Match> {
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
-  @ForeignKey(() => Team)
+  @ForeignKey(() => LeagueTeam)
   @Column
   homeTeamId: number
 
-  @BelongsTo(() => Team, 'homeTeamId')
+  @BelongsTo(() => LeagueTeam, 'homeTeamId')
   homeTeam: Team
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
-  @ForeignKey(() => Team)
+  @ForeignKey(() => LeagueTeam)
   @Column
   awayTeamId: number
 
-  @BelongsTo(() => Team, 'awayTeamId')
-  awayTeam: Team
+  @BelongsTo(() => LeagueTeam, 'awayTeamId')
+  awayTeam: LeagueTeam
 
   @AllowNull(true)
   @Is('isNumeric', value => isNumeric(value))
@@ -62,7 +64,7 @@ export default class Match extends Model<Match> {
   @AllowNull(true)
   @Is('isBoolean', value => isBoolean(value))
   @Column
-  shotout: boolean
+  shootout: boolean
 
   @AllowNull(true)
   @Is('isBoolean', value => isBoolean(value))

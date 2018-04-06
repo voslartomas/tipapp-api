@@ -3,6 +3,7 @@ import { isString, isCzechMobileNumber } from  '../utils/modelValidation'
 
 @Table({
   timestamps: true,
+  paranoid: true
 })
 
 export default class User extends Model<User> {
@@ -11,14 +12,14 @@ export default class User extends Model<User> {
   @Is('isString', value => isString(value))
   @Length({msg: 'Length of first name', min: 3, max: 50})
   @Column
-  firstname: string
+  firstName: string
 
   @AllowNull(false)
   @NotEmpty
   @Is('isString', value => isString(value))
   @Length({msg: 'Length of last name', min: 3, max: 50})
   @Column
-  lastname: string
+  lastName: string
 
   @AllowNull(false)
   @NotEmpty

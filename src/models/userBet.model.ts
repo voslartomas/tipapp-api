@@ -1,12 +1,13 @@
 import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, Is, Default } from 'sequelize-typescript'
 import Match from './match.model'
-import User from './user.model'
-import Player from './player.model'
 import { isBoolean, isDate, isNumeric } from '../utils/modelValidation'
+import LeagueUser from './leagueUser.model'
+import LeaguePlayer from './leaguePlayer.model'
 
 // TODO: Here could be probably the problem when league has specific settings what to bet
 @Table({
   timestamps: true,
+  paranoid: true
 })
 export default class UserBet extends Model<UserBet> {
   @AllowNull(false)
@@ -21,11 +22,11 @@ export default class UserBet extends Model<UserBet> {
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
   @Column
-  @ForeignKey(() => User)
-  userId: number
+  @ForeignKey(() => LeagueUser)
+  leagueUserId: number
 
-  @BelongsTo(() => User)
-  user: User
+  @BelongsTo(() => LeagueUser)
+  user: LeagueUser
 
   @AllowNull(false)
   @Is('isDate', value => isDate(value))
@@ -51,9 +52,9 @@ export default class UserBet extends Model<UserBet> {
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
   @Column
-  @ForeignKey(() => Player)
+  @ForeignKey(() => LeaguePlayer)
   scorerId: number
 
-  @BelongsTo(() => Player)
-  player: Player
+  @BelongsTo(() => LeaguePlayer)
+  scorer: LeaguePlayer
 }

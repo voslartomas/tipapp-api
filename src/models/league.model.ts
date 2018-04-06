@@ -4,7 +4,7 @@ import { isString, isNumeric, isBoolean, isYear } from  '../utils/modelValidatio
 
 @Table({
   timestamps: true,
-  paranoid: true,
+  paranoid: true
 })
 export default class League extends Model<League> {
   @AllowNull(false)

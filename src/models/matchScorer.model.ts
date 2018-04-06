@@ -1,10 +1,11 @@
 import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, Is } from 'sequelize-typescript'
-import Match from './match.model'
-import Player from './player.model'
 import { isNumeric } from '../utils/modelValidation'
+import Match from './match.model'
+import LeaguePlayer from './leaguePlayer.model'
 
 @Table({
   timestamps: true,
+  paranoid: true
 })
 export default class MatchScorer extends Model<MatchScorer> {
   @AllowNull(false)
@@ -18,12 +19,12 @@ export default class MatchScorer extends Model<MatchScorer> {
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
-  @ForeignKey(() => Player)
+  @ForeignKey(() => LeaguePlayer)
   @Column
   scorerId: number
 
-  @BelongsTo(() => Player)
-  scorer: Player
+  @BelongsTo(() => LeaguePlayer)
+  scorer: LeaguePlayer
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))

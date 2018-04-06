@@ -3,22 +3,12 @@ import { isString } from '../utils/modelValidation'
 
 @Table({
   timestamps: true,
+  paranoid: true
 })
 export default class Sport extends Model<Sport> {
   @AllowNull(false)
   @NotEmpty
   @Is('isString', value => isString(value))
   @Column
-  czName: string
-
-  @AllowNull(false)
-  @NotEmpty
-  @Is('isString', value => isString(value))
-  @Column
-  engName: string
-
-  @AllowNull(true)
-  @Is('isString', value => isString(value))
-  @Column
-  value: string
+  name: string
 }

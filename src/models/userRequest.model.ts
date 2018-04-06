@@ -5,6 +5,7 @@ import { isBoolean, isNumeric } from '../utils/modelValidation'
 
 @Table({
   timestamps: true,
+  paranoid: true
 })
 export default class UserRequest extends Model<UserRequest> {
   @AllowNull(false)
