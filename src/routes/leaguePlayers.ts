@@ -4,15 +4,19 @@ import Database from '../services/database'
 import LeaguePlayer from '../models/leaguePlayer.model'
 import { ILeaguePlayer } from '../types/models.d'
 
-@Path('/api/league-players')
+@Path('/api/league/:leagueId/players')
 export default class LeaguePlayerController {
-
     @Inject
     private database: Database
 
+    @PathParam('leagueId')
+    leagueId: string
+
     @GET
     async getLeaguePlayers(): Promise<ILeaguePlayer[]> {
-        return await this.database.models.LeaguePlayer.findAll({})
+        return await this.database.models.LeaguePlayer.findAll({
+          where: {leagueId: this.leagueId}
+        })
     }
 
     @GET
