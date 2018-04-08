@@ -1,79 +1,126 @@
 basePath: /
 definitions:
-    IUser:
+    ILeaguePlayer:
         description: ""
         properties:
             id:
-                type: string
+                type: number
+                format: double
                 description: ""
-            email:
-                type: string
+            leagueTeamId:
+                type: number
+                format: double
                 description: ""
-            firstname:
-                type: string
+            playerId:
+                type: number
+                format: double
                 description: ""
-            lastname:
-                type: string
+            seasonGames:
+                type: number
+                format: double
                 description: ""
-            username:
-                type: string
+            seasonGoals:
+                type: number
+                format: double
                 description: ""
-            mobileNumber:
-                type: string
+            seasonAssists:
+                type: number
+                format: double
                 description: ""
-            createdAt:
-                type: string
-                format: date-time
-                description: ""
-            updatedAt:
-                type: string
-                format: date-time
+            bestScorer:
+                type: boolean
                 description: ""
         type: object
         required:
             - id
-            - email
-            - firstname
-            - lastname
-            - username
-            - mobileNumber
-            - createdAt
-            - updatedAt
+            - leagueTeamId
+            - playerId
+            - seasonGames
+            - seasonGoals
+            - seasonAssists
+            - bestScorer
+    ILeague:
+        description: ""
+        properties:
+            id:
+                type: number
+                format: double
+                description: ""
+            name:
+                type: string
+                description: ""
+            sportId:
+                type: number
+                format: double
+                description: ""
+            isActive:
+                type: boolean
+                description: ""
+            isTheMostActive:
+                type: boolean
+                description: ""
+            isFinished:
+                type: boolean
+                description: ""
+            seasonFrom:
+                type: number
+                format: double
+                description: ""
+            seasonTo:
+                type: number
+                format: double
+                description: ""
+        type: object
+        required:
+            - id
+            - name
+            - sportId
+            - isActive
+            - isTheMostActive
+            - isFinished
+            - seasonFrom
+            - seasonTo
     IMatch:
         description: ""
         properties:
             id:
                 type: string
                 description: ""
-            bettingLeague:
-                type: string
+            leagueId:
+                type: number
+                format: double
                 description: ""
             gameNumber:
-                type: string
+                type: number
+                format: double
                 description: ""
             dateTime:
                 type: string
                 format: date-time
                 description: ""
-            homeTeam:
-                type: string
+            homeTeamId:
+                type: number
+                format: double
                 description: ""
-            awayTeam:
-                type: string
+            awayTeamId:
+                type: number
+                format: double
                 description: ""
             homeScore:
-                type: string
+                type: number
+                format: double
                 description: ""
             awayScore:
-                type: string
+                type: number
+                format: double
                 description: ""
             overtime:
                 type: boolean
                 description: ""
-            shotout:
+            shootout:
                 type: boolean
                 description: ""
-            winner:
+            homeWinner:
                 type: boolean
                 description: ""
             isEvaluated:
@@ -82,92 +129,49 @@ definitions:
         type: object
         required:
             - id
-            - bettingLeague
+            - leagueId
             - gameNumber
             - dateTime
-            - homeTeam
-            - awayTeam
+            - homeTeamId
+            - awayTeamId
             - homeScore
             - awayScore
             - overtime
-            - shotout
-            - winner
+            - shootout
+            - homeWinner
             - isEvaluated
-    ILeague:
-        description: ""
-        properties:
-            id:
-                type: string
-                description: ""
-            name:
-                type: string
-                description: ""
-            sport:
-                type: string
-                description: ""
-            isActive:
-                type: boolean
-                description: ""
-            isTheMostActive:
-                type: boolean
-                description: ""
-            seasonFrom:
-                type: string
-                description: ""
-            seasonTo:
-                type: string
-                description: ""
-            isFinished:
-                type: boolean
-                description: ""
-        type: object
-        required:
-            - id
-            - name
-            - sport
-            - isActive
-            - isTheMostActive
-            - seasonFrom
-            - seasonTo
-            - isFinished
     ITeam:
         description: ""
         properties:
             id:
+                type: number
+                format: double
+                description: ""
+            name:
                 type: string
                 description: ""
-            czName:
-                type: string
-                description: ""
-            engName:
-                type: string
-                description: ""
-            value:
+            nickname:
                 type: string
                 description: ""
             shortcut:
                 type: string
                 description: ""
-            sport:
-                type: string
-                description: ""
-            league:
+            sportId:
                 type: string
                 description: ""
         type: object
         required:
             - id
-            - czName
-            - engName
-            - value
+            - name
+            - nickname
             - shortcut
-            - sport
-            - league
+            - sportId
     IPlayer:
         description: ""
         properties:
             id:
-                type: string
+                type: number
+                format: double
                 description: ""
             firstName:
                 type: string
@@ -175,197 +179,283 @@ definitions:
             lastName:
                 type: string
                 description: ""
-            team:
-                type: string
-                description: ""
-            seasonFrom:
-                type: string
-                description: ""
-            seasonTo:
-                type: string
-                description: ""
-            bestScorer:
-                type: string
-                description: ""
             isActive:
                 type: boolean
-                description: ""
-            seasonGames:
-                type: string
-                description: ""
-            seasonGoals:
-                type: string
-                description: ""
-            seasonAssists:
-                type: string
                 description: ""
         type: object
         required:
             - id
             - firstName
             - lastName
-            - team
-            - seasonFrom
-            - seasonTo
-            - bestScorer
             - isActive
-            - seasonGames
-            - seasonGoals
-            - seasonAssists
+    ILeagueSpecialBetSerie:
+        description: ""
+        properties:
+            id:
+                type: number
+                format: double
+                description: ""
+            leagueId:
+                type: number
+                format: double
+                description: ""
+            specialBetSerieId:
+                type: number
+                format: double
+                description: ""
+            homeTeamId:
+                type: number
+                format: double
+                description: ""
+            awayTeamId:
+                type: number
+                format: double
+                description: ""
+            homeTeamScore:
+                type: number
+                format: double
+                description: ""
+            awayTeamScore:
+                type: number
+                format: double
+                description: ""
+            dateTime:
+                type: string
+                format: date-time
+                description: ""
+        type: object
+        required:
+            - id
+            - leagueId
+            - specialBetSerieId
+            - homeTeamId
+            - awayTeamId
+            - homeTeamScore
+            - awayTeamScore
+            - dateTime
+    ILeagueSpecialBetSingle:
+        description: ""
+        properties:
+            id:
+                type: number
+                format: double
+                description: ""
+            leagueId:
+                type: number
+                format: double
+                description: ""
+            specialBetSingleId:
+                type: number
+                format: double
+                description: ""
+            specialBetTeamResultId:
+                type: number
+                format: double
+                description: ""
+            specialBetPlayerResultId:
+                type: number
+                format: double
+                description: ""
+            specialBetValue:
+                type: number
+                format: double
+                description: ""
+            dateTime:
+                type: string
+                format: date-time
+                description: ""
+        type: object
+        required:
+            - id
+            - leagueId
+            - specialBetSingleId
+            - specialBetTeamResultId
+            - specialBetPlayerResultId
+            - specialBetValue
+            - dateTime
+    ILeagueTeam:
+        description: ""
+        properties:
+            id:
+                type: number
+                format: double
+                description: ""
+            leagueId:
+                type: number
+                format: double
+                description: ""
+            teamId:
+                type: number
+                format: double
+                description: ""
+        type: object
+        required:
+            - id
+            - leagueId
+            - teamId
+    ILeagueUser:
+        description: ""
+        properties:
+            id:
+                type: number
+                format: double
+                description: ""
+            leagueId:
+                type: number
+                format: double
+                description: ""
+            userId:
+                type: number
+                format: double
+                description: ""
+            paid:
+                type: boolean
+                description: ""
+            active:
+                type: boolean
+                description: ""
+        type: object
+        required:
+            - id
+            - leagueId
+            - userId
+            - paid
+            - active
     IMatchScorer:
         description: ""
         properties:
             matchId:
-                type: string
+                type: number
+                format: double
                 description: ""
             scorerId:
-                type: string
+                type: number
+                format: double
                 description: ""
             numberOfGoals:
-                type: string
+                type: number
+                format: double
                 description: ""
         type: object
         required:
             - matchId
             - scorerId
             - numberOfGoals
-    ISpecialBet:
+    ISpecialBetSerie:
         description: ""
         properties:
             id:
-                type: string
+                type: number
+                format: double
                 description: ""
-            key:
+            bestOf:
+                type: number
+                format: double
+                description: ""
+            name:
                 type: string
                 description: ""
         type: object
         required:
             - id
-            - key
-    ISpecialBetResult:
+            - bestOf
+            - name
+    ISpecialBetSingle:
         description: ""
         properties:
             id:
-                type: string
+                type: number
+                format: double
                 description: ""
-            leagueId:
-                type: string
+            sportId:
+                type: number
+                format: double
                 description: ""
-            specialBetId:
-                type: string
+            specialBetType:
+                type: number
+                format: double
                 description: ""
-            seriesHomeTeam:
-                type: string
-                description: ""
-            seriesAwayTeam:
-                type: string
-                description: ""
-            specialBetResult:
+            name:
                 type: string
                 description: ""
         type: object
         required:
             - id
-            - leagueId
-            - specialBetId
-            - seriesHomeTeam
-            - seriesAwayTeam
-            - specialBetResult
+            - sportId
+            - specialBetType
+            - name
     ISport:
         description: ""
         properties:
             id:
-                type: string
+                type: number
+                format: double
                 description: ""
-            czName:
-                type: string
-                description: ""
-            engName:
-                type: string
-                description: ""
-            value:
+            name:
                 type: string
                 description: ""
         type: object
         required:
             - id
-            - czName
-            - engName
-            - value
+            - name
     IUserBet:
         description: ""
         properties:
             id:
-                type: string
+                type: number
+                format: double
                 description: ""
             matchId:
-                type: string
+                type: number
+                format: double
                 description: ""
-            userId:
-                type: string
+            leagueUserId:
+                type: number
+                format: double
                 description: ""
             dateTime:
                 type: string
                 format: date-time
                 description: ""
             homeScore:
-                type: string
+                type: number
+                format: double
                 description: ""
             awayScore:
-                type: string
+                type: number
+                format: double
                 description: ""
             homeWinner:
                 type: boolean
                 description: ""
-            scorer:
-                type: string
+            scorerId:
+                type: number
+                format: double
                 description: ""
         type: object
         required:
             - id
             - matchId
-            - userId
+            - leagueUserId
             - dateTime
             - homeScore
             - awayScore
             - homeWinner
-            - scorer
-    IUserPayment:
-        description: ""
-        properties:
-            id:
-                type: string
-                description: ""
-            userId:
-                type: string
-                description: ""
-            leagueId:
-                type: string
-                description: ""
-            paid:
-                type: boolean
-                description: ""
-            displayed:
-                type: boolean
-                description: ""
-        type: object
-        required:
-            - id
-            - userId
-            - leagueId
-            - paid
-            - displayed
+            - scorerId
     IUserRequest:
         description: ""
         properties:
             id:
-                type: string
+                type: number
+                format: double
                 description: ""
             userId:
-                type: string
+                type: number
+                format: double
                 description: ""
             leagueId:
-                type: string
+                type: number
+                format: double
                 description: ""
             decided:
                 type: boolean
@@ -380,60 +470,93 @@ definitions:
             - leagueId
             - decided
             - accepted
+    IUser:
+        description: ""
+        properties:
+            id:
+                type: number
+                format: double
+                description: ""
+            email:
+                type: string
+                description: ""
+            firstName:
+                type: string
+                description: ""
+            lastName:
+                type: string
+                description: ""
+            username:
+                type: string
+                description: ""
+            mobileNumber:
+                type: string
+                description: ""
+            password:
+                type: string
+                description: ""
+        type: object
+        required:
+            - id
+            - email
+            - firstName
+            - lastName
+            - username
+            - mobileNumber
+            - password
     IUserSetting:
         description: ""
         properties:
             id:
-                type: string
-                description: ""
-            userId:
                 type: number
                 format: double
                 description: ""
-            leagueId:
+            leagueUserId:
                 type: number
                 format: double
                 description: ""
             emailBetNotification:
                 type: boolean
                 description: ""
+            emailBetNotificationValue:
+                type: number
+                format: double
+                description: ""
             emailRankingNotification:
                 type: boolean
+                description: ""
+            emailRankingNotificationValue:
+                type: number
+                format: double
                 description: ""
         type: object
         required:
             - id
-            - userId
-            - leagueId
+            - leagueUserId
             - emailBetNotification
+            - emailBetNotificationValue
             - emailRankingNotification
-    IUserSpecialBet:
+            - emailRankingNotificationValue
+    IUserSpecialBetSerie:
         description: ""
         properties:
             id:
-                type: string
-                description: ""
-            specialBetId:
                 type: number
                 format: double
                 description: ""
-            leagueId:
+            leagueSpecialBetSerieId:
                 type: number
                 format: double
                 description: ""
-            userId:
+            leagueUserId:
                 type: number
                 format: double
                 description: ""
-            seriesHomeTeam:
+            homeTeamScore:
                 type: number
                 format: double
                 description: ""
-            seriesAwayTeam:
-                type: number
-                format: double
-                description: ""
-            specialBet:
+            awayTeamScore:
                 type: number
                 format: double
                 description: ""
@@ -444,12 +567,39 @@ definitions:
         type: object
         required:
             - id
-            - specialBetId
-            - leagueId
-            - userId
-            - seriesHomeTeam
-            - seriesAwayTeam
-            - specialBet
+            - leagueSpecialBetSerieId
+            - leagueUserId
+            - homeTeamScore
+            - awayTeamScore
+            - dateTime
+    IUserSpecialBetSingle:
+        description: ""
+        properties:
+            id:
+                type: number
+                format: double
+                description: ""
+            leagueSpecialBetSingleId:
+                type: number
+                format: double
+                description: ""
+            leagueUserId:
+                type: number
+                format: double
+                description: ""
+            bet:
+                type: string
+                description: ""
+            dateTime:
+                type: string
+                format: date-time
+                description: ""
+        type: object
+        required:
+            - id
+            - leagueSpecialBetSingleId
+            - leagueUserId
+            - bet
             - dateTime
 info:
     license:
@@ -490,9 +640,9 @@ paths:
                     required: true
                     schema:
                         type: object
-    /api/users:
+    /api/league-players:
         get:
-            operationId: UsersGetUsers
+            operationId: LeaguePlayerGetLeaguePlayers
             produces:
                 - application/json
             responses:
@@ -501,18 +651,18 @@ paths:
                     schema:
                         type: array
                         items:
-                            $ref: '#/definitions/IUser'
+                            $ref: '#/definitions/ILeaguePlayer'
             description: ""
             parameters: []
         post:
-            operationId: UsersCreateUser
+            operationId: LeaguePlayerCreateLeaguePlayer
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/IUser'
+                        $ref: '#/definitions/ILeaguePlayer'
             description: ""
             consumes:
                 - application/json
@@ -520,20 +670,20 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: user
+                    name: leaguePlayer
                     required: true
                     schema:
                         type: object
-    '/api/users/{id}':
+    '/api/league-players/{id}':
         get:
-            operationId: UsersGetUser
+            operationId: LeaguePlayerGetLeaguePlayer
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/IUser'
+                        $ref: '#/definitions/ILeaguePlayer'
             description: ""
             parameters:
                 -
@@ -544,14 +694,14 @@ paths:
                     type: number
                     format: double
         put:
-            operationId: UsersUpdateUser
+            operationId: LeaguePlayerUpdateLeaguePlayer
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/IUser'
+                        $ref: '#/definitions/ILeaguePlayer'
             description: ""
             consumes:
                 - application/json
@@ -566,126 +716,12 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: user
+                    name: leaguePlayer
                     required: true
                     schema:
                         type: object
         delete:
-            operationId: UsersDeleteUser
-            produces:
-                - text/html
-            responses:
-                '204':
-                    description: 'No content'
-            description: ""
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: id
-                    required: true
-                    type: number
-                    format: double
-    '/api/users/username/{username}':
-        get:
-            operationId: UsersGetUserUN
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        $ref: '#/definitions/IUser'
-            description: ""
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: username
-                    required: true
-                    type: string
-    /api/matches:
-        get:
-            operationId: MachesGetMatches
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        type: array
-                        items:
-                            $ref: '#/definitions/IMatch'
-            description: ""
-            parameters: []
-        post:
-            operationId: MachesCreateMatch
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        $ref: '#/definitions/IMatch'
-            description: ""
-            consumes:
-                - application/json
-            parameters:
-                -
-                    description: ""
-                    in: body
-                    name: match
-                    required: true
-                    schema:
-                        type: object
-    '/api/matches/{id}':
-        get:
-            operationId: MachesGetMatch
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        $ref: '#/definitions/IMatch'
-            description: ""
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: id
-                    required: true
-                    type: number
-                    format: double
-        put:
-            operationId: MachesUpdateMatch
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        $ref: '#/definitions/IMatch'
-            description: ""
-            consumes:
-                - application/json
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: id
-                    required: true
-                    type: number
-                    format: double
-                -
-                    description: ""
-                    in: body
-                    name: match
-                    required: true
-                    schema:
-                        type: object
-        delete:
-            operationId: MachesDeleteMatch
+            operationId: LeaguePlayerDeleteLeaguePlayer
             produces:
                 - text/html
             responses:
@@ -736,7 +772,7 @@ paths:
                         type: object
     '/api/leagues/{leagueId}/matches':
         get:
-            operationId: LeaguesGetMatches
+            operationId: LeaguesGetLeagueMatches
             produces:
                 - application/json
             responses:
@@ -778,7 +814,7 @@ paths:
                     format: double
     '/api/leagues/{leagueId}/players':
         get:
-            operationId: LeaguesGetPlayers
+            operationId: LeaguesGetLeaguePlayers
             produces:
                 - application/json
             responses:
@@ -790,6 +826,34 @@ paths:
                             $ref: '#/definitions/IPlayer'
             description: ""
             parameters:
+                -
+                    description: ""
+                    in: path
+                    name: leagueId
+                    required: true
+                    type: number
+                    format: double
+    '/api/leagues/{leagueId}/{leagueTeamId}/players':
+        get:
+            operationId: LeaguesGetLeagueTeamPlayers
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/IPlayer'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: leagueTeamId
+                    required: true
+                    type: number
+                    format: double
                 -
                     description: ""
                     in: path
@@ -845,6 +909,486 @@ paths:
                         type: object
         delete:
             operationId: LeaguesDeleteBetLeague
+            produces:
+                - text/html
+            responses:
+                '204':
+                    description: 'No content'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+    /api/league-special-bet-series:
+        get:
+            operationId: LeagueSpecialBetSerieGetLeagueSpecialBetSeries
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/ILeagueSpecialBetSerie'
+            description: ""
+            parameters: []
+        post:
+            operationId: LeagueSpecialBetSerieCreateLeagueSpecialBetSerie
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueSpecialBetSerie'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: body
+                    name: leagueSpecialBetSerie
+                    required: true
+                    schema:
+                        type: object
+    '/api/league-special-bet-series/{id}':
+        get:
+            operationId: LeagueSpecialBetSerieGetLeagueSpecialBetSerie
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueSpecialBetSerie'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+        put:
+            operationId: LeagueSpecialBetSerieUpdateLeagueSpecialBetSerie
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueSpecialBetSerie'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+                -
+                    description: ""
+                    in: body
+                    name: leagueSpecialBetSerie
+                    required: true
+                    schema:
+                        type: object
+        delete:
+            operationId: LeagueSpecialBetSerieDeleteLeagueSpecialBetSerie
+            produces:
+                - text/html
+            responses:
+                '204':
+                    description: 'No content'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+    /api/league-special-bet-singles:
+        get:
+            operationId: LeagueSpecialBetSingleGetLeagueSpecialBetSingles
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/ILeagueSpecialBetSingle'
+            description: ""
+            parameters: []
+        post:
+            operationId: LeagueSpecialBetSingleCreateLeagueSpecialBetSingle
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueSpecialBetSingle'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: body
+                    name: leagueSpecialBetSingle
+                    required: true
+                    schema:
+                        type: object
+    '/api/league-special-bet-singles/{id}':
+        get:
+            operationId: LeagueSpecialBetSingleGetLeagueSpecialBetSingle
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueSpecialBetSingle'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+        put:
+            operationId: LeagueSpecialBetSingleUpdateLeagueSpecialBetSingle
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueSpecialBetSingle'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+                -
+                    description: ""
+                    in: body
+                    name: leagueSpecialBetSingle
+                    required: true
+                    schema:
+                        type: object
+        delete:
+            operationId: LeagueSpecialBetSingleDeleteLeagueSpecialBetSingle
+            produces:
+                - text/html
+            responses:
+                '204':
+                    description: 'No content'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+    /api/league-teams:
+        get:
+            operationId: LeagueTeamGetLeagueTeams
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/ILeagueTeam'
+            description: ""
+            parameters: []
+        post:
+            operationId: LeagueTeamCreateLeagueTeam
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueTeam'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: body
+                    name: leagueTeam
+                    required: true
+                    schema:
+                        type: object
+    '/api/league-teams/{id}':
+        get:
+            operationId: LeagueTeamGetLeagueTeam
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueTeam'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+        put:
+            operationId: LeagueTeamUpdateLeagueTeam
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueTeam'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+                -
+                    description: ""
+                    in: body
+                    name: leagueTeam
+                    required: true
+                    schema:
+                        type: object
+        delete:
+            operationId: LeagueTeamDeleteLeagueTeam
+            produces:
+                - text/html
+            responses:
+                '204':
+                    description: 'No content'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+    /api/league-users:
+        get:
+            operationId: LeagueUserGetLeagueUsers
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/ILeagueUser'
+            description: ""
+            parameters: []
+        post:
+            operationId: LeagueUserCreateLeagueUser
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueUser'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: body
+                    name: leagueUser
+                    required: true
+                    schema:
+                        type: object
+    '/api/league-users/{id}':
+        get:
+            operationId: LeagueUserGetLeagueUser
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueUser'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+        put:
+            operationId: LeagueUserUpdateLeagueUser
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueUser'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+                -
+                    description: ""
+                    in: body
+                    name: leagueUser
+                    required: true
+                    schema:
+                        type: object
+        delete:
+            operationId: LeagueUserDeleteLeagueUser
+            produces:
+                - text/html
+            responses:
+                '204':
+                    description: 'No content'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+    /api/matches:
+        get:
+            operationId: MatchesGetMatches
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/IMatch'
+            description: ""
+            parameters: []
+        post:
+            operationId: MatchesCreateMatch
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IMatch'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: body
+                    name: match
+                    required: true
+                    schema:
+                        type: object
+    '/api/matches/{id}':
+        get:
+            operationId: MatchesGetMatch
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IMatch'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+        put:
+            operationId: MatchesUpdateMatch
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IMatch'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+                -
+                    description: ""
+                    in: body
+                    name: match
+                    required: true
+                    schema:
+                        type: object
+        delete:
+            operationId: MatchesDeleteMatch
             produces:
                 - text/html
             responses:
@@ -1051,9 +1595,9 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/special-bets:
+    /api/-special-bet-series:
         get:
-            operationId: SpecialBetsGetSpecialBets
+            operationId: SpecialBetSeriesGetSpecialBetSeries
             produces:
                 - application/json
             responses:
@@ -1062,18 +1606,18 @@ paths:
                     schema:
                         type: array
                         items:
-                            $ref: '#/definitions/ISpecialBet'
+                            $ref: '#/definitions/ISpecialBetSerie'
             description: ""
             parameters: []
         post:
-            operationId: SpecialBetsCreateSpecialBet
+            operationId: SpecialBetSeriesCreateSpecialBetSerie
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/ISpecialBet'
+                        $ref: '#/definitions/ISpecialBetSerie'
             description: ""
             consumes:
                 - application/json
@@ -1081,20 +1625,20 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: specialBet
+                    name: SpecialBetSerie
                     required: true
                     schema:
                         type: object
-    '/api/special-bets/{id}':
+    '/api/-special-bet-series/{id}':
         get:
-            operationId: SpecialBetsGetSpecialBet
+            operationId: SpecialBetSeriesGetSpecialBetSerie
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/ISpecialBet'
+                        $ref: '#/definitions/ISpecialBetSerie'
             description: ""
             parameters:
                 -
@@ -1105,14 +1649,14 @@ paths:
                     type: number
                     format: double
         put:
-            operationId: SpecialBetsUpdateSpecialBet
+            operationId: SpecialBetSeriesUpdateSpecialBetSerie
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/ISpecialBet'
+                        $ref: '#/definitions/ISpecialBetSerie'
             description: ""
             consumes:
                 - application/json
@@ -1127,12 +1671,12 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: specialBet
+                    name: SpecialBetSerie
                     required: true
                     schema:
                         type: object
         delete:
-            operationId: SpecialBetsDeleteSpecialBet
+            operationId: SpecialBetSeriesDeleteSpecialBetSerie
             produces:
                 - text/html
             responses:
@@ -1147,9 +1691,9 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/special-bet-results:
+    /api/special-bet-singles:
         get:
-            operationId: SpecialBetResultsGetSpecialBetResults
+            operationId: SpecialBetSinglesGetSpecialBetSingles
             produces:
                 - application/json
             responses:
@@ -1158,18 +1702,18 @@ paths:
                     schema:
                         type: array
                         items:
-                            $ref: '#/definitions/ISpecialBetResult'
+                            $ref: '#/definitions/ISpecialBetSingle'
             description: ""
             parameters: []
         post:
-            operationId: SpecialBetResultsCreateSpecialBet
+            operationId: SpecialBetSinglesCreateSpecialBetSingle
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/ISpecialBetResult'
+                        $ref: '#/definitions/ISpecialBetSingle'
             description: ""
             consumes:
                 - application/json
@@ -1177,20 +1721,20 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: specialBetResult
+                    name: SpecialBetSingle
                     required: true
                     schema:
                         type: object
-    '/api/special-bet-results/{id}':
+    '/api/special-bet-singles/{id}':
         get:
-            operationId: SpecialBetResultsGetSpecialBetResult
+            operationId: SpecialBetSinglesGetSpecialBetSingle
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/ISpecialBetResult'
+                        $ref: '#/definitions/ISpecialBetSingle'
             description: ""
             parameters:
                 -
@@ -1201,14 +1745,14 @@ paths:
                     type: number
                     format: double
         put:
-            operationId: SpecialBetResultsUpdateSpecialBet
+            operationId: SpecialBetSinglesUpdateSpecialBetSingle
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/ISpecialBetResult'
+                        $ref: '#/definitions/ISpecialBetSingle'
             description: ""
             consumes:
                 - application/json
@@ -1223,12 +1767,12 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: specialBetResult
+                    name: SpecialBetSingle
                     required: true
                     schema:
                         type: object
         delete:
-            operationId: SpecialBetResultsDeleteSpecialBet
+            operationId: SpecialBetSinglesDeleteSpecialBetSingle
             produces:
                 - text/html
             responses:
@@ -1552,102 +2096,6 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/user-payments:
-        get:
-            operationId: UserPaymentsGetUserPayments
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        type: array
-                        items:
-                            $ref: '#/definitions/IUserPayment'
-            description: ""
-            parameters: []
-        post:
-            operationId: UserPaymentsCreateUserPayment
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        $ref: '#/definitions/IUserPayment'
-            description: ""
-            consumes:
-                - application/json
-            parameters:
-                -
-                    description: ""
-                    in: body
-                    name: userPayment
-                    required: true
-                    schema:
-                        type: object
-    '/api/user-payments/{id}':
-        get:
-            operationId: UserPaymentsGetUserPayment
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        $ref: '#/definitions/IUserPayment'
-            description: ""
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: id
-                    required: true
-                    type: number
-                    format: double
-        put:
-            operationId: UserPaymentsUpdateUserPayment
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        $ref: '#/definitions/IUserPayment'
-            description: ""
-            consumes:
-                - application/json
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: id
-                    required: true
-                    type: number
-                    format: double
-                -
-                    description: ""
-                    in: body
-                    name: userPayment
-                    required: true
-                    schema:
-                        type: object
-        delete:
-            operationId: UserPaymentsDeleteUserPayment
-            produces:
-                - text/html
-            responses:
-                '204':
-                    description: 'No content'
-            description: ""
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: id
-                    required: true
-                    type: number
-                    format: double
     /api/user-requests:
         get:
             operationId: UserRequestsGetUserRequests
@@ -1744,6 +2192,120 @@ paths:
                     required: true
                     type: number
                     format: double
+    /api/users:
+        get:
+            operationId: UsersGetUsers
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/IUser'
+            description: ""
+            parameters: []
+        post:
+            operationId: UsersCreateUser
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IUser'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: body
+                    name: user
+                    required: true
+                    schema:
+                        type: object
+    '/api/users/{id}':
+        get:
+            operationId: UsersGetUser
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IUser'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+        put:
+            operationId: UsersUpdateUser
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IUser'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+                -
+                    description: ""
+                    in: body
+                    name: user
+                    required: true
+                    schema:
+                        type: object
+        delete:
+            operationId: UsersDeleteUser
+            produces:
+                - text/html
+            responses:
+                '204':
+                    description: 'No content'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+    '/api/users/username/{username}':
+        get:
+            operationId: UsersGetUserUN
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IUser'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: username
+                    required: true
+                    type: string
     /api/user-settings:
         get:
             operationId: UserSettingsGetUserSettings
@@ -1840,9 +2402,9 @@ paths:
                     required: true
                     type: number
                     format: double
-    /api/user-special-bets:
+    /api/user-special-bet-series:
         get:
-            operationId: UserSpecialBetsGetUserSpecialBets
+            operationId: UserSpecialBetSeriesGetUserSpecialBetSeries
             produces:
                 - application/json
             responses:
@@ -1851,18 +2413,18 @@ paths:
                     schema:
                         type: array
                         items:
-                            $ref: '#/definitions/IUserSpecialBet'
+                            $ref: '#/definitions/IUserSpecialBetSerie'
             description: ""
             parameters: []
         post:
-            operationId: UserSpecialBetsCreateUserSpecialBet
+            operationId: UserSpecialBetSeriesCreateUserSpecialBetSerie
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/IUserSpecialBet'
+                        $ref: '#/definitions/IUserSpecialBetSerie'
             description: ""
             consumes:
                 - application/json
@@ -1870,20 +2432,20 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: userSpecialBet
+                    name: userSpecialBetSerie
                     required: true
                     schema:
                         type: object
-    '/api/user-special-bets/{id}':
+    '/api/user-special-bet-series/{id}':
         get:
-            operationId: UserSpecialBetsGetUserSpecialBet
+            operationId: UserSpecialBetSeriesGetUserSpecialBetSerie
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/IUserSpecialBet'
+                        $ref: '#/definitions/IUserSpecialBetSerie'
             description: ""
             parameters:
                 -
@@ -1894,14 +2456,14 @@ paths:
                     type: number
                     format: double
         put:
-            operationId: UserSpecialBetsUpdateUserSpecialBet
+            operationId: UserSpecialBetSeriesUpdateUserSpecialBetSerie
             produces:
                 - application/json
             responses:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/IUserSpecialBet'
+                        $ref: '#/definitions/IUserSpecialBetSerie'
             description: ""
             consumes:
                 - application/json
@@ -1916,12 +2478,108 @@ paths:
                 -
                     description: ""
                     in: body
-                    name: userSpecialBet
+                    name: userSpecialBetSerie
                     required: true
                     schema:
                         type: object
         delete:
-            operationId: UserSpecialBetsDeleteUserSpecialBet
+            operationId: UserSpecialBetSeriesDeleteUserSpecialBetSerie
+            produces:
+                - text/html
+            responses:
+                '204':
+                    description: 'No content'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+    /api/user-special-bet-singles:
+        get:
+            operationId: UserSpecialBetSinglesGetUserSpecialBetSingles
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/IUserSpecialBetSingle'
+            description: ""
+            parameters: []
+        post:
+            operationId: UserSpecialBetSinglesCreateUserSpecialBetSingle
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IUserSpecialBetSingle'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: body
+                    name: userSpecialBetSingle
+                    required: true
+                    schema:
+                        type: object
+    '/api/user-special-bet-singles/{id}':
+        get:
+            operationId: UserSpecialBetSinglesGetUserSpecialBetSingle
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IUserSpecialBetSingle'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+        put:
+            operationId: UserSpecialBetSinglesUpdateUserSpecialBetSingle
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/IUserSpecialBetSingle'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+                -
+                    description: ""
+                    in: body
+                    name: userSpecialBetSingle
+                    required: true
+                    schema:
+                        type: object
+        delete:
+            operationId: UserSpecialBetSinglesDeleteUserSpecialBetSingle
             produces:
                 - text/html
             responses:

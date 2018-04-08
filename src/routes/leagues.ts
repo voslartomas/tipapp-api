@@ -6,7 +6,7 @@ import { ILeague } from '../types/models.d'
 import { IMatch, IPlayer, ITeam } from '../types/models'
 import Match from '../models/match.model'
 import Player from '../models/player.model'
-import Team from '../models/team.model'
+import LeagueTeam from '../models/leagueTeam.model'
 
 @Path('/api/leagues')
 export default class LeaguesController {
@@ -21,8 +21,9 @@ export default class LeaguesController {
   @GET
   @Path('/:leagueId/matches')
   async getLeagueMatches(@PathParam('leagueId') leagueId: number): Promise<IMatch[]> {
-    return await this.database.models.Match.findAll({
-        // TODO: include teams info
+    return await this.database.models.Match.findAll({include: [
+        {model: this.database.models.LeagueTeam, as: 'homeTeam', include: [this.database.models.Team]},
+        {model: this.database.models.LeagueTeam, as: 'awayTeam', include: [this.database.models.Team]}],
         where: {leagueId: leagueId}})
   }
 
