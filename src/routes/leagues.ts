@@ -3,7 +3,7 @@ import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import League from '../models/league.model'
 import { ILeague } from '../types/models.d'
-import { IMatch, IPlayer, ITeam } from '../types/models'
+import { IMatch, IPlayer, ITeam, ILeagueTeam } from '../types/models'
 import Match from '../models/match.model'
 import Player from '../models/player.model'
 import LeagueTeam from '../models/leagueTeam.model'
@@ -28,23 +28,13 @@ export default class LeaguesController {
   }
 
   @GET
-  @Path('/:leagueId/teams')
-  async getTeams(@PathParam('leagueId') leagueId: number): Promise<ITeam[]> {
-    const leagueTeams = await this.database.models.LeagueTeam.findAll({ where: { leagueId } })
-    const teams = []
-    for (const leagueTeam in leagueTeams) {
-      const team = await this.database.models.Team.findById(leagueTeam)
-        teams.push(team)
-      }
-
-      return teams
-  }
-
-  @GET
   @Path('/:leagueId/players')
   async getLeaguePlayers(@PathParam('leagueId') leagueId: number): Promise<IPlayer[]> {
-    // TODO: return players from league
-    return
+    return await this.database.models.LeaguePlayer.findAll({
+      include: [
+        this.database.models.Player,
+        {model: this.database.models.LeagueTeam, include: [this.database.models.Team], where: {leagueId}}
+      ], })
   }
 
   @GET
@@ -95,6 +85,34 @@ export default class LeaguesController {
     if (dbLeague) {
       await dbLeague.destroy()
     }
+  }
+
+  // Teams
+  @GET
+  @Path('/:leagueId/teams')
+  async getTeams(@PathParam('leagueId') leagueId: number): Promise<ITeam[]> {
+    const leagueTeams = await this.database.models.LeagueTeam.findAll({
+      include: [this.database.models.Team, {model: this.database.models.League, include: [this.database.models.Sport]}],
+      where: { leagueId }
+    })
+
+    return leagueTeams
+  }
+
+  @POST
+  @Path('/:id/teams')
+  async createTeam(@PathParam('id') leagueId: number, leagueTeam: any): Promise<ILeagueTeam> {
+      return await this.database.models.LeagueTeam.create(leagueTeam)
+  }
+
+  @DELETE
+  @Path('/:leagueId/teams/:id')
+  async deleteTeam(@PathParam('id') teamId: number): Promise<void> {
+      const dbLeagueTeam = await this.database.models.LeagueTeam.findById(teamId)
+
+      if (dbLeagueTeam) {
+          await dbLeagueTeam.destroy()
+      }
   }
 
 }

@@ -140,6 +140,28 @@ definitions:
             - shootout
             - homeWinner
             - isEvaluated
+    IPlayer:
+        description: ""
+        properties:
+            id:
+                type: number
+                format: double
+                description: ""
+            firstName:
+                type: string
+                description: ""
+            lastName:
+                type: string
+                description: ""
+            isActive:
+                type: boolean
+                description: ""
+        type: object
+        required:
+            - id
+            - firstName
+            - lastName
+            - isActive
     ITeam:
         description: ""
         properties:
@@ -166,28 +188,26 @@ definitions:
             - nickname
             - shortcut
             - sportId
-    IPlayer:
+    ILeagueTeam:
         description: ""
         properties:
             id:
                 type: number
                 format: double
                 description: ""
-            firstName:
-                type: string
+            leagueId:
+                type: number
+                format: double
                 description: ""
-            lastName:
-                type: string
-                description: ""
-            isActive:
-                type: boolean
+            teamId:
+                type: number
+                format: double
                 description: ""
         type: object
         required:
             - id
-            - firstName
-            - lastName
-            - isActive
+            - leagueId
+            - teamId
     ILeagueSpecialBetSerie:
         description: ""
         properties:
@@ -273,26 +293,6 @@ definitions:
             - specialBetPlayerResultId
             - specialBetValue
             - dateTime
-    ILeagueTeam:
-        description: ""
-        properties:
-            id:
-                type: number
-                format: double
-                description: ""
-            leagueId:
-                type: number
-                format: double
-                description: ""
-            teamId:
-                type: number
-                format: double
-                description: ""
-        type: object
-        required:
-            - id
-            - leagueId
-            - teamId
     ILeagueUser:
         description: ""
         properties:
@@ -791,27 +791,6 @@ paths:
                     required: true
                     type: number
                     format: double
-    '/api/leagues/{leagueId}/teams':
-        get:
-            operationId: LeaguesGetTeams
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        type: array
-                        items:
-                            $ref: '#/definitions/ITeam'
-            description: ""
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: leagueId
-                    required: true
-                    type: number
-                    format: double
     '/api/leagues/{leagueId}/players':
         get:
             operationId: LeaguesGetLeaguePlayers
@@ -909,6 +888,72 @@ paths:
                         type: object
         delete:
             operationId: LeaguesDeleteBetLeague
+            produces:
+                - text/html
+            responses:
+                '204':
+                    description: 'No content'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+    '/api/leagues/{leagueId}/teams':
+        get:
+            operationId: LeaguesGetTeams
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#/definitions/ITeam'
+            description: ""
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: leagueId
+                    required: true
+                    type: number
+                    format: double
+    '/api/leagues/{id}/teams':
+        post:
+            operationId: LeaguesCreateTeam
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/ILeagueTeam'
+            description: ""
+            consumes:
+                - application/json
+            parameters:
+                -
+                    description: ""
+                    in: path
+                    name: id
+                    required: true
+                    type: number
+                    format: double
+                -
+                    description: ""
+                    in: body
+                    name: leagueTeam
+                    required: true
+                    schema:
+                        type: object
+    '/api/leagues/{leagueId}/teams/{id}':
+        delete:
+            operationId: LeaguesDeleteTeam
             produces:
                 - text/html
             responses:
@@ -1101,102 +1146,6 @@ paths:
                         type: object
         delete:
             operationId: LeagueSpecialBetSingleDeleteLeagueSpecialBetSingle
-            produces:
-                - text/html
-            responses:
-                '204':
-                    description: 'No content'
-            description: ""
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: id
-                    required: true
-                    type: number
-                    format: double
-    /api/league-teams:
-        get:
-            operationId: LeagueTeamGetLeagueTeams
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        type: array
-                        items:
-                            $ref: '#/definitions/ILeagueTeam'
-            description: ""
-            parameters: []
-        post:
-            operationId: LeagueTeamCreateLeagueTeam
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        $ref: '#/definitions/ILeagueTeam'
-            description: ""
-            consumes:
-                - application/json
-            parameters:
-                -
-                    description: ""
-                    in: body
-                    name: leagueTeam
-                    required: true
-                    schema:
-                        type: object
-    '/api/league-teams/{id}':
-        get:
-            operationId: LeagueTeamGetLeagueTeam
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        $ref: '#/definitions/ILeagueTeam'
-            description: ""
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: id
-                    required: true
-                    type: number
-                    format: double
-        put:
-            operationId: LeagueTeamUpdateLeagueTeam
-            produces:
-                - application/json
-            responses:
-                '200':
-                    description: Ok
-                    schema:
-                        $ref: '#/definitions/ILeagueTeam'
-            description: ""
-            consumes:
-                - application/json
-            parameters:
-                -
-                    description: ""
-                    in: path
-                    name: id
-                    required: true
-                    type: number
-                    format: double
-                -
-                    description: ""
-                    in: body
-                    name: leagueTeam
-                    required: true
-                    schema:
-                        type: object
-        delete:
-            operationId: LeagueTeamDeleteLeagueTeam
             produces:
                 - text/html
             responses:

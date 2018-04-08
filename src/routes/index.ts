@@ -4,7 +4,6 @@ import LeaguePlayersController from './leaguePlayers'
 import LeaguesController from './leagues'
 import LeagueSpecialBetSeriesController from './leagueSpecialBetSeries'
 import LeagueSpecialBetSinglesController from './leagueSpecialBetSingles'
-import LeagueTeamsController from './leagueTeams'
 import LeagueUsersController from './leagueUsers'
 import MatchesController from './matches'
 import MatchScoresController from './matchScorers'
@@ -27,7 +26,6 @@ export default [
   LeaguesController,
   LeagueSpecialBetSeriesController,
   LeagueSpecialBetSinglesController,
-  LeagueTeamsController,
   LeagueUsersController,
   MatchesController,
   MatchScoresController,
