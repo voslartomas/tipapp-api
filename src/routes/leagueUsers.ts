@@ -4,15 +4,20 @@ import Database from '../services/database'
 import LeagueUser from '../models/leagueUser.model'
 import { ILeagueUser } from '../types/models.d'
 
-@Path('/api/league-users')
+@Path(`/api/leagues/:leagueId/users`)
 export default class LeagueUserController {
-
     @Inject
     private database: Database
 
+    @PathParam('leagueId')
+    leagueId: string
+
     @GET
     async getLeagueUsers(): Promise<ILeagueUser[]> {
-        return await this.database.models.LeagueUser.findAll({})
+        return await this.database.models.LeagueUser.findAll({
+          where: {leagueId: this.leagueId},
+          include: [this.database.models.League, this.database.models.User]
+        })
     }
 
     @GET
@@ -31,15 +36,10 @@ export default class LeagueUserController {
         }
     }
 
-    @POST
-    async createLeagueUser(leagueUser: any): Promise<ILeagueUser> {
-        return await this.database.models.LeagueUser.create(leagueUser)
-    }
-
     @PUT
     @Path(':id')
-    async updateLeagueUser(@PathParam('id') leagueUserId: number, leagueUser: any): Promise<ILeagueUser> {
-        const dbLeagueUser = await this.database.models.LeagueUser.findById(leagueUserId)
+    async updateLeagueUser(@PathParam('id') userId: number, leagueUser: any): Promise<ILeagueUser> {
+        const dbLeagueUser = await this.database.models.LeagueUser.findById(userId)
 
         if (dbLeagueUser) {
             return await dbLeagueUser.update(leagueUser)

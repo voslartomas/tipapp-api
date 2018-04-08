@@ -4,9 +4,8 @@ import Database from '../services/database'
 import SpecialBetSerie from '../models/SpecialBetSerie.model'
 import { ISpecialBetSerie } from '../types/models.d'
 
-@Path('/api/-special-bet-series')
+@Path('/api/bets/series')
 export default class SpecialBetSeriesController {
-
     @Inject
     private database: Database
 

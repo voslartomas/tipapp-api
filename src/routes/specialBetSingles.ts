@@ -4,7 +4,7 @@ import Database from '../services/database'
 import SpecialBetSingle from '../models/specialBetSingle.model'
 import { ISpecialBetSingle } from '../types/models.d'
 
-@Path('/api/special-bet-singles')
+@Path('/api/bets/single')
 export default class SpecialBetSinglesController {
 
     @Inject

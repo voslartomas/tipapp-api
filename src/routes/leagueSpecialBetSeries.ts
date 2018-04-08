@@ -4,15 +4,24 @@ import Database from '../services/database'
 import LeagueSpecialBetSerie from '../models/leagueSpecialBetSerie.model'
 import { ILeagueSpecialBetSerie } from '../types/models.d'
 
-@Path('/api/league-special-bet-series')
+@Path('/api/leagues/:leagueId/bets/series')
 export default class LeagueSpecialBetSerieController {
-
     @Inject
     private database: Database
 
+    @PathParam('leagueId')
+    leagueId: string
+
     @GET
     async getLeagueSpecialBetSeries(): Promise<ILeagueSpecialBetSerie[]> {
-        return await this.database.models.LeagueSpecialBetSerie.findAll({})
+        return await this.database.models.LeagueSpecialBetSerie.findAll({
+          include: [
+            {model: this.database.models.LeagueTeam, as: 'homeTeam', include: [this.database.models.Team]},
+            {model: this.database.models.LeagueTeam, as: 'awayTeam', include: [this.database.models.Team]},
+            this.database.models.SpecialBetSerie
+          ],
+          where: {leagueId: this.leagueId}
+        })
     }
 
     @GET
