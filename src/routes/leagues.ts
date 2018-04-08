@@ -20,32 +20,37 @@ export default class LeaguesController {
 
   @GET
   @Path('/:leagueId/matches')
-  async getMatches(@PathParam('leagueId') leagueId: number): Promise<IMatch[]> {
-    return await this.database.models.Match.findAll({include: [
-      {model: this.database.models.Team, as: 'homeTeam'},
-      {model: this.database.models.Team, as: 'awayTeam'}], where: {leagueId: leagueId}})
+  async getLeagueMatches(@PathParam('leagueId') leagueId: number): Promise<IMatch[]> {
+    return await this.database.models.Match.findAll({
+        // TODO: include teams info
+        where: {leagueId: leagueId}})
   }
 
   @GET
   @Path('/:leagueId/teams')
   async getTeams(@PathParam('leagueId') leagueId: number): Promise<ITeam[]> {
-    return await this.database.models.Team.findAll({include: [
-      {model: this.database.models.League, as: 'league'},
-      {model: this.database.models.Sport, as: 'sport'}], where: {leagueId: leagueId}})
+    const leagueTeams = await this.database.models.LeagueTeam.findAll({ where: { leagueId } })
+    const teams = []
+    for (const leagueTeam in leagueTeams) {
+      const team = await this.database.models.Team.findById(leagueTeam)
+        teams.push(team)
+      }
+
+      return teams
   }
 
   @GET
   @Path('/:leagueId/players')
-  async getPlayers(@PathParam('leagueId') leagueId: number): Promise<IPlayer[]> {
-    const teams = await this.database.models.Team.findAll({where: { leagueId}})
-    let players = []
-    for (const team in teams) {
-      const teamPlayers = await this.database.models.Player.findAll({include: [
-        {model: this.database.models.Team, as: 'team'}], where: { teamId: teams[team].id}})
-      players = players.concat(teamPlayers)
-    }
+  async getLeaguePlayers(@PathParam('leagueId') leagueId: number): Promise<IPlayer[]> {
+    // TODO: return players from league
+    return
+  }
 
-    return players
+  @GET
+  @Path('/:leagueId/:leagueTeamId/players')
+  async getLeagueTeamPlayers(@PathParam('leagueTeamId') leagueTeamId: number, @PathParam('leagueId') leagueId: number): Promise<IPlayer[]> {
+    // TODO: return players from team
+    return
   }
 
   @GET

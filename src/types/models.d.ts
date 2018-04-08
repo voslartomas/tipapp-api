@@ -96,12 +96,12 @@ export interface ISpecialBetSingle {
 }
 
 export interface ISport {
-  id: string
+  id: number
   name: string
 }
 
 export interface ITeam {
-  id: string
+  id: number
   name: string
   nickname: string
   shortcut: string

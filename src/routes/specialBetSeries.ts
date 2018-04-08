@@ -1,61 +1,61 @@
 import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest'
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
-import SpecialBetResult from '../models/specialBetSerie.model'
+import SpecialBetSerie from '../models/SpecialBetSerie.model'
 import { ISpecialBetSerie } from '../types/models.d'
 
-@Path('/api/special-bet-results')
-export default class SpecialBetResultsController {
+@Path('/api/-special-bet-series')
+export default class SpecialBetSeriesController {
 
-  @Inject
-  private database: Database
+    @Inject
+    private database: Database
 
-  @GET
-  async getSpecialBetResults(): Promise<ISpecialBetSerie[]> {
-    return await this.database.models.SpecialBetResult.findAll({})
-  }
-
-  @GET
-  @Path(':id')
-  async getSpecialBetResult(@PathParam('id') specialBetResultId: number): Promise<ISpecialBetSerie> {
-    try {
-      const specialBetResult = await this.database.models.SpecialBetResult.findById(specialBetResultId)
-
-      if (!specialBetResult) {
-        throw new Error('not found')
-      }
-
-      return specialBetResult
-    } catch (e) {
-      throw new Errors.NotFoundError('Special bet result not found.')
+    @GET
+    async getSpecialBetSeries(): Promise<ISpecialBetSerie[]> {
+        return await this.database.models.SpecialBetSerie.findAll({})
     }
-  }
 
-  @POST
-  async createSpecialBet(specialBetResult: any): Promise<ISpecialBetSerie> {
-    return await this.database.models.SpecialBetResult.create(specialBetResult)
-  }
+    @GET
+    @Path(':id')
+    async getSpecialBetSerie(@PathParam('id') SpecialBetSerieId: number): Promise<ISpecialBetSerie> {
+        try {
+            const specialBetSerie = await this.database.models.SpecialBetSerie.findById(SpecialBetSerieId)
 
-  @PUT
-  @Path(':id')
-  async updateSpecialBet(@PathParam('id') specialBetResultId: number, specialBetResult: any): Promise<ISpecialBetSerie> {
-    const dbSpecialBetResult = await this.database.models.SpecialBetResult.findById(specialBetResultId)
+            if (!specialBetSerie) {
+                throw new Error('not found')
+            }
 
-    if (dbSpecialBetResult) {
-      return await dbSpecialBetResult.update(specialBetResult)
-    } else {
-      return await this.database.models.SpecialBetResult.create(specialBetResult)
+            return specialBetSerie
+        } catch (e) {
+            throw new Errors.NotFoundError(' special bet serie not found.')
+        }
     }
-  }
 
-  @DELETE
-  @Path(':id')
-  async deleteSpecialBet(@PathParam('id') specialBetResultId: number): Promise<void> {
-    const dbSpecialBetResult = await this.database.models.SpecialBetResult.findById(specialBetResultId)
-
-    if (dbSpecialBetResult) {
-      await dbSpecialBetResult.destroy()
+    @POST
+    async createSpecialBetSerie(SpecialBetSerie: any): Promise<ISpecialBetSerie> {
+        return await this.database.models.SpecialBetSerie.create(SpecialBetSerie)
     }
-  }
+
+    @PUT
+    @Path(':id')
+    async updateSpecialBetSerie(@PathParam('id') SpecialBetSerieId: number, SpecialBetSerie: any): Promise<ISpecialBetSerie> {
+        const dbSpecialBetSerie = await this.database.models.SpecialBetSerie.findById(SpecialBetSerieId)
+
+        if (dbSpecialBetSerie) {
+            return await dbSpecialBetSerie.update(SpecialBetSerie)
+        } else {
+            return await this.database.models.SpecialBetSerie.create(SpecialBetSerie)
+        }
+    }
+
+    @DELETE
+    @Path(':id')
+    async deleteSpecialBetSerie(@PathParam('id') SpecialBetSerieId: number): Promise<void> {
+        const dbSpecialBetSerie = await this.database.models.SpecialBetSerie.findById(SpecialBetSerieId)
+
+        if (dbSpecialBetSerie) {
+            await dbSpecialBetSerie.destroy()
+        }
+    }
 
 }
