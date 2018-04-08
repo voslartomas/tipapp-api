@@ -1,6 +1,7 @@
 {
     "swagger": {
         "outputDirectory": "./src/definitions/",
-        "entryFile": "./src/routes/index"
+        "entryFile": "./src/routes/index",
+        "yaml": false
     }
 }
