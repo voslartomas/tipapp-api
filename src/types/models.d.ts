@@ -1,120 +1,164 @@
-export interface IUser {
-  id: string,
-  email: string,
-  firstname: string,
-  lastname: string,
-  username: string,
-  mobileNumber: string,
-  createdAt: Date,
-  updatedAt: Date
-}
-export interface IMatch {
-  id: string,
-  bettingLeague: string,
-  gameNumber: string,
-  dateTime: Date,
-  homeTeam: string,
-  awayTeam: string,
-  homeScore: string,
-  awayScore: string,
-  overtime: boolean,
-  shotout: boolean,
-  winner: boolean,
-  isEvaluated: boolean
-}
 export interface ILeague {
-  id: string,
+  id: number
   name: string
-  sport: string
+  sportId: number
   isActive: boolean
   isTheMostActive: boolean
-  seasonFrom: string
-  seasonTo: string
   isFinished: boolean
+  seasonFrom: number
+  seasonTo: number
 }
+
+export interface ILeaguePlayer {
+    id: number
+    leagueTeamId: number
+    playerId: number
+    seasonGames: number
+    seasonGoals: number
+    seasonAssists: number
+    bestScorer: boolean
+}
+
+export interface ILeagueSpecialBetSerie {
+  id: number
+  leagueId: number
+  specialBetSerieId: number
+  homeTeamId: number
+  awayTeamId: number
+  homeTeamScore: number
+  awayTeamScore: number
+  dateTime: Date
+}
+
+export interface ILeagueSpecialBetSingle {
+  id: number
+  leagueId: number
+  specialBetSingleId: number
+  specialBetTeamResultId: number
+  specialBetPlayerResultId: number
+  specialBetValue: number
+  dateTime: Date
+}
+
+export interface ILeagueTeam {
+  id: number
+  leagueId: number
+  teamId: number
+}
+
+export interface ILeagueUser {
+    id: number
+    leagueId: number
+    userId: number
+    paid: boolean
+    active: boolean
+}
+
+export interface IMatch {
+    id: string
+    leagueId: number
+    gameNumber: number
+    dateTime: Date
+    homeTeamId: number
+    awayTeamId: number
+    homeScore: number
+    awayScore: number
+    overtime: boolean
+    shootout: boolean
+    homeWinner: boolean
+    isEvaluated: boolean
+}
+
 export interface IMatchScorer {
-  matchId: string
-  scorerId: string
-  numberOfGoals: string
+  matchId: number
+  scorerId: number
+  numberOfGoals: number
 }
+
 export interface IPlayer {
-  id: string
+  id: number
   firstName: string
   lastName: string
-  team: string
-  seasonFrom: string
-  seasonTo: string
-  bestScorer: string
   isActive: boolean
-  seasonGames: string
-  seasonGoals: string
-  seasonAssists: string
 }
-export interface ISpecialBet {
-  id: string
-  key: string
+
+export interface ISpecialBetSerie {
+  id: number
+  bestOf: number
+  name: string
 }
-export interface ISpecialBetResult {
-  id: string
-  leagueId: string
-  specialBetId: string
-  seriesHomeTeam: string
-  seriesAwayTeam: string
-  specialBetResult: string
+
+export interface ISpecialBetSingle {
+    id: number
+    sportId: number
+    specialBetType: number
+    name: string
 }
+
 export interface ISport {
-  id: string
-  czName: string
-  engName: string
-  value: string
+  id: number
+  name: string
 }
+
 export interface ITeam {
-  id: string
-  czName: string
-  engName: string
-  value: string
+  id: number
+  name: string
+  nickname: string
   shortcut: string
-  sport: string
-  league: string
+  sportId: string
 }
+
+export interface IUser {
+    id: number
+    email: string
+    firstName: string
+    lastName: string
+    username: string
+    mobileNumber: string
+    password: string
+}
+
 export interface IUserBet {
-  id: string
-  matchId: string
-  userId: string
+  id: number
+  matchId: number
+  leagueUserId: number
   dateTime: Date
-  homeScore: string
-  awayScore: string
+  homeScore: number
+  awayScore: number
   homeWinner: boolean
-  scorer: string
+  scorerId: number
 }
-export interface IUserPayment {
-  id: string
-  userId: string
-  leagueId: string
-  paid: boolean
-  displayed: boolean
-}
+
 export interface IUserRequest {
-  id: string
-  userId: string
-  leagueId: string
+  id: number
+  userId: number
+  leagueId: number
   decided: boolean
   accepted: boolean
 }
+
 export interface IUserSetting {
-  id: string
-  userId: number
-  leagueId: number
+  id: number
+  leagueUserId: number
   emailBetNotification: boolean
+  emailBetNotificationValue: number
   emailRankingNotification: boolean
+  emailRankingNotificationValue: number
 }
-export interface IUserSpecialBet {
-  id: string
-  specialBetId: number
-  leagueId: number
-  userId: number
-  seriesHomeTeam: number
-  seriesAwayTeam: number
-  specialBet: number
+
+export interface IUserSpecialBetSerie {
+  id: number
+  leagueSpecialBetSerieId: number
+  leagueUserId: number
+  homeTeamScore: number
+  awayTeamScore: number
+  dateTime: Date
+}
+
+export interface IUserSpecialBetSingle {
+  id: number
+  leagueSpecialBetSingleId: number
+  leagueUserId: number
+  bet: string
   dateTime: Date
 }

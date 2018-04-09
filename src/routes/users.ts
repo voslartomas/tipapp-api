@@ -9,7 +9,7 @@ export default class UsersController {
   @Inject
   private database: Database
 
-  private readonly ATTRIBUTES = ['id', 'firstname', 'lastname', 'username', 'email', 'mobileNumber', 'createdAt', 'updatedAt']
+  private readonly ATTRIBUTES = ['id', 'firstName', 'lastName', 'username', 'email', 'mobileNumber', 'createdAt', 'updatedAt']
 
   @GET
   async getUsers(): Promise<IUser[]> {

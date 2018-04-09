@@ -1,35 +1,43 @@
 import { PingController } from './ping'
 import { LoginController } from './login'
-import UsersController from './users'
-import MachesController from './matches'
+import LeaguePlayersController from './leaguePlayers'
 import LeaguesController from './leagues'
+import LeagueSpecialBetSeriesController from './leagueSpecialBetSeries'
+import LeagueSpecialBetSinglesController from './leagueSpecialBetSingles'
+import LeagueUsersController from './leagueUsers'
+import MatchesController from './matches'
 import MatchScoresController from './matchScorers'
 import PlayersController from './players'
-import SpecialBetsController from './specialBets'
-import SpecialBetResultsController from './specialBetResults'
+import SpecialBetsSeriesController from './specialBetSeries'
+import SpecialBetSinglesController from './specialBetSingles'
 import SportsController from './sports'
 import TeamsController from './teams'
 import UserBetsController from './userBets'
-import UserPaymentsController from './userPayments'
 import UserRequestsController from './userRequests'
+import UsersController from './users'
 import UserSettingsController from './userSettings'
-import UserSpecialBetsController from './userSpecialBets'
+import UserSpecialBetSeriesController from './userSpecialBetSeries'
+import UserSpecialBetSinglesController from './userSpecialBetSingles'
 
 export default [
   PingController,
   LoginController,
-  UsersController,
-  MachesController,
+  LeaguePlayersController,
   LeaguesController,
+  LeagueSpecialBetSeriesController,
+  LeagueSpecialBetSinglesController,
+  LeagueUsersController,
+  MatchesController,
   MatchScoresController,
   PlayersController,
-  SpecialBetsController,
-  SpecialBetResultsController,
+  SpecialBetsSeriesController,
+  SpecialBetSinglesController,
   SportsController,
   TeamsController,
   UserBetsController,
-  UserPaymentsController,
   UserRequestsController,
+  UsersController,
   UserSettingsController,
-  UserSpecialBetsController
+  UserSpecialBetSeriesController,
+  UserSpecialBetSinglesController
 ]

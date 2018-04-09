@@ -1,6 +1,6 @@
 module.exports = {
 
-  BettingLeagues: [
+  Leagues: [
     {
       name: 'Stanley Cup 2018',
       sportId: 2,
@@ -39,6 +39,265 @@ module.exports = {
     }
   ],
 
+  LeaguePlayers: [
+        {
+            leagueTeamId: 1,
+            playerId: 1,
+            seasonGames: 75,
+            seasonGoals: 12,
+            seasonAssists: 31,
+            bestScorer: false
+        },
+        {
+            leagueTeamId: 1,
+            playerId: 2,
+            seasonGames: 69,
+            seasonGoals: 19,
+            seasonAssists: 15,
+            bestScorer: true
+        },
+        {
+            leagueTeamId: 2,
+            playerId: 3,
+            seasonGames: 82,
+            seasonGoals: 24,
+            seasonAssists: 45,
+            bestScorer: true
+        },
+        {
+            leagueTeamId: 2,
+            playerId: 4,
+            seasonGames: 75,
+            seasonGoals: 29,
+            seasonAssists: 26,
+            bestScorer: false
+        },
+        {
+            leagueTeamId: 3,
+            playerId: 5,
+            seasonGames: 65,
+            seasonGoals: 26,
+            seasonAssists: 31,
+            bestScorer: true
+        },
+        {
+            leagueTeamId: 3,
+            playerId: 6,
+            seasonGames: 79,
+            seasonGoals: 23,
+            seasonAssists: 25,
+            bestScorer: false
+        },
+        {
+            leagueTeamId: 4,
+            playerId: 7,
+            seasonGames: 82,
+            seasonGoals: 39,
+            seasonAssists: 45,
+            bestScorer: true
+        },
+        {
+            leagueTeamId: 4,
+            playerId: 8,
+            seasonGames: 75,
+            seasonGoals: 12,
+            seasonAssists: 11,
+            bestScorer: false
+        },
+        {
+            leagueTeamId: 6,
+            playerId: 9,
+            isActive: true,
+            seasonGames: 15,
+            seasonGoals: 2,
+            bestScorer: false
+        },
+        {
+            leagueTeamId: 7,
+            playerId: 10,
+            isActive: true,
+            seasonGames: 8,
+            seasonGoals: 6,
+            bestScorer: true
+        },
+        {
+            leagueTeamId: 8,
+            playerId: 11,
+            isActive: true,
+            seasonGames: 13,
+            seasonGoals: 7,
+            bestScorer: true
+        }
+    ],
+
+  LeagueSpecialBetSingles: [
+        {
+            leagueId: 1,
+            specialBetSingleId: 1,
+            specialBetTeamResultId: 3,
+            specialBetPlayerResultId: undefined,
+            specialBetValueId: undefined,
+            dateTime: '2018-02-03 04:05:02'
+        },
+        {
+            leagueId: 1,
+            specialBetSingleId: 1,
+            specialBetTeamResultId: undefined,
+            specialBetPlayerResultId: undefined,
+            specialBetValueId: undefined,
+            dateTime: '2018-02-03 04:05:02'
+        },
+        {
+            leagueId: 1,
+            specialBetSingleId: 2,
+            specialBetTeamResultId: 3,
+            specialBetPlayerResultId: undefined,
+            specialBetValueId: undefined,
+            dateTime: '2018-02-03 04:05:02'
+        },
+        {
+            leagueId: 1,
+            specialBetSingleId: 3,
+            specialBetTeamResultId: undefined,
+            specialBetPlayerResultId: 1,
+            specialBetValueId: undefined,
+            dateTime: '2018-02-03 04:05:02'
+        },
+        {
+          leagueId: 1,
+          specialBetSingleId: 4,
+          specialBetTeamResultId: undefined,
+          specialBetPlayerResultId: 1,
+          specialBetValueId: undefined,
+          dateTime: '2018-02-03 04:05:02'
+        }
+    ],
+
+  LeagueSpecialBetSeries: [
+        {
+            leagueId: 1,
+            specialBetSerieId: 2,
+            homeTeamId: 1,
+            awayTeamId: 2,
+            homeTeamScore: 4,
+            awayTeamScore: 3,
+            dateTime: '2018-02-03 05:05:02'
+        },
+        {
+            leagueId: 1,
+            specialBetSerieId: 2,
+            homeTeamId: 2,
+            awayTeamId: 4,
+            homeTeamScore: 4,
+            awayTeamScore: 1,
+            dateTime: '2018-02-03 05:05:03'
+        },
+        {
+            leagueId: 1,
+            specialBetSerieId: 2,
+            homeTeamId: 2,
+            awayTeamId: 3,
+            homeTeamScore: 1,
+            awayTeamScore: 4,
+            dateTime: '2018-02-03 05:05:04'
+        },
+        {
+            leagueId: 1,
+            specialBetSerieId: 2,
+            homeTeamId: 3,
+            awayTeamId: 4,
+            homeTeamScore: 4,
+            awayTeamScore: 2,
+            dateTime: '2018-02-03 05:05:05'
+        }
+    ],
+
+  LeagueTeams: [
+        {
+            leagueId: 1,
+            teamId: 1
+        },
+        {
+            leagueId: 1,
+            teamId: 2
+        },
+        {
+            leagueId: 1,
+            teamId: 3
+        },
+        {
+            leagueId: 1,
+            teamId: 4
+        },
+        {
+            leagueId: 3,
+            teamId: 5
+        },
+        {
+            leagueId: 3,
+            teamId: 6
+        },
+        {
+            leagueId: 3,
+            teamId: 7
+        },
+        {
+            leagueId: 3,
+            teamId: 8
+        }
+    ],
+
+  LeagueUsers: [
+        {
+            leagueId: 1,
+            userId: 1,
+            paid: true,
+            active: true
+        },
+        {
+            leagueId: 1,
+            userId: 2,
+            paid: false,
+            active: true
+        },
+        {
+            leagueId: 1,
+            userId: 3,
+            paid: true,
+            active: false
+        },
+        {
+            leagueId: 1,
+            userId: 4,
+            paid: false,
+            active: false
+        },
+        {
+            leagueId: 3,
+            userId: 1,
+            paid: true,
+            active: true
+        },
+        {
+            leagueId: 3,
+            userId: 2,
+            paid: false,
+            active: true
+        },
+        {
+            leagueId: 3,
+            userId: 3,
+            paid: true,
+            active: false
+        },
+        {
+            leagueId: 3,
+            userId: 4,
+            paid: false,
+            active: false
+        }
+    ],
+
   Matches: [
     {
       leagueId: 1,
@@ -49,8 +308,8 @@ module.exports = {
       homeScore: 5,
       awayScore: 2,
       overtime: false,
-      shotout: false,
-      winner: 1,
+      shootout: false,
+      homeWinner: true,
       isEvaluated: true
     },
     {
@@ -62,8 +321,8 @@ module.exports = {
       homeScore: 3,
       awayScore: 3,
       overtime: true,
-      shotout: false,
-      winner: 2,
+      shootout: false,
+      homeWinner: false,
       isEvaluated: true
     },
     {
@@ -75,8 +334,8 @@ module.exports = {
       homeScore: 2,
       awayScore: 4,
       overtime: false,
-      shotout: false,
-      winner: 1,
+      shootout: false,
+      homeWinner: true,
       isEvaluated: false
     },
     {
@@ -88,8 +347,8 @@ module.exports = {
       homeScore: 5,
       awayScore: 5,
       overtime: false,
-      shotout: true,
-      winner: 1,
+      shootout: true,
+      homeWinner: true,
       isEvaluated: true
     },
     {
@@ -101,8 +360,8 @@ module.exports = {
       // homeScore: 5,
       // awayScore: 2,
       overtime: false,
-      shotout: false,
-      winner: 1,
+      shootout: false,
+      homeWinner: true,
       isEvaluated: false
     },
   ],
@@ -154,98 +413,42 @@ module.exports = {
     {
       firstName: 'Tomáš',
       lastName: 'Plekanec',
-      teamId: 1,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: false,
-      isActive: true,
-      seasonGames: 75,
-      seasonGoals: 12,
-      seasonAssists: 31
+      isActive: true
     },
     {
       firstName: 'Brendan',
       lastName: 'Gallagher',
-      teamId: 1,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: true,
-      isActive: true,
-      seasonGames: 69,
-      seasonGoals: 19,
-      seasonAssists: 15
+      isActive: true
     },
     {
       firstName: 'John',
       lastName: 'Tavares',
-      teamId: 2,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: false,
-      isActive: true,
-      seasonGames: 82,
-      seasonGoals: 24,
-      seasonAssists: 45
+      isActive: true
     },
     {
       firstName: 'Brook',
       lastName: 'Nelson',
-      teamId: 2,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: true,
-      isActive: true,
-      seasonGames: 75,
-      seasonGoals: 29,
-      seasonAssists: 26
+      isActive: true
     },
     {
       firstName: 'Sidney',
       lastName: 'Crosby',
-      teamId: 3,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: false,
-      isActive: true,
-      seasonGames: 65,
-      seasonGoals: 26,
-      seasonAssists: 31
+      isActive: true
     },
     {
       firstName: 'Jevgenij',
       lastName: 'Malkin',
-      teamId: 3,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: false,
-      isActive: true,
-      seasonGames: 79,
-      seasonGoals: 23,
-      seasonAssists: 25
+      isActive: true
     },
     {
       firstName: 'Connor',
       lastName: 'McDavid',
-      teamId: 4,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: true,
-      isActive: true,
-      seasonGames: 82,
-      seasonGoals: 39,
-      seasonAssists: 45
+      isActive: true
     },
     {
       firstName: 'Milan',
       lastName: 'Lucic',
-      teamId: 4,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: false,
-      isActive: true,
-      seasonGames: 75,
-      seasonGoals: 12,
-      seasonAssists: 11
+      isActive: true
     },
     {
       firstName: 'Neymar',
@@ -261,236 +464,198 @@ module.exports = {
     {
       firstName: 'Ezequiel',
       lastName: 'Garay',
-      teamId: 6,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: false,
-      isActive: true,
-      seasonGames: 15,
-      seasonGoals: 2
+      isActive: true
     },
     {
       firstName: 'Thomas',
       lastName: 'Müller',
-      teamId: 7,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: true,
-      isActive: true,
-      seasonGames: 8,
-      seasonGoals: 6
+      isActive: true
     },
     {
       firstName: 'Didier',
       lastName: 'Drogba',
-      teamId: 8,
-      seasonFrom: 2017,
-      seasonTo: 2018,
-      bestScorer: true,
-      isActive: true,
-      seasonGames: 13,
-      seasonGoals: 7
+      isActive: true
     },
   ],
 
-  SpecialBets: [
+  SpecialBetSeries: [
     {
-      key: 'nhlWinner',
+      bestOf: 3,
+      name: 'Na 2 vítězné zápasy'
     },
     {
-      key: 'nhlConferenceWinner',
+      bestOf: 5,
+      name: 'Na 3 vítězné zápasy'
     },
     {
-      key: 'nhlSeriesWinner',
-    },
-    {
-      key: 'nhlMvp',
-    },
-    {
-      key: 'nhlTotalGoals',
-    },
-    {
-      key: 'wcGroupWinner',
-    },
-    {
-      key: 'wcGroupLost',
-    },
-    {
-      key: 'wcWinner',
-    },
-    {
-      key: 'wcBestGoalkeeper',
-    },
-    {
-      key: 'wcBestScorer',
-    },
-    {
-      key: 'wcMvp',
-    },
-    {
-      key: 'wcTotalGoals',
-    },
-    {
-      key: 'footballGroupWinner',
-    },
-    {
-      key: 'footballGroupAdvancer',
-    },
-    {
-      key: 'footballBestScorer',
-    },
-    {
-      key: 'footballBestPlayer',
-    },
-    {
-      key: 'footballBestGoalkeeper',
-    },
-    {
-      key: 'footballTotalGoals',
-    },
-    {
-      key: 'footballTournamentWinner',
-    },
-    {
-      key: 'footballTournamentRunnerUp',
-    },
-    {
-      key: 'footballTournament3rdPlace',
+      bestOf: 7,
+      name: 'Na 4 vítězné zápasy'
     }
   ],
 
-  SpecialBetsResults: [
+  SpecialBetSingles: [
     {
-      leagueId: 1,
-      specialBetId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBetResult: 'PIT'
+      sportId: 2,
+      specialBetType: 2,
+      name: 'Vítěz NHL'
     },
     {
-      leagueId: 1,
-      specialBetId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBetResult: 'PIT'
+      sportId: 2,
+      specialBetType: 2,
+      name: 'Vítěz konference NHL'
     },
     {
-      leagueId: 1,
-      specialBetId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBetResult: 'CHI'
+      sportId: 2,
+      specialBetType: 1,
+      name: 'Nejužitečnější hráč'
     },
     {
-      leagueId: 1,
-      specialBetId: 4,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBetResult: '5'
+      sportId: 2,
+      specialBetType: 2,
+      name: 'Vítěz skupiny MS'
     },
     {
-      leagueId: 1,
-      specialBetId: 5,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBetResult: '851'
+      sportId: 2,
+      specialBetType: 2,
+      name: 'Poslední ve skupině MS'
     },
     {
-      leagueId: 1,
-      specialBetId: 3,
-      seriesHomeTeam: 1,
-      seriesAwayTeam: 2,
-      specialBetResult: '4-3'
+      sportId: 2,
+      specialBetType: 2,
+      name: 'Vítěz MS'
     },
     {
-      leagueId: 1,
-      specialBetId: 3,
-      seriesHomeTeam: 2,
-      seriesAwayTeam: 4,
-      specialBetResult: '2-4'
+      sportId: 2,
+      specialBetType: 1,
+      name: 'Nejlepší brankář MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 1,
+      name: 'Nejlepší střelec MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 1,
+      name: 'Nejužitečnější hráč MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 3,
+      name: 'Celkový počet branek na MS'
+    },
+    {
+      sportId: 1,
+      specialBetType: 2,
+      name: 'Vítěz MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 2,
+      name: 'Poražený finalista MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 2,
+      name: 'Třetí tým MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 2,
+      name: 'Vítěz skupiny MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 2,
+      name: 'Postupující ze skupiny MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 1,
+      name: 'Nejlepší brankář MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 1,
+      name: 'Nejlepší hráč MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 1,
+      name: 'Nejlepší střelec MS'
+    },
+    {
+      sportId: 2,
+      specialBetType: 3,
+      name: 'Celkový počet branek na MS'
     }
   ],
 
   Sports: [
     {
-      czName: 'Fotbal',
-      engName: 'Football',
-      value: 'football'
+      name: 'Fotbal'
     },
     {
-      czName: 'Lední hokej',
-      engName: 'Ice Hockey',
-      value: 'iceHockey'
+      name: 'Lední hokej'
     },
     {
-      czName: 'Házená',
-      engName: 'Handball',
-      value: 'handball'
-    },
+      name: 'Házená'
+    }
   ],
 
   Teams: [
     {
-      czName: 'Montreal Canadiens',
-      engName: 'Montreal Canadiens',
-      value: 'montreal',
+      name: 'Montreal',
+      nickname: 'Canadiens',
       shortcut: 'MTL',
       sport: 2,
       league: 1
     },
     {
-      czName: 'New York Islanders',
-      engName: 'New York Islanders',
-      value: 'islanders',
+      name: 'New York',
+      nickname: 'Islanders',
       shortcut: 'NYI',
       sport: 2,
       league: 1
     },
     {
-      czName: 'Pittsburgh Penguins',
-      engName: 'Pittsburgh Penguins',
-      value: 'pittsburgh',
+      name: 'Pittsburgh',
+      nickname: 'Penguins',
       shortcut: 'PIT',
       sport: 2,
       league: 1
     },
     {
-      name: 'Edmonton Oilers',
-      czName: 'Edmonton Oilers',
-      engName: 'Edmonton Oilers',
-      value: 'edmonton',
+      name: 'Edmonton',
+      nickname: 'Oilers',
       shortcut: 'EDM',
       sport: 2,
       league: 1
     },
     {
-      czName: 'Brazílie',
-      engName: 'Brasil',
-      value: 'brasil',
+      name: 'Brazílie',
+      nickname: '',
       shortcut: 'BRA',
       sport: 1,
       league: 2
     },
     {
-      czName: 'Argentina',
-      engName: 'Argentina',
-      value: 'argentina',
+      name: 'Argentina',
+      nickname: 'argentina',
       shortcut: 'ARG',
       sport: 1,
       league: 2
     },
     {
-      czName: 'Německo',
-      engName: 'Germany',
-      value: 'germany',
+      name: 'Německo',
+      nickname: '',
       shortcut: 'GER',
       sport: 1,
       league: 2
     },
     {
-      czName: 'Pobřeží Slonoviny',
-      engName: "Côte d'Ivoire",
-      value: 'coteDIvoire',
+      name: 'Pobřeží slonoviny',
+      nickname: '',
       shortcut: 'CIV',
       sport: 1,
       league: 2
@@ -499,51 +664,51 @@ module.exports = {
 
   Users: [
     {
-      firstname: 'Roman',
-      lastname: 'Talaš',
+      firstName: 'Roman',
+      lastName: 'Talaš',
       username: 'admin',
       email: 'rotakt@gmail.com',
       mobileNumber: '724724724',
       password: '12345'
     },
     {
-      firstname: 'Petr',
-      lastname: 'Novák',
+      firstName: 'Petr',
+      lastName: 'Novák',
       username: 'user',
       email: 'rotakt@hotmail.com',
       mobileNumber: '724724725',
       password: '12345'
     },
     {
-      firstname: 'Martin',
-      lastname: 'Nový',
+      firstName: 'Martin',
+      lastName: 'Nový',
       username: 'user1',
       email: 'ahoj@seznam.com',
       mobileNumber: '724724726',
       password: '12345'
     },
     {
-      firstname: 'Miroslav',
-      lastname: 'Janíček',
+      firstName: 'Miroslav',
+      lastName: 'Janíček',
       username: 'user2',
       email: 'ahoj2@seznam.com',
       mobileNumber: '724724727',
       password: '12345'
     },
     {
-      firstname: 'Lidumil',
-      lastname: 'Lidumilový',
+      firstName: 'Lidumil',
+      lastName: 'Lidumilový',
       username: 'user3',
       email: 'ahoj3@seznam.com',
       mobileNumber: '724724728',
       password: '12345'
     },
     {
-      firstname: 'Tomas',
-      lastname: 'Voslar',
+      firstName: 'Tomas',
+      lastName: 'Voslar',
       username: 'tvoslar',
       email: 't.voslar@gmail.com',
-      mobileNumber: '-',
+      mobileNumber: '728888999',
       password: 'test'
     }
   ],
@@ -551,147 +716,96 @@ module.exports = {
   UserBets: [
     {
       matchId: 1,
-      userId: 1,
+      leagueUserId: 1,
       dateTime: '2016-08-09 04:05:03',
       homeScore: 5,
       awayScore: 1,
       homeWinner: true,
-      scorer: 1,
+      scorerId: 1,
     },
     {
       matchId: 2,
-      userId: 1,
+      leagueUserId: 1,
       dateTime: '2016-08-09 04:05:03',
       homeScore: 3,
       awayScore: 3,
       homeWinner: true,
-      scorer: 2,
+      scorerId: 2,
     },
     {
       matchId: 3,
-      userId: 1,
+      leagueUserId: 1,
       dateTime: '2016-08-09 04:05:05',
       homeScore: 2,
       awayScore: 3,
       homeWinner: false,
-      scorer: 6,
+      scorerId: 6,
     },
     {
       matchId: 4,
-      userId: 1,
+      leagueUserId: 1,
       dateTime: '2016-08-09 04:05:04',
       homeScore: 5,
       awayScore: 2,
       homeWinner: true,
-      scorer: 7,
+      scorerId: 7,
     },
     {
       matchId: 5,
-      userId: 1,
+      leagueUserId: 1,
       dateTime: '2016-08-09 04:05:02',
       homeScore: 2,
       awayScore: 3,
       homeWinner: false,
-      scorer: 8,
+      scorerId: 8,
     },
 
     {
       matchId: 1,
-      userId: 2,
+      leagueUserId: 2,
       dateTime: '2016-08-09 04:06:03',
       homeScore: 5,
       awayScore: 1,
       homeWinner: true,
-      scorer: 1,
+      scorerId: 1,
     },
     {
       matchId: 2,
-      userId: 2,
+      leagueUserId: 2,
       dateTime: '2016-08-09 04:05:03',
       homeScore: 2,
       awayScore: 2,
       homeWinner: true,
-      scorer: 2,
+      scorerId: 2,
     },
     {
       matchId: 3,
-      userId: 2,
+      leagueUserId: 2,
       dateTime: '2016-08-09 04:07:05',
       homeScore: 2,
       awayScore: 1,
       homeWinner: true,
-      scorer: 6,
+      scorerId: 6,
     },
     {
       matchId: 4,
-      userId: 2,
+      leagueUserId: 2,
       dateTime: '2016-08-09 04:15:04',
       homeScore: 5,
       awayScore: 5,
       homeWinner: true,
-      scorer: 7,
+      scorerId: 7,
     },
     {
       matchId: 5,
-      userId: 2,
+      leagueUserId: 2,
       dateTime: '2016-08-09 04:11:02',
       homeScore: 2,
       awayScore: 4,
       homeWinner: false,
-      scorer: 8,
+      scorerId: 8,
     }
 
-  ],
-
-  UserPayments: [
-    {
-      userId: 1,
-      leagueId: 1,
-      paid: true,
-      displayed: true
-    },
-    {
-      userId: 2,
-      leagueId: 1,
-      paid: true,
-      displayed: true
-    },
-    {
-      userId: 3,
-      leagueId: 1,
-      paid: false,
-      displayed: true
-    },
-    {
-      userId: 4,
-      leagueId: 1,
-      paid: false,
-      displayed: true
-    },
-    {
-      userId: 1,
-      leagueId: 2,
-      paid: true,
-      displayed: true
-    },
-    {
-      userId: 2,
-      leagueId: 2,
-      paid: false,
-      displayed: true
-    },
-    {
-      userId: 3,
-      leagueId: 3,
-      paid: true,
-      displayed: false
-    },
-    {
-      userId: 4,
-      leagueId: 3,
-      paid: false,
-      displayed: false
-    }
   ],
 
   UserRequests: [
@@ -747,160 +861,147 @@ module.exports = {
 
   UserSettings: [
     {
-      userId: 1,
       leagueId: 1,
+      leagueUserId: 1,
       emailBetNotification: true,
-      emailRankingNotification: true
+      emailBetNotificationValue: 1,
+      emailRankingNotification: true,
+      emailRankingNotificationValue: 1
     },
     {
-      userId: 2,
-      leagueId: 1,
+      leagueId: 2,
+      leagueUserId: 1,
       emailBetNotification: true,
-      emailRankingNotification: false
+      emailBetNotificationValue: 2,
+      emailRankingNotification: false,
+      emailRankingNotificationValue: 0
     },
     {
-      userId: 3,
-      leagueId: 2,
+      leagueId: 3,
+      leagueUserId: 2,
       emailBetNotification: false,
-      emailRankingNotification: false
+      emailBetNotificationValue: 3,
+      emailRankingNotification: false,
+      emailRankingNotificationValue: 3
     },
     {
-      userId: 4,
-      leagueId: 2,
+      leagueId: 4,
+      leagueUserId: 2,
       emailBetNotification: false,
-      emailRankingNotification: true
+      emailBetNotificationValue: 4,
+      emailRankingNotification: true,
+      emailRankingNotificationValue: 0
     },
   ],
 
-  UserSpecialBets: [
+  UserSpecialBetSeries: [
     {
-      specialBetId: 1,
-      leagueId: 1,
-      userId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'PIT',
-      dateTime: '2018-02-03 04:05:02'
+      leagueSpecialBetSerieId: 1,
+      leagueUserId: 1,
+      homeTeamScore: 4,
+      awayTeamScore: 2,
+      dateTime: '2018-02-03 05:04:02'
     },
     {
-      specialBetId: 2,
-      leagueId: 1,
-      userId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'PIT',
-      dateTime: '2018-02-03 04:05:02'
+      leagueSpecialBetSerieId: 2,
+      leagueUserId: 1,
+      homeTeamScore: 3,
+      awayTeamScore: 4,
+      dateTime: '2018-02-03 05:04:03'
     },
     {
-      specialBetId: 2,
-      leagueId: 1,
-      userId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'VAN',
-      dateTime: '2018-02-03 07:05:02'
+      leagueSpecialBetSerieId: 3,
+      leagueUserId: 1,
+      homeTeamScore: 3,
+      awayTeamScore: 4,
+      dateTime: '2018-02-03 05:04:04'
     },
     {
-      specialBetId: 4,
-      leagueId: 1,
-      userId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: '6',
-      dateTime: '2018-02-03 06:05:02'
+      leagueSpecialBetSerieId: 4,
+      leagueUserId: 1,
+      homeTeamScore: 4,
+      awayTeamScore: 2,
+      dateTime: '2018-02-03 06:04:02'
     },
     {
-      specialBetId: 5,
-      leagueId: 1,
-      userId: 1,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: '683',
-      dateTime: '2018-02-03 05:05:02'
+      leagueSpecialBetSerieId: 1,
+      leagueUserId: 2,
+      homeTeamScore: 4,
+      awayTeamScore: 2,
+      dateTime: '2018-02-03 05:04:02'
     },
     {
-      specialBetId: 3,
-      leagueId: 1,
-      userId: 1,
-      seriesHomeTeam: 1,
-      seriesAwayTeam: 2,
-      specialBet: '4-3',
-      dateTime: '2018-02-03 05:05:02'
+      leagueSpecialBetSerieId: 2,
+      leagueUserId: 2,
+      homeTeamScore: 3,
+      awayTeamScore: 4,
+      dateTime: '2018-02-03 05:04:03'
     },
     {
-      specialBetId: 3,
-      leagueId: 1,
-      userId: 1,
-      seriesHomeTeam: 2,
-      seriesAwayTeam: 4,
-      specialBet: '4-1',
-      dateTime: '2018-02-03 05:05:02'
-    },
-
-    {
-      specialBetId: 1,
-      leagueId: 1,
-      userId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'CHI',
-      dateTime: '2018-02-03 04:05:02'
+      leagueSpecialBetSerieId: 3,
+      leagueUserId: 2,
+      homeTeamScore: 3,
+      awayTeamScore: 4,
+      dateTime: '2018-02-03 05:04:04'
     },
     {
-      specialBetId: 2,
-      leagueId: 1,
-      userId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'PIT',
-      dateTime: '2018-02-03 04:05:02'
-    },
-    {
-      specialBetId: 2,
-      leagueId: 1,
-      userId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: 'CHI',
-      dateTime: '2018-02-03 07:06:02'
-    },
-    {
-      specialBetId: 4,
-      leagueId: 1,
-      userId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: '1',
-      dateTime: '2018-02-03 06:15:02'
-    },
-    {
-      specialBetId: 5,
-      leagueId: 1,
-      userId: 2,
-      seriesHomeTeam: undefined,
-      seriesAwayTeam: undefined,
-      specialBet: '777',
-      dateTime: '2018-02-04 05:05:02'
-    },
-    {
-      specialBetId: 3,
-      leagueId: 1,
-      userId: 2,
-      seriesHomeTeam: 1,
-      seriesAwayTeam: 2,
-      specialBet: '1-4',
-      dateTime: '2018-02-03 05:05:03'
-    },
-    {
-      specialBetId: 3,
-      leagueId: 1,
-      userId: 2,
-      seriesHomeTeam: 2,
-      seriesAwayTeam: 4,
-      specialBet: '4-3',
-      dateTime: '2018-02-04 05:05:02'
+      leagueSpecialBetSerieId: 4,
+      leagueUserId: 2,
+      homeTeamScore: 4,
+      awayTeamScore: 2,
+      dateTime: '2018-02-03 06:04:02'
     }
+  ],
 
+  UserSpecialBetSingles: [
+    {
+        leagueSpecialBetSingleId: 1,
+        leagueUserId: 1,
+        bet: 'Pittsburgh Penguins',
+        dateTime: '2018-02-02 04:05:02'
+    },
+    {
+        leagueSpecialBetSingleId: 2,
+        leagueUserId: 1,
+        bet: 'Edmonton Oilers',
+        dateTime: '2018-02-02 04:05:02'
+    },
+    {
+        leagueSpecialBetSingleId: 3,
+        leagueUserId: 1,
+        bet: 'New York Islanders',
+        dateTime: '2018-02-02 04:05:02'
+    },
+    {
+        leagueSpecialBetSingleId: 4,
+        leagueUserId: 1,
+        bet: 'Sidney Crosby',
+        dateTime: '2018-02-03 04:05:02'
+    },
+    {
+        leagueSpecialBetSingleId: 1,
+        leagueUserId: 2,
+        bet: 'Chicago Blackhawks',
+        dateTime: '2018-02-02 04:05:02'
+    },
+    {
+        leagueSpecialBetSingleId: 2,
+        leagueUserId: 2,
+        bet: 'Edmonton Oilers',
+        dateTime: '2018-02-02 04:05:02'
+    },
+    {
+        leagueSpecialBetSingleId: 3,
+        leagueUserId: 2,
+        bet: 'New York Islanders',
+        dateTime: '2018-02-02 04:05:02'
+    },
+    {
+        leagueSpecialBetSingleId: 4,
+        leagueUserId: 2,
+        bet: 'John Tavares',
+        dateTime: '2018-02-03 04:05:02'
+    },
   ]
 
 }
