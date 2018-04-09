@@ -789,7 +789,7 @@
 				]
 			}
 		},
-		"/api/league-players": {
+		"/api/league/{leagueId}/players": {
 			"get": {
 				"operationId": "LeaguePlayerGetLeaguePlayers",
 				"produces": [
@@ -839,7 +839,7 @@
 				]
 			}
 		},
-		"/api/league-players/{id}": {
+		"/api/league/{leagueId}/players/{id}": {
 			"get": {
 				"operationId": "LeaguePlayerGetLeaguePlayer",
 				"produces": [
@@ -3076,7 +3076,7 @@
 				]
 			}
 		},
-		"/api/user-special-bet-series": {
+		"/api/leagues/{leagueId}/user/bets/series": {
 			"get": {
 				"operationId": "UserSpecialBetSeriesGetUserSpecialBetSeries",
 				"produces": [
@@ -3126,7 +3126,7 @@
 				]
 			}
 		},
-		"/api/user-special-bet-series/{id}": {
+		"/api/leagues/{leagueId}/user/bets/series/{id}": {
 			"get": {
 				"operationId": "UserSpecialBetSeriesGetUserSpecialBetSerie",
 				"produces": [
@@ -3212,7 +3212,7 @@
 				]
 			}
 		},
-		"/api/user-special-bet-singles": {
+		"/api/leagues/{leagueId}/user/bets/single": {
 			"get": {
 				"operationId": "UserSpecialBetSinglesGetUserSpecialBetSingles",
 				"produces": [
@@ -3262,7 +3262,7 @@
 				]
 			}
 		},
-		"/api/user-special-bet-singles/{id}": {
+		"/api/leagues/{leagueId}/user/bets/single/{id}": {
 			"get": {
 				"operationId": "UserSpecialBetSinglesGetUserSpecialBetSingle",
 				"produces": [
