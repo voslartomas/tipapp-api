@@ -1,11 +1,16 @@
-import { Table, Column, Model, ForeignKey, BelongsTo, DataType } from 'sequelize-typescript'
+import { Table, Column, Model, ForeignKey, BelongsTo, Is, Default, AllowNull } from 'sequelize-typescript'
 import League from './league.model'
 import Team from './team.model'
+import { isBoolean, isNumeric, isDate } from '../utils/modelValidation'
+import LeagueTeam from './leagueTeam.model'
 
 @Table({
   timestamps: true,
+  paranoid: true
 })
 export default class Match extends Model<Match> {
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
   @Column
   @ForeignKey(() => League)
   leagueId: number
@@ -13,41 +18,62 @@ export default class Match extends Model<Match> {
   @BelongsTo(() => League)
   league: League
 
+  @AllowNull(true)
+  @Is('isNumeric', value => isNumeric(value))
   @Column
-  gameNumber: string
+  gameNumber: number
 
-  @Column(DataType.DATE)
+  @AllowNull(false)
+  @Is('isDate', value => isDate(value))
+  @Column
   dateTime: Date
 
-  @ForeignKey(() => Team)
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
+  @ForeignKey(() => LeagueTeam)
   @Column
   homeTeamId: number
 
-  @BelongsTo(() => Team, 'homeTeamId')
+  @BelongsTo(() => LeagueTeam, 'homeTeamId')
   homeTeam: Team
 
-  @ForeignKey(() => Team)
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
+  @ForeignKey(() => LeagueTeam)
   @Column
   awayTeamId: number
 
-  @BelongsTo(() => Team, 'awayTeamId')
-  awayTeam: Team
+  @BelongsTo(() => LeagueTeam, 'awayTeamId')
+  awayTeam: LeagueTeam
 
+  @AllowNull(true)
+  @Is('isNumeric', value => isNumeric(value))
   @Column
-  homeScore: string
+  homeScore: number
 
+  @AllowNull(true)
+  @Is('isNumeric', value => isNumeric(value))
   @Column
-  awayScore: string
+  awayScore: number
 
+  @AllowNull(true)
+  @Is('isBoolean', value => isBoolean(value))
   @Column
   overtime: boolean
 
+  @AllowNull(true)
+  @Is('isBoolean', value => isBoolean(value))
   @Column
-  shotout: boolean
+  shootout: boolean
 
+  @AllowNull(true)
+  @Is('isBoolean', value => isBoolean(value))
   @Column
-  winner: boolean
+  homeWinner: boolean
 
+  @AllowNull(false)
+  @Default(false)
+  @Is('isBoolean', value => isBoolean(value))
   @Column
   isEvaluated: boolean
 }

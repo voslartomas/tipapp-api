@@ -5,7 +5,7 @@ import Match from '../models/match.model'
 import { IMatch } from '../types/models.d'
 
 @Path('/api/matches')
-export default class MachesController {
+export default class MatchesController {
   @Inject
   private database: Database
 
