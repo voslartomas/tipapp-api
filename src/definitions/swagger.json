@@ -789,7 +789,7 @@
 				]
 			}
 		},
-		"/api/league-players": {
+		"/api/leagues/{leagueId}/players": {
 			"get": {
 				"operationId": "LeaguePlayerGetLeaguePlayers",
 				"produces": [
@@ -807,7 +807,16 @@
 					}
 				},
 				"description": "",
-				"parameters": []
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
 			},
 			"post": {
 				"operationId": "LeaguePlayerCreateLeaguePlayer",
@@ -839,7 +848,7 @@
 				]
 			}
 		},
-		"/api/league-players/{id}": {
+		"/api/leagues/{leagueId}/players/{id}": {
 			"get": {
 				"operationId": "LeaguePlayerGetLeaguePlayer",
 				"produces": [
@@ -988,36 +997,6 @@
 							"type": "array",
 							"items": {
 								"$ref": "#/definitions/IMatch"
-							}
-						}
-					}
-				},
-				"description": "",
-				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "leagueId",
-						"required": true,
-						"type": "number",
-						"format": "double"
-					}
-				]
-			}
-		},
-		"/api/leagues/{leagueId}/players": {
-			"get": {
-				"operationId": "LeaguesGetLeaguePlayers",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/IPlayer"
 							}
 						}
 					}
