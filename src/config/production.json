@@ -7,5 +7,13 @@
   "swagger": {
     "enabled": false
   },
+  "db": {
+      "databaseName": "tipapp",
+      "username": "tvoslar",
+      "password": "tipapptipapp",
+      "host": "tipapp.c2fgvnquam0j.eu-central-1.rds.amazonaws.com",
+      "dialect": "postgres",
+      "modelPath": "/../models/*.model.js"
+  },
   "security": true
 }
