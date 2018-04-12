@@ -35,7 +35,8 @@ export class Server {
       res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
       next()
     })
-
+    console.log(process.env.NODE_ENV)
+    console.error(config)
     if (config.get('security')) {
       this.app.get('*', (req, res, next) => {
         this.jwtPassport.getPassport().authenticate('jwt', { session: false })(req, res, next)
@@ -99,7 +100,7 @@ export class Server {
    */
   public start(): Promise<any> {
     return new Promise<any>((resolve, reject) => {
-      this.server = this.app.listen(config.get('port'), (err: any) => {
+      this.server = this.app.listen(config.get('port'), config.get('port'), (err: any) => {
         if (err) {
           return reject(err)
         }
