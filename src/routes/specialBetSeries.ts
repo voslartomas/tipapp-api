@@ -1,7 +1,7 @@
 import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest'
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
-import SpecialBetSerie from '../models/SpecialBetSerie.model'
+import SpecialBetSerie from '../models/specialBetSerie.model'
 import { ISpecialBetSerie } from '../types/models.d'
 
 @Path('/api/bets/series')
