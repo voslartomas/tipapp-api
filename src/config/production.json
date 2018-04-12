@@ -3,6 +3,7 @@
   "logging": {
     "level": "info"
   },
+  "origin": "http://18.195.173.121:5000",
   "swagger": {
     "enabled": false
   },

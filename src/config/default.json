@@ -4,6 +4,7 @@
   "logging": {
     "level": "debug"
   },
+  "origin": "http://localhost:3000",
   "swagger": {
     "enabled": true,
     "config_path": "./definitions/swagger.json"

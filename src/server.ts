@@ -84,7 +84,7 @@ export class Server {
       allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'],
       credentials: true,
       methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-      origin: 'http://localhost:3000',
+      origin: config.get('origin'),
       preflightContinue: false
     }
 
