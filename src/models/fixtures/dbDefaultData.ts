@@ -957,49 +957,49 @@ module.exports = {
     {
         leagueSpecialBetSingleId: 1,
         leagueUserId: 1,
-        bet: 'Pittsburgh Penguins',
+        teamResultId: 1,
         dateTime: '2018-02-02 04:05:02'
     },
     {
         leagueSpecialBetSingleId: 2,
         leagueUserId: 1,
-        bet: 'Edmonton Oilers',
+        teamResultId: 2,
         dateTime: '2018-02-02 04:05:02'
     },
     {
         leagueSpecialBetSingleId: 3,
         leagueUserId: 1,
-        bet: 'New York Islanders',
+        teamResultId: 3,
         dateTime: '2018-02-02 04:05:02'
     },
     {
         leagueSpecialBetSingleId: 4,
         leagueUserId: 1,
-        bet: 'Sidney Crosby',
+        playerResultId: 1,
         dateTime: '2018-02-03 04:05:02'
     },
     {
         leagueSpecialBetSingleId: 1,
         leagueUserId: 2,
-        bet: 'Chicago Blackhawks',
+        teamResultId: 4,
         dateTime: '2018-02-02 04:05:02'
     },
     {
         leagueSpecialBetSingleId: 2,
         leagueUserId: 2,
-        bet: 'Edmonton Oilers',
+        teamResultId: 2,
         dateTime: '2018-02-02 04:05:02'
     },
     {
         leagueSpecialBetSingleId: 3,
         leagueUserId: 2,
-        bet: 'New York Islanders',
+        teamResultId: 5,
         dateTime: '2018-02-02 04:05:02'
     },
     {
         leagueSpecialBetSingleId: 4,
         leagueUserId: 2,
-        bet: 'John Tavares',
+        playerResultId: 3,
         dateTime: '2018-02-03 04:05:02'
     },
   ]

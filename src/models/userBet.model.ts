@@ -55,6 +55,21 @@ export default class UserBet extends Model<UserBet> {
   @ForeignKey(() => LeaguePlayer)
   scorerId: number
 
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
+  @Column
+  pointsScorer: number = 6
+
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
+  @Column
+  points: number = 4
+
+  @AllowNull(false)
+  @Is('isBoolean', value => isBoolean(value))
+  @Column
+  correctBet: boolean = false
+
   @BelongsTo(() => LeaguePlayer)
   scorer: LeaguePlayer
 }

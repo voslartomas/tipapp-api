@@ -17,12 +17,18 @@ export default class UserSpecialBetSinglesController {
 
     @GET
     async getUserSpecialBetSingles(): Promise<IUserSpecialBetSingle[]> {
-        const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: this.leagueId }})
+        const leagueUser = await this.database.models.LeagueUser.findOne({
+          where: { userId: this.context.request['user'].id, leagueId: this.leagueId }})
         if (!leagueUser) {
           throw new Error('User not signed into league.')
         }
 
-        return await this.database.models.UserSpecialBetSingle.findAll({ where: {leagueUserId: leagueUser.id} })
+        return await this.database.models.UserSpecialBetSingle.findAll({
+          include: [
+            {model: this.database.models.LeagueTeam, as: 'teamResult', include: [this.database.models.Team]},
+            {model: this.database.models.LeaguePlayer, as: 'playerResult', include: [this.database.models.Player]},
+          ],
+          where: {leagueUserId: leagueUser.id} })
     }
 
     @GET
