@@ -35,8 +35,7 @@ export class Server {
       res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
       next()
     })
-    console.log(process.env.NODE_ENV)
-    console.error(config)
+
     if (config.get('security')) {
       this.app.get('*', (req, res, next) => {
         this.jwtPassport.getPassport().authenticate('jwt', { session: false })(req, res, next)
