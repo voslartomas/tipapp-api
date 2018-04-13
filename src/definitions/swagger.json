@@ -2506,7 +2506,7 @@
 				]
 			}
 		},
-		"/api/user-bets": {
+		"/api/leagues/{leagueId}/user/bets/match": {
 			"get": {
 				"operationId": "UserBetsGetUserBets",
 				"produces": [
@@ -2525,63 +2525,9 @@
 				},
 				"description": "",
 				"parameters": []
-			},
-			"post": {
-				"operationId": "UserBetsCreateUserBet",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/IUserBet"
-						}
-					}
-				},
-				"description": "",
-				"consumes": [
-					"application/json"
-				],
-				"parameters": [
-					{
-						"description": "",
-						"in": "body",
-						"name": "usetBet",
-						"required": true,
-						"schema": {
-							"type": "object"
-						}
-					}
-				]
 			}
 		},
-		"/api/user-bets/{id}": {
-			"get": {
-				"operationId": "UserBetsGetUserBet",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/IUserBet"
-						}
-					}
-				},
-				"description": "",
-				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "id",
-						"required": true,
-						"type": "number",
-						"format": "double"
-					}
-				]
-			},
+		"/api/leagues/{leagueId}/user/bets/match/{id}": {
 			"put": {
 				"operationId": "UserBetsUpdateUserBet",
 				"produces": [
@@ -2616,6 +2562,31 @@
 						"schema": {
 							"type": "object"
 						}
+					}
+				]
+			},
+			"get": {
+				"operationId": "UserBetsGetUserBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserBet"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
 					}
 				]
 			},
