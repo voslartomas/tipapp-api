@@ -295,6 +295,12 @@ module.exports = {
             userId: 4,
             paid: false,
             active: false
+        },
+        {
+            leagueId: 1,
+            userId: 6,
+            paid: false,
+            active: false
         }
     ],
 

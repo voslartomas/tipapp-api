@@ -1005,6 +1005,33 @@
 				]
 			}
 		},
+		"/api/leagues/{leagueId}/leaderboard": {
+			"get": {
+				"operationId": "LeaguesGetLeaderboard",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
 		"/api/leagues/{leagueId}/players": {
 			"get": {
 				"operationId": "LeaguesGetLeaguePlayers",

@@ -1,6 +1,7 @@
-import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, Is, Default } from 'sequelize-typescript'
+import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, Is, Default, HasMany } from 'sequelize-typescript'
 import { isNumeric, isBoolean } from  '../utils/modelValidation'
 import League from './league.model'
+import UserBet from './userBet.model'
 import User from './user.model'
 
 @Table({
@@ -16,6 +17,9 @@ export default class LeagueUser extends Model<LeagueUser> {
 
     @BelongsTo(() => League)
     league: League
+
+    @HasMany(() => UserBet)
+    bets: UserBet
 
     @AllowNull(false)
     @Is('isNumeric', value => isNumeric(value))
