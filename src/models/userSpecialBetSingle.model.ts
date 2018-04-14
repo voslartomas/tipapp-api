@@ -1,4 +1,4 @@
-import { Table, Column, Model, ForeignKey, BelongsTo, AllowNull, Is } from 'sequelize-typescript'
+import { Table, Column, Model, ForeignKey, BelongsTo, AllowNull, Is, Default } from 'sequelize-typescript'
 import { isString, isNumeric, isDate, isBoolean } from '../utils/modelValidation'
 import LeagueUser from './leagueUser.model'
 import LeagueSpecialBetSingle from './leagueSpecialBetSingle.model'
@@ -58,8 +58,15 @@ export default class UserSpecialBetSingle extends Model<UserSpecialBetSingle> {
 
     @AllowNull(false)
     @Is('isBoolean', value => isBoolean(value))
+    @Default(false)
     @Column
-    correctBet: boolean = false
+    correctBet: boolean
+
+    @AllowNull(false)
+    @Is('isNumeric', value => isNumeric(value))
+    @Default(0)
+    @Column
+    totalPoints: number
 
     @AllowNull(false)
     @Is('isDate', value => isDate(value))
