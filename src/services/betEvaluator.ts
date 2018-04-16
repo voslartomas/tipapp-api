@@ -63,7 +63,7 @@ export default class BetEvaluator {
   }
 
   async updateSingleBet(betSingle: ILeagueSpecialBetSingle) {
-    const userBets = await this.database.models.UserSPecialBetSingle.findAll({where : {leagueSpecialBetSingleId: betSingle.id}})
+    const userBets = await this.database.models.UserSpecialBetSingle.findAll({where : {leagueSpecialBetSingleId: betSingle.id}})
 
     userBets.forEach(userBet => {
       userBet.correctBet = false
@@ -72,7 +72,7 @@ export default class BetEvaluator {
       if (betSingle.specialBetTeamResultId === userBet.teamResultId ||
       betSingle.specialBetPlayerResultId === userBet.playerResultId ||
       betSingle.specialBetValue === userBet.value) {
-        userBet.correcBet = true
+        userBet.correctBet = true
         userBet.totalPoints += userBet.points
       }
 
