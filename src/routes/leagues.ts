@@ -42,16 +42,6 @@ export default class LeaguesController {
   }
 
   @GET
-  @Path('/:leagueId/players')
-  async getLeaguePlayers(@PathParam('leagueId') leagueId: number): Promise<IPlayer[]> {
-    return await this.database.models.LeaguePlayer.findAll({
-      include: [
-        this.database.models.Player,
-        {model: this.database.models.LeagueTeam, include: [this.database.models.Team], where: {leagueId}}
-      ], })
-  }
-
-  @GET
   @Path(':id')
   async getLeague(@PathParam('id') leagueId: number): Promise<ILeague> {
     try {

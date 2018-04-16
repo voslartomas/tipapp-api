@@ -177,35 +177,6 @@
 				"isEvaluated"
 			]
 		},
-		"IPlayer": {
-			"description": "",
-			"properties": {
-				"id": {
-					"type": "number",
-					"format": "double",
-					"description": ""
-				},
-				"firstName": {
-					"type": "string",
-					"description": ""
-				},
-				"lastName": {
-					"type": "string",
-					"description": ""
-				},
-				"isActive": {
-					"type": "boolean",
-					"description": ""
-				}
-			},
-			"type": "object",
-			"required": [
-				"id",
-				"firstName",
-				"lastName",
-				"isActive"
-			]
-		},
 		"ITeam": {
 			"description": "",
 			"properties": {
@@ -396,6 +367,35 @@
 				"matchId",
 				"scorerId",
 				"numberOfGoals"
+			]
+		},
+		"IPlayer": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"firstName": {
+					"type": "string",
+					"description": ""
+				},
+				"lastName": {
+					"type": "string",
+					"description": ""
+				},
+				"isActive": {
+					"type": "boolean",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"firstName",
+				"lastName",
+				"isActive"
 			]
 		},
 		"ISpecialBetSerie": {
@@ -1030,74 +1030,6 @@
 				},
 				"description": "",
 				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "leagueId",
-						"required": true,
-						"type": "number",
-						"format": "double"
-					}
-				]
-			}
-		},
-		"/api/leagues/{leagueId}/players": {
-			"get": {
-				"operationId": "LeaguesGetLeaguePlayers",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/IPlayer"
-							}
-						}
-					}
-				},
-				"description": "",
-				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "leagueId",
-						"required": true,
-						"type": "number",
-						"format": "double"
-					}
-				]
-			}
-		},
-		"/api/leagues/{leagueId}/{leagueTeamId}/players": {
-			"get": {
-				"operationId": "LeaguesGetLeagueTeamPlayers",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/IPlayer"
-							}
-						}
-					}
-				},
-				"description": "",
-				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "leagueTeamId",
-						"required": true,
-						"type": "number",
-						"format": "double"
-					},
 					{
 						"description": "",
 						"in": "path",
