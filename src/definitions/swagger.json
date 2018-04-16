@@ -3102,63 +3102,9 @@
 				},
 				"description": "",
 				"parameters": []
-			},
-			"post": {
-				"operationId": "UserSpecialBetSeriesCreateUserSpecialBetSerie",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/IUserSpecialBetSerie"
-						}
-					}
-				},
-				"description": "",
-				"consumes": [
-					"application/json"
-				],
-				"parameters": [
-					{
-						"description": "",
-						"in": "body",
-						"name": "userSpecialBetSerie",
-						"required": true,
-						"schema": {
-							"type": "object"
-						}
-					}
-				]
 			}
 		},
 		"/api/leagues/{leagueId}/user/bets/series/{id}": {
-			"get": {
-				"operationId": "UserSpecialBetSeriesGetUserSpecialBetSerie",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/IUserSpecialBetSerie"
-						}
-					}
-				},
-				"description": "",
-				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "id",
-						"required": true,
-						"type": "number",
-						"format": "double"
-					}
-				]
-			},
 			"put": {
 				"operationId": "UserSpecialBetSeriesUpdateUserSpecialBetSerie",
 				"produces": [
@@ -3193,28 +3139,6 @@
 						"schema": {
 							"type": "object"
 						}
-					}
-				]
-			},
-			"delete": {
-				"operationId": "UserSpecialBetSeriesDeleteUserSpecialBetSerie",
-				"produces": [
-					"text/html"
-				],
-				"responses": {
-					"204": {
-						"description": "No content"
-					}
-				},
-				"description": "",
-				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "id",
-						"required": true,
-						"type": "number",
-						"format": "double"
 					}
 				]
 			}

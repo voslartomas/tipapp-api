@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`League players API GET /league/:leagueId/players should return list of users 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`League players API GET /players/1 should return 200 when user is in db 1`] = `
+Object {
+  "testData": "shared",
+}
+`;
+
+exports[`League players API PUT /league/:leagueId/players should return 200 and creates new user if does not exist already 1`] = `
+Object {
+  "paid": true,
+}
+`;
+
+exports[`League players API PUT /league/:leagueId/players should return 204 1`] = `Object {}`;

@@ -52,13 +52,6 @@ export default class LeaguesController {
   }
 
   @GET
-  @Path('/:leagueId/:leagueTeamId/players')
-  async getLeagueTeamPlayers(@PathParam('leagueTeamId') leagueTeamId: number, @PathParam('leagueId') leagueId: number): Promise<IPlayer[]> {
-    // TODO: return players from team
-    return
-  }
-
-  @GET
   @Path(':id')
   async getLeague(@PathParam('id') leagueId: number): Promise<ILeague> {
     try {

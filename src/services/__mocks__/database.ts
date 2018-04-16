@@ -1,4 +1,5 @@
 import Shared from './fixtures/shared'
+import betMatches from './fixtures/betMatches'
 
 export default class Database {
   public models = {
@@ -10,8 +11,10 @@ export default class Database {
     Team: Shared,
     SpecialBetSerie: Shared,
     SpecialBetSingle: Shared,
-    UserBet: Shared,
+    UserBet: betMatches,
     LeagueUser: Shared,
+    LeaguePlayer: Shared,
+    LeagueTeam: Shared,
     UserRequest: Shared,
     UserSetting: Shared,
     UserSpecialBet: Shared,

@@ -25,27 +25,6 @@ export default class UserSpecialBetSeriesController {
     return await this.database.models.UserSpecialBetSerie.findAll({ where: {leagueUserId: leagueUser.id} })
   }
 
-  @GET
-  @Path(':id')
-  async getUserSpecialBetSerie(@PathParam('id') userSpecialBetSerieId: number): Promise<IUserSpecialBetSerie> {
-    try {
-      const userSpecialBetSerie = await this.database.models.UserSpecialBetSerie.findById(userSpecialBetSerieId)
-
-      if (!userSpecialBetSerie) {
-        throw new Error('not found')
-      }
-
-      return userSpecialBetSerie
-    } catch (e) {
-      throw new Errors.NotFoundError('User special bet serie not found.')
-    }
-  }
-
-  @POST
-  async createUserSpecialBetSerie(userSpecialBetSerie: any): Promise<IUserSpecialBetSerie> {
-    return await this.database.models.UserSpecialBetSerie.create(userSpecialBetSerie)
-  }
-
   @PUT
   @Path(':id')
   async updateUserSpecialBetSerie(@PathParam('id') userSpecialBetSerieId: number = 0, userSpecialBetSerie: any): Promise<IUserSpecialBetSerie> {
@@ -71,15 +50,4 @@ export default class UserSpecialBetSeriesController {
       throw new Error('User not signed into this league.')
     }
   }
-
-  @DELETE
-  @Path(':id')
-  async deleteUserSpecialBetSerie(@PathParam('id') userSpecialBetSerieId: number): Promise<void> {
-    const dbUserSpecialBetSerie = await this.database.models.UserSpecialBetSerie.findById(userSpecialBetSerieId)
-
-    if (dbUserSpecialBetSerie) {
-      await dbUserSpecialBetSerie.destroy()
-    }
-  }
-
 }
