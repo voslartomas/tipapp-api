@@ -789,7 +789,7 @@
 				]
 			}
 		},
-		"/api/league/{leagueId}/players": {
+		"/api/leagues/{leagueId}/players": {
 			"get": {
 				"operationId": "LeaguePlayerGetLeaguePlayers",
 				"produces": [
@@ -807,7 +807,16 @@
 					}
 				},
 				"description": "",
-				"parameters": []
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
 			},
 			"post": {
 				"operationId": "LeaguePlayerCreateLeaguePlayer",
@@ -839,7 +848,7 @@
 				]
 			}
 		},
-		"/api/league/{leagueId}/players/{id}": {
+		"/api/leagues/{leagueId}/players/{id}": {
 			"get": {
 				"operationId": "LeaguePlayerGetLeaguePlayer",
 				"produces": [

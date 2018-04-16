@@ -1,6 +1,19 @@
 {
-  "port": 80,
+  "port": 8001,
   "logging": {
     "level": "info"
-  }
+  },
+  "origin": "http://18.195.173.121:5000",
+  "swagger": {
+    "enabled": false
+  },
+  "db": {
+      "database": "tipapp",
+      "username": "tvoslar",
+      "password": "tipapptipapp",
+      "host": "tipapp.c2fgvnquam0j.eu-central-1.rds.amazonaws.com",
+      "dialect": "postgres",
+      "modelPath": "/../models/*.model.js"
+  },
+  "security": true
 }

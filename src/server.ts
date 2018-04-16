@@ -84,7 +84,7 @@ export class Server {
       allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'],
       credentials: true,
       methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-      origin: 'http://localhost:3000',
+      origin: config.get('origin'),
       preflightContinue: false
     }
 
@@ -99,7 +99,7 @@ export class Server {
    */
   public start(): Promise<any> {
     return new Promise<any>((resolve, reject) => {
-      this.server = this.app.listen(config.get('port'), (err: any) => {
+      this.server = this.app.listen(config.get('port'), config.get('port'), (err: any) => {
         if (err) {
           return reject(err)
         }
