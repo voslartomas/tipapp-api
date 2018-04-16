@@ -7,7 +7,7 @@ jest.mock('../../src/services/database')
 
 // let app = undefined
 const app = new Server().getApp()
-describe('Match API', () => {
+  describe('Match API', () => {
 
   it('GET /matches should return list of matches', async () => {
     const response = await request(app).get('/api/matches')
@@ -33,7 +33,7 @@ describe('Match API', () => {
   })
 
   it('PUT /matches should return 204', async () => {
-    const response = await request(app).put('/api/matches/1').send({ name: 'Update match' })
+    const response = await request(app).put('/api/matches/1').send({ name: 'Update match', scorerId: 1, homeScore: 2, awayScore: 3 })
     expect(response.status).toBe(204)
     expect(response.body).toMatchSnapshot()
   })

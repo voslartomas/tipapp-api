@@ -10,7 +10,7 @@ export default class LeagueUserController {
     private database: Database
 
     @PathParam('leagueId')
-    leagueId: string
+    leagueId: number
 
     @GET
     async getLeagueUsers(): Promise<ILeagueUser[]> {

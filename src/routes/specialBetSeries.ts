@@ -37,13 +37,13 @@ export default class SpecialBetSeriesController {
 
     @PUT
     @Path(':id')
-    async updateSpecialBetSerie(@PathParam('id') SpecialBetSerieId: number, SpecialBetSerie: any): Promise<ISpecialBetSerie> {
+    async updateSpecialBetSerie(@PathParam('id') SpecialBetSerieId: number, specialBetSerie: any): Promise<ISpecialBetSerie> {
         const dbSpecialBetSerie = await this.database.models.SpecialBetSerie.findById(SpecialBetSerieId)
 
         if (dbSpecialBetSerie) {
-            return await dbSpecialBetSerie.update(SpecialBetSerie)
+            return await dbSpecialBetSerie.update(specialBetSerie)
         } else {
-            return await this.database.models.SpecialBetSerie.create(SpecialBetSerie)
+            return await this.database.models.SpecialBetSerie.create(specialBetSerie)
         }
     }
 

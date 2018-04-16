@@ -34,7 +34,7 @@ export default class JWTPassport {
     this.passport.serializeUser((userModel, done) => done(undefined, userModel.id))
     this.passport.deserializeUser(async (id, done) => {
       const user = await this.database.models.User.findById(id)
-      user ? done(undefined, user.get()) : done(user.errors, undefined)
+      user ? done(undefined, user) : done(user.errors, undefined)
     })
   }
 

@@ -177,35 +177,6 @@
 				"isEvaluated"
 			]
 		},
-		"IPlayer": {
-			"description": "",
-			"properties": {
-				"id": {
-					"type": "number",
-					"format": "double",
-					"description": ""
-				},
-				"firstName": {
-					"type": "string",
-					"description": ""
-				},
-				"lastName": {
-					"type": "string",
-					"description": ""
-				},
-				"isActive": {
-					"type": "boolean",
-					"description": ""
-				}
-			},
-			"type": "object",
-			"required": [
-				"id",
-				"firstName",
-				"lastName",
-				"isActive"
-			]
-		},
 		"ITeam": {
 			"description": "",
 			"properties": {
@@ -396,6 +367,35 @@
 				"matchId",
 				"scorerId",
 				"numberOfGoals"
+			]
+		},
+		"IPlayer": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"firstName": {
+					"type": "string",
+					"description": ""
+				},
+				"lastName": {
+					"type": "string",
+					"description": ""
+				},
+				"isActive": {
+					"type": "boolean",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"firstName",
+				"lastName",
+				"isActive"
 			]
 		},
 		"ISpecialBetSerie": {
@@ -1014,9 +1014,9 @@
 				]
 			}
 		},
-		"/api/leagues/{leagueId}/{leagueTeamId}/players": {
+		"/api/leagues/{leagueId}/leaderboard": {
 			"get": {
-				"operationId": "LeaguesGetLeagueTeamPlayers",
+				"operationId": "LeaguesGetLeaderboard",
 				"produces": [
 					"application/json"
 				],
@@ -1024,23 +1024,12 @@
 					"200": {
 						"description": "Ok",
 						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/IPlayer"
-							}
+							"type": "object"
 						}
 					}
 				},
 				"description": "",
 				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "leagueTeamId",
-						"required": true,
-						"type": "number",
-						"format": "double"
-					},
 					{
 						"description": "",
 						"in": "path",
@@ -2016,7 +2005,7 @@
 					{
 						"description": "",
 						"in": "body",
-						"name": "SpecialBetSerie",
+						"name": "specialBetSerie",
 						"required": true,
 						"schema": {
 							"type": "object"
@@ -2152,7 +2141,7 @@
 					{
 						"description": "",
 						"in": "body",
-						"name": "SpecialBetSingle",
+						"name": "specialBetSingle",
 						"required": true,
 						"schema": {
 							"type": "object"
@@ -2485,7 +2474,7 @@
 				]
 			}
 		},
-		"/api/user-bets": {
+		"/api/leagues/{leagueId}/user/bets/match": {
 			"get": {
 				"operationId": "UserBetsGetUserBets",
 				"produces": [
@@ -2504,63 +2493,9 @@
 				},
 				"description": "",
 				"parameters": []
-			},
-			"post": {
-				"operationId": "UserBetsCreateUserBet",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/IUserBet"
-						}
-					}
-				},
-				"description": "",
-				"consumes": [
-					"application/json"
-				],
-				"parameters": [
-					{
-						"description": "",
-						"in": "body",
-						"name": "usetBet",
-						"required": true,
-						"schema": {
-							"type": "object"
-						}
-					}
-				]
 			}
 		},
-		"/api/user-bets/{id}": {
-			"get": {
-				"operationId": "UserBetsGetUserBet",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/IUserBet"
-						}
-					}
-				},
-				"description": "",
-				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "id",
-						"required": true,
-						"type": "number",
-						"format": "double"
-					}
-				]
-			},
+		"/api/leagues/{leagueId}/user/bets/match/{id}": {
 			"put": {
 				"operationId": "UserBetsUpdateUserBet",
 				"produces": [
@@ -2595,6 +2530,31 @@
 						"schema": {
 							"type": "object"
 						}
+					}
+				]
+			},
+			"get": {
+				"operationId": "UserBetsGetUserBet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserBet"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
 					}
 				]
 			},
@@ -3055,7 +3015,7 @@
 				]
 			}
 		},
-		"/api/user-special-bet-series": {
+		"/api/leagues/{leagueId}/user/bets/series": {
 			"get": {
 				"operationId": "UserSpecialBetSeriesGetUserSpecialBetSeries",
 				"produces": [
@@ -3074,63 +3034,9 @@
 				},
 				"description": "",
 				"parameters": []
-			},
-			"post": {
-				"operationId": "UserSpecialBetSeriesCreateUserSpecialBetSerie",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/IUserSpecialBetSerie"
-						}
-					}
-				},
-				"description": "",
-				"consumes": [
-					"application/json"
-				],
-				"parameters": [
-					{
-						"description": "",
-						"in": "body",
-						"name": "userSpecialBetSerie",
-						"required": true,
-						"schema": {
-							"type": "object"
-						}
-					}
-				]
 			}
 		},
-		"/api/user-special-bet-series/{id}": {
-			"get": {
-				"operationId": "UserSpecialBetSeriesGetUserSpecialBetSerie",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/IUserSpecialBetSerie"
-						}
-					}
-				},
-				"description": "",
-				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "id",
-						"required": true,
-						"type": "number",
-						"format": "double"
-					}
-				]
-			},
+		"/api/leagues/{leagueId}/user/bets/series/{id}": {
 			"put": {
 				"operationId": "UserSpecialBetSeriesUpdateUserSpecialBetSerie",
 				"produces": [
@@ -3167,31 +3073,9 @@
 						}
 					}
 				]
-			},
-			"delete": {
-				"operationId": "UserSpecialBetSeriesDeleteUserSpecialBetSerie",
-				"produces": [
-					"text/html"
-				],
-				"responses": {
-					"204": {
-						"description": "No content"
-					}
-				},
-				"description": "",
-				"parameters": [
-					{
-						"description": "",
-						"in": "path",
-						"name": "id",
-						"required": true,
-						"type": "number",
-						"format": "double"
-					}
-				]
 			}
 		},
-		"/api/user-special-bet-singles": {
+		"/api/leagues/{leagueId}/user/bets/single": {
 			"get": {
 				"operationId": "UserSpecialBetSinglesGetUserSpecialBetSingles",
 				"produces": [
@@ -3241,7 +3125,7 @@
 				]
 			}
 		},
-		"/api/user-special-bet-singles/{id}": {
+		"/api/leagues/{leagueId}/user/bets/single/{id}": {
 			"get": {
 				"operationId": "UserSpecialBetSinglesGetUserSpecialBetSingle",
 				"produces": [

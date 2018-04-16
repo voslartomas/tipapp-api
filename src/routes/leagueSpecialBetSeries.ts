@@ -3,11 +3,15 @@ import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import LeagueSpecialBetSerie from '../models/leagueSpecialBetSerie.model'
 import { ILeagueSpecialBetSerie } from '../types/models.d'
+import BetEvaluator from '../services/betEvaluator'
 
 @Path('/api/leagues/:leagueId/bets/series')
 export default class LeagueSpecialBetSerieController {
     @Inject
     private database: Database
+
+    @Inject
+    private betEvaluator: BetEvaluator
 
     @PathParam('leagueId')
     leagueId: string
@@ -51,6 +55,7 @@ export default class LeagueSpecialBetSerieController {
         const dbLeagueSpecialBetSerie = await this.database.models.LeagueSpecialBetSerie.findById(leagueSpecialBetSerieId)
 
         if (dbLeagueSpecialBetSerie) {
+            await this.betEvaluator.updateSerieBet(leagueSpecialBetSerie)
             return await dbLeagueSpecialBetSerie.update(leagueSpecialBetSerie)
         } else {
             return await this.database.models.LeagueSpecialBetSerie.create(leagueSpecialBetSerie)

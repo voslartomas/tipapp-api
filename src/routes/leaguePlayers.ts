@@ -33,7 +33,7 @@ export default class LeaguePlayerController {
 
             return leaguePlayer
         } catch (e) {
-            throw new Errors.NotFoundError('User special bet serie not found.')
+            throw new Errors.NotFoundError('League player not found.')
         }
     }
 
