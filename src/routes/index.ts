@@ -18,6 +18,7 @@ import UsersController from './users'
 import UserSettingsController from './userSettings'
 import UserSpecialBetSeriesController from './userSpecialBetSeries'
 import UserSpecialBetSinglesController from './userSpecialBetSingles'
+import NHLTeamsController from './nhlTeams'
 
 export default [
   PingController,
@@ -39,5 +40,6 @@ export default [
   UsersController,
   UserSettingsController,
   UserSpecialBetSeriesController,
-  UserSpecialBetSinglesController
+  UserSpecialBetSinglesController,
+  NHLTeamsController
 ]

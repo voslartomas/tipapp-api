@@ -3210,6 +3210,36 @@
 					}
 				]
 			}
+		},
+		"/api/leagues/import/nhl": {
+			"get": {
+				"operationId": "NHLTeamsCreateNHLTeams",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": []
+			}
+		},
+		"/api/leagues/import/nhl/all": {
+			"get": {
+				"operationId": "NHLTeamsGetNHLTeams",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": []
+			}
 		}
 	},
 	"swagger": "2.0",
