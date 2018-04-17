@@ -1,6 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`League API GET /leagues matches should return list of matches 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`League API GET /leagues players should return list of players 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
 exports[`League API GET /leagues should return list of leagues 1`] = `
+Array [
+  Object {
+    "testdata": "shared",
+  },
+]
+`;
+
+exports[`League API GET /leagues teams should return list of teams 1`] = `
 Array [
   Object {
     "testdata": "shared",

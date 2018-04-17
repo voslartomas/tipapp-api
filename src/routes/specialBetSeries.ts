@@ -1,7 +1,7 @@
 import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest'
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
-import SpecialBetSerie from '../models/SpecialBetSerie.model'
+import SpecialBetSerie from '../models/specialBetSerie.model'
 import { ISpecialBetSerie } from '../types/models.d'
 
 @Path('/api/bets/series')
@@ -37,13 +37,13 @@ export default class SpecialBetSeriesController {
 
     @PUT
     @Path(':id')
-    async updateSpecialBetSerie(@PathParam('id') SpecialBetSerieId: number, SpecialBetSerie: any): Promise<ISpecialBetSerie> {
+    async updateSpecialBetSerie(@PathParam('id') SpecialBetSerieId: number, specialBetSerie: any): Promise<ISpecialBetSerie> {
         const dbSpecialBetSerie = await this.database.models.SpecialBetSerie.findById(SpecialBetSerieId)
 
         if (dbSpecialBetSerie) {
-            return await dbSpecialBetSerie.update(SpecialBetSerie)
+            return await dbSpecialBetSerie.update(specialBetSerie)
         } else {
-            return await this.database.models.SpecialBetSerie.create(SpecialBetSerie)
+            return await this.database.models.SpecialBetSerie.create(specialBetSerie)
         }
     }
 

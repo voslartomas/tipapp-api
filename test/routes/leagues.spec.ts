@@ -15,6 +15,24 @@ describe('League API', () => {
     expect(response.body).toMatchSnapshot()
   })
 
+  it('GET /leagues matches should return list of matches', async () => {
+    const response = await request(app).get('/api/leagues/1/matches')
+    expect(response.status).toBe(200)
+    expect(response.body).toMatchSnapshot()
+  })
+
+  it('GET /leagues players should return list of players', async () => {
+    const response = await request(app).get('/api/leagues/1/players')
+    expect(response.status).toBe(200)
+    expect(response.body).toMatchSnapshot()
+  })
+
+  it('GET /leagues teams should return list of teams', async () => {
+    const response = await request(app).get('/api/leagues/1/teams')
+    expect(response.status).toBe(200)
+    expect(response.body).toMatchSnapshot()
+  })
+
   it('GET /leagues/1 should return 200 when user is in db', async () => {
     const response = await request(app).get('/api/leagues/1')
     expect(response.status).toBe(200)

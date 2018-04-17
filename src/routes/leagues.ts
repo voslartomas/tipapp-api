@@ -28,20 +28,17 @@ export default class LeaguesController {
   }
 
   @GET
-  @Path('/:leagueId/players')
-  async getLeaguePlayers(@PathParam('leagueId') leagueId: number): Promise<IPlayer[]> {
-    return await this.database.models.LeaguePlayer.findAll({
-      include: [
-        this.database.models.Player,
-        {model: this.database.models.LeagueTeam, include: [this.database.models.Team], where: {leagueId}}
-      ], })
-  }
+  @Path('/:leagueId/leaderboard')
+  async getLeaderboard(@PathParam('leagueId') leagueId: number): Promise<any> {
+    const users = await this.database.query(`SELECT User.firstName, User.lastName,
+      ((SELECT SUM(totalPoints) FROM UserBet WHERE leagueUserId = LeagueUser.id) +
+      (SELECT SUM(totalPoints) FROM UserSpecialBetSerie WHERE leagueUserId = LeagueUser.id) +
+      (SELECT SUM(totalPoints) FROM UserSpecialBetSingle WHERE leagueUserId = LeagueUser.id)) AS totalPoints
+      FROM LeagueUser
+      LEFT JOIN User ON LeagueUser.userId = User.id WHERE leagueId = ${leagueId}
+      ORDER BY totalPoints DESC`, { type: this.database.QueryTypes.SELECT})
 
-  @GET
-  @Path('/:leagueId/:leagueTeamId/players')
-  async getLeagueTeamPlayers(@PathParam('leagueTeamId') leagueTeamId: number, @PathParam('leagueId') leagueId: number): Promise<IPlayer[]> {
-    // TODO: return players from team
-    return
+    return users
   }
 
   @GET

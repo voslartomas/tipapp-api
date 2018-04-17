@@ -3,12 +3,16 @@ import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import SpecialBetSingle from '../models/specialBetSingle.model'
 import { ISpecialBetSingle } from '../types/models.d'
+import BetEvaluator from '../services/betEvaluator'
 
 @Path('/api/bets/single')
 export default class SpecialBetSinglesController {
 
     @Inject
     private database: Database
+
+    @Inject
+    private betEvaluator: BetEvaluator
 
     @GET
     async getSpecialBetSingles(): Promise<ISpecialBetSingle[]> {
@@ -38,13 +42,13 @@ export default class SpecialBetSinglesController {
 
     @PUT
     @Path(':id')
-    async updateSpecialBetSingle(@PathParam('id') SpecialBetSingleId: number, SpecialBetSingle: any): Promise<ISpecialBetSingle> {
+    async updateSpecialBetSingle(@PathParam('id') SpecialBetSingleId: number, specialBetSingle: any): Promise<ISpecialBetSingle> {
         const dbSpecialBetSingle = await this.database.models.SpecialBetSingle.findById(SpecialBetSingleId)
 
         if (dbSpecialBetSingle) {
-            return await dbSpecialBetSingle.update(SpecialBetSingle)
+            return await dbSpecialBetSingle.update(specialBetSingle)
         } else {
-            return await this.database.models.SpecialBetSingle.create(SpecialBetSingle)
+            return await this.database.models.SpecialBetSingle.create(specialBetSingle)
         }
     }
 

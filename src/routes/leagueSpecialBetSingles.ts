@@ -3,6 +3,7 @@ import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import LeagueSpecialBetSingle from '../models/leagueSpecialBetSingle.model'
 import { ILeagueSpecialBetSingle } from '../types/models.d'
+import BetEvaluator from '../services/betEvaluator'
 
 @Path('/api/leagues/:leagueId/bets/single')
 export default class LeagueSpecialBetSingleController {
@@ -11,6 +12,9 @@ export default class LeagueSpecialBetSingleController {
 
     @PathParam('leagueId')
     leagueId: string
+
+    @Inject
+    private betEvaluator: BetEvaluator
 
     @GET
     async getLeagueSpecialBetSingles(): Promise<ILeagueSpecialBetSingle[]> {
@@ -51,6 +55,7 @@ export default class LeagueSpecialBetSingleController {
         const dbLeagueSpecialBetSingle = await this.database.models.LeagueSpecialBetSingle.findById(leagueSpecialBetSingleId)
 
         if (dbLeagueSpecialBetSingle) {
+            await this.betEvaluator.updateSingleBet(leagueSpecialBetSingle)
             return await dbLeagueSpecialBetSingle.update(leagueSpecialBetSingle)
         } else {
             return await this.database.models.LeagueSpecialBetSingle.create(leagueSpecialBetSingle)

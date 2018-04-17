@@ -35,11 +35,13 @@ export default class UserBet extends Model<UserBet> {
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
+  @Default(0)
   @Column
   homeScore: number
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
+  @Default(0)
   @Column
   awayScore: number
 
@@ -49,7 +51,7 @@ export default class UserBet extends Model<UserBet> {
   @Column
   homeWinner: boolean
 
-  @AllowNull(false)
+  @AllowNull(true)
   @Is('isNumeric', value => isNumeric(value))
   @Column
   @ForeignKey(() => LeaguePlayer)
@@ -57,4 +59,43 @@ export default class UserBet extends Model<UserBet> {
 
   @BelongsTo(() => LeaguePlayer)
   scorer: LeaguePlayer
+
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
+  @Column
+  pointsScorer: number = 6
+
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
+  @Column
+  points: number = 4
+
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
+  @Column
+  pointsExact: number = 8
+
+  @AllowNull(false)
+  @Is('isNumeric', value => isNumeric(value))
+  @Default(0)
+  @Column
+  totalPoints: number
+
+  @AllowNull(false)
+  @Is('isBoolean', value => isBoolean(value))
+  @Default(false)
+  @Column
+  correctBet: boolean
+
+  @AllowNull(false)
+  @Is('isBoolean', value => isBoolean(value))
+  @Default(false)
+  @Column
+  exactBet: boolean
+
+  @AllowNull(false)
+  @Is('isBoolean', value => isBoolean(value))
+  @Default(false)
+  @Column
+  correctBetScorer: boolean
 }

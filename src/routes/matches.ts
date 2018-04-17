@@ -1,6 +1,7 @@
 import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest'
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
+import BetEvaluator from '../services/betEvaluator'
 import Match from '../models/match.model'
 import { IMatch } from '../types/models.d'
 
@@ -8,6 +9,9 @@ import { IMatch } from '../types/models.d'
 export default class MatchesController {
   @Inject
   private database: Database
+
+  @Inject
+  private betEvaluator: BetEvaluator
 
   @GET
   async getMatches(): Promise<IMatch[]> {
@@ -41,6 +45,7 @@ export default class MatchesController {
     const dbMatch = await this.database.models.Match.findById(matchId)
 
     if (dbMatch) {
+      await this.betEvaluator.updateMatchBets(match)
       return await dbMatch.update(match)
     } else {
       return await this.database.models.Match.create(match)
