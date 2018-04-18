@@ -1,4 +1,4 @@
-import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest'
+import { Path, GET, POST, PUT, DELETE, PathParam, Errors, Context, ServiceContext } from 'typescript-rest'
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import League from '../models/league.model'
@@ -13,9 +13,20 @@ export default class LeaguesController {
   @Inject
   private database: Database
 
+  @Context
+  context: ServiceContext
+
   @GET
   async getLeagues(): Promise<ILeague[]> {
     return await this.database.models.League.findAll({})
+  }
+
+  @GET
+  @Path('/active')
+  async getActiveLeagues(): Promise<ILeague[]> {
+    return this.database.models.LeagueUser.findAll({where: { userId: this.context.request['user'].id}
+      , include: [{model: this.database.models.League, where: {isActive: true}}]
+    })
   }
 
   @GET
