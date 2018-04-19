@@ -3226,6 +3226,21 @@
 				"parameters": []
 			}
 		},
+		"/api/leagues/import/nhl/players": {
+			"get": {
+				"operationId": "NHLTeamsCreateNHLPlayers",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": []
+			}
+		},
 		"/api/leagues/import/nhl/all": {
 			"get": {
 				"operationId": "NHLTeamsGetNHLTeams",

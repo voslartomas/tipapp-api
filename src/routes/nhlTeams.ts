@@ -3,6 +3,7 @@ import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import Team from '../models/team.model'
+import Player from '../models/player.model'
 
 @Path('/api/leagues/import/nhl')
 export default class NHLTeamsController {
@@ -20,6 +21,22 @@ export default class NHLTeamsController {
       team.shortcut = item.abbreviation
       team.sportId = 2
       this.database.models.Team.create(team)
+    })
+  }
+
+  @GET
+  @Path('/players')
+  async createNHLPlayers() {
+    const response = await request.get('https://statsapi.web.nhl.com/api/v1/teams/')
+    response.body.teams.forEach(async item => {
+      const playerRoster = await request.get(`https://statsapi.web.nhl.com/api/v1/teams/${item.id}/roster`)
+      playerRoster.body.roster.forEach(item => {
+        const player: any = {}
+        player.firstName = item.person.fullName
+        player.lastName = ''
+        player.isActive = true
+        this.database.models.Player.create(player)
+      })
     })
   }
 
