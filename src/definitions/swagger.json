@@ -3211,9 +3211,9 @@
 				]
 			}
 		},
-		"/api/leagues/import/nhl/{leagueId}/teams": {
+		"/api/leagues/import/nhl/{leagueId}/": {
 			"get": {
-				"operationId": "NHLCreateNHLTeams",
+				"operationId": "NHLImportNHL",
 				"produces": [
 					"text/html"
 				],
@@ -3233,21 +3233,6 @@
 						"format": "double"
 					}
 				]
-			}
-		},
-		"/api/leagues/import/nhl/players": {
-			"get": {
-				"operationId": "NHLCreateNHLPlayers",
-				"produces": [
-					"text/html"
-				],
-				"responses": {
-					"204": {
-						"description": "No content"
-					}
-				},
-				"description": "",
-				"parameters": []
 			}
 		},
 		"/api/leagues/import/nhl/all": {
