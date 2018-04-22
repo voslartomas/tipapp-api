@@ -76,4 +76,9 @@ export default class Match extends Model<Match> {
   @Is('isBoolean', value => isBoolean(value))
   @Column
   isEvaluated: boolean
+
+  @AllowNull(true)
+  @Is('isNumeric', value => isNumeric(value))
+  @Column
+  externalId: number
 }
