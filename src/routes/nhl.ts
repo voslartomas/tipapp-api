@@ -4,15 +4,18 @@ import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import Team from '../models/team.model'
 import Player from '../models/player.model'
+import LeagueTeam from '../models/leagueTeam.model'
+import LeaguePlayer from '../models/leaguePlayer.model'
 
 @Path('/api/leagues/import/nhl')
-export default class NHLTeamsController {
+export default class NHLController {
 
   @Inject
   private database: Database
 
   @GET
-  async createNHLTeams() {
+  @Path('/:leagueId/teams')
+  async createNHLTeams(@PathParam('leagueId') leagueId: number) {
     const response = await request.get('https://statsapi.web.nhl.com/api/v1/teams/')
     response.body.teams.forEach(async item => {
       const dbTeam = await this.database.models.Team.findOne({where: {externalId: item.id}})
@@ -23,7 +26,13 @@ export default class NHLTeamsController {
         team.shortcut = item.abbreviation
         team.externalId = item.id
         team.sportId = 2
-        this.database.models.Team.create(team)
+        const dbTeam = await this.database.models.Team.create(team)
+
+        const leagueTeam: any = {}
+        // const dbTeam = await this.database.models.Team.findOne({where: {externalId: item.id}})
+        leagueTeam.teamId = dbTeam.id
+        leagueTeam.leagueId = leagueId
+        this.database.models.LeagueTeam.create(leagueTeam)
       }
     })
   }
@@ -43,6 +52,8 @@ export default class NHLTeamsController {
           player.isActive = true
           player.externalId = item.person.id
           this.database.models.Player.create(player)
+
+          const leaguePlayer: any = {}
         }
       })
     })
