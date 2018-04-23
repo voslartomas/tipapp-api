@@ -3231,6 +3231,69 @@
 					}
 				]
 			}
+		},
+		"/api/leagues/import/nhl/{leagueId}/": {
+			"get": {
+				"operationId": "NHLImportNHL",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/leagues/import/nhl/all": {
+			"get": {
+				"operationId": "NHLGetNHLTeams",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": []
+			}
+		},
+		"/api/leagues/import/nhl/{leagueId}/matches": {
+			"get": {
+				"operationId": "NHLImportMatches",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
 		}
 	},
 	"swagger": "2.0",

@@ -33,4 +33,9 @@ export default class Team extends Model<Team> {
 
   @BelongsTo(() => Sport)
   sport: Sport
+
+  @AllowNull(true)
+  @Is('isNumeric', value => isNumeric(value))
+  @Column
+  externalId: number
 }
