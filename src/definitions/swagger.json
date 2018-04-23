@@ -984,6 +984,27 @@
 				]
 			}
 		},
+		"/api/leagues/active": {
+			"get": {
+				"operationId": "LeaguesGetActiveLeagues",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ILeague"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			}
+		},
 		"/api/leagues/{leagueId}/matches": {
 			"get": {
 				"operationId": "LeaguesGetLeagueMatches",
