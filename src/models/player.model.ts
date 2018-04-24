@@ -1,5 +1,5 @@
 import { Table, Column, Model, Length, AllowNull, NotEmpty, Is, Default } from 'sequelize-typescript'
-import { isBoolean, isString } from '../utils/modelValidation'
+import { isBoolean, isString, isNumeric } from '../utils/modelValidation'
 
 @Table({
   timestamps: true,
@@ -23,4 +23,9 @@ export default class Player extends Model<Player> {
   @Is('isBoolean', value => isBoolean(value))
   @Column
   isActive: boolean
+
+  @AllowNull(true)
+  @Is('isNumeric', value => isNumeric(value))
+  @Column
+  externalId: number
 }
