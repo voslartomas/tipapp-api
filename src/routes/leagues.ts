@@ -43,15 +43,23 @@ export default class LeaguesController {
   async getBetsMatches(@PathParam('leagueId') leagueId: number, @QueryParam('date') date: string): Promise<IMatch[]> {
     const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
 
+    // TODO refactor
+    const actual = new Date()
+    const previous = new Date()
+    const next = new Date()
+    previous.setDate(actual.getDate() - 1)
+    next.setDate(actual.getDate() + 1)
+
     return this.database.query(`SELECT
       Match.dateTime as matchDateTime, Match.id AS matchId, Match.homeScore AS matchHomeScore, Match.awayScore AS matchAwayScore,
       UserBet.*, Match.homeTeamId, Match.awayTeamId,
       (SELECT Team.name FROM Team LEFT JOIN LeagueTeam ON LeagueTeam.teamId = Team.id WHERE LeagueTeam.id = Match.homeTeamId) AS homeTeam,
-      (SELECT Team.name FROM Team LEFT JOIN LeagueTeam ON LeagueTeam.teamId = Team.id WHERE LeagueTeam.id = Match.awayTeamId) AS awayTeam
+      (SELECT Team.name FROM Team LEFT JOIN LeagueTeam ON LeagueTeam.teamId = Team.id WHERE LeagueTeam.id = Match.awayTeamId) AS awayTeam,
+      (SELECT Player.firstName FROM Player LEFT JOIN LeaguePlayer ON LeaguePlayer.playerId = Player.id WHERE LeaguePlayer.id = UserBet.scorerId) AS scorer
       FROM Match
       LEFT JOIN UserBet ON (Match.id = UserBet.matchId AND UserBet.leagueUserId = ${leagueUser.id})
       WHERE Match.leagueId = ${leagueId}
-      AND Match.dateTime >= '${date}'
+      AND Match.dateTime >= '${previous.toISOString().substring(0, 10)}' AND Match.dateTime <= '${next.toISOString().substring(0, 10)}'
       ORDER BY dateTime ASC`, { type: this.database.QueryTypes.SELECT})
   }
 
