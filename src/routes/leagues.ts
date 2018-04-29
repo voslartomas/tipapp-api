@@ -1,4 +1,4 @@
-import { Path, GET, POST, PUT, DELETE, PathParam, Errors, Context, ServiceContext } from 'typescript-rest'
+import { Path, GET, POST, PUT, DELETE, PathParam, QueryParam, Errors, Context, ServiceContext } from 'typescript-rest'
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import League from '../models/league.model'
@@ -36,6 +36,23 @@ export default class LeaguesController {
         {model: this.database.models.LeagueTeam, as: 'homeTeam', include: [this.database.models.Team]},
         {model: this.database.models.LeagueTeam, as: 'awayTeam', include: [this.database.models.Team]}],
         where: {leagueId: leagueId}})
+  }
+
+  @GET
+  @Path('/:leagueId/bets/matches/')
+  async getBetsMatches(@PathParam('leagueId') leagueId: number, @QueryParam('date') date: string): Promise<IMatch[]> {
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+
+    return this.database.query(`SELECT
+      Match.dateTime as matchDateTime, Match.id AS matchId, Match.homeScore AS matchHomeScore, Match.awayScore AS matchAwayScore,
+      UserBet.*, Match.homeTeamId, Match.awayTeamId,
+      (SELECT Team.name FROM Team LEFT JOIN LeagueTeam ON LeagueTeam.teamId = Team.id WHERE LeagueTeam.id = Match.homeTeamId) AS homeTeam,
+      (SELECT Team.name FROM Team LEFT JOIN LeagueTeam ON LeagueTeam.teamId = Team.id WHERE LeagueTeam.id = Match.awayTeamId) AS awayTeam
+      FROM Match
+      LEFT JOIN UserBet ON (Match.id = UserBet.matchId AND UserBet.leagueUserId = ${leagueUser.id})
+      WHERE Match.leagueId = ${leagueId}
+      AND Match.dateTime >= '${date}'
+      ORDER BY dateTime ASC`, { type: this.database.QueryTypes.SELECT})
   }
 
   @GET

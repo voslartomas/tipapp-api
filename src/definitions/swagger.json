@@ -815,6 +815,17 @@
 						"required": true,
 						"type": "number",
 						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "query",
+						"name": "teams",
+						"required": true,
+						"type": "array",
+						"items": {
+							"type": "number",
+							"format": "double"
+						}
 					}
 				]
 			},
@@ -1031,6 +1042,43 @@
 						"required": true,
 						"type": "number",
 						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/leagues/{leagueId}/bets/matches/": {
+			"get": {
+				"operationId": "LeaguesGetBetsMatches",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IMatch"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "query",
+						"name": "date",
+						"required": true,
+						"type": "string"
 					}
 				]
 			}
