@@ -17,7 +17,7 @@ export default class LeaguePlayerController {
       return await this.database.models.LeaguePlayer.findAll({
         include: [
           this.database.models.Player,
-          {model: this.database.models.LeagueTeam, include: [{model: this.database.models.Team, where: {$or: [{id: teams[0]}, {id: teams[1]}]}}], where: {leagueId}}
+          {model: this.database.models.LeagueTeam, include: [{model: this.database.models.Team}], where: {leagueId, $or: [{id: teams[0]}, {id: teams[1]}]}}
         ], })
     }
 
