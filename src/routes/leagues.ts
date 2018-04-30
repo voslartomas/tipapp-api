@@ -48,10 +48,10 @@ export default class LeaguesController {
     const previous = new Date()
     const next = new Date()
     previous.setDate(actual.getDate() - 1)
-    next.setDate(actual.getDate() + 1)
+    next.setDate(actual.getDate() + 2)
 
     return this.database.query(`SELECT
-      Match.dateTime as matchDateTime, Match.id AS matchId, Match.homeScore AS matchHomeScore, Match.awayScore AS matchAwayScore,
+      Match.dateTime as matchDateTime, Match.id AS matchId1, Match.homeScore AS matchHomeScore, Match.awayScore AS matchAwayScore,
       UserBet.*, Match.homeTeamId, Match.awayTeamId,
       (SELECT Team.name FROM Team LEFT JOIN LeagueTeam ON LeagueTeam.teamId = Team.id WHERE LeagueTeam.id = Match.homeTeamId) AS homeTeam,
       (SELECT Team.name FROM Team LEFT JOIN LeagueTeam ON LeagueTeam.teamId = Team.id WHERE LeagueTeam.id = Match.awayTeamId) AS awayTeam,
@@ -60,7 +60,7 @@ export default class LeaguesController {
       LEFT JOIN UserBet ON (Match.id = UserBet.matchId AND UserBet.leagueUserId = ${leagueUser.id})
       WHERE Match.leagueId = ${leagueId}
       AND Match.dateTime >= '${previous.toISOString().substring(0, 10)}' AND Match.dateTime <= '${next.toISOString().substring(0, 10)}'
-      ORDER BY dateTime ASC`, { type: this.database.QueryTypes.SELECT})
+      ORDER BY Match.dateTime ASC`, { type: this.database.QueryTypes.SELECT})
   }
 
   @GET

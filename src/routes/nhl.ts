@@ -75,7 +75,9 @@ export default class NHLController {
   @GET
   @Path('/:leagueId/matches')
   async importMatches(@PathParam('leagueId') leagueId: number) {
-    const today = new Date().toISOString().split('T')[0]
+    let today: any = new Date()
+    today.setDate(new Date().getDate() + 1)
+    today = today.toISOString().split('T')[0]
     const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2018-04-10&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
 
     const days = response.body.dates

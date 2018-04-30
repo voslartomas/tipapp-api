@@ -17,12 +17,13 @@ export default class BetEvaluator {
       userBet.exactBet = false
       userBet.totalPoints = 0
 
-      matchScorers.forEach(scorer => {
-        if (userBet.scorerId === scorer.id) {
+      for (const scorer of matchScorers) {
+        if (userBet.scorerId === scorer.scorerId) {
           userBet.correctBetScorer = true
           userBet.totalPoints += userBet.pointsScorer
+          break
         }
-      })
+      }
 
       if (userBet.homeScore === match.homeScore && userBet.awayScore === match.awayScore) {
         userBet.exactBet = true
