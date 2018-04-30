@@ -13,11 +13,11 @@ export default class LeaguePlayerController {
     leagueId: string
 
     @GET
-    async getLeaguePlayers(@PathParam('leagueId') leagueId: number, @QueryParam('teams') teams: Array<number>): Promise<ILeaguePlayer[]> {
+    async getLeaguePlayers(@PathParam('leagueId') leagueId: number, @QueryParam('teams') teams: string): Promise<ILeaguePlayer[]> {
       return await this.database.models.LeaguePlayer.findAll({
         include: [
           this.database.models.Player,
-          {model: this.database.models.LeagueTeam, include: [{model: this.database.models.Team}], where: {leagueId, $or: [{id: teams[0]}, {id: teams[1]}]}}
+          {model: this.database.models.LeagueTeam, include: [{model: this.database.models.Team}], where: {leagueId, id: teams.split(',')}}
         ], })
     }
 
