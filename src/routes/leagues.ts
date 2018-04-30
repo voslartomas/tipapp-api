@@ -69,7 +69,7 @@ export default class LeaguesController {
     const users = await this.database.query(`SELECT "User"."firstName", "User"."lastName",
       (IFNULL((SELECT SUM(totalPoints) FROM "UserBet" WHERE "leagueUserId" = "LeagueUser"."id"), 0) +
       IFNULL((SELECT SUM(totalPoints) FROM "UserSpecialBetSerie" WHERE "leagueUserId" = "LeagueUser"."id"), 0) +
-      IFNULL((SELECT SUM(totalPoints) FROM "UserSpecialBetSingle" WHERE "leagueUserId" = "LeagueUser"."id"), 0)) AS totalPoints
+      IFNULL((SELECT SUM(totalPoints) FROM "UserSpecialBetSingle" WHERE "leagueUserId" = "LeagueUser"."id"), 0)) AS "totalPoints"
       FROM "LeagueUser"
       LEFT JOIN "User" ON "LeagueUser"."userId" = "User"."id" WHERE "leagueId" = ${leagueId}
       ORDER BY "totalPoints" DESC`, { type: this.database.QueryTypes.SELECT})
