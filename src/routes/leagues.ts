@@ -71,8 +71,7 @@ export default class LeaguesController {
       IFNULL((SELECT SUM(totalPoints) FROM "UserSpecialBetSerie" WHERE "leagueUserId" = "LeagueUser"."id"), 0) +
       IFNULL((SELECT SUM(totalPoints) FROM "UserSpecialBetSingle" WHERE "leagueUserId" = "LeagueUser"."id"), 0)) AS "totalPoints"
       FROM "LeagueUser"
-      LEFT JOIN "User" ON "LeagueUser"."userId" = "User"."id" WHERE "leagueId" = ${leagueId}
-      ORDER BY "totalPoints" DESC`, { type: this.database.QueryTypes.SELECT})
+      LEFT JOIN "User" ON "LeagueUser"."userId" = "User"."id" WHERE "leagueId" = ${leagueId}`, { type: this.database.QueryTypes.SELECT})
 
     return users
   }
