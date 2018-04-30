@@ -67,9 +67,9 @@ export default class LeaguesController {
   @Path('/:leagueId/leaderboard')
   async getLeaderboard(@PathParam('leagueId') leagueId: number): Promise<any> {
     const users = await this.database.query(`SELECT "User"."firstName", "User"."lastName",
-      (IFNULL((SELECT SUM("UserBet"."totalPoints") FROM "UserBet" WHERE "leagueUserId" = "LeagueUser"."id"), 0) +
-      IFNULL((SELECT SUM("UserSpecialBetSerie"."totalPoints") FROM "UserSpecialBetSerie" WHERE "leagueUserId" = "LeagueUser"."id"), 0) +
-      IFNULL((SELECT SUM("UserSpecialBetSingle"."totalPoints") FROM "UserSpecialBetSingle" WHERE "leagueUserId" = "LeagueUser"."id"), 0)) AS "totalPoints"
+      ((CASE WHEN (SELECT SUM("UserBet"."totalPoints") FROM "UserBet" WHERE "leagueUserId" = "LeagueUser"."id") IS NULL THEN 0 END) +
+      (CASE WHEN (SELECT SUM("UserSpecialBetSerie"."totalPoints") FROM "UserSpecialBetSerie" WHERE "leagueUserId" = "LeagueUser"."id") IS NULL THEN 0 END) +
+      (CASE WHEN (SELECT SUM("UserSpecialBetSingle"."totalPoints") FROM "UserSpecialBetSingle" WHERE "leagueUserId" = "LeagueUser"."id") IS NULL THEN 0 END)) AS "totalPoints"
       FROM "LeagueUser"
       LEFT JOIN "User" ON "LeagueUser"."userId" = "User"."id" WHERE "leagueId" = ${leagueId}
       ORDER BY "totalPoints" DESC`, { type: this.database.QueryTypes.SELECT})
