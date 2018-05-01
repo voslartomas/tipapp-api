@@ -64,4 +64,10 @@ export default class UserBet extends Model<UserBet> {
   @Default(0)
   @Column
   totalPoints: number
+
+  @AllowNull(false)
+  @Default(false)
+  @Is('isBoolean', value => isBoolean(value))
+  @Column
+  overtime: boolean
 }
