@@ -137,6 +137,7 @@ module.exports = {
             specialBetTeamResultId: 3,
             specialBetPlayerResultId: undefined,
             specialBetValueId: undefined,
+            points: 30,
             dateTime: '2018-02-03 04:05:02'
         },
         {
@@ -145,6 +146,7 @@ module.exports = {
             specialBetTeamResultId: undefined,
             specialBetPlayerResultId: undefined,
             specialBetValueId: undefined,
+            points: 30,
             dateTime: '2018-02-03 04:05:02'
         },
         {
@@ -153,6 +155,7 @@ module.exports = {
             specialBetTeamResultId: 3,
             specialBetPlayerResultId: undefined,
             specialBetValueId: undefined,
+            points: 30,
             dateTime: '2018-02-03 04:05:02'
         },
         {
@@ -161,6 +164,7 @@ module.exports = {
             specialBetTeamResultId: undefined,
             specialBetPlayerResultId: 1,
             specialBetValueId: undefined,
+            points: 30,
             dateTime: '2018-02-03 04:05:02'
         },
         {
@@ -169,6 +173,7 @@ module.exports = {
           specialBetTeamResultId: undefined,
           specialBetPlayerResultId: 1,
           specialBetValueId: undefined,
+          points: 30,
           dateTime: '2018-02-03 04:05:02'
         }
     ],
