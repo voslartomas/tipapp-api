@@ -840,7 +840,7 @@
 						"name": "teams",
 						"required": false,
 						"type": "string",
-						"default": ""
+						"default": "0,-1"
 					}
 				]
 			},
