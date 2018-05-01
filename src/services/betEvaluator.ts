@@ -23,7 +23,9 @@ export default class BetEvaluator {
 
   async updateMatchBets(match: Match) {
     const userBets = await this.database.models.UserBet.findAll({where: {matchId: match.id}})
-    const matchScorers = await this.database.models.MatchScorer.findAll({where: {matchId: match.id}})
+    const matchScorers = await this.database.models.MatchScorer.findAll({
+      include: [this.database.models.LeaguePlayer],
+      where: {matchId: match.id}})
     const evaluators: Evaluator[] = await this.database.models.Evaluator.findAll({where: {leagueId: match.leagueId, entity: 'matches'}})
 
     userBets.forEach(userBet => {
@@ -33,7 +35,7 @@ export default class BetEvaluator {
         const evaluator = this.getEvaluatorByType(e.type)
 
         let result: boolean = false
-        if (e.type === 'scorer') {
+        if (e.type === 'scorer' || e.type === 'bestScorer') {
           result = evaluator.evaluateScorer(matchScorers, userBet)
         } else {
           result = evaluator.evaluateMatch(match, userBet)

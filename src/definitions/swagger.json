@@ -839,8 +839,7 @@
 						"in": "query",
 						"name": "teams",
 						"required": false,
-						"type": "string",
-						"default": "0,-1"
+						"type": "string"
 					}
 				]
 			},
