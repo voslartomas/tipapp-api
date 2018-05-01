@@ -820,8 +820,9 @@
 						"description": "",
 						"in": "query",
 						"name": "teams",
-						"required": true,
-						"type": "string"
+						"required": false,
+						"type": "string",
+						"default": ""
 					}
 				]
 			},

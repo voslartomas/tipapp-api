@@ -13,7 +13,7 @@ export default class LeaguePlayerController {
     leagueId: string
 
     @GET
-    async getLeaguePlayers(@PathParam('leagueId') leagueId: number, @QueryParam('teams') teams: string): Promise<ILeaguePlayer[]> {
+    async getLeaguePlayers(@PathParam('leagueId') leagueId: number, @QueryParam('teams') teams: string = ''): Promise<ILeaguePlayer[]> {
       return await this.database.models.LeaguePlayer.findAll({
         include: [
           this.database.models.Player,
