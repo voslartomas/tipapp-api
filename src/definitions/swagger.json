@@ -3511,6 +3511,37 @@
 					}
 				]
 			}
+		},
+		"/api/register": {
+			"post": {
+				"operationId": "RegisterRegister",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "string"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "user",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
 		}
 	},
 	"swagger": "2.0",

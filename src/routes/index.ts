@@ -20,6 +20,7 @@ import UserSpecialBetSeriesController from './userSpecialBetSeries'
 import UserSpecialBetSinglesController from './userSpecialBetSingles'
 import NHLController from './nhl'
 import EvaluatorsController from './evaluators'
+import { RegisterController } from './register'
 
 export default [
   PingController,
@@ -43,5 +44,6 @@ export default [
   UserSpecialBetSeriesController,
   UserSpecialBetSinglesController,
   NHLController,
-  EvaluatorsController
+  EvaluatorsController,
+  RegisterController
 ]
