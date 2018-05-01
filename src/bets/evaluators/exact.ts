@@ -8,7 +8,7 @@ export default class Exact implements IEvaluator {
   type = 'exact'
 
   evaluateMatch(result: Match, tip: UserBet): boolean {
-    return result.homeScore === tip.homeScore && result.awayScore === tip.awayScore
+    return result.homeScore === tip.homeScore && result.awayScore === tip.awayScore && result.overtime === tip.overtime
   }
 
   evaluateSerie(result: LeagueSpecialBetSerie, tip: UserSpecialBetSerie): boolean {
