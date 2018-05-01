@@ -101,7 +101,7 @@ export default class NHLController {
             overtime: game.linescore.currentPeriod > 3
           }
 
-          dbMatch = this.database.models.Match.create(match)
+          dbMatch = await this.database.models.Match.create(match)
         } else {
           const match: any = {}
           match.homeScore = game.teams.home.score
@@ -131,7 +131,7 @@ export default class NHLController {
                 numberOfGoals: 1
               }
 
-              this.database.models.MatchScorer.create(scorer)
+              await this.database.models.MatchScorer.create(scorer)
             } catch (e) {
               console.log(e)
             }

@@ -50,7 +50,7 @@ export default class LeaguesController {
     previous.setDate(actual.getDate() - 1)
     next.setDate(actual.getDate() + 2)
 
-    return this.database.query(`SELECT
+    return this.database.query(`SELECT "Match"."overtime" as "matchOvertime",
       "Match"."dateTime" as "matchDateTime", "Match"."id" AS "matchId1", "Match"."homeScore" AS "matchHomeScore", "Match"."awayScore" AS "matchAwayScore",
       "UserBet".*, "Match"."homeTeamId", "Match"."awayTeamId",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Match"."homeTeamId") AS "homeTeam",
@@ -67,9 +67,9 @@ export default class LeaguesController {
   @Path('/:leagueId/leaderboard')
   async getLeaderboard(@PathParam('leagueId') leagueId: number): Promise<any> {
     const users = await this.database.query(`SELECT "User"."firstName", "User"."lastName",
-      ((CASE WHEN (SELECT SUM("UserBet"."totalPoints") FROM "UserBet" WHERE "leagueUserId" = "LeagueUser"."id") IS NULL THEN 0 END) +
-      (CASE WHEN (SELECT SUM("UserSpecialBetSerie"."totalPoints") FROM "UserSpecialBetSerie" WHERE "leagueUserId" = "LeagueUser"."id") IS NULL THEN 0 END) +
-      (CASE WHEN (SELECT SUM("UserSpecialBetSingle"."totalPoints") FROM "UserSpecialBetSingle" WHERE "leagueUserId" = "LeagueUser"."id") IS NULL THEN 0 END)) AS "totalPoints"
+      ((SELECT coalesce(SUM("UserBet"."totalPoints"), 0) FROM "UserBet" WHERE "leagueUserId" = "LeagueUser"."id") +
+      (SELECT coalesce(SUM("UserSpecialBetSerie"."totalPoints"), 0) FROM "UserSpecialBetSerie" WHERE "leagueUserId" = "LeagueUser"."id") +
+      (SELECT coalesce(SUM("UserSpecialBetSingle"."totalPoints"), 0) FROM "UserSpecialBetSingle" WHERE "leagueUserId" = "LeagueUser"."id")) AS "totalPoints"
       FROM "LeagueUser"
       LEFT JOIN "User" ON "LeagueUser"."userId" = "User"."id" WHERE "leagueId" = ${leagueId}
       ORDER BY "totalPoints" DESC`, { type: this.database.QueryTypes.SELECT})
