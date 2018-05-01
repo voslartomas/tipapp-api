@@ -42,7 +42,7 @@ export class Server {
       })
 
       this.app.post('*', (req, res, next) => {
-        if (req.originalUrl === '/login') {
+        if (req.originalUrl === '/login' || req.originalUrl === '/api/register') {
           return next()
         }
 
