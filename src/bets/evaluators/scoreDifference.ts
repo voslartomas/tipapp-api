@@ -14,7 +14,7 @@ export default class ScoreDifference implements IEvaluator {
       return false
     }
 
-    return Math.abs(tip.homeScore - tip.awayScore) === Math.abs(result.homeScore - result.awayScore)
+    return tip.homeScore - tip.awayScore === result.homeScore - result.awayScore
   }
 
   evaluateSerie(result: LeagueSpecialBetSerie, tip: UserSpecialBetSerie): boolean {
