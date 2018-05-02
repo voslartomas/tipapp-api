@@ -39,28 +39,6 @@ export default class UserSpecialBetSerie extends Model<UserSpecialBetSerie> {
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
-  @Column
-  points: number = 4
-
-  @AllowNull(false)
-  @Is('isBoolean', value => isBoolean(value))
-  @Default(false)
-  @Column
-  correctBet: boolean
-
-  @AllowNull(false)
-  @Is('isNumeric', value => isNumeric(value))
-  @Column
-  pointsExact: number = 8
-
-  @AllowNull(false)
-  @Is('isBoolean', value => isBoolean(value))
-  @Default(false)
-  @Column
-  exactBet: boolean
-
-  @AllowNull(false)
-  @Is('isNumeric', value => isNumeric(value))
   @Default(0)
   @Column
   totalPoints: number

@@ -57,16 +57,20 @@ export interface ILeagueUser {
 export interface IMatch {
     id: string
     leagueId: number
+    league: ILeague
     gameNumber: number
     dateTime: Date
     homeTeamId: number
+    homeTeam: ITeam
     awayTeamId: number
+    awayTeam: ITeam
     homeScore: number
     awayScore: number
     overtime: boolean
     shootout: boolean
     homeWinner: boolean
     isEvaluated: boolean
+    externalId: number
 }
 
 export interface IMatchScorer {

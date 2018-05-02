@@ -1,4 +1,4 @@
-import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest'
+import { Path, GET, POST, PUT, DELETE, PathParam, QueryParam, Errors } from 'typescript-rest'
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import LeaguePlayer from '../models/leaguePlayer.model'
@@ -13,11 +13,23 @@ export default class LeaguePlayerController {
     leagueId: string
 
     @GET
-    async getLeaguePlayers(@PathParam('leagueId') leagueId: number): Promise<ILeaguePlayer[]> {
+    async getLeaguePlayers(@PathParam('leagueId') leagueId: number, @QueryParam('teams') teams: string = undefined): Promise<ILeaguePlayer[]> {
+
+      let where
+      if (teams) {
+        where = {
+          leagueId, id: teams.split(',')
+        }
+      } else {
+        where = {
+          leagueId
+        }
+      }
+
       return await this.database.models.LeaguePlayer.findAll({
         include: [
           this.database.models.Player,
-          {model: this.database.models.LeagueTeam, include: [this.database.models.Team], where: {leagueId}}
+          {model: this.database.models.LeagueTeam, include: [{model: this.database.models.Team}], where}
         ], })
     }
 

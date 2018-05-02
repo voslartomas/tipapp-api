@@ -1,79 +1,86 @@
-import { IMatch } from '../types/models.d'
+import Match from '../models/match.model'
+import Evaluator from '../models/evaluator.model'
+import LeagueSpecialBetSerie from '../models/leagueSpecialBetSerie.model'
+import LeagueSpecialBetSingle from '../models/leagueSpecialBetSingle.model'
 import { Inject } from 'typescript-ioc'
 import Database from './database'
 import { ILeagueSpecialBetSerie, ILeagueSpecialBetSingle } from '../types/models'
+import evaluators from '../bets/evaluators'
+import IEvaluator from '../bets/evaluators/IEvaluator'
 
 export default class BetEvaluator {
   @Inject
   private database: Database
 
-  async updateMatchBets(match: IMatch) {
+  getEvaluatorByType(type: string): IEvaluator {
+    for (const evaluator in evaluators) {
+      const ev = new evaluators[evaluator]()
+      if (ev.type === type) {
+        return ev
+      }
+    }
+  }
+
+  async updateMatchBets(match: Match) {
     const userBets = await this.database.models.UserBet.findAll({where: {matchId: match.id}})
-    const matchScorers = await this.database.models.MatchScorer.findAll({where: {matchId: match.id}})
+    const matchScorers = await this.database.models.MatchScorer.findAll({
+      include: [this.database.models.LeaguePlayer],
+      where: {matchId: match.id}})
+    const evaluators: Evaluator[] = await this.database.models.Evaluator.findAll({where: {leagueId: match.leagueId, entity: 'matches'}})
 
     userBets.forEach(userBet => {
-      userBet.correctBetScorer = false
-      userBet.correctBet = false
-      userBet.exactBet = false
       userBet.totalPoints = 0
 
-      matchScorers.forEach(scorer => {
-        if (userBet.scorerId === scorer.id) {
-          userBet.correctBetScorer = true
-          userBet.totalPoints += userBet.pointsScorer
+      evaluators.forEach(e => {
+        const evaluator = this.getEvaluatorByType(e.type)
+
+        let result: boolean = false
+        if (e.type === 'scorer' || e.type === 'bestScorer') {
+          result = evaluator.evaluateScorer(matchScorers, userBet)
+        } else {
+          result = evaluator.evaluateMatch(match, userBet)
+        }
+
+        if (result) {
+          userBet.totalPoints += parseInt(e.points)
         }
       })
 
-      if (userBet.homeScore === match.homeScore && userBet.awayScore === match.awayScore) {
-        userBet.exactBet = true
-        userBet.totalPoints += userBet.pointsExact
-      }
-
-      if ((userBet.homeScore - userBet.awayScore > 0 && match.homeScore - match.awayScore > 0) ||
-      (userBet.homeScore - userBet.awayScore < 0 && match.homeScore - match.awayScore < 0)) {
-        userBet.correctBet = true
-        userBet.totalPoints += userBet.points
-      }
-
       userBet.save()
     })
   }
 
-  async updateSerieBet(betSerie: ILeagueSpecialBetSerie) {
+  async updateSerieBet(betSerie: LeagueSpecialBetSerie) {
     const userBets = await this.database.models.UserSpecialBetSerie.findAll({where: {leagueSpecialBetSerieId: betSerie.id}})
+    const evaluators: Evaluator[] = await this.database.models.Evaluator.findAll({where: {leagueId: betSerie.leagueId, entity: 'series'}})
 
     userBets.forEach(userBet => {
-      userBet.correctBet = false
-      userBet.exactBet = false
       userBet.totalPoints = 0
 
-      if (userBet.homeTeamScore === betSerie.homeTeamScore && userBet.awayTeamScore === betSerie.awayTeamScore) {
-        userBet.exactBet = true
-        userBet.totalPoints += userBet.pointsExact
-      }
+      evaluators.forEach(e => {
+        const evaluator = this.getEvaluatorByType(e.type)
 
-      if ((userBet.homeTeamScore - userBet.awayTeamScore > 0 && betSerie.homeTeamScore - betSerie.awayTeamScore > 0) ||
-      (userBet.homeScore - userBet.awayScore < 0 && betSerie.homeTeamScore - betSerie.awayTeamScore < 0)) {
-        userBet.correctBet = true
-        userBet.totalPoints += userBet.points
-      }
+        const result = evaluator.evaluateSerie(betSerie, userBet)
+
+        if (result) {
+          userBet.totalPoints += parseInt(e.points)
+        }
+      })
 
       userBet.save()
     })
   }
 
-  async updateSingleBet(betSingle: ILeagueSpecialBetSingle) {
+  async updateSingleBet(betSingle: LeagueSpecialBetSingle) {
     const userBets = await this.database.models.UserSpecialBetSingle.findAll({where : {leagueSpecialBetSingleId: betSingle.id}})
 
     userBets.forEach(userBet => {
-      userBet.correctBet = false
       userBet.totalPoints = 0
 
       if (betSingle.specialBetTeamResultId === userBet.teamResultId ||
       betSingle.specialBetPlayerResultId === userBet.playerResultId ||
       betSingle.specialBetValue === userBet.value) {
-        userBet.correctBet = true
-        userBet.totalPoints += userBet.points
+        userBet.totalPoints += betSingle.points
       }
 
       userBet.save()

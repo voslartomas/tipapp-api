@@ -75,7 +75,9 @@ export default class NHLController {
   @GET
   @Path('/:leagueId/matches')
   async importMatches(@PathParam('leagueId') leagueId: number) {
-    const today = new Date().toISOString().split('T')[0]
+    let today: any = new Date()
+    today.setDate(new Date().getDate() + 1)
+    today = today.toISOString().split('T')[0]
     const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2018-04-10&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
 
     const days = response.body.dates
@@ -99,7 +101,7 @@ export default class NHLController {
             overtime: game.linescore.currentPeriod > 3
           }
 
-          dbMatch = this.database.models.Match.create(match)
+          dbMatch = await this.database.models.Match.create(match)
         } else {
           const match: any = {}
           match.homeScore = game.teams.home.score
@@ -129,7 +131,7 @@ export default class NHLController {
                 numberOfGoals: 1
               }
 
-              this.database.models.MatchScorer.create(scorer)
+              await this.database.models.MatchScorer.create(scorer)
             } catch (e) {
               console.log(e)
             }

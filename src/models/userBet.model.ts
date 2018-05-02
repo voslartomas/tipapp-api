@@ -4,7 +4,6 @@ import { isBoolean, isDate, isNumeric } from '../utils/modelValidation'
 import LeagueUser from './leagueUser.model'
 import LeaguePlayer from './leaguePlayer.model'
 
-// TODO: Here could be probably the problem when league has specific settings what to bet
 @Table({
   timestamps: true,
   paranoid: true
@@ -62,40 +61,13 @@ export default class UserBet extends Model<UserBet> {
 
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
-  @Column
-  pointsScorer: number = 6
-
-  @AllowNull(false)
-  @Is('isNumeric', value => isNumeric(value))
-  @Column
-  points: number = 4
-
-  @AllowNull(false)
-  @Is('isNumeric', value => isNumeric(value))
-  @Column
-  pointsExact: number = 8
-
-  @AllowNull(false)
-  @Is('isNumeric', value => isNumeric(value))
   @Default(0)
   @Column
   totalPoints: number
 
   @AllowNull(false)
-  @Is('isBoolean', value => isBoolean(value))
   @Default(false)
-  @Column
-  correctBet: boolean
-
-  @AllowNull(false)
   @Is('isBoolean', value => isBoolean(value))
-  @Default(false)
   @Column
-  exactBet: boolean
-
-  @AllowNull(false)
-  @Is('isBoolean', value => isBoolean(value))
-  @Default(false)
-  @Column
-  correctBetScorer: boolean
+  overtime: boolean
 }

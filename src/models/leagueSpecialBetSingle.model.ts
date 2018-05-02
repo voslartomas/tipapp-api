@@ -52,6 +52,11 @@ export default class LeagueSpecialBetSingle extends Model<LeagueSpecialBetSingle
     specialBetValue: number
 
     @AllowNull(false)
+    @Is('isNumeric', value => isNumeric(value))
+    @Column
+    points: number
+
+    @AllowNull(false)
     @Is('isDate', value => isDate(value))
     @Column
     dateTime: Date

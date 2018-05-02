@@ -102,81 +102,6 @@
 				"seasonTo"
 			]
 		},
-		"IMatch": {
-			"description": "",
-			"properties": {
-				"id": {
-					"type": "string",
-					"description": ""
-				},
-				"leagueId": {
-					"type": "number",
-					"format": "double",
-					"description": ""
-				},
-				"gameNumber": {
-					"type": "number",
-					"format": "double",
-					"description": ""
-				},
-				"dateTime": {
-					"type": "string",
-					"format": "date-time",
-					"description": ""
-				},
-				"homeTeamId": {
-					"type": "number",
-					"format": "double",
-					"description": ""
-				},
-				"awayTeamId": {
-					"type": "number",
-					"format": "double",
-					"description": ""
-				},
-				"homeScore": {
-					"type": "number",
-					"format": "double",
-					"description": ""
-				},
-				"awayScore": {
-					"type": "number",
-					"format": "double",
-					"description": ""
-				},
-				"overtime": {
-					"type": "boolean",
-					"description": ""
-				},
-				"shootout": {
-					"type": "boolean",
-					"description": ""
-				},
-				"homeWinner": {
-					"type": "boolean",
-					"description": ""
-				},
-				"isEvaluated": {
-					"type": "boolean",
-					"description": ""
-				}
-			},
-			"type": "object",
-			"required": [
-				"id",
-				"leagueId",
-				"gameNumber",
-				"dateTime",
-				"homeTeamId",
-				"awayTeamId",
-				"homeScore",
-				"awayScore",
-				"overtime",
-				"shootout",
-				"homeWinner",
-				"isEvaluated"
-			]
-		},
 		"ITeam": {
 			"description": "",
 			"properties": {
@@ -209,6 +134,99 @@
 				"nickname",
 				"shortcut",
 				"sportId"
+			]
+		},
+		"IMatch": {
+			"description": "",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": ""
+				},
+				"leagueId": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"league": {
+					"$ref": "#/definitions/ILeague"
+				},
+				"gameNumber": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"dateTime": {
+					"type": "string",
+					"format": "date-time",
+					"description": ""
+				},
+				"homeTeamId": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"homeTeam": {
+					"$ref": "#/definitions/ITeam"
+				},
+				"awayTeamId": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"awayTeam": {
+					"$ref": "#/definitions/ITeam"
+				},
+				"homeScore": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"awayScore": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				},
+				"overtime": {
+					"type": "boolean",
+					"description": ""
+				},
+				"shootout": {
+					"type": "boolean",
+					"description": ""
+				},
+				"homeWinner": {
+					"type": "boolean",
+					"description": ""
+				},
+				"isEvaluated": {
+					"type": "boolean",
+					"description": ""
+				},
+				"externalId": {
+					"type": "number",
+					"format": "double",
+					"description": ""
+				}
+			},
+			"type": "object",
+			"required": [
+				"id",
+				"leagueId",
+				"league",
+				"gameNumber",
+				"dateTime",
+				"homeTeamId",
+				"homeTeam",
+				"awayTeamId",
+				"awayTeam",
+				"homeScore",
+				"awayScore",
+				"overtime",
+				"shootout",
+				"homeWinner",
+				"isEvaluated",
+				"externalId"
 			]
 		},
 		"ILeagueTeam": {
@@ -815,6 +833,13 @@
 						"required": true,
 						"type": "number",
 						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "query",
+						"name": "teams",
+						"required": false,
+						"type": "string"
 					}
 				]
 			},
@@ -1031,6 +1056,43 @@
 						"required": true,
 						"type": "number",
 						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/leagues/{leagueId}/bets/matches/": {
+			"get": {
+				"operationId": "LeaguesGetBetsMatches",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IMatch"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "query",
+						"name": "date",
+						"required": true,
+						"type": "string"
 					}
 				]
 			}
@@ -3291,6 +3353,191 @@
 						"required": true,
 						"type": "number",
 						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/leagues/{leagueId}/evaluators": {
+			"get": {
+				"operationId": "EvaluatorsGetAll",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IMatch"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			},
+			"post": {
+				"operationId": "EvaluatorsCreate",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IMatch"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "evaluator",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
+		"/api/leagues/{leagueId}/evaluators/types": {
+			"get": {
+				"operationId": "EvaluatorsGetTypes",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object"
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			}
+		},
+		"/api/leagues/{leagueId}/evaluators/{id}": {
+			"get": {
+				"operationId": "EvaluatorsGet",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IMatch"
+						}
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			},
+			"put": {
+				"operationId": "EvaluatorsUpdate",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					},
+					{
+						"description": "",
+						"in": "body",
+						"name": "evaluator",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "EvaluatorsDelete",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/register": {
+			"post": {
+				"operationId": "RegisterRegister",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "string"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "user",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
 					}
 				]
 			}
