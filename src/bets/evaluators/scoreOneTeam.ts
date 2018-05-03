@@ -13,7 +13,7 @@ export default class ScoreOneTeam implements IEvaluator {
       return false
     }
 
-    return tip.homeScore === result.homeScore || tip.awayScore === result.awayScore
+    return (tip.homeScore === result.homeScore || tip.awayScore === result.awayScore) && tip.overtime === result.overtime
   }
 
   evaluateSerie(result: LeagueSpecialBetSerie, tip: UserSpecialBetSerie): boolean {
