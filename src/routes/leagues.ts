@@ -47,7 +47,7 @@ export default class LeaguesController {
     const actual = new Date()
     const previous = new Date()
     const next = new Date()
-    previous.setDate(actual.getDate() - 1)
+    previous.setDate(actual.getDate() - 60)
     next.setDate(actual.getDate() + 2)
 
     return this.database.query(`SELECT "Match"."overtime" as "matchOvertime",
