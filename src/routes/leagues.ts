@@ -60,7 +60,7 @@ export default class LeaguesController {
       LEFT JOIN "UserBet" ON ("Match"."id" = "UserBet"."matchId" AND "UserBet"."leagueUserId" = ${leagueUser.id})
       WHERE "Match"."leagueId" = ${leagueId}
       AND "Match"."dateTime" >= '${previous.toISOString().substring(0, 10)}' AND "Match"."dateTime" <= '${next.toISOString().substring(0, 10)}'
-      ORDER BY "Match"."dateTime" ASC`, { type: this.database.QueryTypes.SELECT})
+      ORDER BY "Match"."dateTime" DESC`, { type: this.database.QueryTypes.SELECT})
   }
 
   @GET
