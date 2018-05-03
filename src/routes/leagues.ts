@@ -47,7 +47,7 @@ export default class LeaguesController {
     const actual = new Date()
     const previous = new Date()
     const next = new Date()
-    previous.setDate(actual.getDate() - 1)
+    previous.setDate(actual.getDate() - 60)
     next.setDate(actual.getDate() + 2)
 
     return this.database.query(`SELECT "Match"."overtime" as "matchOvertime",
@@ -60,7 +60,7 @@ export default class LeaguesController {
       LEFT JOIN "UserBet" ON ("Match"."id" = "UserBet"."matchId" AND "UserBet"."leagueUserId" = ${leagueUser.id})
       WHERE "Match"."leagueId" = ${leagueId}
       AND "Match"."dateTime" >= '${previous.toISOString().substring(0, 10)}' AND "Match"."dateTime" <= '${next.toISOString().substring(0, 10)}'
-      ORDER BY "Match"."dateTime" ASC`, { type: this.database.QueryTypes.SELECT})
+      ORDER BY "Match"."dateTime" DESC`, { type: this.database.QueryTypes.SELECT})
   }
 
   @GET

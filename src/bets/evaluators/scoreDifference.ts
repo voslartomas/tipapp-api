@@ -9,15 +9,14 @@ export default class ScoreDifference implements IEvaluator {
   type = 'scoreDifference'
 
   evaluateMatch(result: Match, tip: UserBet): boolean {
-
     if (new Exact().evaluateMatch(result, tip)) {
       return false
     }
 
-    return tip.homeScore - tip.awayScore === result.homeScore - result.awayScore
+    return tip.homeScore - tip.awayScore === result.homeScore - result.awayScore && result.overtime === tip.overtime
   }
 
   evaluateSerie(result: LeagueSpecialBetSerie, tip: UserSpecialBetSerie): boolean {
-    return Math.abs(tip.homeTeamScore - tip.awayTeamScore) === Math.abs(result.homeTeamScore - result.awayTeamScore)
+    return tip.homeTeamScore - tip.awayTeamScore === result.homeTeamScore - result.awayTeamScore
   }
 }
