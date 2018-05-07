@@ -52,7 +52,7 @@ export default class LeaguesController {
 
     return this.database.query(`SELECT "Match"."overtime" as "matchOvertime",
       "Match"."dateTime" as "matchDateTime", "Match"."id" AS "matchId1", "Match"."homeScore" AS "matchHomeScore", "Match"."awayScore" AS "matchAwayScore",
-      "UserBet".*, "Match"."homeTeamId", "Match"."awayTeamId",
+      "UserBet".*, "Match"."homeTeamId", "Match"."awayTeamId", "UserBet"."id",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Match"."homeTeamId") AS "homeTeam",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Match"."awayTeamId") AS "awayTeam",
       (SELECT "Player"."firstName" FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "UserBet"."scorerId") AS "scorer"

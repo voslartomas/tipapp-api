@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "neymar.sqlite",
+    "host": "localhost",
+    "storage": "../neymar.sqlite",
+    "dialect": "sqlite"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "tvoslar",
+    "password": "tipapptipapp",
+    "database": "tipapp",
+    "host": "tipapp.c2fgvnquam0j.eu-central-1.rds.amazonaws.com",
+    "dialect": "postgres"
+  }
+}
