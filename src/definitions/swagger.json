@@ -1060,6 +1060,54 @@
 				]
 			}
 		},
+		"/api/leagues/{leagueId}/bets/specials/": {
+			"get": {
+				"operationId": "LeaguesGetBetsSeries",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
+		"/api/leagues/{leagueId}/users/bets/series/": {
+			"get": {
+				"operationId": "LeaguesGetBetsSpecial",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "",
+				"parameters": [
+					{
+						"description": "",
+						"in": "path",
+						"name": "leagueId",
+						"required": true,
+						"type": "number",
+						"format": "double"
+					}
+				]
+			}
+		},
 		"/api/leagues/{leagueId}/bets/matches/": {
 			"get": {
 				"operationId": "LeaguesGetBetsMatches",
