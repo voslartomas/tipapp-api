@@ -28,14 +28,12 @@ export default class User extends Model<User> {
   @Column
   username: string
 
-  @AllowNull(false)
-  @NotEmpty
+  @AllowNull(true)
   @IsEmail
   @Column
   email: string
 
-  @AllowNull(false)
-  @NotEmpty
+  @AllowNull(true)
   @Is('isMobileNumber', value => isCzechMobileNumber(value))
   @Column
   mobileNumber: string

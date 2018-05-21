@@ -39,6 +39,29 @@ export default class LeaguesController {
   }
 
   @GET
+  @Path('/:leagueId/bets/specials/')
+  async getBetsSeries(@PathParam('leagueId') leagueId: number) {
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+
+    return this.database.query(``)
+  }
+
+  @GET
+  @Path('/:leagueId/users/bets/series/')
+  async getBetsSpecial(@PathParam('leagueId') leagueId: number) {
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+
+    return this.database.query(`SELECT "Serie"."dateTime", "Serie"."homeTeamScore" AS "serieHomeScore", "Serie"."awayTeamScore" AS "serieAwayScore",
+      "UserSpecialBetSerie".*, "Serie"."id" AS "leagueSpecialBetSerieId",
+      (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Serie"."homeTeamId") AS "homeTeam",
+      (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Serie"."awayTeamId") AS "awayTeam"
+      FROM "LeagueSpecialBetSerie" AS "Serie"
+      LEFT JOIN "UserSpecialBetSerie" ON ("Serie"."id" = "UserSpecialBetSerie"."leagueSpecialBetSerieId" AND "UserSpecialBetSerie"."leagueUserId" = ${leagueUser.id})
+      WHERE "Serie"."leagueId" = ${leagueId}
+      ORDER BY "Serie"."dateTime" DESC`, { type: this.database.QueryTypes.SELECT})
+  }
+
+  @GET
   @Path('/:leagueId/bets/matches/')
   async getBetsMatches(@PathParam('leagueId') leagueId: number, @QueryParam('date') date: string): Promise<IMatch[]> {
     const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
@@ -52,7 +75,7 @@ export default class LeaguesController {
 
     return this.database.query(`SELECT "Match"."overtime" as "matchOvertime",
       "Match"."dateTime" as "matchDateTime", "Match"."id" AS "matchId1", "Match"."homeScore" AS "matchHomeScore", "Match"."awayScore" AS "matchAwayScore",
-      "UserBet".*, "Match"."homeTeamId", "Match"."awayTeamId",
+      "UserBet".*, "Match"."homeTeamId", "Match"."awayTeamId", "UserBet"."id",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Match"."homeTeamId") AS "homeTeam",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Match"."awayTeamId") AS "awayTeam",
       (SELECT "Player"."firstName" FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "UserBet"."scorerId") AS "scorer"

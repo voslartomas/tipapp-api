@@ -1,4 +1,4 @@
-import { Path, GET, POST, PUT, DELETE, PathParam, Errors } from 'typescript-rest'
+import { Path, GET, POST, PUT, DELETE, PathParam, Errors, Context, ServiceContext } from 'typescript-rest'
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import User from '../models/user.model'
@@ -9,6 +9,9 @@ export default class UsersController {
   @Inject
   private database: Database
 
+  @Context
+  context: ServiceContext
+
   private readonly ATTRIBUTES = ['id', 'firstName', 'lastName', 'username', 'email', 'mobileNumber', 'createdAt', 'updatedAt']
 
   @GET
@@ -16,6 +19,12 @@ export default class UsersController {
     return await this.database.models.User.findAll({
       attributes: this.ATTRIBUTES
     })
+  }
+
+  @GET
+  @Path('/current')
+  async getCurrentUser(): Promise<IUser[]> {
+    return this.context.request['user']
   }
 
   @GET

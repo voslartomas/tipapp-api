@@ -2,7 +2,7 @@ export default {
   findAll: () => {
       return [
         {
-          scorerId: 1, homeScore: 2, awayScore: 3, pointsScorer: 1, pointsExact: 2, save:   () => {}
+          scorerId: 1, homeScore: 2, awayScore: 3, totalPoints: 10, save:   () => {}
         },
       ]
   },

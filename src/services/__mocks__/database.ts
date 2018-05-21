@@ -19,6 +19,7 @@ export default class Database {
     UserSetting: Shared,
     UserSpecialBet: Shared,
     MatchScorer: Shared,
+    Evaluator: Shared
   }
 
   constructor() {

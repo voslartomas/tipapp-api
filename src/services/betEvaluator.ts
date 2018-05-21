@@ -34,6 +34,8 @@ export default class BetEvaluator {
       evaluators.forEach(e => {
         const evaluator = this.getEvaluatorByType(e.type)
 
+        if (!evaluator) return undefined
+
         let result: boolean = false
         if (e.type === 'scorer' || e.type === 'bestScorer') {
           result = evaluator.evaluateScorer(matchScorers, userBet)
