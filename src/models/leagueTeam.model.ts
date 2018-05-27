@@ -1,5 +1,5 @@
-import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, Is } from 'sequelize-typescript'
-import { isNumeric } from  '../utils/modelValidation'
+import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, Is, Length } from 'sequelize-typescript'
+import { isNumeric, isString } from '../utils/modelValidation'
 import League from './league.model'
 import Team from './team.model'
 
@@ -25,4 +25,10 @@ export default class LeagueTeam extends Model<LeagueTeam> {
 
     @BelongsTo(() => Team)
     team: Team
+
+    @AllowNull(true)
+    @Is('isString', value => isString(value))
+    @Length({msg: 'Name of the group', min: 1, max: 1})
+    @Column
+    group: string
 }

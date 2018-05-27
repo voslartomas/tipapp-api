@@ -1,17 +1,36 @@
-const data = require('../models/fixtures/dbDefaultData')
+const path = '../models/fixtures/'
 const bCrypt = require('bcrypt-nodejs')
+const leaguePlayers = require(path + 'leaguePlayersDefaultData').LeaguePlayers
+const leagues = require(path + 'leaguesDefaultData').Leagues
+const leagueSpecialBetSingles = require(path + 'leagueSpecialBetSinglesDefaultData').LeagueSpecialBetSingles
+const leagueSpecialBetSeries = require(path + 'leagueSpecialBetSeriesDefaultData').LeagueSpecialBetSeries
+const leagueTeams = require(path + 'leagueTeamsDefaultData').LeagueTeams
+const leagueUsers = require(path + 'leagueUsersDefaultData').LeagueUsers
+const matches = require(path + 'matchesDefaultData').Matches
+const matchScorers = require(path + 'matchScorersDefaultData').MatchScorers
+const players = require(path + 'playersDefaultData').Players
+const specialBetSeries = require(path + 'specialBetSeriesDefaultData').SpecialBetSeries
+const specialBetSingles = require(path + 'specialBetSinglesDefaultData').SpecialBetSingles
+const sports = require(path + 'sportsDefaultData').Sports
+const teams = require(path + 'teamsDefaultData').Teams
+const users = require(path + 'usersDefaultData').Users
+const userBets = require(path + 'userBetsDefaultData').UserBets
+const userRequests = require(path + 'userRequestsDefaultData').UserRequests
+const userSettings = require(path + 'userSettingsDefaultData').UserSettings
+const userSpecialBetSeries = require(path + 'userSpecialBetSeriesDefaultData').UserSpecialBetSeries
+const userSpecialBetSingles = require(path + 'userSpecialBetSinglesDefaultData').UserSpecialBetSingles
 
 export default async (models) => {
   let e = false
 
-  for (const a of data.Sports) {
+  for (const a of sports) {
         await models.Sport.findOrCreate({
             where: { name: a.name },
             defaults: a
         }).error(err => e = err)
   }
 
-  for (const a of data.Teams) {
+  for (const a of teams) {
         await models.Team.findOrCreate({
             where: { name: a.name,
                 nickname: a.nickname,
@@ -22,7 +41,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.Leagues) {
+  for (const a of leagues) {
         await models.League.findOrCreate({
             where: { name: a.name,
                 sportId: a.sport,
@@ -33,7 +52,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.Players) {
+  for (const a of players) {
         await models.Player.findOrCreate({
             where: { firstName: a.firstName,
                 lastName: a.lastName,
@@ -43,7 +62,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.LeagueTeams) {
+  for (const a of leagueTeams) {
       await models.LeagueTeam.findOrCreate({
           where: { leagueId: a.leagueId,
               teamId: a.teamId
@@ -52,7 +71,7 @@ export default async (models) => {
       }).error(err => e = err)
   }
 
-  for (const a of data.LeaguePlayers) {
+  for (const a of leaguePlayers) {
         await models.LeaguePlayer.findOrCreate({
             where: { leagueTeamId: a.leagueTeamId,
                 playerId: a.playerId
@@ -61,7 +80,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.Matches) {
+  for (const a of matches) {
         await models.Match.findOrCreate({
             where: { leagueId: a.leagueId,
                 homeTeamId: a.homeTeamId,
@@ -72,7 +91,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.MatchScorers) {
+  for (const a of matchScorers) {
         await models.MatchScorer.findOrCreate({
             where: {
                 matchId: a.matchId,
@@ -82,7 +101,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.Users) {
+  for (const a of users) {
         a.salt = bCrypt.genSaltSync(8)
         a.password = await bCrypt.hashSync(a.password, a.salt, undefined)
         await models.User.findOrCreate({
@@ -91,7 +110,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.LeagueUsers) {
+  for (const a of leagueUsers) {
         await models.LeagueUser.findOrCreate({
             where: { leagueId: a.leagueId,
                 userId: a.userId
@@ -100,7 +119,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.UserRequests) {
+  for (const a of userRequests) {
         await models.UserRequest.findOrCreate({
             where: {
                 userId: a.userId,
@@ -110,7 +129,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.UserSettings) {
+  for (const a of userSettings) {
         await models.UserSetting.findOrCreate({
             where: {
                 leagueUserId: a.leagueUserId
@@ -119,7 +138,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.SpecialBetSeries) {
+  for (const a of specialBetSeries) {
         await models.SpecialBetSerie.findOrCreate({
             where: { bestOf: a.bestOf,
                 name: a.name
@@ -128,7 +147,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.SpecialBetSingles) {
+  for (const a of specialBetSingles) {
         await models.SpecialBetSingle.findOrCreate({
             where: { sportId: a.sportId,
                 specialBetType: a.specialBetType,
@@ -138,7 +157,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.LeagueSpecialBetSeries) {
+  for (const a of leagueSpecialBetSeries) {
         await models.LeagueSpecialBetSerie.findOrCreate({
             where: { leagueId: a.leagueId,
                 specialBetSerieId: a.specialBetSerieId,
@@ -149,7 +168,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.LeagueSpecialBetSingles) {
+  for (const a of leagueSpecialBetSingles) {
         await models.LeagueSpecialBetSingle.findOrCreate({
             where: { leagueId: a.leagueId,
                 specialBetSingleId: a.specialBetSingleId,
@@ -159,7 +178,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.UserBets) {
+  for (const a of userBets) {
         await models.UserBet.findOrCreate({
             where: { matchId: a.matchId,
                 leagueUserId: a.leagueUserId
@@ -168,7 +187,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.UserSpecialBetSeries) {
+  for (const a of userSpecialBetSeries) {
       console.log(a.leagueSpecialBetSerieId)
 
         await models.UserSpecialBetSerie.findOrCreate({
@@ -180,7 +199,7 @@ export default async (models) => {
         }).error(err => e = err)
     }
 
-  for (const a of data.UserSpecialBetSingles) {
+  for (const a of userSpecialBetSingles) {
         await models.UserSpecialBetSingle.findOrCreate({
             where: {
                  leagueSpecialBetSingleId: a.leagueSpecialBetSingleId,
