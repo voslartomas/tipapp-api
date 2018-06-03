@@ -37,7 +37,7 @@ export default class UsersController {
 
     return this.database.query(`SELECT "League".* FROM "League"
       LEFT JOIN "LeagueUser" ON ("League"."id" = "LeagueUser"."leagueId" AND "LeagueUser"."userId" = ${this.context.request['user'].id})
-      WHERE "LeagueUser"."admin" = 'true'`, { type: this.database.QueryTypes.SELECT})
+      WHERE "LeagueUser"."admin" = 'true' AND "League"."deletedAt" IS NULL`, { type: this.database.QueryTypes.SELECT})
   }
 
   @GET
