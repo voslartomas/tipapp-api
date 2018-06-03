@@ -15,6 +15,7 @@
     "generateDocs": "./node_modules/.bin/swaggerGen -c swaggerConfig.json",
     "build": "rm -rf ./build && tsc && npm run tslint && npm run copyStatic",
     "dev": "./node_modules/.bin/nodemon | bunyan -o short",
+    "db:create": "./node_modules/.bin/sequelize db:create",
     "fixtures": "npm run build && cd ./build && node ./importFixtures.js"
   },
   "repository": {

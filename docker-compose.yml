@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  postgres:
+    image: 'postgres:9.5'
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: devpass
+    ports:
+      - '5436:5432'
