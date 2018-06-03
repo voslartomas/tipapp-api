@@ -41,4 +41,10 @@ export default class LeagueUser extends Model<LeagueUser> {
     @Default(true)
     @Column
     active: boolean
+
+    @AllowNull(true)
+    @Is('isBoolean', value => isBoolean(value))
+    @Default(false)
+    @Column
+    admin: boolean
 }

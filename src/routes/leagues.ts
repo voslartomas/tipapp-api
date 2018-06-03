@@ -118,7 +118,16 @@ export default class LeaguesController {
 
   @POST
   async createLeague(league: any): Promise<ILeague> {
-    return await this.database.models.League.create(league)
+    const dbLeague =  await this.database.models.League.create(league)
+    console.log(dbLeague)
+    // add current user as admin
+    await this.database.models.LeagueUser.create({
+      userId: this.context.request['user'].id,
+      leagueId: dbLeague.id,
+      admin: true
+    })
+
+    return dbLeague
   }
 
   @PUT

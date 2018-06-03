@@ -2898,6 +2898,48 @@
 				]
 			}
 		},
+		"/api/users/current": {
+			"get": {
+				"operationId": "UsersGetCurrentUser",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IUser"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			}
+		},
+		"/api/users/leagues": {
+			"get": {
+				"operationId": "UsersGetUserLeagues",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ILeague"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			}
+		},
 		"/api/users/{id}": {
 			"get": {
 				"operationId": "UsersGetUser",

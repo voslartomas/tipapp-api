@@ -4,7 +4,7 @@
     "password": "",
     "database": "neymar.sqlite",
     "host": "localhost",
-    "storage": "../neymar.sqlite",
+    "storage": "./neymar.sqlite",
     "dialect": "sqlite"
   },
   "test": {
