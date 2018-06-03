@@ -25,6 +25,11 @@ export default class Team extends Model<Team> {
   @Column
   shortcut: string
 
+  @AllowNull(true)
+  @Is('isString', value => isString(value))
+  @Column
+  flagIcon: string
+
   @AllowNull(false)
   @Is('isNumeric', value => isNumeric(value))
   @Column

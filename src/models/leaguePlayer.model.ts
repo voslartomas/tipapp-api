@@ -1,5 +1,5 @@
 import { Table, Column, Model, BelongsTo, ForeignKey, AllowNull, Is, Default } from 'sequelize-typescript'
-import { isNumeric, isBoolean } from  '../utils/modelValidation'
+import { isNumeric, isBoolean, isString } from '../utils/modelValidation'
 import Player from './player.model'
 import LeagueTeam from './leagueTeam.model'
 
@@ -40,6 +40,11 @@ export default class LeaguePlayer extends Model<LeaguePlayer> {
     @Is('isNumeric', value => isNumeric(value))
     @Column
     seasonAssists: number
+
+    @AllowNull(true)
+    @Is('isString', value => isString(value))
+    @Column
+    clubName: string
 
     @AllowNull(false)
     @Default(false)

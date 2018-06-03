@@ -71,7 +71,7 @@ export default class LeaguesController {
     const previous = new Date()
     const next = new Date()
     previous.setDate(actual.getDate() - 60)
-    next.setDate(actual.getDate() + 2)
+    next.setDate(actual.getDate() + 14)
 
     return this.database.query(`SELECT "Match"."overtime" as "matchOvertime",
       "Match"."dateTime" as "matchDateTime", "Match"."id" AS "matchId1", "Match"."homeScore" AS "matchHomeScore", "Match"."awayScore" AS "matchAwayScore",
@@ -119,13 +119,17 @@ export default class LeaguesController {
   @POST
   async createLeague(league: any): Promise<ILeague> {
     const dbLeague =  await this.database.models.League.create(league)
-    console.log(dbLeague)
-    // add current user as admin
-    await this.database.models.LeagueUser.create({
-      userId: this.context.request['user'].id,
-      leagueId: dbLeague.id,
-      admin: true
-    })
+
+    try {
+      // add current user as admin
+      await this.database.models.LeagueUser.create({
+        userId: this.context.request['user'].id,
+        leagueId: dbLeague.id,
+        admin: true
+      })
+    } catch (err) {
+      console.log(err)
+    }
 
     return dbLeague
   }
