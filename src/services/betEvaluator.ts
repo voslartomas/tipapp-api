@@ -79,9 +79,9 @@ export default class BetEvaluator {
     userBets.forEach(userBet => {
       userBet.totalPoints = 0
 
-      if (betSingle.specialBetTeamResultId === userBet.teamResultId ||
-      betSingle.specialBetPlayerResultId === userBet.playerResultId ||
-      betSingle.specialBetValue === userBet.value) {
+      if ((userBet.teamResultId && betSingle.specialBetTeamResultId === userBet.teamResultId) ||
+      (userBet.playerResultId && betSingle.specialBetPlayerResultId === userBet.playerResultId) ||
+      (userBet.value && betSingle.specialBetValue === userBet.value)) {
         userBet.totalPoints += betSingle.points
       }
 
