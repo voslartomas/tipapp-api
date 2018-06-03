@@ -5,7 +5,8 @@ module.exports = {
             leagueId: 1,
             userId: 1,
             paid: true,
-            active: true
+            active: true,
+            admin: 1
         },
         {
             leagueId: 1,
@@ -29,7 +30,8 @@ module.exports = {
             leagueId: 3,
             userId: 1,
             paid: true,
-            active: true
+            active: true,
+            admin: 1
         },
         {
             leagueId: 3,
@@ -54,6 +56,13 @@ module.exports = {
             userId: 6,
             paid: false,
             active: false
+        },
+        {
+            leagueId: 3,
+            userId: 6,
+            paid: false,
+            active: false,
+            admin: 1
         }
     ]
 }
