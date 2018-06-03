@@ -15,16 +15,6 @@ export default class UserSpecialBetSeriesController {
   @PathParam('leagueId')
   leagueId: number
 
-  @GET
-  async getUserSpecialBetSeries(): Promise<IUserSpecialBetSerie[]> {
-    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: this.leagueId }})
-    if (!leagueUser) {
-      throw new Error('User not signed into league.')
-    }
-
-    return await this.database.models.UserSpecialBetSerie.findAll({ where: {leagueUserId: leagueUser.id} })
-  }
-
   @PUT
   @Path(':id')
   async updateUserSpecialBetSerie(@PathParam('id') userSpecialBetSerieId: number = 0, userSpecialBetSerie: any): Promise<IUserSpecialBetSerie> {
