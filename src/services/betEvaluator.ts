@@ -81,7 +81,7 @@ export default class BetEvaluator {
 
       if ((userBet.teamResultId && betSingle.specialBetTeamResultId === userBet.teamResultId) ||
       (userBet.playerResultId && betSingle.specialBetPlayerResultId === userBet.playerResultId) ||
-      (userBet.value && betSingle.specialBetValue === userBet.value)) {
+      (userBet.value && betSingle.specialBetValue == userBet.value)) {
         userBet.totalPoints += betSingle.points
       }
 
