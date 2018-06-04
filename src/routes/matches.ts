@@ -34,6 +34,14 @@ export default class MatchesController {
     }
   }
 
+  @GET
+  @Path(':id/scorers')
+  async getMatchScorers(@PathParam('id') matchId: number): Promise<Array<number>> {
+    const scorers = await this.database.models.MatchScorer.findAll({ where: { matchId } })
+
+    return scorers.map(scorer => scorer.scorerId)
+  }
+
   @POST
   async createMatch(match: any): Promise<IMatch> {
     return await this.database.models.Match.create(match)
@@ -45,8 +53,22 @@ export default class MatchesController {
     const dbMatch = await this.database.models.Match.findById(matchId)
 
     if (dbMatch) {
+      await this.database.models.MatchScorer.destroy({ where: { matchId: dbMatch.id } })
+      match.scorers.forEach(async scorerId => {
+        const scorer = {
+          matchId: dbMatch.id,
+          scorerId,
+          numberOfGoals: 1
+        }
+
+        await this.database.models.MatchScorer.create(scorer)
+      })
+
+      const result = await dbMatch.update(match)
+
       await this.betEvaluator.updateMatchBets(match)
-      return await dbMatch.update(match)
+
+      return result
     } else {
       return await this.database.models.Match.create(match)
     }

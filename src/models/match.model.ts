@@ -81,4 +81,6 @@ export default class Match extends Model<Match> {
   @Is('isNumeric', value => isNumeric(value))
   @Column
   externalId: number
+
+  scorers: Array<Number>
 }
