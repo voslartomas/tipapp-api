@@ -71,6 +71,7 @@ export interface IMatch {
     homeWinner: boolean
     isEvaluated: boolean
     externalId: number
+    scorers: Array<number>
 }
 
 export interface IMatchScorer {

@@ -22,5 +22,8 @@ export default {
   },
   create: (data) => {
     return data
+  },
+  destroy: ({}) => {
+    return true
   }
 }

@@ -6,15 +6,15 @@ import { isBoolean, isString, isNumeric } from '../utils/modelValidation'
   paranoid: true
 })
 export default class Player extends Model<Player> {
+  @AllowNull(true)
+  @Is('isString', value => isString(value))
+  @Column
+  firstName: string
+
   @AllowNull(false)
   @NotEmpty
   @Is('isString', value => isString(value))
   @Length({msg: 'Length of first name', min: 3, max: 50})
-  @Column
-  firstName: string
-
-  @AllowNull(true)
-  @Is('isString', value => isString(value))
   @Column
   lastName: string
 
@@ -23,6 +23,11 @@ export default class Player extends Model<Player> {
   @Is('isBoolean', value => isBoolean(value))
   @Column
   isActive: boolean
+
+  @AllowNull(true)
+  @Is('isString', value => isString(value))
+  @Column
+  position: string
 
   @AllowNull(true)
   @Is('isNumeric', value => isNumeric(value))

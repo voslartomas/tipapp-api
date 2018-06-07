@@ -62,6 +62,26 @@ export default class LeaguesController {
   }
 
   @GET
+  @Path('/:leagueId/users/bets/single/')
+  async getBetsSingle(@PathParam('leagueId') leagueId: number) {
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+
+    return this.database.query(`SELECT "Single"."dateTime", "SpecialBetSingle"."name", "SpecialBetSingle"."specialBetType" AS "type",
+      "UserSpecialBetSingle".*, "Single"."id" AS "singleId", "UserSpecialBetSingle"."id" AS "betId", "Single"."dateTime" AS "endDate",
+      (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Single"."specialBetTeamResultId") AS "team",
+      (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "UserSpecialBetSingle"."teamResultId") AS "teamBet",
+      (SELECT "Player"."firstName" FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "Single"."specialBetPlayerResultId") AS "player",
+      (SELECT "Player"."firstName" FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "UserSpecialBetSingle"."playerResultId") AS "playerBet",
+      "Single"."specialBetValue" AS "value",
+      "UserSpecialBetSingle"."value" AS "valueBet"
+      FROM "LeagueSpecialBetSingle" AS "Single"
+      LEFT JOIN "SpecialBetSingle" ON ("Single"."specialBetSingleId" = "SpecialBetSingle"."id")
+      LEFT JOIN "UserSpecialBetSingle" ON ("Single"."id" = "UserSpecialBetSingle"."leagueSpecialBetSingleId" AND "UserSpecialBetSingle"."leagueUserId" = ${leagueUser.id})
+      WHERE "Single"."leagueId" = ${leagueId}
+      ORDER BY "Single"."dateTime" DESC`, { type: this.database.QueryTypes.SELECT})
+  }
+
+  @GET
   @Path('/:leagueId/bets/matches/')
   async getBetsMatches(@PathParam('leagueId') leagueId: number, @QueryParam('date') date: string): Promise<IMatch[]> {
     const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
@@ -71,7 +91,7 @@ export default class LeaguesController {
     const previous = new Date()
     const next = new Date()
     previous.setDate(actual.getDate() - 60)
-    next.setDate(actual.getDate() + 2)
+    next.setDate(actual.getDate() + 14)
 
     return this.database.query(`SELECT "Match"."overtime" as "matchOvertime",
       "Match"."dateTime" as "matchDateTime", "Match"."id" AS "matchId1", "Match"."homeScore" AS "matchHomeScore", "Match"."awayScore" AS "matchAwayScore",
@@ -118,7 +138,20 @@ export default class LeaguesController {
 
   @POST
   async createLeague(league: any): Promise<ILeague> {
-    return await this.database.models.League.create(league)
+    const dbLeague =  await this.database.models.League.create(league)
+
+    try {
+      // add current user as admin
+      await this.database.models.LeagueUser.create({
+        userId: this.context.request['user'].id,
+        leagueId: dbLeague.id,
+        admin: true
+      })
+    } catch (err) {
+      console.log(err)
+    }
+
+    return dbLeague
   }
 
   @PUT

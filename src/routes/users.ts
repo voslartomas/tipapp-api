@@ -2,7 +2,7 @@ import { Path, GET, POST, PUT, DELETE, PathParam, Errors, Context, ServiceContex
 import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import User from '../models/user.model'
-import { IUser } from '../types/models.d'
+import { IUser, ILeague } from '../types/models.d'
 
 @Path('/api/users')
 export default class UsersController {
@@ -25,6 +25,19 @@ export default class UsersController {
   @Path('/current')
   async getCurrentUser(): Promise<IUser[]> {
     return this.context.request['user']
+  }
+
+  @GET
+  @Path('/leagues')
+  async getUserLeagues(): Promise<ILeague[]> {
+
+    if (!this.context.request['user'].id) {
+      throw new Errors.UnauthorizedError('You must be logged in.')
+    }
+
+    return this.database.query(`SELECT "League".* FROM "League"
+      LEFT JOIN "LeagueUser" ON ("League"."id" = "LeagueUser"."leagueId" AND "LeagueUser"."userId" = ${this.context.request['user'].id})
+      WHERE "LeagueUser"."admin" = 'true' AND "League"."deletedAt" IS NULL`, { type: this.database.QueryTypes.SELECT})
   }
 
   @GET

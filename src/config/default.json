@@ -10,19 +10,13 @@
     "config_path": "./definitions/swagger.json"
   },
   "db": {
-      "storage": "../neymar.sqlite",
-      "databaseName": "neymar.sqlite",
-      "username": "root",
-      "password": "",
+      "database": "tipapp",
+      "username": "postgres",
+      "password": "devpass",
       "host": "localhost",
-      "dialect": "sqlite",
-      "modelPath": "/../models/*.model.js",
-      "pool": {
-        "max": 5,
-        "min": 0,
-        "acquire": 30000,
-        "idle": 10000
-      }
+      "dialect": "postgres",
+      "port": 5436,
+      "modelPath": "/../models/*.model.js"
   },
   "security": true,
   "points": {

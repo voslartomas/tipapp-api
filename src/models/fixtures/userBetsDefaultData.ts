@@ -1,0 +1,97 @@
+module.exports = {
+
+    UserBets: [
+        {
+            matchId: 1,
+            leagueUserId: 1,
+            dateTime: '2016-08-09 04:05:03',
+            homeScore: 5,
+            awayScore: 1,
+            homeWinner: true,
+            scorerId: 1,
+        },
+        {
+            matchId: 2,
+            leagueUserId: 1,
+            dateTime: '2016-08-09 04:05:03',
+            homeScore: 3,
+            awayScore: 3,
+            homeWinner: true,
+            scorerId: 2,
+        },
+        {
+            matchId: 3,
+            leagueUserId: 1,
+            dateTime: '2016-08-09 04:05:05',
+            homeScore: 2,
+            awayScore: 3,
+            homeWinner: false,
+            scorerId: 6,
+        },
+        {
+            matchId: 4,
+            leagueUserId: 1,
+            dateTime: '2016-08-09 04:05:04',
+            homeScore: 5,
+            awayScore: 2,
+            homeWinner: true,
+            scorerId: 7,
+        },
+        {
+            matchId: 5,
+            leagueUserId: 1,
+            dateTime: '2016-08-09 04:05:02',
+            homeScore: 2,
+            awayScore: 3,
+            homeWinner: false,
+            scorerId: 8,
+        },
+
+        {
+            matchId: 1,
+            leagueUserId: 2,
+            dateTime: '2016-08-09 04:06:03',
+            homeScore: 5,
+            awayScore: 1,
+            homeWinner: true,
+            scorerId: 1,
+        },
+        {
+            matchId: 2,
+            leagueUserId: 2,
+            dateTime: '2016-08-09 04:05:03',
+            homeScore: 2,
+            awayScore: 2,
+            homeWinner: true,
+            scorerId: 2,
+        },
+        {
+            matchId: 3,
+            leagueUserId: 2,
+            dateTime: '2016-08-09 04:07:05',
+            homeScore: 2,
+            awayScore: 1,
+            homeWinner: true,
+            scorerId: 6,
+        },
+        {
+            matchId: 4,
+            leagueUserId: 2,
+            dateTime: '2016-08-09 04:15:04',
+            homeScore: 5,
+            awayScore: 5,
+            homeWinner: true,
+            scorerId: 7,
+        },
+        {
+            matchId: 5,
+            leagueUserId: 2,
+            dateTime: '2016-08-09 04:11:02',
+            homeScore: 2,
+            awayScore: 4,
+            homeWinner: false,
+            scorerId: 8,
+        }
+
+    ]
+}

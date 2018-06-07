@@ -1,7 +1,8 @@
 import * as config from 'config'
 import { Server } from '../../src/server'
 import * as request from 'supertest'
-import { Server as RestServer, HttpMethod } from 'typescript-rest'
+import { Server as RestServer, HttpMethod, ServiceContext } from 'typescript-rest'
+import { Container } from 'typescript-ioc'
 
 jest.mock('../../src/services/database')
 
