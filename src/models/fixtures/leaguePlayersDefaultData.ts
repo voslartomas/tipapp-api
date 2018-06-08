@@ -2,6 +2,38 @@ module.exports = {
 
     LeaguePlayers: [
         {
+            leagueTeamId: 1,
+            playerId: 1,
+            seasonGames: 75,
+            seasonGoals: 12,
+            seasonAssists: 31,
+            bestScorer: false
+        },
+        {
+            leagueTeamId: 1,
+            playerId: 2,
+            seasonGames: 69,
+            seasonGoals: 19,
+            seasonAssists: 15,
+            bestScorer: true
+        },
+        {
+            leagueTeamId: 2,
+            playerId: 3,
+            seasonGames: 82,
+            seasonGoals: 24,
+            seasonAssists: 45,
+            bestScorer: true
+        },
+        {
+            leagueTeamId: 2,
+            playerId: 4,
+            seasonGames: 75,
+            seasonGoals: 29,
+            seasonAssists: 26,
+            bestScorer: false
+        },
+        {
             leagueTeamId: 5,
             playerId: 8,
             seasonGames: 158,
@@ -6625,5 +6657,5 @@ module.exports = {
             bestScorer: false,
             clubName: 'SPAL'
         }
-        ]
+    ]
 }
