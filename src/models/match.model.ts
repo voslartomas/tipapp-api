@@ -77,6 +77,12 @@ export default class Match extends Model<Match> {
   @Column
   isEvaluated: boolean
 
+  @AllowNull(false)
+  @Default(false)
+  @Is('isBoolean', value => isBoolean(value))
+  @Column
+  isPlayoffGame: boolean
+
   @AllowNull(true)
   @Is('isNumeric', value => isNumeric(value))
   @Column
