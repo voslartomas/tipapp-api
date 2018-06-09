@@ -19,6 +19,7 @@ const userRequests = require(path + 'userRequestsDefaultData').UserRequests
 const userSettings = require(path + 'userSettingsDefaultData').UserSettings
 const userSpecialBetSeries = require(path + 'userSpecialBetSeriesDefaultData').UserSpecialBetSeries
 const userSpecialBetSingles = require(path + 'userSpecialBetSinglesDefaultData').UserSpecialBetSingles
+const evaluators = require(path + 'evaluatorDefaultData').Evaluators
 
 export default async (models) => {
   let e = false
@@ -204,6 +205,16 @@ export default async (models) => {
             where: {
                  leagueSpecialBetSingleId: a.leagueSpecialBetSingleId,
                 leagueUserId: a.leagueUserId
+            },
+            defaults: a
+        }).error(err => e = err)
+    }
+
+    for (const a of evaluators) {
+        await models.Evaluator.findOrCreate({
+            where: {
+                leagueId: a.leagueId,
+                name: a.name
             },
             defaults: a
         }).error(err => e = err)

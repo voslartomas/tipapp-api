@@ -4,6 +4,8 @@ import LeagueSpecialBetSerie from '../../models/leagueSpecialBetSerie.model'
 import UserBet from '../../models/userBet.model'
 import UserSpecialBetSerie from '../../models/userSpecialBetSerie.model'
 import Exact from './exact'
+import Draw from './draw'
+import Winner from './winner'
 
 export default class ScoreDifference implements IEvaluator {
   type = 'scoreDifference'
@@ -13,7 +15,14 @@ export default class ScoreDifference implements IEvaluator {
       return false
     }
 
-    return tip.homeScore - tip.awayScore === result.homeScore - result.awayScore && result.overtime === tip.overtime
+    if (new Draw().evaluateMatch(result, tip)) {
+      return false
+    }
+    // on football there are score difference points only with winner
+    if (new Winner().evaluateMatch(result, tip)) {
+      return tip.homeScore - tip.awayScore === result.homeScore - result.awayScore && result.overtime === tip.overtime
+    }
+
   }
 
   evaluateSerie(result: LeagueSpecialBetSerie, tip: UserSpecialBetSerie): boolean {
