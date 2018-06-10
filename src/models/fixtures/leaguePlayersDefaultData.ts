@@ -129,7 +129,7 @@ module.exports = {
             seasonGames: 19,
             seasonGoals: 3,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Al-Ittihad'
         },
         {
@@ -336,7 +336,7 @@ module.exports = {
             seasonGames: 12,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Spartak Moscow'
         },
         {
@@ -543,7 +543,7 @@ module.exports = {
             seasonGames: 36,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Al-Hilal'
         },
         {
@@ -741,7 +741,7 @@ module.exports = {
             seasonGames: 14,
             seasonGoals: 2,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Cruzeiro'
         },
         {
@@ -1047,7 +1047,7 @@ module.exports = {
             seasonGames: 45,
             seasonGoals: 9,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Nottingham Forest'
         },
         {
@@ -1191,7 +1191,7 @@ module.exports = {
             seasonGames: 58,
             seasonGoals: 7,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Al-Jazira'
         },
         {
@@ -1344,7 +1344,7 @@ module.exports = {
             seasonGames: 110,
             seasonGoals: 7,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Monaco'
         },
         {
@@ -1659,7 +1659,7 @@ module.exports = {
             seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Real Madrid'
         },
         {
@@ -1731,7 +1731,7 @@ module.exports = {
             seasonGames: 70,
             seasonGoals: 6,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Al-Ahli'
         },
         {
@@ -1992,7 +1992,7 @@ module.exports = {
             seasonGames: 19,
             seasonGoals: 1,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Bordeaux'
         },
         {
@@ -2172,7 +2172,7 @@ module.exports = {
             seasonGames: 11,
             seasonGoals: 3,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Monaco'
         },
         {
@@ -2397,7 +2397,7 @@ module.exports = {
             seasonGames: 83,
             seasonGoals: 25,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Lokomotiv Moscow'
         },
         {
@@ -2613,7 +2613,7 @@ module.exports = {
             seasonGames: 94,
             seasonGoals: 19,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Paris Saint-Germain'
         },
         {
@@ -2883,7 +2883,7 @@ module.exports = {
             seasonGames: 15,
             seasonGoals: 1,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Eintracht Frankfurt'
         },
         {
@@ -3027,7 +3027,7 @@ module.exports = {
             seasonGames: 47,
             seasonGoals: 13,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'FC Augsburg'
         },
         {
@@ -3270,7 +3270,7 @@ module.exports = {
             seasonGames: 17,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Torino'
         },
         {
@@ -3441,7 +3441,7 @@ module.exports = {
             seasonGames: 36,
             seasonGoals: 9,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Barcelona'
         },
         {
@@ -3648,7 +3648,7 @@ module.exports = {
             seasonGames: 46,
             seasonGoals: 10,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Saprissa'
         },
         {
@@ -3846,7 +3846,7 @@ module.exports = {
             seasonGames: 52,
             seasonGoals: 13,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Southampton'
         },
         {
@@ -4053,7 +4053,7 @@ module.exports = {
             seasonGames: 61,
             seasonGoals: 9,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Arsenal'
         },
         {
@@ -4260,7 +4260,7 @@ module.exports = {
             seasonGames: 90,
             seasonGoals: 23,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Arsenal'
         },
         {
@@ -4656,7 +4656,7 @@ module.exports = {
             seasonGames: 10,
             seasonGoals: 1,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Asan Mugunghwa'
         },
         {
@@ -4881,7 +4881,7 @@ module.exports = {
             seasonGames: 35,
             seasonGoals: 6,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'RB Leipzig'
         },
         {
@@ -5088,7 +5088,7 @@ module.exports = {
             seasonGames: 83,
             seasonGoals: 22,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Chelsea'
         },
         {
@@ -5286,7 +5286,7 @@ module.exports = {
             seasonGames: 24,
             seasonGoals: 13,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Tottenham Hotspur'
         },
         {
@@ -5295,7 +5295,7 @@ module.exports = {
             seasonGames: 38,
             seasonGoals: 2,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Manchester City'
         },
         {
@@ -5583,7 +5583,7 @@ module.exports = {
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Gent'
         },
         {
@@ -5718,7 +5718,7 @@ module.exports = {
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Gent'
         },
         {
@@ -5907,7 +5907,7 @@ module.exports = {
             seasonGames: 73,
             seasonGoals: 29,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Monaco'
         },
         {
@@ -6114,7 +6114,7 @@ module.exports = {
             seasonGames: 112,
             seasonGoals: 50,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Leicester City'
         },
         {
@@ -6321,7 +6321,7 @@ module.exports = {
             seasonGames: 93,
             seasonGoals: 52,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Bayern Munich'
         },
         {
@@ -6537,7 +6537,7 @@ module.exports = {
             seasonGames: 51,
             seasonGoals: 14,
             seasonAssists: 0,
-            bestScorer: false,
+            bestScorer: true,
             clubName: 'Liverpool'
         },
         {
