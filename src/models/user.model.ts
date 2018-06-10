@@ -46,4 +46,9 @@ export default class User extends Model<User> {
 
   @Column
   salt: string
+
+  @AllowNull(true)
+  @Is('isString', value => isString(value))
+  @Column
+  pushId: string
 }
