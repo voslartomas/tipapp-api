@@ -70,8 +70,8 @@ export default class LeaguesController {
       "UserSpecialBetSingle".*, "Single"."id" AS "singleId", "UserSpecialBetSingle"."id" AS "betId", "Single"."dateTime" AS "endDate",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Single"."specialBetTeamResultId") AS "team",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "UserSpecialBetSingle"."teamResultId") AS "teamBet",
-      (SELECT "Player"."firstName" FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "Single"."specialBetPlayerResultId") AS "player",
-      (SELECT "Player"."firstName" FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "UserSpecialBetSingle"."playerResultId") AS "playerBet",
+      (SELECT CONCAT("Player"."firstName", ' ', "Player"."lastName") FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "Single"."specialBetPlayerResultId") AS "player",
+      (SELECT CONCAT("Player"."firstName", ' ', "Player"."lastName") FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "UserSpecialBetSingle"."playerResultId") AS "playerBet",
       "Single"."specialBetValue" AS "value",
       "UserSpecialBetSingle"."value" AS "valueBet"
       FROM "LeagueSpecialBetSingle" AS "Single"
