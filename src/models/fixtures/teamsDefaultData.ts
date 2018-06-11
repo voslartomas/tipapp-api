@@ -30,6 +30,13 @@ module.exports = {
             flagIcon: ''
         },
         {
+            name: 'Egypt',
+            nickname: '',
+            shortcut: 'EGY',
+            sport: 1,
+            flagIcon: ''
+        },
+        {
             name: 'Rusko',
             nickname: '',
             shortcut: 'RUS',
@@ -44,16 +51,23 @@ module.exports = {
             flagIcon: ''
         },
         {
-            name: 'Egypt',
+            name: 'Uruguay',
             nickname: '',
-            shortcut: 'EGY',
+            shortcut: 'URU',
             sport: 1,
             flagIcon: ''
         },
         {
-            name: 'Uruguay',
+            name: 'Írán',
             nickname: '',
-            shortcut: 'URU',
+            shortcut: 'IRN',
+            sport: 1,
+            flagIcon: ''
+        },
+        {
+            name: 'Maroko',
+            nickname: '',
+            shortcut: 'MAR',
             sport: 1,
             flagIcon: ''
         },
@@ -72,37 +86,9 @@ module.exports = {
             flagIcon: ''
         },
         {
-            name: 'Maroko',
-            nickname: '',
-            shortcut: 'MAR',
-            sport: 1,
-            flagIcon: ''
-        },
-        {
-            name: 'Írán',
-            nickname: '',
-            shortcut: 'IRN',
-            sport: 1,
-            flagIcon: ''
-        },
-        {
-            name: 'Francie',
-            nickname: '',
-            shortcut: 'FRA',
-            sport: 1,
-            flagIcon: ''
-        },
-        {
             name: 'Austrálie',
             nickname: '',
             shortcut: 'AUS',
-            sport: 1,
-            flagIcon: ''
-        },
-        {
-            name: 'Peru',
-            nickname: '',
-            shortcut: 'PER',
             sport: 1,
             flagIcon: ''
         },
@@ -114,16 +100,23 @@ module.exports = {
             flagIcon: ''
         },
         {
-            name: 'Argentina',
+            name: 'Francie',
             nickname: '',
-            shortcut: 'ARG',
+            shortcut: 'FRA',
             sport: 1,
             flagIcon: ''
         },
         {
-            name: 'Island',
+            name: 'Peru',
             nickname: '',
-            shortcut: 'ICE',
+            shortcut: 'PER',
+            sport: 1,
+            flagIcon: ''
+        },
+        {
+            name: 'Argentina',
+            nickname: '',
+            shortcut: 'ARG',
             sport: 1,
             flagIcon: ''
         },
@@ -135,9 +128,16 @@ module.exports = {
             flagIcon: ''
         },
         {
+            name: 'Island',
+            nickname: '',
+            shortcut: 'ICE',
+            sport: 1,
+            flagIcon: ''
+        },
+        {
             name: 'Nigérie',
             nickname: '',
-            shortcut: 'CRO',
+            shortcut: 'NIG',
             sport: 1,
             flagIcon: ''
         },
@@ -145,13 +145,6 @@ module.exports = {
             name: 'Brazílie',
             nickname: '',
             shortcut: 'BRA',
-            sport: 1,
-            flagIcon: ''
-        },
-        {
-            name: 'Švýcarsko',
-            nickname: '',
-            shortcut: 'SWI',
             sport: 1,
             flagIcon: ''
         },
@@ -170,6 +163,13 @@ module.exports = {
             flagIcon: ''
         },
         {
+            name: 'Švýcarsko',
+            nickname: '',
+            shortcut: 'SWI',
+            sport: 1,
+            flagIcon: ''
+        },
+        {
             name: 'Německo',
             nickname: '',
             shortcut: 'GER',
@@ -184,13 +184,6 @@ module.exports = {
             flagIcon: ''
         },
         {
-            name: 'Švédsko',
-            nickname: '',
-            shortcut: 'SWE',
-            sport: 1,
-            flagIcon: ''
-        },
-        {
             name: 'Jižní Korea',
             nickname: '',
             shortcut: 'KOR',
@@ -198,9 +191,23 @@ module.exports = {
             flagIcon: ''
         },
         {
+            name: 'Švédsko',
+            nickname: '',
+            shortcut: 'SWE',
+            sport: 1,
+            flagIcon: ''
+        },
+        {
             name: 'Belgie',
             nickname: '',
             shortcut: 'BEL',
+            sport: 1,
+            flagIcon: ''
+        },
+        {
+            name: 'Anglie',
+            nickname: '',
+            shortcut: 'ENG',
             sport: 1,
             flagIcon: ''
         },
@@ -219,9 +226,16 @@ module.exports = {
             flagIcon: ''
         },
         {
-            name: 'Anglie',
+            name: 'Kolumbie',
             nickname: '',
-            shortcut: 'ENG',
+            shortcut: 'COL',
+            sport: 1,
+            flagIcon: ''
+        },
+        {
+            name: 'Japonsko',
+            nickname: '',
+            shortcut: 'JAP',
             sport: 1,
             flagIcon: ''
         },
@@ -236,20 +250,6 @@ module.exports = {
             name: 'Senegal',
             nickname: '',
             shortcut: 'SEN',
-            sport: 1,
-            flagIcon: ''
-        },
-        {
-            name: 'Kolumbie',
-            nickname: '',
-            shortcut: 'COL',
-            sport: 1,
-            flagIcon: ''
-        },
-        {
-            name: 'Japonsko',
-            nickname: '',
-            shortcut: 'JAP',
             sport: 1,
             flagIcon: ''
         },

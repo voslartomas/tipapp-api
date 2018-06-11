@@ -27,6 +27,12 @@ module.exports = {
             active: false
         },
         {
+            leagueId: 1,
+            userId: 6,
+            paid: false,
+            active: false
+        },
+        {
             leagueId: 3,
             userId: 6,
             paid: false,
