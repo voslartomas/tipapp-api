@@ -55,82 +55,82 @@ module.exports = {
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Vítěz skupiny A MS'
+            name: 'Vítěz skupiny A'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Vítěz skupiny B MS'
+            name: 'Vítěz skupiny B'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Vítěz skupiny C MS'
+            name: 'Vítěz skupiny C'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Vítěz skupiny D MS'
+            name: 'Vítěz skupiny D'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Vítěz skupiny E MS'
+            name: 'Vítěz skupiny E'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Vítěz skupiny F MS'
+            name: 'Vítěz skupiny F'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Vítěz skupiny G MS'
+            name: 'Vítěz skupiny G'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Vítěz skupiny H MS'
+            name: 'Vítěz skupiny H'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Druhý postupující ze skupiny A MS'
+            name: 'Druhý postupující ze skupiny A'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Druhý postupující ze skupiny B MS'
+            name: 'Druhý postupující ze skupiny B'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Druhý postupující ze skupiny C MS'
+            name: 'Druhý postupující ze skupiny C'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Druhý postupující ze skupiny D MS'
+            name: 'Druhý postupující ze skupiny D'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Druhý postupující ze skupiny E MS'
+            name: 'Druhý postupující ze skupiny E'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Druhý postupující ze skupiny F MS'
+            name: 'Druhý postupující ze skupiny F'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Druhý postupující ze skupiny G MS'
+            name: 'Druhý postupující ze skupiny G'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Druhý postupující ze skupiny H MS'
+            name: 'Druhý postupující ze skupiny H'
         },
         {
             sportId: 1,
@@ -150,22 +150,22 @@ module.exports = {
         {
             sportId: 1,
             specialBetType: 1,
-            name: 'Nejlepší hráč MS'
+            name: 'Nejlepší hráč'
         },
         {
             sportId: 1,
             specialBetType: 1,
-            name: 'Nejlepší střelec MS'
+            name: 'Nejlepší střelec'
         },
         {
             sportId: 1,
             specialBetType: 1,
-            name: 'Nejlepší brankář MS'
+            name: 'Nejlepší brankář'
         },
         {
             sportId: 1,
             specialBetType: 3,
-            name: 'Celkový počet branek MS'
+            name: 'Celkový počet branek'
         }
     ]
 }
