@@ -83,15 +83,24 @@ export default class LeaguesController {
 
   @GET
   @Path('/:leagueId/bets/matches/')
-  async getBetsMatches(@PathParam('leagueId') leagueId: number, @QueryParam('date') date: string): Promise<IMatch[]> {
+  async getBetsMatches(
+    @PathParam('leagueId') leagueId: number,
+    @QueryParam('order') order: string = 'DESC',
+    @QueryParam('history') history: boolean = true,
+    @QueryParam('limitDays') limitDays: number = 5): Promise<IMatch[]> {
+
     const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
 
-    // TODO refactor
-    const actual = new Date()
-    const previous = new Date()
-    const next = new Date()
-    previous.setDate(actual.getDate() - 60)
-    next.setDate(actual.getDate() + 14)
+    const today = new Date().toISOString().substring(0, 10)
+    let whereDate
+    if (!history) {
+      const toDate = new Date()
+      toDate.setDate(new Date().getDate() + limitDays)
+      const toDateString = toDate.toISOString().substring(0, 10)
+      whereDate = `"Match"."dateTime" >= '${today}' AND "Match"."dateTime" <= '${toDateString}'`
+    } else {
+      whereDate = `"Match"."dateTime" < '${today}'`
+    }
 
     return this.database.query(`SELECT "Match"."overtime" as "matchOvertime",
       "Match"."dateTime" as "matchDateTime", "Match"."id" AS "matchId1", "Match"."homeScore" AS "matchHomeScore", "Match"."awayScore" AS "matchAwayScore",
@@ -102,8 +111,8 @@ export default class LeaguesController {
       FROM "Match"
       LEFT JOIN "UserBet" ON ("Match"."id" = "UserBet"."matchId" AND "UserBet"."leagueUserId" = ${leagueUser.id})
       WHERE "Match"."leagueId" = ${leagueId}
-      AND "Match"."dateTime" >= '${previous.toISOString().substring(0, 10)}' AND "Match"."dateTime" <= '${next.toISOString().substring(0, 10)}'
-      ORDER BY "Match"."dateTime" DESC`, { type: this.database.QueryTypes.SELECT})
+      AND ${whereDate}
+      ORDER BY "Match"."dateTime" ${order}`, { type: this.database.QueryTypes.SELECT})
   }
 
   @GET
