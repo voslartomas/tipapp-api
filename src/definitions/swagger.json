@@ -1171,9 +1171,27 @@
 					{
 						"description": "",
 						"in": "query",
-						"name": "date",
-						"required": true,
-						"type": "string"
+						"name": "order",
+						"required": false,
+						"type": "string",
+						"default": "DESC"
+					},
+					{
+						"description": "",
+						"in": "query",
+						"name": "history",
+						"required": false,
+						"type": "boolean",
+						"default": true
+					},
+					{
+						"description": "",
+						"in": "query",
+						"name": "limitDays",
+						"required": false,
+						"type": "number",
+						"format": "double",
+						"default": 5
 					}
 				]
 			}

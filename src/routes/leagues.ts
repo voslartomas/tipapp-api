@@ -70,8 +70,8 @@ export default class LeaguesController {
       "UserSpecialBetSingle".*, "Single"."id" AS "singleId", "UserSpecialBetSingle"."id" AS "betId", "Single"."dateTime" AS "endDate",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Single"."specialBetTeamResultId") AS "team",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "UserSpecialBetSingle"."teamResultId") AS "teamBet",
-      (SELECT "Player"."firstName" FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "Single"."specialBetPlayerResultId") AS "player",
-      (SELECT "Player"."firstName" FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "UserSpecialBetSingle"."playerResultId") AS "playerBet",
+      (SELECT CONCAT("Player"."firstName", ' ', "Player"."lastName") FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "Single"."specialBetPlayerResultId") AS "player",
+      (SELECT CONCAT("Player"."firstName", ' ', "Player"."lastName") FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "UserSpecialBetSingle"."playerResultId") AS "playerBet",
       "Single"."specialBetValue" AS "value",
       "UserSpecialBetSingle"."value" AS "valueBet"
       FROM "LeagueSpecialBetSingle" AS "Single"
@@ -83,27 +83,36 @@ export default class LeaguesController {
 
   @GET
   @Path('/:leagueId/bets/matches/')
-  async getBetsMatches(@PathParam('leagueId') leagueId: number, @QueryParam('date') date: string): Promise<IMatch[]> {
+  async getBetsMatches(
+    @PathParam('leagueId') leagueId: number,
+    @QueryParam('order') order: string = 'DESC',
+    @QueryParam('history') history: boolean = true,
+    @QueryParam('limitDays') limitDays: number = 5): Promise<IMatch[]> {
+
     const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
 
-    // TODO refactor
-    const actual = new Date()
-    const previous = new Date()
-    const next = new Date()
-    previous.setDate(actual.getDate() - 60)
-    next.setDate(actual.getDate() + 14)
+    const today = new Date().toISOString().substring(0, 10)
+    let whereDate
+    if (!history) {
+      const toDate = new Date()
+      toDate.setDate(new Date().getDate() + limitDays)
+      const toDateString = toDate.toISOString().substring(0, 10)
+      whereDate = `"Match"."dateTime" >= '${today}' AND "Match"."dateTime" <= '${toDateString}'`
+    } else {
+      whereDate = `"Match"."dateTime" < '${today}'`
+    }
 
     return this.database.query(`SELECT "Match"."overtime" as "matchOvertime",
       "Match"."dateTime" as "matchDateTime", "Match"."id" AS "matchId1", "Match"."homeScore" AS "matchHomeScore", "Match"."awayScore" AS "matchAwayScore",
       "UserBet".*, "Match"."homeTeamId", "Match"."awayTeamId", "UserBet"."id",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Match"."homeTeamId") AS "homeTeam",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Match"."awayTeamId") AS "awayTeam",
-      (SELECT "Player"."firstName" FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "UserBet"."scorerId") AS "scorer"
+      (SELECT CONCAT("Player"."firstName", ' ', "Player"."lastName") FROM "Player" LEFT JOIN "LeaguePlayer" ON "LeaguePlayer"."playerId" = "Player"."id" WHERE "LeaguePlayer"."id" = "UserBet"."scorerId") AS "scorer"
       FROM "Match"
       LEFT JOIN "UserBet" ON ("Match"."id" = "UserBet"."matchId" AND "UserBet"."leagueUserId" = ${leagueUser.id})
       WHERE "Match"."leagueId" = ${leagueId}
-      AND "Match"."dateTime" >= '${previous.toISOString().substring(0, 10)}' AND "Match"."dateTime" <= '${next.toISOString().substring(0, 10)}'
-      ORDER BY "Match"."dateTime" DESC`, { type: this.database.QueryTypes.SELECT})
+      AND ${whereDate}
+      ORDER BY "Match"."dateTime" ${order}`, { type: this.database.QueryTypes.SELECT})
   }
 
   @GET

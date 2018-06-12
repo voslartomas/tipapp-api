@@ -12,6 +12,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: true,
+            isPlayoffGame: false,
             isEvaluated: true
         },
         {
@@ -25,6 +26,7 @@ module.exports = {
             overtime: true,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: true
         },
         {
@@ -38,6 +40,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: true,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -51,6 +54,7 @@ module.exports = {
             overtime: false,
             shootout: true,
             homeWinner: true,
+            isPlayoffGame: false,
             isEvaluated: true
         },
         {
@@ -64,6 +68,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: true,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -76,6 +81,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -88,6 +94,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -100,6 +107,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -112,6 +120,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -124,6 +133,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -136,6 +146,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -148,6 +159,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -160,6 +172,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -172,6 +185,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -184,6 +198,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -196,6 +211,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -208,6 +224,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -220,6 +237,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -232,6 +250,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -244,6 +263,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -256,6 +276,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -268,6 +289,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -280,6 +302,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -292,6 +315,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -304,6 +328,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -316,6 +341,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -328,6 +354,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -340,6 +367,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -352,6 +380,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -364,6 +393,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -376,6 +406,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -388,6 +419,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -400,6 +432,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -412,6 +445,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -424,6 +458,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -436,6 +471,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -448,6 +484,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -460,6 +497,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -472,6 +510,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -484,6 +523,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -496,6 +536,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -508,6 +549,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -520,6 +562,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -532,6 +575,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -544,6 +588,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -556,6 +601,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -568,6 +614,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -580,6 +627,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -592,6 +640,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -604,6 +653,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -616,6 +666,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -628,6 +679,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -640,6 +692,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: false,
             isEvaluated: false
         },
         {
@@ -652,6 +705,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -664,6 +718,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -676,6 +731,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -688,6 +744,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -700,6 +757,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -712,6 +770,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -724,6 +783,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -736,6 +796,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -748,6 +809,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -760,6 +822,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -772,6 +835,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -784,6 +848,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -796,6 +861,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -808,6 +874,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -820,6 +887,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         },
         {
@@ -832,6 +900,7 @@ module.exports = {
             overtime: false,
             shootout: false,
             homeWinner: false,
+            isPlayoffGame: true,
             isEvaluated: false
         }
     ]

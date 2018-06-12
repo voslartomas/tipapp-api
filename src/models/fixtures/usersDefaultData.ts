@@ -41,13 +41,102 @@ module.exports = {
             mobileNumber: '724724728',
             password: '12345'
         },
+        // od sestky
         {
-            firstName: 'Tomas',
-            lastName: 'Voslar',
+            firstName: 'Tomáš',
+            lastName: 'Voslař',
             username: 'tvoslar',
             email: 't.voslar@gmail.com',
             mobileNumber: '728888999',
-            password: 'test'
+            password: '123234'
+        },
+        {
+            firstName: 'Roman',
+            lastName: 'Talaš',
+            username: 'rtalas',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '234345'
+        },
+        {
+            firstName: 'Radek',
+            lastName: 'Mikel',
+            username: 'rmikel',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '345456'
+        },
+        {
+            firstName: 'Pavel',
+            lastName: 'Mikel',
+            username: 'pmikel',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '456567'
+        },
+        {
+            firstName: 'Martin',
+            lastName: 'Mikel',
+            username: 'mmikel',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '567678'
+        },
+        {
+            firstName: 'Jaroslav',
+            lastName: 'Hamouz',
+            username: 'jhamouz',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '678789'
+        },
+        {
+            firstName: 'Václav',
+            lastName: 'Dvorník',
+            username: 'vdvornik',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '789890'
+        },
+        {
+            firstName: 'Tomáš',
+            lastName: 'Brebis',
+            username: 'tbrebis',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '890901'
+        },
+        {
+            firstName: 'Filip',
+            lastName: 'Bartoš',
+            username: 'fbartos',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '901012'
+        },
+        {
+            firstName: 'Jakub',
+            lastName: 'Mikulášek',
+            username: 'jmikulasek',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '112123'
+        },
+        {
+            firstName: 'Lukáš',
+            lastName: 'Novák',
+            username: 'lnovak',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '124345'
+        },
+        {
+            firstName: 'Jan',
+            lastName: 'Kořenek',
+            username: 'jkorenek',
+            email: undefined,
+            mobileNumber: undefined,
+            password: '245345'
         }
     ]
 
