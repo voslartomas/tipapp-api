@@ -35,7 +35,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 8,
+            playerId: 9,
             seasonGames: 158,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -44,7 +44,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 9,
+            playerId: 10,
             seasonGames: 21,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -53,7 +53,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 10,
+            playerId: 11,
             seasonGames: 78,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -62,7 +62,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 11,
+            playerId: 12,
             seasonGames: 24,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -71,7 +71,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 12,
+            playerId: 13,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -80,7 +80,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 13,
+            playerId: 14,
             seasonGames: 45,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -89,7 +89,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 14,
+            playerId: 15,
             seasonGames: 126,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -98,7 +98,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 15,
+            playerId: 16,
             seasonGames: 21,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -107,7 +107,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 16,
+            playerId: 17,
             seasonGames: 24,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -116,7 +116,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 17,
+            playerId: 18,
             seasonGames: 57,
             seasonGoals: 33,
             seasonAssists: 0,
@@ -125,16 +125,16 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 18,
+            playerId: 19,
             seasonGames: 19,
             seasonGoals: 3,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Al-Ittihad'
         },
         {
             leagueTeamId: 5,
-            playerId: 19,
+            playerId: 20,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -143,7 +143,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 20,
+            playerId: 21,
             seasonGames: 51,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -152,7 +152,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 21,
+            playerId: 22,
             seasonGames: 23,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -161,7 +161,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 22,
+            playerId: 23,
             seasonGames: 0,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -170,7 +170,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 23,
+            playerId: 24,
             seasonGames: 22,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -179,7 +179,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 24,
+            playerId: 25,
             seasonGames: 61,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -188,7 +188,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 25,
+            playerId: 26,
             seasonGames: 29,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -197,7 +197,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 26,
+            playerId: 27,
             seasonGames: 36,
             seasonGoals: 6,
             seasonAssists: 0,
@@ -206,7 +206,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 27,
+            playerId: 28,
             seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -215,7 +215,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 28,
+            playerId: 29,
             seasonGames: 24,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -224,7 +224,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 29,
+            playerId: 30,
             seasonGames: 16,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -233,7 +233,7 @@ module.exports = {
         },
         {
             leagueTeamId: 5,
-            playerId: 30,
+            playerId: 31,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -242,7 +242,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 31,
+            playerId: 32,
             seasonGames: 106,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -251,7 +251,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 32,
+            playerId: 33,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -260,7 +260,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 33,
+            playerId: 34,
             seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -269,7 +269,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 34,
+            playerId: 35,
             seasonGames: 122,
             seasonGoals: 8,
             seasonAssists: 0,
@@ -278,7 +278,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 35,
+            playerId: 36,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -287,21 +287,12 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 36,
+            playerId: 37,
             seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Villarreal'
-        },
-        {
-            leagueTeamId: 6,
-            playerId: 37,
-            seasonGames: 6,
-            seasonGoals: 0,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Zenit Saint Petersburg'
         },
         {
             leagueTeamId: 6,
@@ -310,11 +301,20 @@ module.exports = {
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'Krasnodar'
+            clubName: 'Zenit Saint Petersburg'
         },
         {
             leagueTeamId: 6,
             playerId: 39,
+            seasonGames: 6,
+            seasonGoals: 0,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Krasnodar'
+        },
+        {
+            leagueTeamId: 6,
+            playerId: 40,
             seasonGames: 57,
             seasonGoals: 9,
             seasonAssists: 0,
@@ -323,7 +323,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 40,
+            playerId: 41,
             seasonGames: 32,
             seasonGoals: 12,
             seasonAssists: 0,
@@ -332,16 +332,16 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 41,
+            playerId: 42,
             seasonGames: 12,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Spartak Moscow'
         },
         {
             leagueTeamId: 6,
-            playerId: 42,
+            playerId: 43,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -350,7 +350,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 43,
+            playerId: 44,
             seasonGames: 19,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -359,7 +359,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 44,
+            playerId: 45,
             seasonGames: 12,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -368,7 +368,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 45,
+            playerId: 46,
             seasonGames: 18,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -377,7 +377,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 46,
+            playerId: 47,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -386,7 +386,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 47,
+            playerId: 48,
             seasonGames: 19,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -395,7 +395,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 48,
+            playerId: 49,
             seasonGames: 84,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -404,7 +404,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 49,
+            playerId: 50,
             seasonGames: 48,
             seasonGoals: 7,
             seasonAssists: 0,
@@ -413,7 +413,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 50,
+            playerId: 51,
             seasonGames: 10,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -422,7 +422,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 51,
+            playerId: 52,
             seasonGames: 17,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -431,7 +431,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 52,
+            playerId: 53,
             seasonGames: 23,
             seasonGoals: 11,
             seasonAssists: 0,
@@ -440,7 +440,7 @@ module.exports = {
         },
         {
             leagueTeamId: 6,
-            playerId: 53,
+            playerId: 54,
             seasonGames: 27,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -449,8 +449,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 54,
-            seasonGames: 10,
+            playerId: 55,
+            seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -458,8 +458,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 55,
-            seasonGames: 39,
+            playerId: 56,
+            seasonGames: 40,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -467,8 +467,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 56,
-            seasonGames: 134,
+            playerId: 57,
+            seasonGames: 135,
             seasonGoals: 7,
             seasonAssists: 0,
             bestScorer: false,
@@ -476,8 +476,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 57,
-            seasonGames: 3,
+            playerId: 58,
+            seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -485,8 +485,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 58,
-            seasonGames: 41,
+            playerId: 59,
+            seasonGames: 42,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -494,8 +494,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 59,
-            seasonGames: 10,
+            playerId: 60,
+            seasonGames: 11,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -503,8 +503,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 60,
-            seasonGames: 42,
+            playerId: 61,
+            seasonGames: 43,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -512,8 +512,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 61,
-            seasonGames: 56,
+            playerId: 62,
+            seasonGames: 57,
             seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
@@ -521,8 +521,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 62,
-            seasonGames: 4,
+            playerId: 63,
+            seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -530,8 +530,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 63,
-            seasonGames: 39,
+            playerId: 64,
+            seasonGames: 40,
             seasonGoals: 28,
             seasonAssists: 0,
             bestScorer: false,
@@ -539,16 +539,16 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 64,
+            playerId: 65,
             seasonGames: 36,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Al-Hilal'
         },
         {
             leagueTeamId: 7,
-            playerId: 65,
+            playerId: 66,
             seasonGames: 6,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -557,18 +557,9 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 66,
-            seasonGames: 36,
-            seasonGoals: 0,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Al-Hilal'
-        },
-        {
-            leagueTeamId: 7,
             playerId: 67,
-            seasonGames: 15,
-            seasonGoals: 1,
+            seasonGames: 37,
+            seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Al-Hilal'
@@ -576,7 +567,16 @@ module.exports = {
         {
             leagueTeamId: 7,
             playerId: 68,
-            seasonGames: 4,
+            seasonGames: 16,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Al-Hilal'
+        },
+        {
+            leagueTeamId: 7,
+            playerId: 69,
+            seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -584,8 +584,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 69,
-            seasonGames: 17,
+            playerId: 70,
+            seasonGames: 18,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -593,17 +593,17 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 70,
-            seasonGames: 131,
-            seasonGoals: 18,
+            playerId: 71,
+            seasonGames: 132,
+            seasonGoals: 19,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Al-Ahli'
         },
         {
             leagueTeamId: 7,
-            playerId: 71,
-            seasonGames: 32,
+            playerId: 72,
+            seasonGames: 33,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -611,8 +611,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 72,
-            seasonGames: 44,
+            playerId: 73,
+            seasonGames: 45,
             seasonGoals: 10,
             seasonAssists: 0,
             bestScorer: false,
@@ -620,7 +620,7 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 73,
+            playerId: 74,
             seasonGames: 18,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -629,17 +629,8 @@ module.exports = {
         },
         {
             leagueTeamId: 7,
-            playerId: 74,
-            seasonGames: 32,
-            seasonGoals: 0,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Al-Ahli'
-        },
-        {
-            leagueTeamId: 7,
             playerId: 75,
-            seasonGames: 6,
+            seasonGames: 32,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -648,6 +639,15 @@ module.exports = {
         {
             leagueTeamId: 7,
             playerId: 76,
+            seasonGames: 6,
+            seasonGoals: 0,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Al-Ahli'
+        },
+        {
+            leagueTeamId: 7,
+            playerId: 77,
             seasonGames: 17,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -656,7 +656,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 77,
+            playerId: 78,
             seasonGames: 97,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -665,7 +665,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 78,
+            playerId: 79,
             seasonGames: 42,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -674,7 +674,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 79,
+            playerId: 80,
             seasonGames: 116,
             seasonGoals: 8,
             seasonAssists: 0,
@@ -683,7 +683,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 80,
+            playerId: 81,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -692,7 +692,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 81,
+            playerId: 82,
             seasonGames: 36,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -701,7 +701,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 82,
+            playerId: 83,
             seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -710,7 +710,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 83,
+            playerId: 84,
             seasonGames: 105,
             seasonGoals: 11,
             seasonAssists: 0,
@@ -719,7 +719,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 84,
+            playerId: 85,
             seasonGames: 12,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -728,7 +728,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 85,
+            playerId: 86,
             seasonGames: 98,
             seasonGoals: 51,
             seasonAssists: 0,
@@ -737,16 +737,16 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 86,
+            playerId: 87,
             seasonGames: 14,
             seasonGoals: 2,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Cruzeiro'
         },
         {
             leagueTeamId: 8,
-            playerId: 87,
+            playerId: 88,
             seasonGames: 41,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -755,17 +755,8 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 88,
-            seasonGames: 1,
-            seasonGoals: 0,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Independiente'
-        },
-        {
-            leagueTeamId: 8,
             playerId: 89,
-            seasonGames: 17,
+            seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -774,6 +765,15 @@ module.exports = {
         {
             leagueTeamId: 8,
             playerId: 90,
+            seasonGames: 17,
+            seasonGoals: 0,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Independiente'
+        },
+        {
+            leagueTeamId: 8,
+            playerId: 91,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -782,7 +782,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 91,
+            playerId: 92,
             seasonGames: 22,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -791,7 +791,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 92,
+            playerId: 93,
             seasonGames: 125,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -800,7 +800,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 93,
+            playerId: 94,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -809,7 +809,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 94,
+            playerId: 95,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -818,7 +818,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 95,
+            playerId: 96,
             seasonGames: 30,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -827,7 +827,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 96,
+            playerId: 97,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -836,7 +836,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 97,
+            playerId: 98,
             seasonGames: 101,
             seasonGoals: 42,
             seasonAssists: 0,
@@ -845,7 +845,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 98,
+            playerId: 99,
             seasonGames: 76,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -854,7 +854,7 @@ module.exports = {
         },
         {
             leagueTeamId: 8,
-            playerId: 99,
+            playerId: 100,
             seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -863,8 +863,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 100,
-            seasonGames: 21,
+            playerId: 101,
+            seasonGames: 22,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -872,8 +872,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 101,
-            seasonGames: 16,
+            playerId: 102,
+            seasonGames: 17,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -881,8 +881,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 102,
-            seasonGames: 93,
+            playerId: 103,
+            seasonGames: 94,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -890,8 +890,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 103,
-            seasonGames: 9,
+            playerId: 104,
+            seasonGames: 10,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -899,8 +899,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 104,
-            seasonGames: 18,
+            playerId: 105,
+            seasonGames: 19,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -908,7 +908,7 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 105,
+            playerId: 106,
             seasonGames: 25,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -917,8 +917,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 106,
-            seasonGames: 73,
+            playerId: 107,
+            seasonGames: 74,
             seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
@@ -926,8 +926,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 107,
-            seasonGames: 26,
+            playerId: 108,
+            seasonGames: 27,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -935,8 +935,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 108,
-            seasonGames: 29,
+            playerId: 109,
+            seasonGames: 30,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -944,17 +944,17 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 109,
-            seasonGames: 63,
-            seasonGoals: 16,
+            playerId: 110,
+            seasonGames: 64,
+            seasonGoals: 17,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Olympiacos'
         },
         {
             leagueTeamId: 9,
-            playerId: 110,
-            seasonGames: 35,
+            playerId: 111,
+            seasonGames: 36,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -962,7 +962,7 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 111,
+            playerId: 112,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -971,7 +971,7 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 112,
+            playerId: 113,
             seasonGames: 11,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -980,16 +980,16 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 113,
-            seasonGames: 7,
+            playerId: 114,
+            seasonGames: 8,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'Östersunds FK'
+            clubName: 'Östersund'
         },
         {
             leagueTeamId: 9,
-            playerId: 114,
+            playerId: 115,
             seasonGames: 46,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -998,8 +998,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 115,
-            seasonGames: 42,
+            playerId: 116,
+            seasonGames: 43,
             seasonGoals: 17,
             seasonAssists: 0,
             bestScorer: false,
@@ -1007,8 +1007,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 116,
-            seasonGames: 25,
+            playerId: 117,
+            seasonGames: 26,
             seasonGoals: 11,
             seasonAssists: 0,
             bestScorer: false,
@@ -1016,8 +1016,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 117,
-            seasonGames: 37,
+            playerId: 118,
+            seasonGames: 38,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -1025,7 +1025,7 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 118,
+            playerId: 119,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1034,8 +1034,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 119,
-            seasonGames: 32,
+            playerId: 120,
+            seasonGames: 33,
             seasonGoals: 23,
             seasonAssists: 0,
             bestScorer: false,
@@ -1043,16 +1043,16 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 120,
-            seasonGames: 45,
+            playerId: 121,
+            seasonGames: 46,
             seasonGoals: 9,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Nottingham Forest'
         },
         {
             leagueTeamId: 9,
-            playerId: 121,
+            playerId: 122,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1061,8 +1061,8 @@ module.exports = {
         },
         {
             leagueTeamId: 9,
-            playerId: 122,
-            seasonGames: 27,
+            playerId: 123,
+            seasonGames: 28,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -1070,7 +1070,7 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 123,
+            playerId: 124,
             seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1079,8 +1079,8 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 124,
-            seasonGames: 9,
+            playerId: 125,
+            seasonGames: 10,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -1088,7 +1088,7 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 125,
+            playerId: 126,
             seasonGames: 13,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1097,8 +1097,8 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 126,
-            seasonGames: 27,
+            playerId: 127,
+            seasonGames: 28,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -1106,8 +1106,8 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 127,
-            seasonGames: 56,
+            playerId: 128,
+            seasonGames: 57,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -1115,8 +1115,8 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 128,
-            seasonGames: 23,
+            playerId: 129,
+            seasonGames: 24,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -1124,17 +1124,17 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 129,
-            seasonGames: 17,
-            seasonGoals: 8,
+            playerId: 130,
+            seasonGames: 18,
+            seasonGoals: 9,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Ajax'
         },
         {
             leagueTeamId: 10,
-            playerId: 130,
-            seasonGames: 50,
+            playerId: 131,
+            seasonGames: 51,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -1142,8 +1142,8 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 131,
-            seasonGames: 9,
+            playerId: 132,
+            seasonGames: 10,
             seasonGoals: 11,
             seasonAssists: 0,
             bestScorer: false,
@@ -1151,16 +1151,16 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 132,
-            seasonGames: 46,
-            seasonGoals: 4,
+            playerId: 133,
+            seasonGames: 47,
+            seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Galatasaray'
         },
         {
             leagueTeamId: 10,
-            playerId: 133,
+            playerId: 134,
             seasonGames: 23,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -1169,8 +1169,8 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 134,
-            seasonGames: 26,
+            playerId: 135,
+            seasonGames: 27,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1178,8 +1178,8 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 135,
-            seasonGames: 17,
+            playerId: 136,
+            seasonGames: 18,
             seasonGoals: 7,
             seasonAssists: 0,
             bestScorer: false,
@@ -1187,17 +1187,17 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 136,
-            seasonGames: 58,
+            playerId: 137,
+            seasonGames: 59,
             seasonGoals: 7,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Al-Jazira'
         },
         {
             leagueTeamId: 10,
-            playerId: 137,
-            seasonGames: 13,
+            playerId: 138,
+            seasonGames: 14,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1205,8 +1205,8 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 138,
-            seasonGames: 43,
+            playerId: 139,
+            seasonGames: 44,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -1214,7 +1214,7 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 139,
+            playerId: 140,
             seasonGames: 34,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -1223,8 +1223,8 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 140,
-            seasonGames: 5,
+            playerId: 141,
+            seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1232,17 +1232,17 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 141,
-            seasonGames: 15,
-            seasonGoals: 1,
+            playerId: 142,
+            seasonGames: 16,
+            seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Málaga'
         },
         {
             leagueTeamId: 10,
-            playerId: 142,
-            seasonGames: 14,
+            playerId: 143,
+            seasonGames: 15,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -1250,8 +1250,8 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 143,
-            seasonGames: 5,
+            playerId: 144,
+            seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1259,7 +1259,7 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 144,
+            playerId: 145,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1268,7 +1268,7 @@ module.exports = {
         },
         {
             leagueTeamId: 10,
-            playerId: 145,
+            playerId: 146,
             seasonGames: 20,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -1277,7 +1277,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 146,
+            playerId: 147,
             seasonGames: 69,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1286,7 +1286,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 147,
+            playerId: 148,
             seasonGames: 96,
             seasonGoals: 11,
             seasonAssists: 0,
@@ -1295,7 +1295,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 148,
+            playerId: 149,
             seasonGames: 95,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -1304,7 +1304,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 149,
+            playerId: 150,
             seasonGames: 14,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -1313,7 +1313,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 150,
+            playerId: 151,
             seasonGames: 24,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -1322,7 +1322,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 151,
+            playerId: 152,
             seasonGames: 31,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1331,7 +1331,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 152,
+            playerId: 153,
             seasonGames: 150,
             seasonGoals: 81,
             seasonAssists: 0,
@@ -1340,16 +1340,16 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 153,
+            playerId: 154,
             seasonGames: 110,
             seasonGoals: 7,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Monaco'
         },
         {
             leagueTeamId: 11,
-            playerId: 154,
+            playerId: 155,
             seasonGames: 23,
             seasonGoals: 12,
             seasonAssists: 0,
@@ -1358,7 +1358,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 155,
+            playerId: 156,
             seasonGames: 36,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -1367,7 +1367,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 156,
+            playerId: 157,
             seasonGames: 25,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -1376,7 +1376,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 157,
+            playerId: 158,
             seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1385,7 +1385,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 158,
+            playerId: 159,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1394,7 +1394,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 159,
+            playerId: 160,
             seasonGames: 43,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -1403,7 +1403,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 160,
+            playerId: 161,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1412,7 +1412,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 161,
+            playerId: 162,
             seasonGames: 6,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -1421,7 +1421,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 162,
+            playerId: 163,
             seasonGames: 10,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -1430,7 +1430,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 163,
+            playerId: 164,
             seasonGames: 18,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1439,7 +1439,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 164,
+            playerId: 165,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1448,7 +1448,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 165,
+            playerId: 166,
             seasonGames: 77,
             seasonGoals: 9,
             seasonAssists: 0,
@@ -1457,7 +1457,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 166,
+            playerId: 167,
             seasonGames: 29,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -1466,7 +1466,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 167,
+            playerId: 168,
             seasonGames: 14,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1475,7 +1475,7 @@ module.exports = {
         },
         {
             leagueTeamId: 11,
-            playerId: 168,
+            playerId: 169,
             seasonGames: 23,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -1484,8 +1484,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 169,
-            seasonGames: 28,
+            playerId: 170,
+            seasonGames: 29,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1493,7 +1493,7 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 170,
+            playerId: 171,
             seasonGames: 15,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1502,8 +1502,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 171,
-            seasonGames: 97,
+            playerId: 172,
+            seasonGames: 98,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -1511,8 +1511,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 172,
-            seasonGames: 16,
+            playerId: 173,
+            seasonGames: 17,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1520,8 +1520,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 173,
-            seasonGames: 102,
+            playerId: 174,
+            seasonGames: 103,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -1529,8 +1529,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 174,
-            seasonGames: 126,
+            playerId: 175,
+            seasonGames: 127,
             seasonGoals: 14,
             seasonAssists: 0,
             bestScorer: false,
@@ -1538,17 +1538,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 175,
-            seasonGames: 10,
-            seasonGoals: 0,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Atlético Madrid'
-        },
-        {
-            leagueTeamId: 12,
             playerId: 176,
-            seasonGames: 39,
+            seasonGames: 10,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1557,7 +1548,16 @@ module.exports = {
         {
             leagueTeamId: 12,
             playerId: 177,
-            seasonGames: 5,
+            seasonGames: 40,
+            seasonGoals: 0,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Atlético Madrid'
+        },
+        {
+            leagueTeamId: 12,
+            playerId: 178,
+            seasonGames: 6,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -1565,8 +1565,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 178,
-            seasonGames: 28,
+            playerId: 179,
+            seasonGames: 29,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -1574,8 +1574,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 179,
-            seasonGames: 6,
+            playerId: 180,
+            seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1583,8 +1583,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 180,
-            seasonGames: 3,
+            playerId: 181,
+            seasonGames: 4,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -1592,7 +1592,7 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 181,
+            playerId: 182,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1601,7 +1601,7 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 182,
+            playerId: 183,
             seasonGames: 22,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1610,8 +1610,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 183,
-            seasonGames: 151,
+            playerId: 184,
+            seasonGames: 152,
             seasonGoals: 13,
             seasonAssists: 0,
             bestScorer: false,
@@ -1619,7 +1619,7 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 184,
+            playerId: 185,
             seasonGames: 22,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -1628,17 +1628,17 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 185,
-            seasonGames: 9,
-            seasonGoals: 4,
+            playerId: 186,
+            seasonGames: 10,
+            seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Celta Vigo'
         },
         {
             leagueTeamId: 12,
-            playerId: 186,
-            seasonGames: 61,
+            playerId: 187,
+            seasonGames: 62,
             seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
@@ -1646,8 +1646,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 187,
-            seasonGames: 19,
+            playerId: 188,
+            seasonGames: 20,
             seasonGoals: 7,
             seasonAssists: 0,
             bestScorer: false,
@@ -1655,17 +1655,17 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 188,
-            seasonGames: 11,
+            playerId: 189,
+            seasonGames: 12,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Real Madrid'
         },
         {
             leagueTeamId: 12,
-            playerId: 189,
-            seasonGames: 120,
+            playerId: 190,
+            seasonGames: 121,
             seasonGoals: 35,
             seasonAssists: 0,
             bestScorer: false,
@@ -1673,8 +1673,8 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 190,
-            seasonGames: 27,
+            playerId: 191,
+            seasonGames: 28,
             seasonGoals: 10,
             seasonAssists: 0,
             bestScorer: false,
@@ -1682,7 +1682,7 @@ module.exports = {
         },
         {
             leagueTeamId: 12,
-            playerId: 191,
+            playerId: 192,
             seasonGames: 36,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1691,8 +1691,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 192,
-            seasonGames: 43,
+            playerId: 193,
+            seasonGames: 44,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1700,7 +1700,7 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 193,
+            playerId: 194,
             seasonGames: 18,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1709,7 +1709,7 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 194,
+            playerId: 195,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1718,8 +1718,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 195,
-            seasonGames: 105,
+            playerId: 196,
+            seasonGames: 106,
             seasonGoals: 50,
             seasonAssists: 0,
             bestScorer: false,
@@ -1727,16 +1727,16 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 196,
-            seasonGames: 70,
+            playerId: 197,
+            seasonGames: 71,
             seasonGoals: 6,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Al-Ahli'
         },
         {
             leagueTeamId: 13,
-            playerId: 197,
+            playerId: 198,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1745,8 +1745,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 198,
-            seasonGames: 52,
+            playerId: 199,
+            seasonGames: 53,
             seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
@@ -1754,8 +1754,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 199,
-            seasonGames: 35,
+            playerId: 200,
+            seasonGames: 36,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -1763,8 +1763,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 200,
-            seasonGames: 34,
+            playerId: 201,
+            seasonGames: 35,
             seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
@@ -1772,8 +1772,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 201,
-            seasonGames: 63,
+            playerId: 202,
+            seasonGames: 64,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -1781,8 +1781,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 202,
-            seasonGames: 3,
+            playerId: 203,
+            seasonGames: 4,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -1790,8 +1790,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 203,
-            seasonGames: 5,
+            playerId: 204,
+            seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1799,8 +1799,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 204,
-            seasonGames: 33,
+            playerId: 205,
+            seasonGames: 34,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -1808,7 +1808,7 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 205,
+            playerId: 206,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1817,8 +1817,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 206,
-            seasonGames: 75,
+            playerId: 207,
+            seasonGames: 76,
             seasonGoals: 18,
             seasonAssists: 0,
             bestScorer: false,
@@ -1826,8 +1826,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 207,
-            seasonGames: 22,
+            playerId: 208,
+            seasonGames: 23,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -1835,16 +1835,16 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 208,
-            seasonGames: 1,
-            seasonGoals: 0,
+            playerId: 209,
+            seasonGames: 2,
+            seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Melbourne City'
         },
         {
             leagueTeamId: 13,
-            playerId: 209,
+            playerId: 210,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1853,8 +1853,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 210,
-            seasonGames: 7,
+            playerId: 211,
+            seasonGames: 8,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1862,8 +1862,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 211,
-            seasonGames: 34,
+            playerId: 212,
+            seasonGames: 35,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -1871,7 +1871,7 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 212,
+            playerId: 213,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1880,8 +1880,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 213,
-            seasonGames: 18,
+            playerId: 214,
+            seasonGames: 19,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -1889,8 +1889,8 @@ module.exports = {
         },
         {
             leagueTeamId: 13,
-            playerId: 214,
-            seasonGames: 36,
+            playerId: 215,
+            seasonGames: 37,
             seasonGoals: 7,
             seasonAssists: 0,
             bestScorer: false,
@@ -1898,8 +1898,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 215,
-            seasonGames: 34,
+            playerId: 216,
+            seasonGames: 35,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -1907,8 +1907,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 216,
-            seasonGames: 58,
+            playerId: 217,
+            seasonGames: 59,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -1916,7 +1916,7 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 217,
+            playerId: 218,
             seasonGames: 16,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -1925,8 +1925,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 218,
-            seasonGames: 77,
+            playerId: 219,
+            seasonGames: 78,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -1934,7 +1934,7 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 219,
+            playerId: 220,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -1943,8 +1943,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 220,
-            seasonGames: 15,
+            playerId: 221,
+            seasonGames: 16,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -1952,8 +1952,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 221,
-            seasonGames: 79,
+            playerId: 222,
+            seasonGames: 80,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -1961,8 +1961,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 222,
-            seasonGames: 26,
+            playerId: 223,
+            seasonGames: 27,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -1970,8 +1970,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 223,
-            seasonGames: 30,
+            playerId: 224,
+            seasonGames: 31,
             seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
@@ -1979,26 +1979,26 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 224,
-            seasonGames: 77,
-            seasonGoals: 21,
+            playerId: 225,
+            seasonGames: 78,
+            seasonGoals: 22,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Tottenham Hotspur'
         },
         {
             leagueTeamId: 14,
-            playerId: 225,
-            seasonGames: 19,
+            playerId: 226,
+            seasonGames: 20,
             seasonGoals: 1,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Bordeaux'
         },
         {
             leagueTeamId: 14,
-            playerId: 226,
-            seasonGames: 5,
+            playerId: 227,
+            seasonGames: 6,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -2006,7 +2006,7 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 227,
+            playerId: 228,
             seasonGames: 12,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2015,8 +2015,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 228,
-            seasonGames: 10,
+            playerId: 229,
+            seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2024,8 +2024,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 229,
-            seasonGames: 18,
+            playerId: 230,
+            seasonGames: 19,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -2033,7 +2033,7 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 230,
+            playerId: 231,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2042,8 +2042,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 231,
-            seasonGames: 12,
+            playerId: 232,
+            seasonGames: 13,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -2051,8 +2051,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 232,
-            seasonGames: 3,
+            playerId: 233,
+            seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2060,8 +2060,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 233,
-            seasonGames: 35,
+            playerId: 234,
+            seasonGames: 36,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -2069,16 +2069,16 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 234,
-            seasonGames: 27,
-            seasonGoals: 3,
+            playerId: 235,
+            seasonGames: 28,
+            seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'RB Leipzig'
         },
         {
             leagueTeamId: 14,
-            playerId: 235,
+            playerId: 236,
             seasonGames: 18,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -2087,7 +2087,7 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 236,
+            playerId: 237,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2096,8 +2096,8 @@ module.exports = {
         },
         {
             leagueTeamId: 14,
-            playerId: 237,
-            seasonGames: 13,
+            playerId: 238,
+            seasonGames: 14,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -2105,8 +2105,8 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 238,
-            seasonGames: 97,
+            playerId: 239,
+            seasonGames: 98,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2114,8 +2114,8 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 239,
-            seasonGames: 5,
+            playerId: 240,
+            seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2123,7 +2123,7 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 240,
+            playerId: 241,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2132,8 +2132,8 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 241,
-            seasonGames: 41,
+            playerId: 242,
+            seasonGames: 42,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -2141,8 +2141,8 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 242,
-            seasonGames: 18,
+            playerId: 243,
+            seasonGames: 19,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -2150,8 +2150,8 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 243,
-            seasonGames: 53,
+            playerId: 244,
+            seasonGames: 54,
             seasonGoals: 9,
             seasonAssists: 0,
             bestScorer: false,
@@ -2159,8 +2159,8 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 244,
-            seasonGames: 53,
+            playerId: 245,
+            seasonGames: 54,
             seasonGoals: 20,
             seasonAssists: 0,
             bestScorer: false,
@@ -2168,17 +2168,17 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 245,
-            seasonGames: 11,
+            playerId: 246,
+            seasonGames: 12,
             seasonGoals: 3,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Monaco'
         },
         {
             leagueTeamId: 15,
-            playerId: 246,
-            seasonGames: 73,
+            playerId: 247,
+            seasonGames: 74,
             seasonGoals: 31,
             seasonAssists: 0,
             bestScorer: false,
@@ -2186,17 +2186,17 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 247,
-            seasonGames: 14,
-            seasonGoals: 3,
+            playerId: 248,
+            seasonGames: 15,
+            seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Paris Saint-Germain'
         },
         {
             leagueTeamId: 15,
-            playerId: 248,
-            seasonGames: 11,
+            playerId: 249,
+            seasonGames: 12,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -2204,8 +2204,8 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 249,
-            seasonGames: 8,
+            playerId: 250,
+            seasonGames: 9,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2213,8 +2213,8 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 250,
-            seasonGames: 23,
+            playerId: 251,
+            seasonGames: 24,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -2222,8 +2222,8 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 251,
-            seasonGames: 66,
+            playerId: 252,
+            seasonGames: 67,
             seasonGoals: 9,
             seasonAssists: 0,
             bestScorer: false,
@@ -2231,7 +2231,7 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 252,
+            playerId: 253,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2240,7 +2240,7 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 253,
+            playerId: 254,
             seasonGames: 27,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2249,7 +2249,7 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 254,
+            playerId: 255,
             seasonGames: 35,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -2258,8 +2258,8 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 255,
-            seasonGames: 11,
+            playerId: 256,
+            seasonGames: 12,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -2267,21 +2267,12 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 256,
-            seasonGames: 16,
+            playerId: 257,
+            seasonGames: 17,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Monaco'
-        },
-        {
-            leagueTeamId: 15,
-            playerId: 257,
-            seasonGames: 4,
-            seasonGoals: 0,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Marseille'
         },
         {
             leagueTeamId: 15,
@@ -2290,12 +2281,21 @@ module.exports = {
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'Atlético Madrid'
+            clubName: 'Marseille'
         },
         {
             leagueTeamId: 15,
             playerId: 259,
-            seasonGames: 6,
+            seasonGames: 5,
+            seasonGoals: 0,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Atlético Madrid'
+        },
+        {
+            leagueTeamId: 15,
+            playerId: 260,
+            seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2303,7 +2303,7 @@ module.exports = {
         },
         {
             leagueTeamId: 15,
-            playerId: 260,
+            playerId: 261,
             seasonGames: 0,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2312,8 +2312,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 261,
-            seasonGames: 37,
+            playerId: 262,
+            seasonGames: 38,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2321,8 +2321,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 262,
-            seasonGames: 58,
+            playerId: 263,
+            seasonGames: 59,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2330,7 +2330,7 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 263,
+            playerId: 264,
             seasonGames: 25,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2339,8 +2339,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 264,
-            seasonGames: 3,
+            playerId: 265,
+            seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2348,7 +2348,7 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 265,
+            playerId: 266,
             seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2357,8 +2357,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 266,
-            seasonGames: 26,
+            playerId: 267,
+            seasonGames: 27,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2366,7 +2366,7 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 267,
+            playerId: 268,
             seasonGames: 31,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -2375,8 +2375,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 268,
-            seasonGames: 43,
+            playerId: 269,
+            seasonGames: 44,
             seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
@@ -2384,8 +2384,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 269,
-            seasonGames: 87,
+            playerId: 270,
+            seasonGames: 88,
             seasonGoals: 34,
             seasonAssists: 0,
             bestScorer: false,
@@ -2393,16 +2393,16 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 270,
-            seasonGames: 83,
+            playerId: 271,
+            seasonGames: 84,
             seasonGoals: 25,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Lokomotiv Moscow'
         },
         {
             leagueTeamId: 16,
-            playerId: 271,
+            playerId: 272,
             seasonGames: 30,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -2411,7 +2411,7 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 272,
+            playerId: 273,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2420,8 +2420,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 273,
-            seasonGames: 22,
+            playerId: 274,
+            seasonGames: 23,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -2429,8 +2429,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 274,
-            seasonGames: 16,
+            playerId: 275,
+            seasonGames: 17,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -2438,8 +2438,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 275,
-            seasonGames: 65,
+            playerId: 276,
+            seasonGames: 66,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -2447,7 +2447,7 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 276,
+            playerId: 277,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2456,8 +2456,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 277,
-            seasonGames: 64,
+            playerId: 278,
+            seasonGames: 65,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2465,8 +2465,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 278,
-            seasonGames: 44,
+            playerId: 279,
+            seasonGames: 45,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -2474,8 +2474,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 279,
-            seasonGames: 72,
+            playerId: 280,
+            seasonGames: 73,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -2483,8 +2483,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 280,
-            seasonGames: 28,
+            playerId: 281,
+            seasonGames: 29,
             seasonGoals: 9,
             seasonAssists: 0,
             bestScorer: false,
@@ -2492,7 +2492,7 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 281,
+            playerId: 282,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2501,7 +2501,7 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 282,
+            playerId: 283,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2510,8 +2510,8 @@ module.exports = {
         },
         {
             leagueTeamId: 16,
-            playerId: 283,
-            seasonGames: 12,
+            playerId: 284,
+            seasonGames: 13,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2519,7 +2519,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 284,
+            playerId: 285,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2528,7 +2528,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 285,
+            playerId: 286,
             seasonGames: 20,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -2537,7 +2537,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 286,
+            playerId: 287,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2546,7 +2546,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 287,
+            playerId: 288,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2555,7 +2555,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 288,
+            playerId: 289,
             seasonGames: 57,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -2564,7 +2564,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 289,
+            playerId: 290,
             seasonGames: 9,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -2573,7 +2573,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 290,
+            playerId: 291,
             seasonGames: 62,
             seasonGoals: 6,
             seasonAssists: 0,
@@ -2582,7 +2582,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 291,
+            playerId: 292,
             seasonGames: 10,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2591,7 +2591,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 292,
+            playerId: 293,
             seasonGames: 71,
             seasonGoals: 31,
             seasonAssists: 0,
@@ -2600,7 +2600,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 293,
+            playerId: 294,
             seasonGames: 124,
             seasonGoals: 64,
             seasonAssists: 0,
@@ -2609,16 +2609,16 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 294,
+            playerId: 295,
             seasonGames: 94,
             seasonGoals: 19,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Paris Saint-Germain'
         },
         {
             leagueTeamId: 17,
-            playerId: 295,
+            playerId: 296,
             seasonGames: 0,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2627,7 +2627,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 296,
+            playerId: 297,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2636,7 +2636,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 297,
+            playerId: 298,
             seasonGames: 143,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -2645,16 +2645,16 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 298,
-            seasonGames: 4,
+            playerId: 299,
+            seasonGames: 23,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'West Ham United'
+            clubName: 'River Plate'
         },
         {
             leagueTeamId: 17,
-            playerId: 299,
+            playerId: 300,
             seasonGames: 56,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -2663,7 +2663,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 300,
+            playerId: 301,
             seasonGames: 54,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -2672,7 +2672,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 301,
+            playerId: 302,
             seasonGames: 9,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2681,7 +2681,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 302,
+            playerId: 303,
             seasonGames: 85,
             seasonGoals: 37,
             seasonAssists: 0,
@@ -2690,7 +2690,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 303,
+            playerId: 304,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2699,7 +2699,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 304,
+            playerId: 305,
             seasonGames: 12,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2708,7 +2708,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 305,
+            playerId: 306,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2717,7 +2717,7 @@ module.exports = {
         },
         {
             leagueTeamId: 17,
-            playerId: 306,
+            playerId: 307,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2726,7 +2726,7 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 307,
+            playerId: 308,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2735,7 +2735,7 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 308,
+            playerId: 309,
             seasonGames: 35,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2744,8 +2744,8 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 309,
-            seasonGames: 42,
+            playerId: 310,
+            seasonGames: 43,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2753,17 +2753,17 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 310,
-            seasonGames: 65,
-            seasonGoals: 17,
+            playerId: 311,
+            seasonGames: 66,
+            seasonGoals: 18,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Inter Milan'
         },
         {
             leagueTeamId: 18,
-            playerId: 311,
-            seasonGames: 98,
+            playerId: 312,
+            seasonGames: 99,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -2771,8 +2771,8 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 312,
-            seasonGames: 38,
+            playerId: 313,
+            seasonGames: 39,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -2780,8 +2780,8 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 313,
-            seasonGames: 91,
+            playerId: 314,
+            seasonGames: 92,
             seasonGoals: 14,
             seasonAssists: 0,
             bestScorer: false,
@@ -2789,8 +2789,8 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 314,
-            seasonGames: 40,
+            playerId: 315,
+            seasonGames: 41,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -2798,17 +2798,17 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 315,
-            seasonGames: 30,
-            seasonGoals: 8,
+            playerId: 316,
+            seasonGames: 31,
+            seasonGoals: 9,
             seasonAssists: 0,
             bestScorer: false,
             clubName: '1899 Hoffenheim'
         },
         {
             leagueTeamId: 18,
-            playerId: 316,
-            seasonGames: 105,
+            playerId: 317,
+            seasonGames: 106,
             seasonGoals: 12,
             seasonAssists: 0,
             bestScorer: false,
@@ -2816,21 +2816,12 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 317,
-            seasonGames: 34,
+            playerId: 318,
+            seasonGames: 35,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Inter Milan'
-        },
-        {
-            leagueTeamId: 18,
-            playerId: 318,
-            seasonGames: 10,
-            seasonGoals: 0,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Gent'
         },
         {
             leagueTeamId: 18,
@@ -2839,11 +2830,20 @@ module.exports = {
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'Bayer Leverkusen'
+            clubName: 'Gent'
         },
         {
             leagueTeamId: 18,
             playerId: 320,
+            seasonGames: 12,
+            seasonGoals: 0,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Bayer Leverkusen'
+        },
+        {
+            leagueTeamId: 18,
+            playerId: 321,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2852,7 +2852,7 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 321,
+            playerId: 322,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2861,8 +2861,8 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 322,
-            seasonGames: 41,
+            playerId: 323,
+            seasonGames: 42,
             seasonGoals: 15,
             seasonAssists: 0,
             bestScorer: false,
@@ -2870,8 +2870,8 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 323,
-            seasonGames: 82,
+            playerId: 324,
+            seasonGames: 83,
             seasonGoals: 30,
             seasonAssists: 0,
             bestScorer: false,
@@ -2879,17 +2879,17 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 324,
-            seasonGames: 15,
+            playerId: 325,
+            seasonGames: 16,
             seasonGoals: 1,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Eintracht Frankfurt'
         },
         {
             leagueTeamId: 18,
-            playerId: 325,
-            seasonGames: 37,
+            playerId: 326,
+            seasonGames: 38,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -2897,7 +2897,7 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 326,
+            playerId: 327,
             seasonGames: 16,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -2906,8 +2906,8 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 327,
-            seasonGames: 58,
+            playerId: 328,
+            seasonGames: 59,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -2915,7 +2915,7 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 328,
+            playerId: 329,
             seasonGames: 19,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2924,8 +2924,8 @@ module.exports = {
         },
         {
             leagueTeamId: 18,
-            playerId: 329,
-            seasonGames: 37,
+            playerId: 330,
+            seasonGames: 38,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -2933,7 +2933,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 330,
+            playerId: 331,
             seasonGames: 49,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2942,7 +2942,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 331,
+            playerId: 332,
             seasonGames: 79,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -2951,7 +2951,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 332,
+            playerId: 333,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -2960,7 +2960,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 333,
+            playerId: 334,
             seasonGames: 5,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -2969,17 +2969,8 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 334,
-            seasonGames: 20,
-            seasonGoals: 3,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Rostov'
-        },
-        {
-            leagueTeamId: 19,
             playerId: 335,
-            seasonGames: 77,
+            seasonGames: 20,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -2988,6 +2979,15 @@ module.exports = {
         {
             leagueTeamId: 19,
             playerId: 336,
+            seasonGames: 77,
+            seasonGoals: 3,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Rostov'
+        },
+        {
+            leagueTeamId: 19,
+            playerId: 337,
             seasonGames: 67,
             seasonGoals: 7,
             seasonAssists: 0,
@@ -2996,7 +2996,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 337,
+            playerId: 338,
             seasonGames: 67,
             seasonGoals: 9,
             seasonAssists: 0,
@@ -3005,7 +3005,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 338,
+            playerId: 339,
             seasonGames: 12,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -3014,7 +3014,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 339,
+            playerId: 340,
             seasonGames: 57,
             seasonGoals: 19,
             seasonAssists: 0,
@@ -3023,16 +3023,16 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 340,
+            playerId: 341,
             seasonGames: 47,
             seasonGoals: 13,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'FC Augsburg'
         },
         {
             leagueTeamId: 19,
-            playerId: 341,
+            playerId: 342,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3041,7 +3041,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 342,
+            playerId: 343,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3050,7 +3050,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 343,
+            playerId: 344,
             seasonGames: 67,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -3059,7 +3059,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 344,
+            playerId: 345,
             seasonGames: 10,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -3068,7 +3068,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 345,
+            playerId: 346,
             seasonGames: 36,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -3077,7 +3077,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 346,
+            playerId: 347,
             seasonGames: 77,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -3086,7 +3086,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 347,
+            playerId: 348,
             seasonGames: 16,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -3095,7 +3095,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 348,
+            playerId: 349,
             seasonGames: 47,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -3104,7 +3104,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 349,
+            playerId: 350,
             seasonGames: 64,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -3113,7 +3113,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 350,
+            playerId: 351,
             seasonGames: 19,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -3122,7 +3122,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 351,
+            playerId: 352,
             seasonGames: 38,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -3131,7 +3131,7 @@ module.exports = {
         },
         {
             leagueTeamId: 19,
-            playerId: 352,
+            playerId: 353,
             seasonGames: 56,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3140,7 +3140,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 353,
+            playerId: 354,
             seasonGames: 24,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3149,7 +3149,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 354,
+            playerId: 355,
             seasonGames: 5,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -3158,7 +3158,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 355,
+            playerId: 356,
             seasonGames: 62,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -3167,7 +3167,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 356,
+            playerId: 357,
             seasonGames: 17,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3176,7 +3176,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 357,
+            playerId: 358,
             seasonGames: 22,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -3185,7 +3185,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 358,
+            playerId: 359,
             seasonGames: 19,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3194,7 +3194,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 359,
+            playerId: 360,
             seasonGames: 72,
             seasonGoals: 13,
             seasonAssists: 0,
@@ -3203,7 +3203,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 360,
+            playerId: 361,
             seasonGames: 14,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -3212,7 +3212,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 361,
+            playerId: 362,
             seasonGames: 19,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -3221,7 +3221,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 362,
+            playerId: 363,
             seasonGames: 85,
             seasonGoals: 6,
             seasonAssists: 0,
@@ -3230,7 +3230,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 363,
+            playerId: 364,
             seasonGames: 34,
             seasonGoals: 11,
             seasonAssists: 0,
@@ -3239,7 +3239,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 364,
+            playerId: 365,
             seasonGames: 25,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3248,7 +3248,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 365,
+            playerId: 366,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3257,7 +3257,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 366,
+            playerId: 367,
             seasonGames: 18,
             seasonGoals: 8,
             seasonAssists: 0,
@@ -3266,16 +3266,16 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 367,
+            playerId: 368,
             seasonGames: 17,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Torino'
         },
         {
             leagueTeamId: 20,
-            playerId: 368,
+            playerId: 369,
             seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3284,7 +3284,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 369,
+            playerId: 370,
             seasonGames: 52,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -3293,7 +3293,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 370,
+            playerId: 371,
             seasonGames: 19,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -3302,7 +3302,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 371,
+            playerId: 372,
             seasonGames: 20,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -3311,7 +3311,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 372,
+            playerId: 373,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3320,7 +3320,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 373,
+            playerId: 374,
             seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3329,7 +3329,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 374,
+            playerId: 375,
             seasonGames: 39,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3338,7 +3338,7 @@ module.exports = {
         },
         {
             leagueTeamId: 20,
-            playerId: 375,
+            playerId: 376,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3347,8 +3347,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 376,
-            seasonGames: 25,
+            playerId: 377,
+            seasonGames: 26,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3356,8 +3356,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 377,
-            seasonGames: 70,
+            playerId: 378,
+            seasonGames: 71,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -3365,8 +3365,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 378,
-            seasonGames: 46,
+            playerId: 379,
+            seasonGames: 47,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -3374,7 +3374,7 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 379,
+            playerId: 380,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3383,8 +3383,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 380,
-            seasonGames: 23,
+            playerId: 381,
+            seasonGames: 24,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3392,8 +3392,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 381,
-            seasonGames: 32,
+            playerId: 382,
+            seasonGames: 33,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -3401,8 +3401,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 382,
-            seasonGames: 24,
+            playerId: 383,
+            seasonGames: 25,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -3410,7 +3410,7 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 383,
+            playerId: 384,
             seasonGames: 28,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -3419,35 +3419,35 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 384,
-            seasonGames: 16,
-            seasonGoals: 9,
+            playerId: 385,
+            seasonGames: 17,
+            seasonGoals: 10,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Manchester City'
         },
         {
             leagueTeamId: 21,
-            playerId: 385,
-            seasonGames: 84,
-            seasonGoals: 54,
+            playerId: 386,
+            seasonGames: 85,
+            seasonGoals: 55,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Paris Saint-Germain'
         },
         {
             leagueTeamId: 21,
-            playerId: 386,
-            seasonGames: 36,
-            seasonGoals: 9,
+            playerId: 387,
+            seasonGames: 37,
+            seasonGoals: 10,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Barcelona'
         },
         {
             leagueTeamId: 21,
-            playerId: 387,
-            seasonGames: 53,
+            playerId: 388,
+            seasonGames: 54,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -3455,8 +3455,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 388,
-            seasonGames: 25,
+            playerId: 389,
+            seasonGames: 26,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3464,8 +3464,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 389,
-            seasonGames: 17,
+            playerId: 390,
+            seasonGames: 18,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3473,8 +3473,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 390,
-            seasonGames: 49,
+            playerId: 391,
+            seasonGames: 50,
             seasonGoals: 12,
             seasonAssists: 0,
             bestScorer: false,
@@ -3482,7 +3482,7 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 391,
+            playerId: 392,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3491,8 +3491,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 392,
-            seasonGames: 43,
+            playerId: 393,
+            seasonGames: 44,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -3500,7 +3500,7 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 393,
+            playerId: 394,
             seasonGames: 8,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3509,8 +3509,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 394,
-            seasonGames: 56,
+            playerId: 395,
+            seasonGames: 57,
             seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
@@ -3518,8 +3518,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 395,
-            seasonGames: 20,
+            playerId: 396,
+            seasonGames: 21,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -3527,8 +3527,8 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 396,
-            seasonGames: 7,
+            playerId: 397,
+            seasonGames: 8,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -3536,7 +3536,7 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 397,
+            playerId: 398,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3545,7 +3545,7 @@ module.exports = {
         },
         {
             leagueTeamId: 21,
-            playerId: 398,
+            playerId: 399,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3554,21 +3554,12 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 399,
-            seasonGames: 80,
+            playerId: 400,
+            seasonGames: 81,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Real Madrid'
-        },
-        {
-            leagueTeamId: 22,
-            playerId: 400,
-            seasonGames: 68,
-            seasonGoals: 2,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Águilas Doradas'
         },
         {
             leagueTeamId: 22,
@@ -3577,21 +3568,30 @@ module.exports = {
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'Bologna'
+            clubName: 'Águilas Doradas'
         },
         {
             leagueTeamId: 22,
             playerId: 402,
-            seasonGames: 3,
-            seasonGoals: 0,
+            seasonGames: 70,
+            seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'IFK Norrköping'
+            clubName: 'Bologna'
         },
         {
             leagueTeamId: 22,
             playerId: 403,
-            seasonGames: 112,
+            seasonGames: 4,
+            seasonGoals: 0,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Norrköping'
+        },
+        {
+            leagueTeamId: 22,
+            playerId: 404,
+            seasonGames: 113,
             seasonGoals: 21,
             seasonAssists: 0,
             bestScorer: false,
@@ -3599,8 +3599,8 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 404,
-            seasonGames: 38,
+            playerId: 405,
+            seasonGames: 39,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -3608,8 +3608,8 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 405,
-            seasonGames: 80,
+            playerId: 406,
+            seasonGames: 81,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -3617,8 +3617,8 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 406,
-            seasonGames: 43,
+            playerId: 407,
+            seasonGames: 44,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -3626,7 +3626,7 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 407,
+            playerId: 408,
             seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3635,26 +3635,26 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 408,
-            seasonGames: 109,
-            seasonGoals: 23,
+            playerId: 409,
+            seasonGames: 110,
+            seasonGoals: 24,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Sporting CP'
         },
         {
             leagueTeamId: 22,
-            playerId: 409,
-            seasonGames: 46,
+            playerId: 410,
+            seasonGames: 47,
             seasonGoals: 10,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Saprissa'
         },
         {
             leagueTeamId: 22,
-            playerId: 410,
-            seasonGames: 76,
+            playerId: 411,
+            seasonGames: 77,
             seasonGoals: 15,
             seasonAssists: 0,
             bestScorer: false,
@@ -3662,7 +3662,7 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 411,
+            playerId: 412,
             seasonGames: 30,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -3671,8 +3671,8 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 412,
-            seasonGames: 57,
+            playerId: 413,
+            seasonGames: 58,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -3680,8 +3680,8 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 413,
-            seasonGames: 37,
+            playerId: 414,
+            seasonGames: 38,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -3689,8 +3689,8 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 414,
-            seasonGames: 67,
+            playerId: 415,
+            seasonGames: 68,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -3698,8 +3698,8 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 415,
-            seasonGames: 50,
+            playerId: 416,
+            seasonGames: 51,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3707,7 +3707,7 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 416,
+            playerId: 417,
             seasonGames: 39,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3716,7 +3716,7 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 417,
+            playerId: 418,
             seasonGames: 26,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -3725,8 +3725,8 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 418,
-            seasonGames: 42,
+            playerId: 419,
+            seasonGames: 43,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3734,8 +3734,8 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 419,
-            seasonGames: 63,
+            playerId: 420,
+            seasonGames: 64,
             seasonGoals: 15,
             seasonAssists: 0,
             bestScorer: false,
@@ -3743,7 +3743,7 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 420,
+            playerId: 421,
             seasonGames: 23,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -3752,7 +3752,7 @@ module.exports = {
         },
         {
             leagueTeamId: 22,
-            playerId: 421,
+            playerId: 422,
             seasonGames: 9,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3761,8 +3761,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 422,
-            seasonGames: 80,
+            playerId: 423,
+            seasonGames: 81,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3770,8 +3770,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 423,
-            seasonGames: 46,
+            playerId: 424,
+            seasonGames: 47,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3779,8 +3779,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 424,
-            seasonGames: 23,
+            playerId: 425,
+            seasonGames: 24,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -3788,8 +3788,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 425,
-            seasonGames: 27,
+            playerId: 426,
+            seasonGames: 28,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -3797,7 +3797,7 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 426,
+            playerId: 427,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3806,16 +3806,16 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 427,
-            seasonGames: 102,
-            seasonGoals: 12,
+            playerId: 428,
+            seasonGames: 103,
+            seasonGoals: 13,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Zenit Saint Petersburg'
         },
         {
             leagueTeamId: 23,
-            playerId: 428,
+            playerId: 429,
             seasonGames: 10,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3824,8 +3824,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 429,
-            seasonGames: 8,
+            playerId: 430,
+            seasonGames: 9,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -3833,26 +3833,26 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 430,
-            seasonGames: 36,
-            seasonGoals: 13,
+            playerId: 431,
+            seasonGames: 37,
+            seasonGoals: 16,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Fulham'
         },
         {
             leagueTeamId: 23,
-            playerId: 431,
-            seasonGames: 52,
+            playerId: 432,
+            seasonGames: 53,
             seasonGoals: 13,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Southampton'
         },
         {
             leagueTeamId: 23,
-            playerId: 432,
-            seasonGames: 75,
+            playerId: 433,
+            seasonGames: 76,
             seasonGoals: 10,
             seasonAssists: 0,
             bestScorer: false,
@@ -3860,8 +3860,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 433,
-            seasonGames: 7,
+            playerId: 434,
+            seasonGames: 8,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3869,7 +3869,7 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 434,
+            playerId: 435,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3878,7 +3878,7 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 435,
+            playerId: 436,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3887,8 +3887,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 436,
-            seasonGames: 2,
+            playerId: 437,
+            seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3896,8 +3896,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 437,
-            seasonGames: 7,
+            playerId: 438,
+            seasonGames: 8,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3905,8 +3905,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 438,
-            seasonGames: 22,
+            playerId: 439,
+            seasonGames: 23,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -3914,8 +3914,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 439,
-            seasonGames: 2,
+            playerId: 440,
+            seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3923,7 +3923,7 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 440,
+            playerId: 441,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3932,8 +3932,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 441,
-            seasonGames: 3,
+            playerId: 442,
+            seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -3941,8 +3941,8 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 442,
-            seasonGames: 39,
+            playerId: 443,
+            seasonGames: 40,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -3950,16 +3950,16 @@ module.exports = {
         },
         {
             leagueTeamId: 23,
-            playerId: 443,
-            seasonGames: 28,
-            seasonGoals: 5,
+            playerId: 444,
+            seasonGames: 29,
+            seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Torino'
         },
         {
             leagueTeamId: 23,
-            playerId: 444,
+            playerId: 445,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3968,7 +3968,7 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 445,
+            playerId: 446,
             seasonGames: 35,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -3977,8 +3977,8 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 446,
-            seasonGames: 99,
+            playerId: 447,
+            seasonGames: 100,
             seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
@@ -3986,21 +3986,12 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 447,
-            seasonGames: 17,
+            playerId: 448,
+            seasonGames: 18,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Toulouse'
-        },
-        {
-            leagueTeamId: 24,
-            playerId: 448,
-            seasonGames: 5,
-            seasonGoals: 0,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Borussia Mönchengladbach'
         },
         {
             leagueTeamId: 24,
@@ -4009,11 +4000,20 @@ module.exports = {
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'Borussia Dortmund'
+            clubName: 'Borussia Mönchengladbach'
         },
         {
             leagueTeamId: 24,
             playerId: 450,
+            seasonGames: 7,
+            seasonGoals: 0,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Borussia Dortmund'
+        },
+        {
+            leagueTeamId: 24,
+            playerId: 451,
             seasonGames: 24,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -4022,8 +4022,8 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 451,
-            seasonGames: 24,
+            playerId: 452,
+            seasonGames: 25,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -4031,8 +4031,8 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 452,
-            seasonGames: 9,
+            playerId: 453,
+            seasonGames: 10,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4040,26 +4040,26 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 453,
-            seasonGames: 50,
-            seasonGoals: 11,
+            playerId: 454,
+            seasonGames: 51,
+            seasonGoals: 12,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Benfica'
         },
         {
             leagueTeamId: 24,
-            playerId: 454,
-            seasonGames: 61,
+            playerId: 455,
+            seasonGames: 62,
             seasonGoals: 9,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Arsenal'
         },
         {
             leagueTeamId: 24,
-            playerId: 455,
-            seasonGames: 78,
+            playerId: 456,
+            seasonGames: 79,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -4067,7 +4067,7 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 456,
+            playerId: 457,
             seasonGames: 0,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4076,17 +4076,17 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 457,
-            seasonGames: 52,
-            seasonGoals: 4,
+            playerId: 458,
+            seasonGames: 53,
+            seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Milan'
         },
         {
             leagueTeamId: 24,
-            playerId: 458,
-            seasonGames: 11,
+            playerId: 459,
+            seasonGames: 12,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -4094,8 +4094,8 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 459,
-            seasonGames: 64,
+            playerId: 460,
+            seasonGames: 65,
             seasonGoals: 9,
             seasonAssists: 0,
             bestScorer: false,
@@ -4103,7 +4103,7 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 460,
+            playerId: 461,
             seasonGames: 67,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -4112,7 +4112,7 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 461,
+            playerId: 462,
             seasonGames: 10,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4121,8 +4121,8 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 462,
-            seasonGames: 13,
+            playerId: 463,
+            seasonGames: 14,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -4130,8 +4130,8 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 463,
-            seasonGames: 28,
+            playerId: 464,
+            seasonGames: 29,
             seasonGoals: 9,
             seasonAssists: 0,
             bestScorer: false,
@@ -4139,7 +4139,7 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 464,
+            playerId: 465,
             seasonGames: 74,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -4148,8 +4148,8 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 465,
-            seasonGames: 8,
+            playerId: 466,
+            seasonGames: 9,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4157,8 +4157,8 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 466,
-            seasonGames: 38,
+            playerId: 467,
+            seasonGames: 39,
             seasonGoals: 7,
             seasonAssists: 0,
             bestScorer: false,
@@ -4166,8 +4166,8 @@ module.exports = {
         },
         {
             leagueTeamId: 24,
-            playerId: 467,
-            seasonGames: 69,
+            playerId: 468,
+            seasonGames: 70,
             seasonGoals: 20,
             seasonAssists: 0,
             bestScorer: false,
@@ -4175,8 +4175,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 468,
-            seasonGames: 75,
+            playerId: 469,
+            seasonGames: 76,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4184,7 +4184,7 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 469,
+            playerId: 470,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4193,8 +4193,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 470,
-            seasonGames: 37,
+            playerId: 471,
+            seasonGames: 38,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -4202,8 +4202,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 471,
-            seasonGames: 17,
+            playerId: 472,
+            seasonGames: 18,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4211,8 +4211,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 472,
-            seasonGames: 63,
+            playerId: 473,
+            seasonGames: 64,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -4220,8 +4220,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 473,
-            seasonGames: 74,
+            playerId: 474,
+            seasonGames: 75,
             seasonGoals: 7,
             seasonAssists: 0,
             bestScorer: false,
@@ -4229,8 +4229,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 474,
-            seasonGames: 43,
+            playerId: 475,
+            seasonGames: 44,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -4238,8 +4238,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 475,
-            seasonGames: 82,
+            playerId: 476,
+            seasonGames: 83,
             seasonGoals: 12,
             seasonAssists: 0,
             bestScorer: false,
@@ -4247,26 +4247,26 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 476,
-            seasonGames: 13,
-            seasonGoals: 7,
+            playerId: 477,
+            seasonGames: 14,
+            seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'RB Leipzig'
         },
         {
             leagueTeamId: 25,
-            playerId: 477,
+            playerId: 478,
             seasonGames: 90,
             seasonGoals: 23,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Arsenal'
         },
         {
             leagueTeamId: 25,
-            playerId: 478,
-            seasonGames: 30,
+            playerId: 479,
+            seasonGames: 31,
             seasonGoals: 9,
             seasonAssists: 0,
             bestScorer: false,
@@ -4274,7 +4274,7 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 479,
+            playerId: 480,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4283,8 +4283,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 480,
-            seasonGames: 90,
+            playerId: 481,
+            seasonGames: 91,
             seasonGoals: 38,
             seasonAssists: 0,
             bestScorer: false,
@@ -4292,7 +4292,7 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 481,
+            playerId: 482,
             seasonGames: 15,
             seasonGoals: 6,
             seasonAssists: 0,
@@ -4301,8 +4301,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 482,
-            seasonGames: 10,
+            playerId: 483,
+            seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4310,7 +4310,7 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 483,
+            playerId: 484,
             seasonGames: 24,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -4319,18 +4319,9 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 484,
-            seasonGames: 70,
-            seasonGoals: 1,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Bayern Munich'
-        },
-        {
-            leagueTeamId: 25,
             playerId: 485,
-            seasonGames: 28,
-            seasonGoals: 3,
+            seasonGames: 71,
+            seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Bayern Munich'
@@ -4338,6 +4329,15 @@ module.exports = {
         {
             leagueTeamId: 25,
             playerId: 486,
+            seasonGames: 29,
+            seasonGoals: 3,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Bayern Munich'
+        },
+        {
+            leagueTeamId: 25,
+            playerId: 487,
             seasonGames: 25,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -4346,8 +4346,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 487,
-            seasonGames: 15,
+            playerId: 488,
+            seasonGames: 16,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -4355,8 +4355,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 488,
-            seasonGames: 25,
+            playerId: 489,
+            seasonGames: 26,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -4364,8 +4364,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 489,
-            seasonGames: 19,
+            playerId: 490,
+            seasonGames: 20,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4373,8 +4373,8 @@ module.exports = {
         },
         {
             leagueTeamId: 25,
-            playerId: 490,
-            seasonGames: 74,
+            playerId: 491,
+            seasonGames: 75,
             seasonGoals: 31,
             seasonAssists: 0,
             bestScorer: false,
@@ -4382,7 +4382,7 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 491,
+            playerId: 492,
             seasonGames: 52,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4391,8 +4391,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 492,
-            seasonGames: 42,
+            playerId: 493,
+            seasonGames: 43,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -4400,8 +4400,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 493,
-            seasonGames: 20,
+            playerId: 494,
+            seasonGames: 21,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4409,8 +4409,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 494,
-            seasonGames: 144,
+            playerId: 495,
+            seasonGames: 145,
             seasonGoals: 18,
             seasonAssists: 0,
             bestScorer: false,
@@ -4418,7 +4418,7 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 495,
+            playerId: 496,
             seasonGames: 55,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -4427,8 +4427,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 496,
-            seasonGames: 31,
+            playerId: 497,
+            seasonGames: 32,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4436,8 +4436,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 497,
-            seasonGames: 63,
+            playerId: 498,
+            seasonGames: 64,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -4445,8 +4445,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 498,
-            seasonGames: 38,
+            playerId: 499,
+            seasonGames: 39,
             seasonGoals: 9,
             seasonAssists: 0,
             bestScorer: false,
@@ -4454,7 +4454,7 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 499,
+            playerId: 500,
             seasonGames: 63,
             seasonGoals: 13,
             seasonAssists: 0,
@@ -4463,8 +4463,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 500,
-            seasonGames: 104,
+            playerId: 501,
+            seasonGames: 105,
             seasonGoals: 19,
             seasonAssists: 0,
             bestScorer: false,
@@ -4472,7 +4472,7 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 501,
+            playerId: 502,
             seasonGames: 68,
             seasonGoals: 18,
             seasonAssists: 0,
@@ -4481,7 +4481,7 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 502,
+            playerId: 503,
             seasonGames: 27,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4490,8 +4490,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 503,
-            seasonGames: 93,
+            playerId: 504,
+            seasonGames: 94,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4499,8 +4499,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 504,
-            seasonGames: 101,
+            playerId: 505,
+            seasonGames: 102,
             seasonGoals: 49,
             seasonAssists: 0,
             bestScorer: false,
@@ -4508,8 +4508,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 505,
-            seasonGames: 91,
+            playerId: 506,
+            seasonGames: 92,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -4517,8 +4517,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 506,
-            seasonGames: 65,
+            playerId: 507,
+            seasonGames: 66,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -4526,8 +4526,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 507,
-            seasonGames: 35,
+            playerId: 508,
+            seasonGames: 36,
             seasonGoals: 7,
             seasonAssists: 0,
             bestScorer: false,
@@ -4535,8 +4535,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 508,
-            seasonGames: 144,
+            playerId: 509,
+            seasonGames: 145,
             seasonGoals: 25,
             seasonAssists: 0,
             bestScorer: false,
@@ -4544,8 +4544,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 509,
-            seasonGames: 66,
+            playerId: 510,
+            seasonGames: 67,
             seasonGoals: 26,
             seasonAssists: 0,
             bestScorer: false,
@@ -4553,7 +4553,7 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 510,
+            playerId: 511,
             seasonGames: 53,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4562,8 +4562,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 511,
-            seasonGames: 12,
+            playerId: 512,
+            seasonGames: 13,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -4571,8 +4571,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 512,
-            seasonGames: 27,
+            playerId: 513,
+            seasonGames: 28,
             seasonGoals: 7,
             seasonAssists: 0,
             bestScorer: false,
@@ -4580,8 +4580,8 @@ module.exports = {
         },
         {
             leagueTeamId: 26,
-            playerId: 513,
-            seasonGames: 22,
+            playerId: 514,
+            seasonGames: 23,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4589,7 +4589,7 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 514,
+            playerId: 515,
             seasonGames: 33,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4598,8 +4598,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 515,
-            seasonGames: 27,
+            playerId: 516,
+            seasonGames: 28,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4607,7 +4607,7 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 516,
+            playerId: 517,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4616,7 +4616,7 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 517,
+            playerId: 518,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4625,7 +4625,7 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 518,
+            playerId: 519,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4634,7 +4634,7 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 519,
+            playerId: 520,
             seasonGames: 36,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4643,8 +4643,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 520,
-            seasonGames: 66,
+            playerId: 521,
+            seasonGames: 67,
             seasonGoals: 21,
             seasonAssists: 0,
             bestScorer: false,
@@ -4652,17 +4652,17 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 521,
-            seasonGames: 10,
+            playerId: 522,
+            seasonGames: 11,
             seasonGoals: 1,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Asan Mugunghwa'
         },
         {
             leagueTeamId: 27,
-            playerId: 522,
-            seasonGames: 49,
+            playerId: 523,
+            seasonGames: 50,
             seasonGoals: 10,
             seasonAssists: 0,
             bestScorer: false,
@@ -4670,8 +4670,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 523,
-            seasonGames: 3,
+            playerId: 524,
+            seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4679,7 +4679,7 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 524,
+            playerId: 525,
             seasonGames: 14,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -4688,8 +4688,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 525,
-            seasonGames: 19,
+            playerId: 526,
+            seasonGames: 20,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -4697,8 +4697,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 526,
-            seasonGames: 67,
+            playerId: 527,
+            seasonGames: 68,
             seasonGoals: 19,
             seasonAssists: 0,
             bestScorer: false,
@@ -4706,7 +4706,7 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 527,
+            playerId: 528,
             seasonGames: 14,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4715,8 +4715,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 528,
-            seasonGames: 29,
+            playerId: 529,
+            seasonGames: 30,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -4724,8 +4724,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 529,
-            seasonGames: 101,
+            playerId: 530,
+            seasonGames: 102,
             seasonGoals: 10,
             seasonAssists: 0,
             bestScorer: false,
@@ -4733,8 +4733,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 530,
-            seasonGames: 34,
+            playerId: 531,
+            seasonGames: 35,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -4742,7 +4742,7 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 531,
+            playerId: 532,
             seasonGames: 3,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -4751,8 +4751,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 532,
-            seasonGames: 52,
+            playerId: 533,
+            seasonGames: 53,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -4760,8 +4760,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 533,
-            seasonGames: 50,
+            playerId: 534,
+            seasonGames: 51,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -4769,7 +4769,7 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 534,
+            playerId: 535,
             seasonGames: 15,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4778,8 +4778,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 535,
-            seasonGames: 19,
+            playerId: 536,
+            seasonGames: 20,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4787,8 +4787,8 @@ module.exports = {
         },
         {
             leagueTeamId: 27,
-            playerId: 536,
-            seasonGames: 5,
+            playerId: 537,
+            seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4796,8 +4796,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 537,
-            seasonGames: 17,
+            playerId: 538,
+            seasonGames: 18,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4805,8 +4805,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 538,
-            seasonGames: 65,
+            playerId: 539,
+            seasonGames: 66,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -4814,8 +4814,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 539,
-            seasonGames: 20,
+            playerId: 540,
+            seasonGames: 21,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -4823,8 +4823,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 540,
-            seasonGames: 71,
+            playerId: 541,
+            seasonGames: 72,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -4832,7 +4832,7 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 541,
+            playerId: 542,
             seasonGames: 43,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -4841,8 +4841,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 542,
-            seasonGames: 14,
+            playerId: 543,
+            seasonGames: 15,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4850,8 +4850,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 543,
-            seasonGames: 99,
+            playerId: 544,
+            seasonGames: 100,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -4859,8 +4859,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 544,
-            seasonGames: 33,
+            playerId: 545,
+            seasonGames: 34,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4868,8 +4868,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 545,
-            seasonGames: 56,
+            playerId: 546,
+            seasonGames: 57,
             seasonGoals: 18,
             seasonAssists: 0,
             bestScorer: false,
@@ -4877,16 +4877,16 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 546,
-            seasonGames: 35,
+            playerId: 547,
+            seasonGames: 36,
             seasonGoals: 6,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'RB Leipzig'
         },
         {
             leagueTeamId: 28,
-            playerId: 547,
+            playerId: 548,
             seasonGames: 20,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -4895,7 +4895,7 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 548,
+            playerId: 549,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4904,8 +4904,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 549,
-            seasonGames: 12,
+            playerId: 550,
+            seasonGames: 13,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4913,7 +4913,7 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 550,
+            playerId: 551,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4922,8 +4922,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 551,
-            seasonGames: 21,
+            playerId: 552,
+            seasonGames: 22,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -4931,8 +4931,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 552,
-            seasonGames: 12,
+            playerId: 553,
+            seasonGames: 13,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -4940,8 +4940,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 553,
-            seasonGames: 21,
+            playerId: 554,
+            seasonGames: 22,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -4949,7 +4949,7 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 554,
+            playerId: 555,
             seasonGames: 15,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -4958,8 +4958,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 555,
-            seasonGames: 11,
+            playerId: 556,
+            seasonGames: 12,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -4967,8 +4967,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 556,
-            seasonGames: 58,
+            playerId: 557,
+            seasonGames: 59,
             seasonGoals: 13,
             seasonAssists: 0,
             bestScorer: false,
@@ -4976,7 +4976,7 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 557,
+            playerId: 558,
             seasonGames: 45,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -4985,8 +4985,8 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 558,
-            seasonGames: 19,
+            playerId: 559,
+            seasonGames: 20,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -4994,7 +4994,7 @@ module.exports = {
         },
         {
             leagueTeamId: 28,
-            playerId: 559,
+            playerId: 560,
             seasonGames: 8,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5003,8 +5003,8 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 560,
-            seasonGames: 57,
+            playerId: 561,
+            seasonGames: 58,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5012,8 +5012,8 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 561,
-            seasonGames: 73,
+            playerId: 562,
+            seasonGames: 74,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -5021,7 +5021,7 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 562,
+            playerId: 563,
             seasonGames: 64,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -5030,7 +5030,7 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 563,
+            playerId: 564,
             seasonGames: 74,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -5039,8 +5039,8 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 564,
-            seasonGames: 101,
+            playerId: 565,
+            seasonGames: 102,
             seasonGoals: 8,
             seasonAssists: 0,
             bestScorer: false,
@@ -5048,8 +5048,8 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 565,
-            seasonGames: 86,
+            playerId: 566,
+            seasonGames: 87,
             seasonGoals: 9,
             seasonAssists: 0,
             bestScorer: false,
@@ -5057,8 +5057,8 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 566,
-            seasonGames: 58,
+            playerId: 567,
+            seasonGames: 59,
             seasonGoals: 13,
             seasonAssists: 0,
             bestScorer: false,
@@ -5066,7 +5066,7 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 567,
+            playerId: 568,
             seasonGames: 80,
             seasonGoals: 17,
             seasonAssists: 0,
@@ -5075,26 +5075,26 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 568,
-            seasonGames: 65,
-            seasonGoals: 31,
+            playerId: 569,
+            seasonGames: 66,
+            seasonGoals: 33,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Manchester United'
         },
         {
             leagueTeamId: 29,
-            playerId: 569,
-            seasonGames: 83,
+            playerId: 570,
+            seasonGames: 84,
             seasonGoals: 22,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Chelsea'
         },
         {
             leagueTeamId: 29,
-            playerId: 570,
-            seasonGames: 24,
+            playerId: 571,
+            seasonGames: 25,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -5102,7 +5102,7 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 571,
+            playerId: 572,
             seasonGames: 21,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5111,7 +5111,7 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 572,
+            playerId: 573,
             seasonGames: 0,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5120,17 +5120,17 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 573,
-            seasonGames: 66,
-            seasonGoals: 13,
+            playerId: 574,
+            seasonGames: 67,
+            seasonGoals: 14,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Napoli'
         },
         {
             leagueTeamId: 29,
-            playerId: 574,
-            seasonGames: 24,
+            playerId: 575,
+            seasonGames: 25,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -5138,21 +5138,12 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 575,
-            seasonGames: 9,
+            playerId: 576,
+            seasonGames: 10,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Borussia Mönchengladbach'
-        },
-        {
-            leagueTeamId: 29,
-            playerId: 576,
-            seasonGames: 7,
-            seasonGoals: 0,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Monaco'
         },
         {
             leagueTeamId: 29,
@@ -5161,12 +5152,21 @@ module.exports = {
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'Real Sociedad'
+            clubName: 'Monaco'
         },
         {
             leagueTeamId: 29,
             playerId: 578,
-            seasonGames: 74,
+            seasonGames: 8,
+            seasonGoals: 0,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Real Sociedad'
+        },
+        {
+            leagueTeamId: 29,
+            playerId: 579,
+            seasonGames: 75,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -5174,8 +5174,8 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 579,
-            seasonGames: 6,
+            playerId: 580,
+            seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5183,17 +5183,17 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 580,
-            seasonGames: 14,
-            seasonGoals: 5,
+            playerId: 581,
+            seasonGames: 15,
+            seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Borussia Dortmund'
         },
         {
             leagueTeamId: 29,
-            playerId: 581,
-            seasonGames: 42,
+            playerId: 582,
+            seasonGames: 43,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -5201,8 +5201,8 @@ module.exports = {
         },
         {
             leagueTeamId: 29,
-            playerId: 582,
-            seasonGames: 4,
+            playerId: 583,
+            seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5210,7 +5210,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 583,
+            playerId: 584,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5219,7 +5219,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 584,
+            playerId: 585,
             seasonGames: 35,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5228,18 +5228,9 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 585,
+            playerId: 586,
             seasonGames: 18,
             seasonGoals: 0,
-            seasonAssists: 0,
-            bestScorer: false,
-            clubName: 'Tottenham Hotspur'
-        },
-        {
-            leagueTeamId: 30,
-            playerId: 586,
-            seasonGames: 26,
-            seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Tottenham Hotspur'
@@ -5248,6 +5239,15 @@ module.exports = {
             leagueTeamId: 30,
             playerId: 587,
             seasonGames: 26,
+            seasonGoals: 3,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: 'Tottenham Hotspur'
+        },
+        {
+            leagueTeamId: 30,
+            playerId: 588,
+            seasonGames: 26,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5255,7 +5255,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 588,
+            playerId: 589,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5264,7 +5264,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 589,
+            playerId: 590,
             seasonGames: 12,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -5273,7 +5273,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 590,
+            playerId: 591,
             seasonGames: 39,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5282,25 +5282,25 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 591,
+            playerId: 592,
             seasonGames: 24,
             seasonGoals: 13,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Tottenham Hotspur'
         },
         {
             leagueTeamId: 30,
-            playerId: 592,
+            playerId: 593,
             seasonGames: 38,
             seasonGoals: 2,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Manchester City'
         },
         {
             leagueTeamId: 30,
-            playerId: 593,
+            playerId: 594,
             seasonGames: 22,
             seasonGoals: 7,
             seasonAssists: 0,
@@ -5309,7 +5309,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 594,
+            playerId: 595,
             seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5318,7 +5318,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 595,
+            playerId: 596,
             seasonGames: 8,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5327,7 +5327,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 596,
+            playerId: 597,
             seasonGames: 39,
             seasonGoals: 16,
             seasonAssists: 0,
@@ -5336,7 +5336,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 597,
+            playerId: 598,
             seasonGames: 60,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -5345,7 +5345,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 598,
+            playerId: 599,
             seasonGames: 25,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5354,7 +5354,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 599,
+            playerId: 600,
             seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5363,7 +5363,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 600,
+            playerId: 601,
             seasonGames: 34,
             seasonGoals: 7,
             seasonAssists: 0,
@@ -5372,7 +5372,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 601,
+            playerId: 602,
             seasonGames: 19,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -5381,7 +5381,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 602,
+            playerId: 603,
             seasonGames: 25,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -5390,7 +5390,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 603,
+            playerId: 604,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5399,7 +5399,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 604,
+            playerId: 605,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5408,7 +5408,7 @@ module.exports = {
         },
         {
             leagueTeamId: 30,
-            playerId: 605,
+            playerId: 606,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5417,7 +5417,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 606,
+            playerId: 607,
             seasonGames: 131,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5426,7 +5426,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 607,
+            playerId: 608,
             seasonGames: 22,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -5435,7 +5435,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 608,
+            playerId: 609,
             seasonGames: 52,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5444,7 +5444,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 609,
+            playerId: 610,
             seasonGames: 23,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -5453,7 +5453,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 610,
+            playerId: 611,
             seasonGames: 111,
             seasonGoals: 10,
             seasonAssists: 0,
@@ -5462,7 +5462,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 611,
+            playerId: 612,
             seasonGames: 144,
             seasonGoals: 12,
             seasonAssists: 0,
@@ -5471,7 +5471,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 612,
+            playerId: 613,
             seasonGames: 118,
             seasonGoals: 43,
             seasonAssists: 0,
@@ -5480,7 +5480,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 613,
+            playerId: 614,
             seasonGames: 29,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5489,7 +5489,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 614,
+            playerId: 615,
             seasonGames: 72,
             seasonGoals: 14,
             seasonAssists: 0,
@@ -5498,7 +5498,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 615,
+            playerId: 616,
             seasonGames: 11,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -5507,7 +5507,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 616,
+            playerId: 617,
             seasonGames: 98,
             seasonGoals: 7,
             seasonAssists: 0,
@@ -5516,7 +5516,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 617,
+            playerId: 618,
             seasonGames: 31,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5525,7 +5525,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 618,
+            playerId: 619,
             seasonGames: 76,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -5534,7 +5534,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 619,
+            playerId: 620,
             seasonGames: 23,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -5543,7 +5543,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 620,
+            playerId: 621,
             seasonGames: 38,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5552,7 +5552,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 621,
+            playerId: 622,
             seasonGames: 33,
             seasonGoals: 5,
             seasonAssists: 0,
@@ -5561,16 +5561,16 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 622,
+            playerId: 623,
             seasonGames: 25,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'Olimpia'
+            clubName: 'CD Olimpia'
         },
         {
             leagueTeamId: 31,
-            playerId: 623,
+            playerId: 624,
             seasonGames: 105,
             seasonGoals: 43,
             seasonAssists: 0,
@@ -5579,16 +5579,16 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 624,
+            playerId: 625,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Gent'
         },
         {
             leagueTeamId: 31,
-            playerId: 625,
+            playerId: 626,
             seasonGames: 59,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -5597,7 +5597,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 626,
+            playerId: 627,
             seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5606,7 +5606,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 627,
+            playerId: 628,
             seasonGames: 6,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5615,7 +5615,7 @@ module.exports = {
         },
         {
             leagueTeamId: 31,
-            playerId: 628,
+            playerId: 629,
             seasonGames: 102,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -5624,7 +5624,7 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 629,
+            playerId: 630,
             seasonGames: 15,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5633,8 +5633,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 630,
-            seasonGames: 41,
+            playerId: 631,
+            seasonGames: 42,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -5642,8 +5642,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 631,
-            seasonGames: 3,
+            playerId: 632,
+            seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5651,8 +5651,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 632,
-            seasonGames: 15,
+            playerId: 633,
+            seasonGames: 16,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -5660,8 +5660,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 633,
-            seasonGames: 8,
+            playerId: 634,
+            seasonGames: 9,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5669,7 +5669,7 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 634,
+            playerId: 635,
             seasonGames: 8,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5678,8 +5678,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 635,
-            seasonGames: 4,
+            playerId: 636,
+            seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5687,8 +5687,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 636,
-            seasonGames: 38,
+            playerId: 637,
+            seasonGames: 39,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -5696,8 +5696,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 637,
-            seasonGames: 6,
+            playerId: 638,
+            seasonGames: 7,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -5705,7 +5705,7 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 638,
+            playerId: 639,
             seasonGames: 35,
             seasonGoals: 12,
             seasonAssists: 0,
@@ -5714,17 +5714,17 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 639,
-            seasonGames: 4,
+            playerId: 640,
+            seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Gent'
         },
         {
             leagueTeamId: 32,
-            playerId: 640,
-            seasonGames: 45,
+            playerId: 641,
+            seasonGames: 46,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5732,8 +5732,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 641,
-            seasonGames: 38,
+            playerId: 642,
+            seasonGames: 39,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -5741,8 +5741,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 642,
-            seasonGames: 25,
+            playerId: 643,
+            seasonGames: 26,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -5750,7 +5750,7 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 643,
+            playerId: 644,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5759,8 +5759,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 644,
-            seasonGames: 69,
+            playerId: 645,
+            seasonGames: 70,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5768,8 +5768,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 645,
-            seasonGames: 4,
+            playerId: 646,
+            seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5777,8 +5777,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 646,
-            seasonGames: 4,
+            playerId: 647,
+            seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -5786,8 +5786,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 647,
-            seasonGames: 43,
+            playerId: 648,
+            seasonGames: 44,
             seasonGoals: 7,
             seasonAssists: 0,
             bestScorer: false,
@@ -5795,7 +5795,7 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 648,
+            playerId: 649,
             seasonGames: 6,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -5804,7 +5804,7 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 649,
+            playerId: 650,
             seasonGames: 15,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5813,7 +5813,7 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 650,
+            playerId: 651,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5822,8 +5822,8 @@ module.exports = {
         },
         {
             leagueTeamId: 32,
-            playerId: 651,
-            seasonGames: 16,
+            playerId: 652,
+            seasonGames: 17,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -5831,7 +5831,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 652,
+            playerId: 653,
             seasonGames: 86,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5840,7 +5840,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 653,
+            playerId: 654,
             seasonGames: 55,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -5849,7 +5849,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 654,
+            playerId: 655,
             seasonGames: 13,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5858,7 +5858,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 655,
+            playerId: 656,
             seasonGames: 41,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5867,7 +5867,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 656,
+            playerId: 657,
             seasonGames: 10,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5876,7 +5876,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 657,
+            playerId: 658,
             seasonGames: 85,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5885,7 +5885,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 658,
+            playerId: 659,
             seasonGames: 45,
             seasonGoals: 14,
             seasonAssists: 0,
@@ -5894,7 +5894,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 659,
+            playerId: 660,
             seasonGames: 70,
             seasonGoals: 7,
             seasonAssists: 0,
@@ -5903,16 +5903,16 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 660,
+            playerId: 661,
             seasonGames: 73,
             seasonGoals: 29,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Monaco'
         },
         {
             leagueTeamId: 33,
-            playerId: 661,
+            playerId: 662,
             seasonGames: 63,
             seasonGoals: 21,
             seasonAssists: 0,
@@ -5921,7 +5921,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 662,
+            playerId: 663,
             seasonGames: 70,
             seasonGoals: 7,
             seasonAssists: 0,
@@ -5930,7 +5930,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 663,
+            playerId: 664,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5939,7 +5939,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 664,
+            playerId: 665,
             seasonGames: 12,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -5948,7 +5948,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 665,
+            playerId: 666,
             seasonGames: 18,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -5957,7 +5957,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 666,
+            playerId: 667,
             seasonGames: 8,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5966,7 +5966,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 667,
+            playerId: 668,
             seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -5975,7 +5975,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 668,
+            playerId: 669,
             seasonGames: 4,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -5984,16 +5984,16 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 669,
-            seasonGames: 19,
-            seasonGoals: 1,
+            playerId: 670,
+            seasonGames: 13,
+            seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
-            clubName: 'Boca Juniors'
+            clubName: 'Olimpia'
         },
         {
             leagueTeamId: 33,
-            playerId: 670,
+            playerId: 671,
             seasonGames: 7,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -6002,7 +6002,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 671,
+            playerId: 672,
             seasonGames: 15,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -6011,7 +6011,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 672,
+            playerId: 673,
             seasonGames: 5,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -6020,7 +6020,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 673,
+            playerId: 674,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -6029,7 +6029,7 @@ module.exports = {
         },
         {
             leagueTeamId: 33,
-            playerId: 674,
+            playerId: 675,
             seasonGames: 9,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -6038,8 +6038,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 675,
-            seasonGames: 83,
+            playerId: 676,
+            seasonGames: 84,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6047,7 +6047,7 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 676,
+            playerId: 677,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -6056,7 +6056,7 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 677,
+            playerId: 678,
             seasonGames: 10,
             seasonGoals: 1,
             seasonAssists: 0,
@@ -6065,8 +6065,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 678,
-            seasonGames: 94,
+            playerId: 679,
+            seasonGames: 95,
             seasonGoals: 36,
             seasonAssists: 0,
             bestScorer: false,
@@ -6074,8 +6074,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 679,
-            seasonGames: 104,
+            playerId: 680,
+            seasonGames: 105,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -6083,7 +6083,7 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 680,
+            playerId: 681,
             seasonGames: 11,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -6092,8 +6092,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 681,
-            seasonGames: 16,
+            playerId: 682,
+            seasonGames: 17,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -6101,8 +6101,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 682,
-            seasonGames: 31,
+            playerId: 683,
+            seasonGames: 32,
             seasonGoals: 6,
             seasonAssists: 0,
             bestScorer: false,
@@ -6110,17 +6110,17 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 683,
+            playerId: 684,
             seasonGames: 112,
             seasonGoals: 50,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Leicester City'
         },
         {
             leagueTeamId: 34,
-            playerId: 684,
-            seasonGames: 90,
+            playerId: 685,
+            seasonGames: 91,
             seasonGoals: 29,
             seasonAssists: 0,
             bestScorer: false,
@@ -6128,8 +6128,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 685,
-            seasonGames: 22,
+            playerId: 686,
+            seasonGames: 23,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -6137,7 +6137,7 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 686,
+            playerId: 687,
             seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -6146,8 +6146,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 687,
-            seasonGames: 22,
+            playerId: 688,
+            seasonGames: 23,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -6155,8 +6155,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 688,
-            seasonGames: 25,
+            playerId: 689,
+            seasonGames: 26,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -6164,8 +6164,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 689,
-            seasonGames: 27,
+            playerId: 690,
+            seasonGames: 28,
             seasonGoals: 7,
             seasonAssists: 0,
             bestScorer: false,
@@ -6173,7 +6173,7 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 690,
+            playerId: 691,
             seasonGames: 41,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -6182,8 +6182,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 691,
-            seasonGames: 109,
+            playerId: 692,
+            seasonGames: 110,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -6191,8 +6191,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 692,
-            seasonGames: 4,
+            playerId: 693,
+            seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6200,8 +6200,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 693,
-            seasonGames: 41,
+            playerId: 694,
+            seasonGames: 42,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6209,8 +6209,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 694,
-            seasonGames: 31,
+            playerId: 695,
+            seasonGames: 32,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -6218,8 +6218,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 695,
-            seasonGames: 39,
+            playerId: 696,
+            seasonGames: 40,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6227,8 +6227,8 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 696,
-            seasonGames: 81,
+            playerId: 697,
+            seasonGames: 82,
             seasonGoals: 10,
             seasonAssists: 0,
             bestScorer: false,
@@ -6236,7 +6236,7 @@ module.exports = {
         },
         {
             leagueTeamId: 34,
-            playerId: 697,
+            playerId: 698,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -6245,8 +6245,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 698,
-            seasonGames: 33,
+            playerId: 699,
+            seasonGames: 34,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6254,8 +6254,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 699,
-            seasonGames: 31,
+            playerId: 700,
+            seasonGames: 32,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6263,7 +6263,7 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 700,
+            playerId: 701,
             seasonGames: 35,
             seasonGoals: 3,
             seasonAssists: 0,
@@ -6272,8 +6272,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 701,
-            seasonGames: 17,
+            playerId: 702,
+            seasonGames: 18,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6281,8 +6281,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 702,
-            seasonGames: 1,
+            playerId: 703,
+            seasonGames: 2,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6290,8 +6290,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 703,
-            seasonGames: 3,
+            playerId: 704,
+            seasonGames: 4,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6299,8 +6299,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 704,
-            seasonGames: 38,
+            playerId: 705,
+            seasonGames: 39,
             seasonGoals: 12,
             seasonAssists: 0,
             bestScorer: false,
@@ -6308,8 +6308,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 705,
-            seasonGames: 19,
+            playerId: 706,
+            seasonGames: 20,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -6317,17 +6317,17 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 706,
-            seasonGames: 93,
-            seasonGoals: 52,
+            playerId: 707,
+            seasonGames: 94,
+            seasonGoals: 53,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Bayern Munich'
         },
         {
             leagueTeamId: 35,
-            playerId: 707,
-            seasonGames: 49,
+            playerId: 708,
+            seasonGames: 50,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -6335,8 +6335,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 708,
-            seasonGames: 56,
+            playerId: 709,
+            seasonGames: 57,
             seasonGoals: 12,
             seasonAssists: 0,
             bestScorer: false,
@@ -6344,7 +6344,7 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 709,
+            playerId: 710,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -6353,8 +6353,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 710,
-            seasonGames: 49,
+            playerId: 711,
+            seasonGames: 50,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -6362,8 +6362,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 711,
-            seasonGames: 15,
+            playerId: 712,
+            seasonGames: 16,
             seasonGoals: 4,
             seasonAssists: 0,
             bestScorer: false,
@@ -6371,7 +6371,7 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 712,
+            playerId: 713,
             seasonGames: 57,
             seasonGoals: 4,
             seasonAssists: 0,
@@ -6380,8 +6380,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 713,
-            seasonGames: 97,
+            playerId: 714,
+            seasonGames: 98,
             seasonGoals: 19,
             seasonAssists: 0,
             bestScorer: false,
@@ -6389,7 +6389,7 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 714,
+            playerId: 715,
             seasonGames: 43,
             seasonGoals: 2,
             seasonAssists: 0,
@@ -6398,8 +6398,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 715,
-            seasonGames: 6,
+            playerId: 716,
+            seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6407,17 +6407,17 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 716,
-            seasonGames: 31,
-            seasonGoals: 4,
+            playerId: 717,
+            seasonGames: 32,
+            seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Napoli'
         },
         {
             leagueTeamId: 35,
-            playerId: 717,
-            seasonGames: 61,
+            playerId: 718,
+            seasonGames: 62,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -6425,7 +6425,7 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 718,
+            playerId: 719,
             seasonGames: 3,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -6434,8 +6434,8 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 719,
-            seasonGames: 43,
+            playerId: 720,
+            seasonGames: 44,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6443,7 +6443,7 @@ module.exports = {
         },
         {
             leagueTeamId: 35,
-            playerId: 720,
+            playerId: 721,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -6452,8 +6452,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 721,
-            seasonGames: 16,
+            playerId: 722,
+            seasonGames: 17,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6461,7 +6461,7 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 722,
+            playerId: 723,
             seasonGames: 18,
             seasonGoals: 0,
             seasonAssists: 0,
@@ -6470,8 +6470,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 723,
-            seasonGames: 24,
+            playerId: 724,
+            seasonGames: 26,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6479,8 +6479,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 724,
-            seasonGames: 51,
+            playerId: 725,
+            seasonGames: 52,
             seasonGoals: 5,
             seasonAssists: 0,
             bestScorer: false,
@@ -6488,8 +6488,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 725,
-            seasonGames: 59,
+            playerId: 726,
+            seasonGames: 61,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -6497,8 +6497,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 726,
-            seasonGames: 20,
+            playerId: 727,
+            seasonGames: 22,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6506,8 +6506,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 727,
-            seasonGames: 50,
+            playerId: 728,
+            seasonGames: 51,
             seasonGoals: 18,
             seasonAssists: 0,
             bestScorer: false,
@@ -6515,8 +6515,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 728,
-            seasonGames: 47,
+            playerId: 729,
+            seasonGames: 48,
             seasonGoals: 2,
             seasonAssists: 0,
             bestScorer: false,
@@ -6524,8 +6524,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 729,
-            seasonGames: 47,
+            playerId: 730,
+            seasonGames: 49,
             seasonGoals: 10,
             seasonAssists: 0,
             bestScorer: false,
@@ -6533,17 +6533,17 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 730,
-            seasonGames: 51,
+            playerId: 731,
+            seasonGames: 53,
             seasonGoals: 14,
             seasonAssists: 0,
-            bestScorer: true,
+            bestScorer: false,
             clubName: 'Liverpool'
         },
         {
             leagueTeamId: 36,
-            playerId: 731,
-            seasonGames: 24,
+            playerId: 732,
+            seasonGames: 26,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -6551,8 +6551,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 732,
-            seasonGames: 3,
+            playerId: 733,
+            seasonGames: 5,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6560,8 +6560,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 733,
-            seasonGames: 19,
+            playerId: 734,
+            seasonGames: 21,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6569,17 +6569,17 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 734,
-            seasonGames: 27,
-            seasonGoals: 9,
+            playerId: 735,
+            seasonGames: 28,
+            seasonGoals: 10,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Amiens'
         },
         {
             leagueTeamId: 36,
-            playerId: 735,
-            seasonGames: 10,
+            playerId: 736,
+            seasonGames: 12,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -6587,8 +6587,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 736,
-            seasonGames: 25,
+            playerId: 737,
+            seasonGames: 26,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6596,8 +6596,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 737,
-            seasonGames: 18,
+            playerId: 738,
+            seasonGames: 20,
             seasonGoals: 1,
             seasonAssists: 0,
             bestScorer: false,
@@ -6605,17 +6605,17 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 738,
-            seasonGames: 14,
-            seasonGoals: 2,
+            playerId: 739,
+            seasonGames: 16,
+            seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'Rennes'
         },
         {
             leagueTeamId: 36,
-            playerId: 739,
-            seasonGames: 5,
+            playerId: 740,
+            seasonGames: 7,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6623,8 +6623,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 740,
-            seasonGames: 17,
+            playerId: 741,
+            seasonGames: 19,
             seasonGoals: 3,
             seasonAssists: 0,
             bestScorer: false,
@@ -6632,8 +6632,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 741,
-            seasonGames: 35,
+            playerId: 742,
+            seasonGames: 36,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6641,8 +6641,8 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 742,
-            seasonGames: 9,
+            playerId: 743,
+            seasonGames: 10,
             seasonGoals: 0,
             seasonAssists: 0,
             bestScorer: false,
@@ -6650,7 +6650,7 @@ module.exports = {
         },
         {
             leagueTeamId: 36,
-            playerId: 743,
+            playerId: 744,
             seasonGames: 1,
             seasonGoals: 0,
             seasonAssists: 0,

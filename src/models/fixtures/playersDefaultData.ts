@@ -1790,8 +1790,8 @@ module.exports = {
             position: 'DF'
         },
         {
-            firstName: 'Manuel',
-            lastName: 'Lanzini',
+            firstName: 'Enzo',
+            lastName: 'Pérez',
             isActive: true,
             position: 'MF'
         },
@@ -4016,8 +4016,8 @@ module.exports = {
             position: 'DF'
         },
         {
-            firstName: 'Frank',
-            lastName: 'Fabra',
+            firstName: 'Farid',
+            lastName: 'Díaz',
             isActive: true,
             position: 'DF'
         },
@@ -4464,6 +4464,6 @@ module.exports = {
             lastName: 'Gomis',
             isActive: true,
             position: 'GK'
-        }
+        },
     ]
 }

@@ -60,7 +60,17 @@ module.exports = {
         {
             sportId: 1,
             specialBetType: 2,
+            name: 'Druhé místo skupiny A'
+        },
+        {
+            sportId: 1,
+            specialBetType: 2,
             name: 'Vítěz skupiny B'
+        },
+        {
+            sportId: 1,
+            specialBetType: 2,
+            name: 'Druhé místo skupiny B'
         },
         {
             sportId: 1,
@@ -70,7 +80,17 @@ module.exports = {
         {
             sportId: 1,
             specialBetType: 2,
+            name: 'Druhé místo skupiny C'
+        },
+        {
+            sportId: 1,
+            specialBetType: 2,
             name: 'Vítěz skupiny D'
+        },
+        {
+            sportId: 1,
+            specialBetType: 2,
+            name: 'Druhé místo skupiny D'
         },
         {
             sportId: 1,
@@ -80,7 +100,17 @@ module.exports = {
         {
             sportId: 1,
             specialBetType: 2,
+            name: 'Druhé místo skupiny E'
+        },
+        {
+            sportId: 1,
+            specialBetType: 2,
             name: 'Vítěz skupiny F'
+        },
+        {
+            sportId: 1,
+            specialBetType: 2,
+            name: 'Druhé místo skupiny F'
         },
         {
             sportId: 1,
@@ -90,47 +120,17 @@ module.exports = {
         {
             sportId: 1,
             specialBetType: 2,
+            name: 'Druhé místo skupiny G'
+        },
+        {
+            sportId: 1,
+            specialBetType: 2,
             name: 'Vítěz skupiny H'
         },
         {
             sportId: 1,
             specialBetType: 2,
-            name: 'Druhý postupující ze skupiny A'
-        },
-        {
-            sportId: 1,
-            specialBetType: 2,
-            name: 'Druhý postupující ze skupiny B'
-        },
-        {
-            sportId: 1,
-            specialBetType: 2,
-            name: 'Druhý postupující ze skupiny C'
-        },
-        {
-            sportId: 1,
-            specialBetType: 2,
-            name: 'Druhý postupující ze skupiny D'
-        },
-        {
-            sportId: 1,
-            specialBetType: 2,
-            name: 'Druhý postupující ze skupiny E'
-        },
-        {
-            sportId: 1,
-            specialBetType: 2,
-            name: 'Druhý postupující ze skupiny F'
-        },
-        {
-            sportId: 1,
-            specialBetType: 2,
-            name: 'Druhý postupující ze skupiny G'
-        },
-        {
-            sportId: 1,
-            specialBetType: 2,
-            name: 'Druhý postupující ze skupiny H'
+            name: 'Druhé místo skupiny H'
         },
         {
             sportId: 1,
