@@ -2,54 +2,6 @@ module.exports = {
 
     Players: [
         {
-            firstName: 'Tomáš',
-            lastName: 'Plekanec',
-            isActive: true,
-            position: ''
-        },
-        {
-            firstName: 'Brendan',
-            lastName: 'Gallagher',
-            isActive: true,
-            position: ''
-        },
-        {
-            firstName: 'John',
-            lastName: 'Tavares',
-            isActive: true,
-            position: ''
-        },
-        {
-            firstName: 'Brook',
-            lastName: 'Nelson',
-            isActive: true,
-            position: ''
-        },
-        {
-            firstName: 'Sidney',
-            lastName: 'Crosby',
-            isActive: true,
-            position: ''
-        },
-        {
-            firstName: 'Jevgenij',
-            lastName: 'Malkin',
-            isActive: true,
-            position: ''
-        },
-        {
-            firstName: 'Connor',
-            lastName: 'McDavid',
-            isActive: true,
-            position: ''
-        },
-        {
-            firstName: 'Milan',
-            lastName: 'Lucic',
-            isActive: true,
-            position: ''
-        },
-        {
             firstName: 'Essam',
             lastName: 'El-Hadary',
             isActive: true,
@@ -1790,8 +1742,8 @@ module.exports = {
             position: 'DF'
         },
         {
-            firstName: 'Manuel',
-            lastName: 'Lanzini',
+            firstName: 'Enzo',
+            lastName: 'Pérez',
             isActive: true,
             position: 'MF'
         },
@@ -3945,7 +3897,7 @@ module.exports = {
         },
         {
             firstName: 'Carlos',
-            lastName: 'Sánchez',
+            lastName: 'Sánchez2',
             isActive: true,
             position: 'MF'
         },
@@ -4016,8 +3968,8 @@ module.exports = {
             position: 'DF'
         },
         {
-            firstName: 'Frank',
-            lastName: 'Fabra',
+            firstName: 'Farid',
+            lastName: 'Díaz',
             isActive: true,
             position: 'DF'
         },
