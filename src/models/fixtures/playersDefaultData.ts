@@ -4464,6 +4464,6 @@ module.exports = {
             lastName: 'Gomis',
             isActive: true,
             position: 'GK'
-        },
+        }
     ]
 }
