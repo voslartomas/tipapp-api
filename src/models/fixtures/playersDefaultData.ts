@@ -3897,7 +3897,7 @@ module.exports = {
         },
         {
             firstName: 'Carlos',
-            lastName: 'Sánchez',
+            lastName: 'Sánchez2',
             isActive: true,
             position: 'MF'
         },
