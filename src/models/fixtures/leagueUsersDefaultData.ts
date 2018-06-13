@@ -104,17 +104,10 @@ module.exports = {
         },
         {
             leagueId: 3,
-            userId: 16,
-            paid: false,
-            active: true,
-            admin: 0
-        },
-        {
-            leagueId: 3,
             userId: 17,
             paid: false,
             active: true,
             admin: 0
-        },
+        }
     ]
 }
