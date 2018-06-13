@@ -3,6 +3,7 @@ import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import User from '../models/user.model'
 import { IUser, ILeague } from '../types/models.d'
+const bCrypt = require('bcrypt-nodejs')
 
 @Path('/api/users')
 export default class UsersController {
@@ -70,6 +71,15 @@ export default class UsersController {
     } catch (e) {
       throw new Errors.NotFoundError('User not found.')
     }
+  }
+
+  @PUT
+  @Path('/password')
+  async changePassword(password: any): Promise<IUser> {
+    const user = this.context.request['user']
+    const dbUser = await this.database.models.User.findById(user.id)
+    const passwordHash = await bCrypt.hashSync(password.password, dbUser.salt, undefined)
+    return await dbUser.update({ password: passwordHash })
   }
 
   @POST

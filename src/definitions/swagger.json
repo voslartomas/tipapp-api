@@ -3134,6 +3134,37 @@
 				]
 			}
 		},
+		"/api/users/password": {
+			"put": {
+				"operationId": "UsersChangePassword",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUser"
+						}
+					}
+				},
+				"description": "",
+				"consumes": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"description": "",
+						"in": "body",
+						"name": "password",
+						"required": true,
+						"schema": {
+							"type": "object"
+						}
+					}
+				]
+			}
+		},
 		"/api/user-settings": {
 			"get": {
 				"operationId": "UserSettingsGetUserSettings",
