@@ -108,7 +108,7 @@ module.exports = {
         },
         {
             firstName: 'Filip',
-            lastName: 'Bartoš',
+            lastName: 'Bartoš, Bc, Ing, MS, MA, PhD, ScD',
             username: 'fbartos',
             email: undefined,
             mobileNumber: undefined,
