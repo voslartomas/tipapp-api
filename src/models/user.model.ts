@@ -51,4 +51,8 @@ export default class User extends Model<User> {
   @Is('isString', value => isString(value))
   @Column
   pushId: string
+
+  @AllowNull(false)
+  @Column
+  notifyHours: number = 2
 }

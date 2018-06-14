@@ -16,5 +16,9 @@
       "port": 5432,
       "modelPath": "/../models/*.model.js"
   },
+  "redis": {
+    "host": "tipapp.iuour7.0001.euc1.cache.amazonaws.com",
+    "port": 6379
+  },
   "security": true
 }
