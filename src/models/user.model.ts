@@ -53,7 +53,7 @@ export default class User extends Model<User> {
   pushId: string
 
   @AllowNull(false)
-  @Default(0)
+  @Default(2)
   @Column
   notifyHours: number
 }
