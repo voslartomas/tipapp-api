@@ -34,7 +34,7 @@ export default class PushNotifications {
 
         const notifyBefore = moment(new Date()).add(user[0].notifyHours, 'hours').utc().format('YYYY-MM-DD HH:mm:ss')
         const now = moment(new Date()).utc().format('YYYY-MM-DD HH:mm:ss')
-        console.log('User', user, user.previous().notifyHours, notifyBefore)
+        console.log('User', user, user[0].previous().notifyHours, notifyBefore)
         const matches = await this.database.query(`
           SELECT "Match".* FROM "Match" LEFT JOIN "UserBet" ON "Match"."id" = "UserBet"."matchId" AND "UserBet"."leagueUserId" = ${leagueUser.id}
           WHERE "UserBet"."matchId" IS NULL
