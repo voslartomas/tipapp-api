@@ -52,8 +52,6 @@ export default class PushNotifications {
             this.sendPushNotification(user.pushId, 'tiapp') // Android
             this.sendPushNotification(user.pushId, 'tipapp') // iOS
             await this.cache.set(cacheKey, { count: matches.length }, 24 * 60 * 60 * 60)
-          } else {
-            await this.cache.del(cacheKey)
           }
         }
 
