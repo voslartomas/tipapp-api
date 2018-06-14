@@ -4416,6 +4416,18 @@ module.exports = {
             lastName: 'Gomis',
             isActive: true,
             position: 'GK'
+        },
+        {
+            firstName: '',
+            lastName: 'Vlastní gól',
+            isActive: true,
+            position: 'DF'
+        },
+        {
+            firstName: '',
+            lastName: 'Žádný střelec',
+            isActive: true,
+            position: 'FW'
         }
     ]
 }

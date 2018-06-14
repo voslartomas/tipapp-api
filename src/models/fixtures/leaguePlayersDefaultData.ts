@@ -6624,6 +6624,582 @@ module.exports = {
             seasonAssists: 0,
             bestScorer: false,
             clubName: 'SPAL'
+        },
+        {
+            leagueTeamId: 5,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 6,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 7,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 8,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 9,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 10,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 11,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 12,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 13,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 14,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 15,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 16,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 17,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 18,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 19,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 20,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 21,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 22,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 23,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 24,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 25,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 26,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 27,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 28,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 29,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 30,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 31,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 32,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 33,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 34,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 35,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 36,
+            playerId: 737,
+            seasonGames: 1,
+            seasonGoals: 1000,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 5,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 6,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 7,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 8,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 9,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 10,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 11,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 12,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 13,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 14,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 15,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 16,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 17,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 18,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 19,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 20,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 21,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 22,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 23,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 24,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 25,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 26,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 27,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 28,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 29,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 30,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 31,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 32,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 33,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 34,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 35,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
+        },
+        {
+            leagueTeamId: 36,
+            playerId: 738,
+            seasonGames: 1000,
+            seasonGoals: 1,
+            seasonAssists: 0,
+            bestScorer: false,
+            clubName: ''
         }
     ]
 }

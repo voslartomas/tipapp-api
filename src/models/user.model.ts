@@ -1,4 +1,4 @@
-import { Table, Column, Model, AllowNull, IsEmail, Is, NotEmpty, Length } from 'sequelize-typescript'
+import { Table, Column, Model, AllowNull, IsEmail, Is, NotEmpty, Length, Default } from 'sequelize-typescript'
 import { isString, isCzechMobileNumber } from  '../utils/modelValidation'
 
 @Table({
@@ -51,4 +51,9 @@ export default class User extends Model<User> {
   @Is('isString', value => isString(value))
   @Column
   pushId: string
+
+  @AllowNull(false)
+  @Default(0)
+  @Column
+  notifyHours: number
 }

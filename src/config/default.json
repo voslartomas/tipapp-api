@@ -18,6 +18,11 @@
       "port": 5436,
       "modelPath": "/../models/*.model.js"
   },
+  "redis": {
+    "host": "localhost",
+    "port": 6379
+  },
+  "appcenter_push_token": "aa1a124fa04f708bc2e0dd4e6b60c5e7650a4e8d",
   "security": true,
   "points": {
     "hockey": {

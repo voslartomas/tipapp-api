@@ -10,7 +10,9 @@ import { Sequelize } from 'sequelize-typescript'
 import loggerMiddleware from './middlewares/logger'
 import Database from './services/database'
 import JWTPassport from './security/passport'
+import PushNotifications from './services/pushNotifications'
 import * as cors from 'cors'
+import * as cron from 'node-cron'
 
 export class Server {
 
@@ -24,6 +26,9 @@ export class Server {
 
   @Inject
   private jwtPassport: JWTPassport
+
+  @Inject
+  private pushNotifications: PushNotifications
 
   constructor() {
     this.app = express()
@@ -98,6 +103,11 @@ export class Server {
    * @returns {Promise<any>}
    */
   public start(): Promise<any> {
+    cron.schedule('* * * * *', () => {
+      console.log('Running push notification service')
+      this.pushNotifications.sendPushNotifications()
+    })
+
     return new Promise<any>((resolve, reject) => {
       this.server = this.app.listen(config.get('port'), config.get('port'), (err: any) => {
         if (err) {
