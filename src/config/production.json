@@ -17,7 +17,7 @@
       "modelPath": "/../models/*.model.js"
   },
   "redis": {
-    "host": "rtipapp-cache.utcfyn.ng.0001.apse1.cache.amazonaws.com",
+    "host": "localhost",
     "port": 6379
   },
   "security": true
