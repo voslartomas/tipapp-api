@@ -28,10 +28,12 @@ export default class BetEvaluator {
       where: {matchId: match.id}})
     const evaluators: Evaluator[] = await this.database.models.Evaluator.findAll({where: {leagueId: match.leagueId, entity: 'matches'}})
 
-    userBets.forEach(userBet => {
+    for (const i in userBets) {
+      const userBet = userBets[i]
       userBet.totalPoints = 0
 
-      evaluators.forEach(e => {
+      for (const x in evaluators) {
+        const e = evaluators[x]
         const evaluator = this.getEvaluatorByType(e.type)
 
         if (!evaluator) return undefined
@@ -46,10 +48,10 @@ export default class BetEvaluator {
         if (result) {
           userBet.totalPoints += parseInt(e.points)
         }
-      })
+      }
 
       userBet.save()
-    })
+    }
   }
 
   async updateSerieBet(betSerie: LeagueSpecialBetSerie) {
