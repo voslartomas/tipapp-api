@@ -65,8 +65,9 @@ export default class MatchesController {
       })
 
       const result = await dbMatch.update(match)
+      const matchToEvaluate = await this.database.models.Match.findById(matchId)
 
-      await this.betEvaluator.updateMatchBets(match)
+      await this.betEvaluator.updateMatchBets(matchToEvaluate)
 
       return result
     } else {
