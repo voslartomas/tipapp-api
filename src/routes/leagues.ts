@@ -102,7 +102,7 @@ export default class LeaguesController {
       whereDate = `"Match"."dateTime" < '${today}'`
     }
 
-    return this.database.query(`SELECT "Match"."overtime" as "matchOvertime",
+    return this.database.query(`SELECT "Match"."overtime" as "matchOvertime", "Match"."isEvaluated",
       "Match"."dateTime" as "matchDateTime", "Match"."id" AS "matchId1", "Match"."homeScore" AS "matchHomeScore", "Match"."awayScore" AS "matchAwayScore",
       "UserBet".*, "Match"."homeTeamId", "Match"."awayTeamId", "UserBet"."id",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Match"."homeTeamId") AS "homeTeam",
