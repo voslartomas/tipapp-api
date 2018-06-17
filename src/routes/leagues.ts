@@ -39,14 +39,6 @@ export default class LeaguesController {
   }
 
   @GET
-  @Path('/:leagueId/bets/specials/')
-  async getBetsSeries(@PathParam('leagueId') leagueId: number) {
-    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
-
-    return this.database.query(``)
-  }
-
-  @GET
   @Path('/:leagueId/users/bets/series/')
   async getBetsSpecial(@PathParam('leagueId') leagueId: number) {
     const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
@@ -127,6 +119,30 @@ export default class LeaguesController {
       ORDER BY "totalPoints" DESC`, { type: this.database.QueryTypes.SELECT})
 
     return users
+  }
+
+  @GET
+  @Path('/:leagueId/users/bets/single/:singleId')
+  async getBetsSingleAllUsers(@PathParam('leagueId') leagueId: number, @PathParam('singleId') singleId: number) {
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+
+    return await this.database.models.UserSpecialBetSingle.findAll({include: [
+        {model: this.database.models.LeagueUser, as: 'leagueUser', include: [this.database.models.User]},
+        {model: this.database.models.LeagueTeam, as: 'teamResult', include: [this.database.models.Team]},
+        {model: this.database.models.LeaguePlayer, as: 'playerResult', include: [this.database.models.Player]},
+        ],
+        where: {leagueSpecialBetSingleId: singleId}})
+  }
+
+  @GET
+  @Path('/:leagueId/users/bets/match/:matchId')
+  async getBetsMatchAllUsers(@PathParam('leagueId') leagueId: number, @PathParam('matchId') matchId: number) {
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+
+    return await this.database.models.UserBet.findAll({include: [
+        {model: this.database.models.LeagueUser, as: 'user', include: [this.database.models.User]}
+        ],
+        where: {matchId: matchId}})
   }
 
   @GET
