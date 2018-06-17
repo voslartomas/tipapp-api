@@ -75,7 +75,8 @@ export default class PushNotifications {
           'notification_content' : {
               'name' : 'Tipovani',
               'title' : 'Je čas tipovat',
-              'body' : 'Za chvíli začíná zápas a ty ještě nemáš natipováno!'
+              'body' : 'Za chvíli začíná zápas a ty ještě nemáš natipováno!',
+              'custom_data': { sound: 'default' }
           },
             'notification_target' : {
               'type' : 'devices_target',
