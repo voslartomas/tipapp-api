@@ -140,7 +140,8 @@ export default class LeaguesController {
     const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
 
     return await this.database.models.UserBet.findAll({include: [
-        {model: this.database.models.LeagueUser, as: 'user', include: [this.database.models.User]}
+        {model: this.database.models.LeagueUser, as: 'user', include: [this.database.models.User]},
+        {model: this.database.models.LeaguePlayer, as: 'scorer', include: [this.database.models.Player]}
         ],
         where: {matchId: matchId}})
   }
