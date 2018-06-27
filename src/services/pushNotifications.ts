@@ -49,20 +49,17 @@ export default class PushNotifications {
           console.log(match.id, notified, cacheKey)
           if (!notified) {
             console.log('Notifying', user.firstName, user.pushId, match.id)
-            this.sendPushNotification(user.pushId, 'tiapp') // Android
-            this.sendPushNotification(user.pushId, 'tipapp') // iOS
+            const campaign = `${user.firstName} ${user.firstName} ${match.id}`
+            this.sendPushNotification(campaign, user.pushId, 'tiapp') // Android
+            this.sendPushNotification(campaign, user.pushId, 'tipapp') // iOS
             await this.cache.set(cacheKey, { count: matches.length }, 24 * 60 * 60 * 60)
           }
         }
-
-        // console.log('Matches', matches, leagueUser.id)
       }
     }
-
-    // return await this.database.query(``, { type: this.database.QueryTypes.SELECT})
   }
 
-  sendPushNotification(deviceId, app) {
+  sendPushNotification(campaign, deviceId, app) {
     request({
       url: `https://api.appcenter.ms/v0.1/apps/t.voslar/${app}/push/notifications`,
       method: 'POST',

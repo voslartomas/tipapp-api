@@ -68,10 +68,6 @@ export class Server {
     if (config.get('swagger.enabled')) {
       RestServer.swagger(this.app, `${config.get('swagger.config_path')}`, '/api-docs', `localhost:${config.get('port')}`, ['http'])
     }
-
-    this.database.sync().then(() => {}).catch((e) => {
-      console.error(e)
-    })
   }
 
   public getApp() {
