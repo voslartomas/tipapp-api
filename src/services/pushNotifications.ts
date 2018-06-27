@@ -70,7 +70,7 @@ export default class PushNotifications {
       },
       body: {
           'notification_content' : {
-              'name' : 'Tipovani',
+              'name' : campaign,
               'title' : 'Je čas tipovat',
               'body' : 'Za chvíli začíná zápas a ty ještě nemáš natipováno!',
               'custom_data': { sound: 'default' }
