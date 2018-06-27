@@ -49,7 +49,7 @@ export default class PushNotifications {
           console.log(match.id, notified, cacheKey)
           if (!notified) {
             console.log('Notifying', user.firstName, user.pushId, match.id)
-            const campaign = `${user.firstName} ${user.firstName} ${match.id}`
+            const campaign = `${user.firstName} ${user.lastName} ${match.id}`
             this.sendPushNotification(campaign, user.pushId, 'tiapp') // Android
             this.sendPushNotification(campaign, user.pushId, 'tipapp') // iOS
             await this.cache.set(cacheKey, { count: matches.length }, 24 * 60 * 60 * 60)
