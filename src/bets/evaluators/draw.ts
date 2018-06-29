@@ -14,6 +14,10 @@ export default class Draw implements IEvaluator {
             return false
         }
 
+        if (tip.overtime && result.overtime) {
+          return true
+        }
+
         return tip.homeScore - tip.awayScore === 0 && result.homeScore - result.awayScore === 0
             && tip.overtime === result.overtime
     }
