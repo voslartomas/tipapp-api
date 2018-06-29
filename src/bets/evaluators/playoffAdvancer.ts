@@ -10,7 +10,8 @@ export default class PlayoffAdvancer implements IEvaluator {
 
     evaluateMatch(result: Match, tip: UserBet): boolean {
         if (result.isPlayoffGame) {
-          return result.homeWinner === tip.homeWinner
+          return ((tip.homeScore - tip.awayScore > 0 && result.homeScore - result.awayScore > 0) ||
+          (tip.homeScore - tip.awayScore < 0 && result.homeScore - result.awayScore < 0))
         } else {
           return false
         }
