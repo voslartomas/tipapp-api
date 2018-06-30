@@ -6,6 +6,7 @@ import UserSpecialBetSerie from '../../models/userSpecialBetSerie.model'
 import Exact from './exact'
 import Draw from './draw'
 import Winner from './winner'
+import { getRegularScore } from '../../utils/regularScore'
 
 export default class ScoreDifference implements IEvaluator {
   type = 'scoreDifference'
@@ -18,9 +19,17 @@ export default class ScoreDifference implements IEvaluator {
     if (new Draw().evaluateMatch(result, tip)) {
       return false
     }
+
     // on football there are score difference points only with winner
     if (new Winner().evaluateMatch(result, tip)) {
-      return tip.homeScore - tip.awayScore === result.homeScore - result.awayScore && result.overtime === tip.overtime
+      const data = getRegularScore(result, tip)
+
+      const homeScoreRegularTime = data.homeScoreRegularTime
+      const awayScoreRegularTime = data.awayScoreRegularTime
+      const homeTipScoreRegularTime = data.homeTipScoreRegularTime
+      const awayTipScoreRegularTime = data.awayTipScoreRegularTime
+
+      return homeTipScoreRegularTime - awayTipScoreRegularTime === homeScoreRegularTime - awayScoreRegularTime
     }
 
   }

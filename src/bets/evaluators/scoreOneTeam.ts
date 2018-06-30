@@ -5,6 +5,7 @@ import UserBet from '../../models/userBet.model'
 import UserSpecialBetSerie from '../../models/userSpecialBetSerie.model'
 import Exact from './exact'
 import Draw from './draw'
+import { getRegularScore } from '../../utils/regularScore'
 
 export default class ScoreOneTeam implements IEvaluator {
   type = 'scoreOneTeam'
@@ -18,9 +19,16 @@ export default class ScoreOneTeam implements IEvaluator {
       return false
     }
 
-    return ((tip.homeScore === result.homeScore || tip.awayScore === result.awayScore) && !result.overtime) ||
-    (result.overtime && result.homeScore < tip.awayScore && tip.homeScore === result.homeScore) ||
-    (result.overtime && result.awayScore < tip.homeScore && tip.awayScore === result.awayScore)
+    const data = getRegularScore(result, tip)
+
+    const homeScoreRegularTime = data.homeScoreRegularTime
+    const awayScoreRegularTime = data.awayScoreRegularTime
+    const homeTipScoreRegularTime = data.homeTipScoreRegularTime
+    const awayTipScoreRegularTime = data.awayTipScoreRegularTime
+
+    return (homeTipScoreRegularTime === homeScoreRegularTime || awayTipScoreRegularTime === awayScoreRegularTime) ||
+    (homeScoreRegularTime < awayTipScoreRegularTime && homeTipScoreRegularTime === homeScoreRegularTime) ||
+    (awayScoreRegularTime < homeTipScoreRegularTime && awayTipScoreRegularTime === awayScoreRegularTime)
   }
 
   evaluateSerie(result: LeagueSpecialBetSerie, tip: UserSpecialBetSerie): boolean {
