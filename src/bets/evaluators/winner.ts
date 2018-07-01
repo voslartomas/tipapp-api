@@ -4,6 +4,8 @@ import LeagueSpecialBetSerie from '../../models/leagueSpecialBetSerie.model'
 import UserBet from '../../models/userBet.model'
 import UserSpecialBetSerie from '../../models/userSpecialBetSerie.model'
 import Exact from './exact'
+import Draw from './draw'
+import { getRegularScore } from '../../utils/regularScore'
 
 export default class Winner implements IEvaluator {
   type = 'winner'
@@ -14,8 +16,19 @@ export default class Winner implements IEvaluator {
       return false
     }
 
-    return ((tip.homeScore - tip.awayScore > 0 && result.homeScore - result.awayScore > 0) ||
-    (tip.homeScore - tip.awayScore < 0 && result.homeScore - result.awayScore < 0))
+    if (new Draw().evaluateMatch(result, tip)) {
+      return false
+    }
+
+    const data = getRegularScore(result, tip)
+
+    const homeScoreRegularTime = data.homeScoreRegularTime
+    const awayScoreRegularTime = data.awayScoreRegularTime
+    const homeTipScoreRegularTime = data.homeTipScoreRegularTime
+    const awayTipScoreRegularTime = data.awayTipScoreRegularTime
+
+    return ((homeTipScoreRegularTime - awayTipScoreRegularTime > 0 && homeScoreRegularTime - awayScoreRegularTime > 0) ||
+    (homeTipScoreRegularTime - awayTipScoreRegularTime < 0 && homeScoreRegularTime - awayScoreRegularTime < 0))
   }
 
   evaluateSerie(result: LeagueSpecialBetSerie, tip: UserSpecialBetSerie): boolean {
