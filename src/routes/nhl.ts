@@ -84,7 +84,7 @@ export default class NHLController {
 
   private getStats (stats) {
     const length = stats.body.people[0].stats[0].splits.length
-    return stats.body.people[0].stats[0].splits[length - 1].stat
+    return stats.body.people[0].stats[0].splits[length - 1] && stats.body.people[0].stats[0].splits[length - 1].stat
   }
 
   @GET
