@@ -13,7 +13,6 @@ export default class Player extends Model<Player> {
 
   @AllowNull(true)
   @Is('isString', value => isString(value))
-  @Length({msg: 'Length of first name', min: 3, max: 50})
   @Column
   lastName: string
 
