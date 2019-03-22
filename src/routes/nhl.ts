@@ -70,14 +70,14 @@ export default class NHLController {
         const playoffStats = this.getStats(playerPlayoffStats)
 
         const player = await this.database.models.LeaguePlayer.findOne({ where: { playerId: dbPlayer.id } }) as LeaguePlayer
-        player.playoffGames = playoffStats.games
-        player.playoffGoals = playoffStats.goals
-        player.playoffAssists = playoffStats.assists
-        player.seasonGames = regularStats.games
-        player.seasonGoals = regularStats.goals
-        player.seasonAssists = regularStats.assists
-
-        await player.update(player)
+        await player.update({
+          playoffGames: playoffStats.games,
+          playoffGoals: playoffStats.goals,
+          playoffAssists: playoffStats.assists,
+          seasonGames: regularStats.games,
+          seasonGoals: regularStats.goals,
+          seasonAssists: regularStats.assists
+        })
       })
     })
   }
