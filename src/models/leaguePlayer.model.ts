@@ -66,4 +66,23 @@ export default class LeaguePlayer extends Model<LeaguePlayer> {
     @Is('isBoolean', value => isBoolean(value))
     @Column
     bestScorer: boolean
+
+    @AllowNull(true)
+    @Default(false)
+    @Is('isBoolean', value => isBoolean(value))
+    @Column
+    secondBestScorer: boolean
+
+    @AllowNull(true)
+    @Default(false)
+    @Is('isBoolean', value => isBoolean(value))
+    @Column
+    thirdBestScorer: boolean
+
+    @AllowNull(true)
+    @Default(false)
+    @Is('isBoolean', value => isBoolean(value))
+    @Column
+    fourthBestScorer: boolean
+
 }

@@ -17,6 +17,9 @@ export interface ILeaguePlayer {
     seasonGoals: number
     seasonAssists: number
     bestScorer: boolean
+    secondBestScorer: boolean
+    thirdBestScorer: boolean
+    fourthBestScorer: boolean
 }
 
 export interface ILeagueSpecialBetSerie {
