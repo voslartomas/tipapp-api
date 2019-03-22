@@ -21,7 +21,7 @@ export default class NHLController {
   @Path('/:leagueId/')
   async importNHL(@PathParam('leagueId') leagueId: number) {
     const teamResponse = await request.get('https://statsapi.web.nhl.com/api/v1/teams/')
-    teamResponse.body.teams.forEach(async teamResponseItem => {
+    await teamResponse.body.teams.forEach(async teamResponseItem => {
       const dbTeam = await this.database.models.Team.findOne({where: {externalId: teamResponseItem.id}})
       if (!dbTeam) {
         const team: any = {}
@@ -42,7 +42,7 @@ export default class NHLController {
     const playerResponse = await request.get('https://statsapi.web.nhl.com/api/v1/teams/')
     playerResponse.body.teams.forEach(async teamItem => {
       const playerRoster = await request.get(`https://statsapi.web.nhl.com/api/v1/teams/${teamItem.id}/roster`)
-      playerRoster.body.roster.forEach(async playerRosterItem => {
+      await playerRoster.body.roster.forEach(async playerRosterItem => {
         const dbPlayer = await this.database.models.Player.findOne({where: {externalId: playerRosterItem.person.id}})
         if (!dbPlayer) {
           const player: any = {}
@@ -61,8 +61,30 @@ export default class NHLController {
           leaguePlayer.bestScorer = false
           this.database.models.LeaguePlayer.create(leaguePlayer)
         }
+
+        // get stats
+        const playerStats = await request.get(`https://statsapi.web.nhl.com${playerRosterItem.person.link}?expand=person.stats&stats=yearByYear&expand=stats.team`)
+        const playerPlayoffStats = await request.get(`https://statsapi.web.nhl.com${playerRosterItem.person.link}?expand=person.stats&stats=yearByYearPlayoffs&expand=stats.team`)
+
+        const regularStats = this.getStats(playerStats)
+        const playoffStats = this.getStats(playerPlayoffStats)
+
+        const player = await this.database.models.LeaguePlayer.findOne({ where: { playerId: dbPlayer.id } }) as LeaguePlayer
+        player.playoffGames = playoffStats.games
+        player.playoffGoals = playoffStats.goals
+        player.playoffAssists = playoffStats.assists
+        player.seasonGames = regularStats.games
+        player.seasonGoals = regularStats.goals
+        player.seasonAssists = regularStats.assists
+
+        await player.update(player)
       })
     })
+  }
+
+  private getStats (stats) {
+    const length = stats.body.people[0].stats[0].splits.length
+    return stats.body.people[0].stats[0].splits[length - 1].stat
   }
 
   @GET
@@ -78,7 +100,7 @@ export default class NHLController {
     let today: any = new Date()
     today.setDate(new Date().getDate() + 1)
     today = today.toISOString().split('T')[0]
-    const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2018-04-10&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
+    const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-08&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
 
     const days = response.body.dates
     for (const index in days) {
@@ -140,7 +162,7 @@ export default class NHLController {
       })
     }
 
-    return `https://statsapi.web.nhl.com/api/v1/schedule?startDate=2018-04-10&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`
+    return `https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-08&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`
   }
 
   private async getLeagueTeam(externalId: number, leagueId: number) {

@@ -39,6 +39,21 @@ export default class LeaguePlayer extends Model<LeaguePlayer> {
     @AllowNull(true)
     @Is('isNumeric', value => isNumeric(value))
     @Column
+    playoffAssists: number
+
+    @AllowNull(true)
+    @Is('isNumeric', value => isNumeric(value))
+    @Column
+    playoffGames: number
+
+    @AllowNull(true)
+    @Is('isNumeric', value => isNumeric(value))
+    @Column
+    playoffGoals: number
+
+    @AllowNull(true)
+    @Is('isNumeric', value => isNumeric(value))
+    @Column
     seasonAssists: number
 
     @AllowNull(true)
