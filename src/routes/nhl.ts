@@ -65,6 +65,9 @@ export default class NHLController {
           leaguePlayer.leagueTeamId = dbLeagueTeam.id
           leaguePlayer.playerId = dbPlayer.id
           leaguePlayer.bestScorer = false
+          leaguePlayer.secondBestScorer = false
+          leaguePlayer.thirdBestScorer = false
+          leaguePlayer.fourthBestScorer = false
           await this.database.models.LeaguePlayer.create(leaguePlayer)
         }
 

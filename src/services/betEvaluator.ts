@@ -39,7 +39,8 @@ export default class BetEvaluator {
         if (!evaluator) return undefined
 
         let result: boolean = false
-        if (e.type === 'scorer' || e.type === 'bestScorer') {
+        const scorers = [ 'bestScorer', 'secondBestScorer', 'thirdBestScorer', 'fourthBestScorer',  'scorer', ]
+        if (scorers.includes(e.type)) {
           result = evaluator.evaluateScorer(matchScorers, userBet)
         } else {
           result = evaluator.evaluateMatch(match, userBet)

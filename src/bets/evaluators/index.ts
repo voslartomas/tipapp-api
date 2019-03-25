@@ -2,6 +2,9 @@ import Exact from './exact'
 import ScoreDifference from './scoreDifference'
 import ScoreOneTeam from './scoreOneTeam'
 import Scorer from './scorer'
+import FourthBestScorer from './fourthBestScorer'
+import ThirdBestScorer from './thirdBestScorer'
+import SecondBestScorer from './secondBestScorer'
 import BestScorer from './bestScorer'
 import Winner from './winner'
 import Draw from './draw'
@@ -14,6 +17,9 @@ export default {
   HockeyScoreDifference,
   ScoreOneTeam,
   Scorer,
+  FourthBestScorer,
+  ThirdBestScorer,
+  SecondBestScorer,
   BestScorer,
   Winner,
   Draw,

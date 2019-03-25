@@ -4,10 +4,9 @@ import MatchScorer from '../../models/matchScorer.model'
 import BestScorer from './bestScorer'
 import SecondBestScorer from './secondBestScorer'
 import ThirdBestScorer from './thirdBestScorer'
-import FourthBestScorer from './fourthBestScorer'
 
-export default class Scorer implements IEvaluator {
-  type = 'scorer'
+export default class FourthBestScorer implements IEvaluator {
+  type = 'fourthBestScorer'
 
   evaluateScorer(matchScorers: MatchScorer[], tip: UserBet): boolean {
     if (new BestScorer().evaluateScorer(matchScorers, tip)) {
@@ -22,12 +21,8 @@ export default class Scorer implements IEvaluator {
       return false
     }
 
-    if (new FourthBestScorer().evaluateScorer(matchScorers, tip)) {
-      return false
-    }
-
     for (const scorer of matchScorers) {
-      if (tip.scorerId === scorer.scorerId) {
+      if (tip.scorerId === scorer.scorerId && scorer.scorer.fourthBestScorer) {
         return true
       }
     }
