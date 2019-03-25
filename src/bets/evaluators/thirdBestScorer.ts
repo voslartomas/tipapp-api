@@ -5,7 +5,7 @@ import BestScorer from './bestScorer'
 import SecondBestScorer from './secondBestScorer'
 
 export default class ThirdBestScorer implements IEvaluator {
-  type = 'scorer'
+  type = 'thirdBestScorer'
 
   evaluateScorer(matchScorers: MatchScorer[], tip: UserBet): boolean {
     if (new BestScorer().evaluateScorer(matchScorers, tip)) {

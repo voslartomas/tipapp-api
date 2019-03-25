@@ -4,7 +4,7 @@ import MatchScorer from '../../models/matchScorer.model'
 import BestScorer from './bestScorer'
 
 export default class SecondBestScorer implements IEvaluator {
-  type = 'scorer'
+  type = 'secondBestScorer'
 
   evaluateScorer(matchScorers: MatchScorer[], tip: UserBet): boolean {
     if (new BestScorer().evaluateScorer(matchScorers, tip)) {

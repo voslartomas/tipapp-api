@@ -3,10 +3,10 @@ import UserBet from '../../models/userBet.model'
 import MatchScorer from '../../models/matchScorer.model'
 import BestScorer from './bestScorer'
 import SecondBestScorer from './secondBestScorer'
-import ThirdBestScorer from './secondBestScorer'
+import ThirdBestScorer from './thirdBestScorer'
 
 export default class FourthBestScorer implements IEvaluator {
-  type = 'scorer'
+  type = 'fourthBestScorer'
 
   evaluateScorer(matchScorers: MatchScorer[], tip: UserBet): boolean {
     if (new BestScorer().evaluateScorer(matchScorers, tip)) {
