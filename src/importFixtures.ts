@@ -7,4 +7,4 @@ sequelize.addModels([__dirname + '/models/*.model.js'])
 
 sequelize.sync({ force: true }).then(() => {
   dbDataSync(sequelize.models)
-})
+}).catch(err => console.log(err))

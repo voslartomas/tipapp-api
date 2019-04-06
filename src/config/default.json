@@ -2,7 +2,7 @@
   "host": "0.0.0.0",
   "port": 7300,
   "logging": {
-    "level": "debug"
+    "level": "info"
   },
   "origin": "http://localhost:3000",
   "swagger": {

@@ -21,7 +21,6 @@ export class LoginController {
    */
   async login(user: any): Promise<string> {
     const dbUser = await this.database.models.User.findOne({ where: {username: user.username} })
-    console.log(user)
     if (!dbUser) {
       throw new Error('User not found')
     }
