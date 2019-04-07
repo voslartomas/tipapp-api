@@ -49,27 +49,32 @@ export default class NHLController {
         const dbTeam = await this.database.models.Team.findOne({ where: { externalId: (teamItem as any).id } })
         const dbLeagueTeam = await this.database.models.LeagueTeam.findOne({ where: { teamId: dbTeam.id, leagueId } })
         for (const playerRosterItem of playerRoster.body.roster) {
-          const dbPlayer = await this.database.models.Player.findOne({where: {externalId: (playerRosterItem as any).person.id}})
-          if (!dbPlayer) {
-            const player: any = {}
-            player.firstName = (playerRosterItem as any).person.fullName
-            player.lastName = ''
-            player.isActive = true
-            player.externalId = (playerRosterItem as any).person.id
-            const dbPlayer = await this.database.models.Player.create(player)
-          }
+          let dbPlayer
+          try {
+            dbPlayer = await this.database.models.Player.findOne({where: {externalId: (playerRosterItem as any).person.id}})
+            if (!dbPlayer) {
+              const player: any = {}
+              player.firstName = (playerRosterItem as any).person.fullName
+              player.lastName = ''
+              player.isActive = true
+              player.externalId = (playerRosterItem as any).person.id
+              dbPlayer = await this.database.models.Player.create(player)
+            }
 
-          const dbLeaguePlayer = await this.database.models.LeaguePlayer.findOne({ where: { leagueTeamId: dbLeagueTeam.id, playerId: dbPlayer.id } })
+            const dbLeaguePlayer = await this.database.models.LeaguePlayer.findOne({ where: { leagueTeamId: dbLeagueTeam.id, playerId: dbPlayer.id } })
 
-          if (!dbLeaguePlayer) {
-            const leaguePlayer: any = {}
-            leaguePlayer.leagueTeamId = dbLeagueTeam.id
-            leaguePlayer.playerId = dbPlayer.id
-            leaguePlayer.bestScorer = false
-            leaguePlayer.secondBestScorer = false
-            leaguePlayer.thirdBestScorer = false
-            leaguePlayer.fourthBestScorer = false
-            await this.database.models.LeaguePlayer.create(leaguePlayer)
+            if (!dbLeaguePlayer) {
+              const leaguePlayer: any = {}
+              leaguePlayer.leagueTeamId = dbLeagueTeam.id
+              leaguePlayer.playerId = dbPlayer.id
+              leaguePlayer.bestScorer = false
+              leaguePlayer.secondBestScorer = false
+              leaguePlayer.thirdBestScorer = false
+              leaguePlayer.fourthBestScorer = false
+              await this.database.models.LeaguePlayer.create(leaguePlayer)
+            }
+          } catch (err) {
+            console.log(err)
           }
 
           // get stats
