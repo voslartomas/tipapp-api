@@ -96,7 +96,7 @@ export default class NHLController {
           })
         }
         const bestScorer = await this.database.models.LeaguePlayer.findOne({ where: { leagueTeamId: dbLeagueTeam.id, seasonGoals: { [ this.database.Op.gte ]: 0 }  }, order: [ [ 'seasonGoals', 'DESC' ] ] }) as LeaguePlayer
-        await this.database.models.LeaguePlayer.update({ bestScorer: false }, { where: { leagueTeamId: dbLeagueTeam.id } })
+        // await this.database.models.LeaguePlayer.update({ bestScorer: false }, { where: { leagueTeamId: dbLeagueTeam.id } })
         await bestScorer.update({
           bestScorer: true
         })
