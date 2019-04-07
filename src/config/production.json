@@ -13,6 +13,7 @@
       "password": "tipapptipapp",
       "host": "tipapp.c2fgvnquam0j.eu-central-1.rds.amazonaws.com",
       "dialect": "postgres",
+      "logging" : false,
       "port": 5432,
       "modelPath": "/../models/*.model.js"
   },
