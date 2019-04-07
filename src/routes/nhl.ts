@@ -43,11 +43,13 @@ export default class NHLController {
         }
       }
 
+      let numberOfPlayers = 0
       const playerResponse = await request.get('https://statsapi.web.nhl.com/api/v1/teams/')
       for (const teamItem of playerResponse.body.teams) {
         const playerRoster = await request.get(`https://statsapi.web.nhl.com/api/v1/teams/${(teamItem as any).id}/roster`)
         const dbTeam = await this.database.models.Team.findOne({ where: { externalId: (teamItem as any).id } })
         const dbLeagueTeam = await this.database.models.LeagueTeam.findOne({ where: { teamId: dbTeam.id, leagueId } })
+        numberOfPlayers += playerRoster.body.roster.length
         for (const playerRosterItem of playerRoster.body.roster) {
           let dbPlayer
           try {
@@ -102,9 +104,12 @@ export default class NHLController {
         })
         console.log(`Best scorer for ${dbTeam.name} is ${bestScorer.playerId}`)
       }
+
+      console.log('Number of players: ' + numberOfPlayers)
     } catch (err) {
       console.log(err)
     }
+
   }
 
   private getStats (stats) {
@@ -125,14 +130,13 @@ export default class NHLController {
     let today: any = new Date()
     today.setDate(new Date().getDate() + 4)
     today = today.toISOString().split('T')[0]
-    const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-07&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
+    const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-01&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
 
     const days = response.body.dates
     for (const index in days) {
       const dateDetail = days[index]
-
       dateDetail.games.forEach(async game => {
-        let dbMatch = await this.database.models.Match.findOne({ where: { externalId: game.gamePk } })
+        let dbMatch = await this.database.models.Match.findOne({ where: { externalId: game.gamePk, leagueId } })
 
         if (!dbMatch) {
           const dbHomeTeam = await this.getLeagueTeam(game.teams.home.team.id, leagueId)
@@ -163,14 +167,35 @@ export default class NHLController {
 
         const scorers = await this.database.models.MatchScorer.findAll({ where: { matchId: dbMatch.id } })
         if (scorers.length === 0) {
-          game.scoringPlays.forEach(async play => {
+          for (const play of game.scoringPlays) {
             try {
               const externalId = play.players[0].player.id
               const dbPlayer = await this.database.models.Player.findOne({ where: { externalId } })
-              const leaguePlayer = await this.database.models.LeaguePlayer.findOne({
+              if (!dbPlayer) {
+                const player: any = {}
+                player.firstName = play.players[0].player.fullName
+                player.lastName = ''
+                player.isActive = true
+                player.externalId = play.players[0].player.id
+                const dbPlayer = await this.database.models.Player.create(player)
+              }
+              let leaguePlayer = await this.database.models.LeaguePlayer.findOne({
                 where: { playerId: dbPlayer.id },
                 include: [{model: this.database.models.LeagueTeam, required: true, where: {leagueId}}]
               })
+
+              if (!leaguePlayer) {
+                const dbTeam = await this.database.models.Team.findOne({ where: { externalId: play.team.id } })
+                const dbLeagueTeam = await this.database.models.LeagueTeam.findOne({ where: { teamId: dbTeam.id, leagueId } })
+                leaguePlayer = {}
+                leaguePlayer.leagueTeamId = dbLeagueTeam.id
+                leaguePlayer.playerId = dbPlayer.id
+                leaguePlayer.bestScorer = false
+                leaguePlayer.secondBestScorer = false
+                leaguePlayer.thirdBestScorer = false
+                leaguePlayer.fourthBestScorer = false
+                leaguePlayer = await this.database.models.LeaguePlayer.create(leaguePlayer)
+              }
 
               const scorer = {
                 matchId: dbMatch.id,
@@ -180,14 +205,14 @@ export default class NHLController {
 
               await this.database.models.MatchScorer.create(scorer)
             } catch (e) {
-              console.log(e)
+              console.log(e, play.players)
             }
-          })
+          }
         }
       })
     }
 
-    return `https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-07&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`
+    return `https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-01&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`
   }
 
   private async getLeagueTeam(externalId: number, leagueId: number) {
