@@ -100,6 +100,7 @@ export default class NHLController {
         await bestScorer.update({
           bestScorer: true
         })
+        console.log(`Best scorer for ${dbTeam.name} is ${bestScorer.playerId}`)
       }
     } catch (err) {
       console.log(err)
