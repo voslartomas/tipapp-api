@@ -128,9 +128,9 @@ export default class NHLController {
   @Path('/:leagueId/matches')
   async importMatches(@PathParam('leagueId') leagueId: number) {
     let today: any = new Date()
-    today.setDate(new Date().getDate() + 4)
+    today.setDate(new Date().getDate() + 1)
     today = today.toISOString().split('T')[0]
-    const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-01&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
+    const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-07&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
 
     const days = response.body.dates
     for (const index in days) {
@@ -212,7 +212,7 @@ export default class NHLController {
       })
     }
 
-    return `https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-01&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`
+    return `https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-07&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`
   }
 
   private async getLeagueTeam(externalId: number, leagueId: number) {
