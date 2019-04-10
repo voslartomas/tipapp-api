@@ -21,7 +21,7 @@ export default class UserSpecialBetSeriesController {
     const dbUserSpecialBetSerie = await this.database.models.UserSpecialBetSerie.findById(userSpecialBetSerieId)
 
     const specialBetSerie = await this.database.models.leagueSpecialBetSerie.findById(userSpecialBetSerie.leagueSpecialBetSerieId)
-    if (new Date().getTime() >= specialBetSerie.dateTime.getTime()) {
+    if (new Date().getTime() >= new Date(specialBetSerie.dateTime).getTime()) {
       throw new Error('It\'s too late')
     }
 
