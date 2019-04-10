@@ -50,7 +50,7 @@ export default class LeaguesController {
       FROM "LeagueSpecialBetSerie" AS "Serie"
       LEFT JOIN "UserSpecialBetSerie" ON ("Serie"."id" = "UserSpecialBetSerie"."leagueSpecialBetSerieId" AND "UserSpecialBetSerie"."leagueUserId" = ${leagueUser.id})
       WHERE "Serie"."leagueId" = ${leagueId}
-      ORDER BY "endDate" DESC`, { type: this.database.QueryTypes.SELECT})
+      ORDER BY "Serie"."id" DESC`, { type: this.database.QueryTypes.SELECT})
   }
 
   @GET
