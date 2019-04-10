@@ -20,8 +20,14 @@ export default class UserSpecialBetSeriesController {
   async updateUserSpecialBetSerie(@PathParam('id') userSpecialBetSerieId: number = 0, userSpecialBetSerie: any): Promise<IUserSpecialBetSerie> {
     const dbUserSpecialBetSerie = await this.database.models.UserSpecialBetSerie.findById(userSpecialBetSerieId)
 
+    const specialBetSerie = await this.database.models.leagueSpecialBetSerie.findById(userSpecialBetSerie.leagueSpecialBetSerieId)
+    if (new Date().getTime() >= specialBetSerie.dateTime.getTime()) {
+      throw new Error('It\'s too late')
+    }
+
     if (dbUserSpecialBetSerie) {
       // check if userId match
+
       const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: this.leagueId }})
       if (leagueUser && leagueUser.id === dbUserSpecialBetSerie.leagueUserId) {
         return await dbUserSpecialBetSerie.update(userSpecialBetSerie)

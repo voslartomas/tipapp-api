@@ -43,7 +43,7 @@ export default class LeaguesController {
   async getBetsSpecial(@PathParam('leagueId') leagueId: number) {
     const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
 
-    return this.database.query(`SELECT "Serie"."dateTime", "Serie"."homeTeamScore" AS "serieHomeScore", "Serie"."awayTeamScore" AS "serieAwayScore",
+    return this.database.query(`SELECT "Serie"."dateTime" AS "endDate", "Serie"."homeTeamScore" AS "serieHomeScore", "Serie"."awayTeamScore" AS "serieAwayScore",
       "UserSpecialBetSerie".*, "Serie"."id" AS "leagueSpecialBetSerieId",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Serie"."homeTeamId") AS "homeTeam",
       (SELECT "Team"."name" FROM "Team" LEFT JOIN "LeagueTeam" ON "LeagueTeam"."teamId" = "Team"."id" WHERE "LeagueTeam"."id" = "Serie"."awayTeamId") AS "awayTeam"
