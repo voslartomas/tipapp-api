@@ -204,11 +204,11 @@ export default class NHLController {
             } catch (e) {
               console.log(e, play.players)
             }
-
-            // update match bets
-            this.betEvaluator.updateMatchBets(dbMatch)
           }
         }
+
+        // update match bets
+        this.betEvaluator.updateMatchBets(dbMatch)
       })
     }
 
