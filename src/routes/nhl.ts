@@ -162,9 +162,6 @@ export default class NHLController {
           dbMatch.update(match)
         }
 
-        // update match bets
-        this.betEvaluator.updateMatchBets(dbMatch)
-
         const scorers = await this.database.models.MatchScorer.findAll({ where: { matchId: dbMatch.id } })
         if (scorers.length === 0) {
           for (const play of game.scoringPlays) {
@@ -207,6 +204,9 @@ export default class NHLController {
             } catch (e) {
               console.log(e, play.players)
             }
+
+            // update match bets
+            this.betEvaluator.updateMatchBets(dbMatch)
           }
         }
       })
