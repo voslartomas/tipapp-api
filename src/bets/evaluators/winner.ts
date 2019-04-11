@@ -1,10 +1,10 @@
+import Draw from './draw'
+import Exact from './exact'
 import IEvaluator from './IEvaluator'
-import Match from '../../models/match.model'
 import LeagueSpecialBetSerie from '../../models/leagueSpecialBetSerie.model'
+import Match from '../../models/match.model'
 import UserBet from '../../models/userBet.model'
 import UserSpecialBetSerie from '../../models/userSpecialBetSerie.model'
-import Exact from './exact'
-import Draw from './draw'
 import { getRegularScore } from '../../utils/regularScore'
 
 export default class Winner implements IEvaluator {
@@ -16,16 +16,16 @@ export default class Winner implements IEvaluator {
       return false
     }
 
-    if (new Draw().evaluateMatch(result, tip)) {
-      return false
-    }
+    // if (new Draw().evaluateMatch(result, tip)) {
+    //   return false
+    // }
 
-    const data = getRegularScore(result, tip)
+    // const data = getRegularScore(result, tip)
 
-    const homeScoreRegularTime = data.homeScoreRegularTime
-    const awayScoreRegularTime = data.awayScoreRegularTime
-    const homeTipScoreRegularTime = data.homeTipScoreRegularTime
-    const awayTipScoreRegularTime = data.awayTipScoreRegularTime
+    const homeScoreRegularTime = result.homeScore
+    const awayScoreRegularTime = result.awayScore
+    const homeTipScoreRegularTime = tip.homeScore
+    const awayTipScoreRegularTime = tip.awayScore
 
     return ((homeTipScoreRegularTime - awayTipScoreRegularTime > 0 && homeScoreRegularTime - awayScoreRegularTime > 0) ||
     (homeTipScoreRegularTime - awayTipScoreRegularTime < 0 && homeScoreRegularTime - awayScoreRegularTime < 0))
