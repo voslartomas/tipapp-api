@@ -135,7 +135,8 @@ export default class NHLController {
     const days = response.body.dates
     for (const index in days) {
       const dateDetail = days[index]
-      dateDetail.games.forEach(async game => {
+      // dateDetail.games.forEach(async game => {
+      for (const game of dateDetail.games) {
         let dbMatch = await this.database.models.Match.findOne({ where: { externalId: game.gamePk, leagueId } })
 
         if (!dbMatch) {
@@ -208,8 +209,8 @@ export default class NHLController {
         }
 
         // update match bets
-        this.betEvaluator.updateMatchBets(dbMatch)
-      })
+        await this.betEvaluator.updateMatchBets(dbMatch)
+      }
     }
 
     return `https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-07&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`

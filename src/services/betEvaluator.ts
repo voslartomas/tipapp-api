@@ -1,12 +1,13 @@
-import Match from '../models/match.model'
+import { ILeagueSpecialBetSerie, ILeagueSpecialBetSingle } from '../types/models'
+
+import Database from './database'
 import Evaluator from '../models/evaluator.model'
+import IEvaluator from '../bets/evaluators/IEvaluator'
+import { Inject } from 'typescript-ioc'
 import LeagueSpecialBetSerie from '../models/leagueSpecialBetSerie.model'
 import LeagueSpecialBetSingle from '../models/leagueSpecialBetSingle.model'
-import { Inject } from 'typescript-ioc'
-import Database from './database'
-import { ILeagueSpecialBetSerie, ILeagueSpecialBetSingle } from '../types/models'
+import Match from '../models/match.model'
 import evaluators from '../bets/evaluators'
-import IEvaluator from '../bets/evaluators/IEvaluator'
 
 export default class BetEvaluator {
   @Inject
@@ -51,7 +52,7 @@ export default class BetEvaluator {
         }
       }
 
-      userBet.save()
+      await userBet.save()
     }
   }
 
