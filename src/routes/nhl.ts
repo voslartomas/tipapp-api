@@ -139,6 +139,10 @@ export default class NHLController {
       for (const game of dateDetail.games) {
         let dbMatch = await this.database.models.Match.findOne({ where: { externalId: game.gamePk, leagueId } })
 
+        if (game.status.abstractGameState !== 'Final') {
+          continue
+        }
+
         if (!dbMatch) {
           const dbHomeTeam = await this.getLeagueTeam(game.teams.home.team.id, leagueId)
           const dbAwayTeam = await this.getLeagueTeam(game.teams.away.team.id, leagueId)
