@@ -128,7 +128,7 @@ export default class NHLController {
   @Path('/:leagueId/matches')
   async importMatches(@PathParam('leagueId') leagueId: number) {
     let today: any = new Date()
-    // today.setDate(new Date().getDate() + 1)
+    today.setDate(new Date().getDate() + 1)
     today = today.toISOString().split('T')[0]
     const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-07&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
 
@@ -160,7 +160,7 @@ export default class NHLController {
           match.awayScore = game.teams.away.score
           match.overtime = game.linescore.currentPeriod > 3
 
-          dbMatch.update(match)
+          await dbMatch.update(match)
         }
 
         if (game.status.abstractGameState !== 'Final') {
