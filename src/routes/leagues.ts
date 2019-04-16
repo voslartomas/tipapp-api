@@ -147,6 +147,17 @@ export default class LeaguesController {
   }
 
   @GET
+  @Path('/:leagueId/users/bets/serie/:serieId')
+  async getBetsSerieAllUsers(@PathParam('leagueId') leagueId: number, @PathParam('serieId') serieId: number) {
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+
+    return await this.database.models.UserSpecialBetSerie.findAll({include: [
+        {model: this.database.models.LeagueUser, as: 'leagueUser', include: [this.database.models.User]}
+      ],
+      where: {leagueSpecialBetSerieId: serieId}})
+  }
+
+  @GET
   @Path(':id')
   async getLeague(@PathParam('id') leagueId: number): Promise<ILeague> {
     try {
