@@ -16,8 +16,7 @@ export default class Exact implements IEvaluator {
     const homeTipScoreRegularTime = data.homeTipScoreRegularTime
     const awayTipScoreRegularTime = data.awayTipScoreRegularTime
 
-    return homeScoreRegularTime === homeTipScoreRegularTime && awayScoreRegularTime === awayTipScoreRegularTime &&
-      result.overtime === tip.overtime
+    return homeScoreRegularTime === homeTipScoreRegularTime && awayScoreRegularTime === awayTipScoreRegularTime
   }
 
   evaluateSerie(result: LeagueSpecialBetSerie, tip: UserSpecialBetSerie): boolean {
