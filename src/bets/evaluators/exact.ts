@@ -11,20 +11,10 @@ export default class Exact implements IEvaluator {
   evaluateMatch(result: Match, tip: UserBet): boolean {
     const data = getRegularScore(result, tip)
 
-    const homeScoreRegularTime = result.homeScore
-    const awayScoreRegularTime = result.awayScore
-    const homeTipScoreRegularTime = tip.homeScore
-    const awayTipScoreRegularTime = tip.awayScore
-
-    /* DEBUG */
-    if (tip.id === 1622) {
-      console.log('result: ' + JSON.stringify(result))
-      console.log('tip: ' + JSON.stringify(tip))
-      console.log('data: ' + JSON.stringify(data))
-      console.log(`1: ${homeScoreRegularTime === homeTipScoreRegularTime}`)
-      console.log(`2: ${awayScoreRegularTime === awayTipScoreRegularTime}`)
-      console.log(`3: ${result.overtime === tip.overtime}`)
-    }
+    const homeScoreRegularTime = data.homeScoreRegularTime
+    const awayScoreRegularTime = data.awayScoreRegularTime
+    const homeTipScoreRegularTime = data.homeTipScoreRegularTime
+    const awayTipScoreRegularTime = data.awayTipScoreRegularTime
 
     return homeScoreRegularTime === homeTipScoreRegularTime && awayScoreRegularTime === awayTipScoreRegularTime &&
       result.overtime === tip.overtime
