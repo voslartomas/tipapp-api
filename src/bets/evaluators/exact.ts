@@ -17,7 +17,7 @@ export default class Exact implements IEvaluator {
     const awayTipScoreRegularTime = tip.awayScore
 
     /* DEBUG */
-    if (tip.id = 1622) {
+    if (tip.id === 1622) {
       console.log('result: ' + JSON.stringify(result))
       console.log('tip: ' + JSON.stringify(tip))
       console.log('data: ' + JSON.stringify(data))
