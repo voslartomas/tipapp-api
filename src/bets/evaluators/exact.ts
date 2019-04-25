@@ -10,24 +10,16 @@ export default class Exact implements IEvaluator {
 
   evaluateMatch(result: Match, tip: UserBet): boolean {
     const data = getRegularScore(result, tip)
+    const strangeRules = result.leagueId === 7
 
-    const homeScoreRegularTime = result.homeScore
-    const awayScoreRegularTime = result.awayScore
-    const homeTipScoreRegularTime = tip.homeScore
-    const awayTipScoreRegularTime = tip.awayScore
+    const homeScoreRegularTime = strangeRules ? data.homeScoreRegularTime : result.homeScore
+    const awayScoreRegularTime = strangeRules ? data.awayScoreRegularTime : result.awayScore
+    const homeTipScoreRegularTime = strangeRules ? data.homeTipScoreRegularTime : tip.homeScore
+    const awayTipScoreRegularTime = strangeRules ? data.awayTipScoreRegularTime : tip.awayScore
 
-    /* DEBUG */
-    if (tip.id === 1622) {
-      console.log('result: ' + JSON.stringify(result))
-      console.log('tip: ' + JSON.stringify(tip))
-      console.log('data: ' + JSON.stringify(data))
-      console.log(`1: ${homeScoreRegularTime === homeTipScoreRegularTime}`)
-      console.log(`2: ${awayScoreRegularTime === awayTipScoreRegularTime}`)
-      console.log(`3: ${result.overtime === tip.overtime}`)
-    }
+    const normalCounting = homeScoreRegularTime === homeTipScoreRegularTime && awayScoreRegularTime === awayTipScoreRegularTime
 
-    return homeScoreRegularTime === homeTipScoreRegularTime && awayScoreRegularTime === awayTipScoreRegularTime &&
-      result.overtime === tip.overtime
+    return strangeRules ? normalCounting && (result.overtime === tip.overtime) : normalCounting
   }
 
   evaluateSerie(result: LeagueSpecialBetSerie, tip: UserSpecialBetSerie): boolean {
