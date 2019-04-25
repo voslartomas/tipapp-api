@@ -16,6 +16,16 @@ export default class Exact implements IEvaluator {
     const homeTipScoreRegularTime = tip.homeScore
     const awayTipScoreRegularTime = tip.awayScore
 
+    /* DEBUG */
+    if (tip.id = 1622) {
+      console.log('result: ' + JSON.stringify(result))
+      console.log('tip: ' + JSON.stringify(tip))
+      console.log('data: ' + JSON.stringify(data))
+      console.log(`1: ${homeScoreRegularTime === homeTipScoreRegularTime}`)
+      console.log(`2: ${awayScoreRegularTime === awayTipScoreRegularTime}`)
+      console.log(`3: ${result.overtime === tip.overtime}`)
+    }
+
     return homeScoreRegularTime === homeTipScoreRegularTime && awayScoreRegularTime === awayTipScoreRegularTime &&
       result.overtime === tip.overtime
   }
