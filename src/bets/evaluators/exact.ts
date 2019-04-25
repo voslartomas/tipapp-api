@@ -12,10 +12,10 @@ export default class Exact implements IEvaluator {
     const data = getRegularScore(result, tip)
     const strangeRules = result.leagueId === 7
 
-    const homeScoreRegularTime = strangeRules ? data.homeScoreRegularTime : result.homeScore
-    const awayScoreRegularTime = strangeRules ? data.awayScoreRegularTime : result.awayScore
-    const homeTipScoreRegularTime = strangeRules ? data.homeTipScoreRegularTime : tip.homeScore
-    const awayTipScoreRegularTime = strangeRules ? data.awayTipScoreRegularTime : tip.awayScore
+    const homeScoreRegularTime = strangeRules ? result.homeScore : data.homeScoreRegularTime
+    const awayScoreRegularTime = strangeRules ? result.awayScore : data.awayScoreRegularTime
+    const homeTipScoreRegularTime = strangeRules ? tip.homeScore : data.homeTipScoreRegularTime
+    const awayTipScoreRegularTime = strangeRules ? tip.awayScore : data.awayTipScoreRegularTime
 
     const normalCounting = homeScoreRegularTime === homeTipScoreRegularTime && awayScoreRegularTime === awayTipScoreRegularTime
 
