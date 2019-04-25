@@ -10,14 +10,16 @@ export default class Exact implements IEvaluator {
 
   evaluateMatch(result: Match, tip: UserBet): boolean {
     const data = getRegularScore(result, tip)
+    const strangeRules = result.leagueId === 7
 
-    const homeScoreRegularTime = result.homeScore
-    const awayScoreRegularTime = result.awayScore
-    const homeTipScoreRegularTime = tip.homeScore
-    const awayTipScoreRegularTime = tip.awayScore
+    const homeScoreRegularTime = strangeRules ? result.homeScore : data.homeScoreRegularTime
+    const awayScoreRegularTime = strangeRules ? result.awayScore : data.awayScoreRegularTime
+    const homeTipScoreRegularTime = strangeRules ? tip.homeScore : data.homeTipScoreRegularTime
+    const awayTipScoreRegularTime = strangeRules ? tip.awayScore : data.awayTipScoreRegularTime
 
-    return homeScoreRegularTime === homeTipScoreRegularTime && awayScoreRegularTime === awayTipScoreRegularTime &&
-      result.overtime === tip.overtime
+    const normalCounting = homeScoreRegularTime === homeTipScoreRegularTime && awayScoreRegularTime === awayTipScoreRegularTime
+
+    return strangeRules ? normalCounting && (result.overtime === tip.overtime) : normalCounting
   }
 
   evaluateSerie(result: LeagueSpecialBetSerie, tip: UserSpecialBetSerie): boolean {
