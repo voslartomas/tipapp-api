@@ -12,7 +12,9 @@ export default class Winner implements IEvaluator {
 
   evaluateMatch(result: Match, tip: UserBet): boolean {
 
-    if (new Exact().evaluateMatch(result, tip)) {
+    const strangeRules = result.leagueId === 7
+
+    if (strangeRules && new Exact().evaluateMatch(result, tip)) {
       return false
     }
 
