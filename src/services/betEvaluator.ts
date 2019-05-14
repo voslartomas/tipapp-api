@@ -48,7 +48,7 @@ export default class BetEvaluator {
         }
 
         if (result) {
-          userBet.totalPoints += parseInt(e.points)
+          userBet.totalPoints += parseInt(e.points) * (match.isDoubled ? 2 : 1)
         }
       }
 
