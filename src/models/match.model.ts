@@ -88,5 +88,11 @@ export default class Match extends Model<Match> {
   @Column
   externalId: number
 
+  @AllowNull(false)
+  @Default(false)
+  @Is('isBoolean', value => isBoolean(value))
+  @Column
+  isDoubled: boolean
+
   scorers: Array<Number>
 }

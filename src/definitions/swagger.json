@@ -230,6 +230,10 @@
 						"format": "double"
 					},
 					"description": ""
+				},
+				"doubled": {
+					"type": "boolean",
+					"description": ""
 				}
 			},
 			"type": "object",
@@ -250,7 +254,8 @@
 				"homeWinner",
 				"isEvaluated",
 				"externalId",
-				"scorers"
+				"scorers",
+				"doubled"
 			]
 		},
 		"ILeagueTeam": {
