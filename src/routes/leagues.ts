@@ -7,6 +7,7 @@ import { IMatch, IPlayer, ITeam, ILeagueTeam } from '../types/models'
 import Match from '../models/match.model'
 import Player from '../models/player.model'
 import LeagueTeam from '../models/leagueTeam.model'
+import User from '../models/user.model'
 
 @Path('/api/leagues')
 export default class LeaguesController {
@@ -24,7 +25,7 @@ export default class LeaguesController {
   @GET
   @Path('/active')
   async getActiveLeagues(): Promise<ILeague[]> {
-    return this.database.models.LeagueUser.findAll({where: { userId: this.context.request['user'].id}
+    return this.database.models.LeagueUser.findAll({where: { userId: (this.context.request['user'] as User).id}
       , include: [{model: this.database.models.League, where: {isActive: true}}]
     })
   }
@@ -41,7 +42,7 @@ export default class LeaguesController {
   @GET
   @Path('/:leagueId/users/bets/series/')
   async getBetsSpecial(@PathParam('leagueId') leagueId: number) {
-    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: (this.context.request['user'] as User).id, leagueId: leagueId }})
 
     return this.database.query(`SELECT "Serie"."dateTime" AS "endDate", "Serie"."homeTeamScore" AS "serieHomeScore", "Serie"."awayTeamScore" AS "serieAwayScore",
       "UserSpecialBetSerie".*, "Serie"."id" AS "leagueSpecialBetSerieId",
@@ -56,7 +57,7 @@ export default class LeaguesController {
   @GET
   @Path('/:leagueId/users/bets/single/')
   async getBetsSingle(@PathParam('leagueId') leagueId: number) {
-    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: (this.context.request['user'] as User).id, leagueId: leagueId }})
 
     return this.database.query(`SELECT "Single"."dateTime", "SpecialBetSingle"."name", "SpecialBetSingle"."specialBetType" AS "type",
       "UserSpecialBetSingle".*, "Single"."id" AS "singleId", "UserSpecialBetSingle"."id" AS "betId", "Single"."dateTime" AS "endDate",
@@ -81,7 +82,7 @@ export default class LeaguesController {
     @QueryParam('history') history: boolean = true,
     @QueryParam('limitDays') limitDays: number = 5): Promise<IMatch[]> {
 
-    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: (this.context.request['user'] as User).id, leagueId: leagueId }})
 
     const today = new Date().toISOString().substring(0, 10)
     let whereDate
@@ -124,7 +125,7 @@ export default class LeaguesController {
   @GET
   @Path('/:leagueId/users/bets/single/:singleId')
   async getBetsSingleAllUsers(@PathParam('leagueId') leagueId: number, @PathParam('singleId') singleId: number) {
-    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: (this.context.request['user'] as User).id, leagueId: leagueId }})
 
     return await this.database.models.UserSpecialBetSingle.findAll({include: [
         {model: this.database.models.LeagueUser, as: 'leagueUser', include: [this.database.models.User]},
@@ -137,7 +138,7 @@ export default class LeaguesController {
   @GET
   @Path('/:leagueId/users/bets/match/:matchId')
   async getBetsMatchAllUsers(@PathParam('leagueId') leagueId: number, @PathParam('matchId') matchId: number) {
-    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: (this.context.request['user'] as User).id, leagueId: leagueId }})
 
     return await this.database.models.UserBet.findAll({include: [
         {model: this.database.models.LeagueUser, as: 'user', include: [this.database.models.User]},
@@ -149,7 +150,7 @@ export default class LeaguesController {
   @GET
   @Path('/:leagueId/users/bets/serie/:serieId')
   async getBetsSerieAllUsers(@PathParam('leagueId') leagueId: number, @PathParam('serieId') serieId: number) {
-    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: leagueId }})
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: (this.context.request['user'] as User).id, leagueId: leagueId }})
 
     return await this.database.models.UserSpecialBetSerie.findAll({include: [
         {model: this.database.models.LeagueUser, as: 'leagueUser', include: [this.database.models.User]}
@@ -180,7 +181,7 @@ export default class LeaguesController {
     try {
       // add current user as admin
       await this.database.models.LeagueUser.create({
-        userId: this.context.request['user'].id,
+        userId: (this.context.request['user'] as User).id,
         leagueId: dbLeague.id,
         admin: true
       })

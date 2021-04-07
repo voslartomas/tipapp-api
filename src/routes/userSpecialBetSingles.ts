@@ -3,6 +3,7 @@ import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import UserSpecialBetSingle from '../models/userSpecialBetSingle.model'
 import { IUserSpecialBetSingle } from '../types/models.d'
+import User from '../models/user.model'
 
 @Path('/api/leagues/:leagueId/user/bets/single')
 export default class UserSpecialBetSinglesController {
@@ -21,14 +22,14 @@ export default class UserSpecialBetSinglesController {
         const dbUserSpecialBetSingle = await this.database.models.UserSpecialBetSingle.findById(userSpecialBetSingleId)
 
         if (dbUserSpecialBetSingle) {
-          const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: this.leagueId }})
+          const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: (this.context.request['user'] as User).id, leagueId: this.leagueId }})
           if (leagueUser && leagueUser.id === dbUserSpecialBetSingle.leagueUserId) {
             return await dbUserSpecialBetSingle.update(userSpecialBetSingle)
           }
 
           throw new Error('User not signed into this league.')
         } else {
-          const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: this.leagueId }})
+          const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: (this.context.request['user'] as User).id, leagueId: this.leagueId }})
 
           if (leagueUser) {
               userSpecialBetSingle.leagueUserId = leagueUser.id

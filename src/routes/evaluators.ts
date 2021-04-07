@@ -5,6 +5,7 @@ import BetEvaluator from '../services/betEvaluator'
 import Evaluator from '../models/evaluator.model'
 import { IMatch } from '../types/models.d'
 import evaluators from '../bets/evaluators'
+import IEvaluator from '../bets/evaluators/IEvaluator'
 
 @Path('/api/leagues/:leagueId/evaluators')
 export default class EvaluatorsController {
@@ -15,8 +16,8 @@ export default class EvaluatorsController {
   leagueId: string
 
   @GET
-  async getAll(): Promise<IMatch[]> {
-    return await this.database.models.Evaluator.findAll({ where: {leagueId: this.leagueId} })
+  async getAll(): Promise<IEvaluator[]> {
+    return await this.database.models.Evaluator.findAll({ where: {leagueId: this.leagueId} }) as Evaluator[]
   }
 
   @GET
@@ -32,9 +33,9 @@ export default class EvaluatorsController {
 
   @GET
   @Path(':id')
-  async get(@PathParam('id') id: number): Promise<IMatch> {
+  async get(@PathParam('id') id: number): Promise<IEvaluator> {
     try {
-      const evaluator = await this.database.models.Evaluator.findById(id)
+      const evaluator = await this.database.models.Evaluator.findById(id) as Evaluator
 
       if (!evaluator) {
         throw new Error('not found')
@@ -47,10 +48,10 @@ export default class EvaluatorsController {
   }
 
   @POST
-  async create(evaluator: any): Promise<IMatch> {
+  async create(evaluator: any): Promise<IEvaluator> {
     evaluator.leagueId = this.leagueId
 
-    return await this.database.models.Evaluator.create(evaluator)
+    return await this.database.models.Evaluator.create(evaluator) as Evaluator
   }
 
   @PUT

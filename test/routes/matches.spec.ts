@@ -34,7 +34,6 @@ const app = new Server().getApp()
 
   it.only('PUT /matches should return 204', async () => {
     const response = await request(app).put('/api/matches/1').send({ name: 'Update match', scorers: [1, 2], scorerId: 1, homeScore: 2, awayScore: 3 })
-    console.log(response)
     expect(response.status).toBe(204)
     expect(response.body).toMatchSnapshot()
   })

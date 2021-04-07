@@ -8,6 +8,9 @@ import LeagueSpecialBetSerie from '../models/leagueSpecialBetSerie.model'
 import LeagueSpecialBetSingle from '../models/leagueSpecialBetSingle.model'
 import Match from '../models/match.model'
 import evaluators from '../bets/evaluators'
+import UserSpecialBetSingle from '../models/userSpecialBetSingle.model'
+import UserBet from '../models/userBet.model'
+import MatchScorer from '../models/matchScorer.model'
 
 export default class BetEvaluator {
   @Inject
@@ -23,11 +26,11 @@ export default class BetEvaluator {
   }
 
   async updateMatchBets(match: Match) {
-    const userBets = await this.database.models.UserBet.findAll({where: {matchId: match.id}})
+    const userBets = await this.database.models.UserBet.findAll({where: {matchId: match.id}}) as UserBet[]
     const matchScorers = await this.database.models.MatchScorer.findAll({
       include: [this.database.models.LeaguePlayer],
-      where: {matchId: match.id}})
-    const evaluators: Evaluator[] = await this.database.models.Evaluator.findAll({where: {leagueId: match.leagueId, entity: 'matches'}})
+      where: {matchId: match.id}}) as MatchScorer[]
+    const evaluators: Evaluator[] = await this.database.models.Evaluator.findAll({where: {leagueId: match.leagueId, entity: 'matches'}}) as Evaluator[]
 
     for (const i in userBets) {
       const userBet = userBets[i]
@@ -78,7 +81,7 @@ export default class BetEvaluator {
   }
 
   async updateSingleBet(betSingle: LeagueSpecialBetSingle) {
-    const userBets = await this.database.models.UserSpecialBetSingle.findAll({where : {leagueSpecialBetSingleId: betSingle.id}})
+    const userBets = await this.database.models.UserSpecialBetSingle.findAll({where : {leagueSpecialBetSingleId: betSingle.id}}) as UserSpecialBetSingle[]
 
     userBets.forEach(userBet => {
       userBet.totalPoints = 0

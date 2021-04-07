@@ -25,19 +25,19 @@ export default class UsersController {
   @GET
   @Path('/current')
   async getCurrentUser(): Promise<IUser[]> {
-    return this.context.request['user']
+    return this.context.request['user'] as IUser[]
   }
 
   @GET
   @Path('/leagues')
   async getUserLeagues(): Promise<ILeague[]> {
 
-    if (!this.context.request['user'].id) {
+    if (!(this.context.request['user'] as User).id) {
       throw new Errors.UnauthorizedError('You must be logged in.')
     }
 
     return this.database.query(`SELECT "League".* FROM "League"
-      LEFT JOIN "LeagueUser" ON ("League"."id" = "LeagueUser"."leagueId" AND "LeagueUser"."userId" = ${this.context.request['user'].id})
+      LEFT JOIN "LeagueUser" ON ("League"."id" = "LeagueUser"."leagueId" AND "LeagueUser"."userId" = ${(this.context.request['user'] as User).id})
       WHERE "LeagueUser"."admin" = 'true' AND "League"."deletedAt" IS NULL`, { type: this.database.QueryTypes.SELECT})
   }
 
@@ -76,7 +76,7 @@ export default class UsersController {
   @PUT
   @Path('/password')
   async changePassword(password: any): Promise<IUser> {
-    const user = this.context.request['user']
+    const user = this.context.request['user'] as User
     const dbUser = await this.database.models.User.findById(user.id)
     const passwordHash = await bCrypt.hashSync(password.password, dbUser.salt, undefined)
     return await dbUser.update({ password: passwordHash })

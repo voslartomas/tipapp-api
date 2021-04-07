@@ -3,6 +3,7 @@ import { Inject } from 'typescript-ioc'
 import Database from '../services/database'
 import UserBet from '../models/userBet.model'
 import { IUserBet } from '../types/models.d'
+import User from '../models/user.model'
 
 @Path('/api/leagues/:leagueId/user/bets/match')
 export default class UserBetsController {
@@ -17,7 +18,7 @@ export default class UserBetsController {
 
   @GET
   async getUserBets(): Promise<IUserBet[]> {
-    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: this.leagueId }})
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: (this.context.request['user'] as User).id, leagueId: this.leagueId }})
     if (!leagueUser) {
       throw new Error('User not signed into league.')
     }
@@ -28,7 +29,7 @@ export default class UserBetsController {
   @PUT
   @Path(':id')
   async updateUserBet(@PathParam('id') userBetId: number = 0, userBet: any): Promise<IUserBet> {
-    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: this.context.request['user'].id, leagueId: this.leagueId }})
+    const leagueUser = await this.database.models.LeagueUser.findOne({where: { userId: (this.context.request['user'] as User).id, leagueId: this.leagueId }})
 
     if (leagueUser && leagueUser.id === userBet.leagueUserId) {
       throw new Error('User not signed into this league.')

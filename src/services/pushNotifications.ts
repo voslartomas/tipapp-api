@@ -4,6 +4,11 @@ import { Inject, Singleton } from 'typescript-ioc'
 import * as config from 'config'
 import * as moment from 'moment'
 import * as request from 'request'
+import { QueryTypes } from 'sequelize'
+import League from '../models/league.model'
+import User from '../models/user.model'
+import LeagueUser from '../models/leagueUser.model'
+import Match from '../models/match.model'
 
 @Singleton
 export default class PushNotifications {
@@ -17,11 +22,11 @@ export default class PushNotifications {
   }
 
   async getAll() {
-    const leagues = await this.database.models.League.findAll()
+    const leagues = await this.database.models.League.findAll() as League[]
 
     for (const x in leagues) {
       const league = leagues[x]
-      const users = await this.database.models.LeagueUser.findAll({ where: { leagueId: league.id }})
+      const users = await this.database.models.LeagueUser.findAll({ where: { leagueId: league.id }}) as LeagueUser[]
 
       for (const i in users) {
         const leagueUser = users[i]
@@ -39,7 +44,7 @@ export default class PushNotifications {
           SELECT "Match".* FROM "Match" LEFT JOIN "UserBet" ON "Match"."id" = "UserBet"."matchId" AND "UserBet"."leagueUserId" = ${leagueUser.id}
           WHERE "UserBet"."matchId" IS NULL
           AND "Match"."leagueId" = ${league.id} AND "Match"."dateTime" > '${now}' AND "Match"."dateTime" < '${notifyBefore}'
-        `, { type: this.database.QueryTypes.SELECT})
+        `, { type: QueryTypes.SELECT}) as Match[]
 
         console.log('Count: ', matches.length)
         for (const m in matches) {

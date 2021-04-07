@@ -13,6 +13,7 @@ import JWTPassport from './security/passport'
 import PushNotifications from './services/pushNotifications'
 import * as cors from 'cors'
 import * as cron from 'node-cron'
+import { AddressInfo } from 'net'
 
 export class Server {
 
@@ -66,7 +67,7 @@ export class Server {
     RestServer.buildServices(this.app, ...routes)
 
     if (config.get('swagger.enabled')) {
-      RestServer.swagger(this.app, `${config.get('swagger.config_path')}`, '/api-docs', `localhost:${config.get('port')}`, ['http'])
+      RestServer.swagger(this.app, { filePath: `${config.get('swagger.config_path')}`, endpoint: '/api-docs', host: `localhost:${config.get('port')}`, schemes: ['http'] })
     }
   }
 
@@ -105,14 +106,11 @@ export class Server {
     })
 
     return new Promise<any>((resolve, reject) => {
-      this.server = this.app.listen(config.get('port'), config.get('port'), (err: any) => {
-        if (err) {
-          return reject(err)
-        }
-
-        this.logger.info(`Listening to http://localhost:${this.server.address().port}`)
-        return resolve()
-      })
+      this.server = this.app.listen(config.get('port'), config.get('port'), () => {
+        const { port } = this.server.address() as AddressInfo
+        this.logger.info(`Listening to http://localhost:${port}`)
+        return resolve(true)
+      }).on('error', (err) => reject(err))
     })
   }
 
