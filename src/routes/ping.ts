@@ -6,4 +6,10 @@ export class PingController {
   sayPong(): string {
     return 'pong'
   }
+
+  @GET
+  @Path('/timestamp')
+  getCurrentTimestamp(): number {
+    return new Date().getTime()
+  }
 }

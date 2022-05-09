@@ -8,5 +8,6 @@ export default class Database extends Sequelize {
     super(config.db)
 
     this.addModels([__dirname + config.db.modelPath])
+    // this.sync(config)
   }
 }

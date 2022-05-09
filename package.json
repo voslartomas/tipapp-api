@@ -72,6 +72,7 @@
     "sinon": "^4.4.10",
     "source-map-support": "^0.5.2",
     "supertest": "^3.0.0",
-    "ts-jest": "^22.0.4"
+    "ts-jest": "^22.0.4",
+    "ts-node": "^10.7.0"
   }
 }

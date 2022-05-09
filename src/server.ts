@@ -99,10 +99,10 @@ export class Server {
    * @returns {Promise<any>}
    */
   public start(): Promise<any> {
-    cron.schedule('* * * * *', () => {
+/*     cron.schedule('* * * * *', () => {
       console.log('Running push notification service')
       this.pushNotifications.sendPushNotifications()
-    })
+    }) */
 
     return new Promise<any>((resolve, reject) => {
       this.server = this.app.listen(config.get('port'), config.get('port'), (err: any) => {

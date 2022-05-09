@@ -1,21 +1,24 @@
 {
-  "port": 8001,
+  "port": 8080,
   "logging": {
     "level": "info"
   },
-  "origin": "http://54.93.116.88:5000",
+  "origin": "*",
   "swagger": {
     "enabled": false
   },
   "db": {
-      "database": "tipapp",
-      "username": "tvoslar",
-      "password": "tipapptipapp",
-      "host": "tipapp.c2fgvnquam0j.eu-central-1.rds.amazonaws.com",
-      "dialect": "postgres",
-      "logging" : false,
-      "port": 5432,
-      "modelPath": "/../models/*.model.js"
+    "database": "ywucuvfk",
+    "username": "ywucuvfk",
+    "password": "w6Ew55-nQHwKNI3VRZ0Ovsd0ySIYQZm8",
+    "host": "tyke.db.elephantsql.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": true
+    },
+    "logging": true,
+    "port": 5432,
+    "modelPath": "/../models/*.model.js"
   },
   "redis": {
     "host": "localhost",

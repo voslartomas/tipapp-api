@@ -805,6 +805,25 @@
 				"parameters": []
 			}
 		},
+		"/ping/timestamp": {
+			"get": {
+				"operationId": "PingGetCurrentTimestamp",
+				"produces": [
+					"text/html"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "number",
+							"format": "double"
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			}
+		},
 		"/login": {
 			"post": {
 				"operationId": "LoginLogin",

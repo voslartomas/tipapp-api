@@ -189,7 +189,6 @@ export default async (models) => {
     }
 
   for (const a of userSpecialBetSeries) {
-      console.log(a.leagueSpecialBetSerieId)
 
         await models.UserSpecialBetSerie.findOrCreate({
             where: {

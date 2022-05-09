@@ -15,7 +15,7 @@ export default class Cache {
 
   constructor() {
     Bluebird.promisifyAll(redis.RedisClient.prototype)
-    this.client = <any>redis.createClient(config.get('redis.port'), config.get('redis.host'))
+    // this.client = <any>redis.createClient(config.get('redis.port'), config.get('redis.host'))
   }
 
   /**
@@ -24,7 +24,7 @@ export default class Cache {
    * @param  ttl=60 Time to live
    */
   public async set(key, data, ttl: number = 60) {
-    return this.client.setAsync(this.composeKey(key), JSON.stringify(data), 'EX', ttl)
+    // return this.client.setAsync(this.composeKey(key), JSON.stringify(data), 'EX', ttl)
   }
 
   /**
@@ -32,11 +32,11 @@ export default class Cache {
    * @return
    */
   public async get(key) {
-    const cached = await this.client.getAsync(this.composeKey(key))
+/*     const cached = await this.client.getAsync(this.composeKey(key))
 
     if (cached) {
       return JSON.parse(cached)
-    }
+    } */
 
     return
   }
@@ -45,7 +45,7 @@ export default class Cache {
    * @param  key Key to delete.
    */
   public async del (key: string) {
-    return this.client.delAsync(this.composeKey(key))
+   // return this.client.delAsync(this.composeKey(key))
   }
 
   private composeKey(key) {

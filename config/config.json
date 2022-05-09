@@ -15,10 +15,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "tvoslar",
-    "password": "tipapptipapp",
-    "database": "tipapp",
-    "host": "tipapp.c2fgvnquam0j.eu-central-1.rds.amazonaws.com",
+    "username": "ywucuvfk",
+    "password": "w6Ew55-nQHwKNI3VRZ0Ovsd0ySIYQZm8",
+    "database": "ywucuvfk",
+    "host": "tyke.db.elephantsql.com",
     "dialect": "postgres"
   }
 }

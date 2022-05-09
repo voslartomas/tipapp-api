@@ -23,7 +23,7 @@ export default class NHLController {
     try {
       const teamResponse = await request.get('https://statsapi.web.nhl.com/api/v1/teams/')
       for (const teamResponseItem of teamResponse.body.teams) {
-        const dbTeam = await this.database.models.Team.findOne({where: {externalId: (teamResponseItem as any).id}})
+        let dbTeam = await this.database.models.Team.findOne({where: {externalId: (teamResponseItem as any).id}})
         if (!dbTeam) {
           const team: any = {}
           team.name = (teamResponseItem as any).name
@@ -31,7 +31,7 @@ export default class NHLController {
           team.shortcut = (teamResponseItem as any).abbreviation
           team.externalId = (teamResponseItem as any).id
           team.sportId = 2
-          const dbTeam = await this.database.models.Team.create(team)
+          dbTeam = await this.database.models.Team.create(team)
         }
 
         const leagueTeam: any = {}
@@ -46,6 +46,7 @@ export default class NHLController {
       let numberOfPlayers = 0
       const playerResponse = await request.get('https://statsapi.web.nhl.com/api/v1/teams/')
       for (const teamItem of playerResponse.body.teams) {
+        if (teamItem.id === 55) continue // seattle
         const playerRoster = await request.get(`https://statsapi.web.nhl.com/api/v1/teams/${(teamItem as any).id}/roster`)
         const dbTeam = await this.database.models.Team.findOne({ where: { externalId: (teamItem as any).id } })
         const dbLeagueTeam = await this.database.models.LeagueTeam.findOne({ where: { teamId: dbTeam.id, leagueId } })
@@ -89,20 +90,34 @@ export default class NHLController {
           const player = await this.database.models.LeaguePlayer.findOne({ where: { leagueTeamId: dbLeagueTeam.id, playerId: dbPlayer.id } }) as LeaguePlayer
 
           await player.update({
-            playoffGames: playoffStats && playoffStats.games,
-            playoffGoals: playoffStats && playoffStats.goals,
-            playoffAssists: playoffStats && playoffStats.assists,
-            seasonGames: regularStats && regularStats.games,
-            seasonGoals: regularStats && regularStats.goals,
-            seasonAssists: regularStats && regularStats.assists
+            playoffGames: (playoffStats && playoffStats.games) || 0,
+            playoffGoals: (playoffStats && playoffStats.goals) || 0,
+            playoffAssists: (playoffStats && playoffStats.assists) || 0,
+            seasonGames: (regularStats && regularStats.games) || 0,
+            seasonGoals: (regularStats && regularStats.goals) || 0,
+            seasonAssists: (regularStats && regularStats.assists) || 0
           })
         }
-        const bestScorer = await this.database.models.LeaguePlayer.findOne({ where: { leagueTeamId: dbLeagueTeam.id, seasonGoals: { [ this.database.Op.gte ]: 0 }  }, order: [ [ 'seasonGoals', 'DESC' ] ] }) as LeaguePlayer
-        // await this.database.models.LeaguePlayer.update({ bestScorer: false }, { where: { leagueTeamId: dbLeagueTeam.id } })
-        await bestScorer.update({
-          bestScorer: true
-        })
-        console.log(`Best scorer for ${dbTeam.name} is ${bestScorer.playerId}`)
+        const bestScorers = await this.database.models.LeaguePlayer.findAll({ where: { leagueTeamId: dbLeagueTeam.id, seasonGoals: { [ this.database.Op.gte ]: 0 }  }, order: [ [ 'seasonGoals', 'DESC' ] ] }) as LeaguePlayer[]
+
+        if (bestScorers && bestScorers.length) {
+          await bestScorers[0].update({
+            bestScorer: true
+          })
+          console.log(`Best scorer for ${dbTeam.name} is ${bestScorers[0].playerId}`)
+          await bestScorers[1].update({
+            secondBestScorer: true
+          })
+          console.log(`Second best scorer for ${dbTeam.name} is ${bestScorers[1].playerId}`)
+          await bestScorers[2].update({
+            thirdBestScorer: true
+          })
+          console.log(`Third best scorer for ${dbTeam.name} is ${bestScorers[2].playerId}`)
+          await bestScorers[3].update({
+            fourthBestScorer: true
+          })
+          console.log(`Fourth best scorer for ${dbTeam.name} is ${bestScorers[3].playerId}`)
+        }
       }
 
       console.log('Number of players: ' + numberOfPlayers)
@@ -113,8 +128,15 @@ export default class NHLController {
   }
 
   private getStats (stats) {
-    const length = stats.body.people[0].stats[0].splits.length
-    return stats.body.people[0].stats[0].splits[length - 1] && stats.body.people[0].stats[0].splits[length - 1].stat
+    try {
+      const currentTeamStats = stats.body.people[0].stats[0].splits.filter(s => s.team.name === stats.body.people[0].currentTeam.name)
+      if (currentTeamStats.length) {
+        return currentTeamStats[currentTeamStats.length - 1].stat
+      }
+      return undefined
+    } catch (error) {
+      return undefined
+    }
   }
 
   @GET
@@ -128,9 +150,9 @@ export default class NHLController {
   @Path('/:leagueId/matches')
   async importMatches(@PathParam('leagueId') leagueId: number) {
     let today: any = new Date()
-    today.setDate(new Date().getDate() + 1)
+    today.setDate(new Date().getDate() + 20)
     today = today.toISOString().split('T')[0]
-    const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2019-04-07&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
+    const response = await request.get(`https://statsapi.web.nhl.com/api/v1/schedule?startDate=2021-05-15&endDate=${today}&expand=schedule.linescore,schedule.scoringplays`)
 
     const days = response.body.dates
     for (const index in days) {
@@ -172,14 +194,14 @@ export default class NHLController {
           for (const play of game.scoringPlays) {
             try {
               const externalId = play.players[0].player.id
-              const dbPlayer = await this.database.models.Player.findOne({ where: { externalId } })
+              let dbPlayer = await this.database.models.Player.findOne({ where: { externalId } })
               if (!dbPlayer) {
                 const player: any = {}
                 player.firstName = play.players[0].player.fullName
                 player.lastName = ''
                 player.isActive = true
                 player.externalId = play.players[0].player.id
-                const dbPlayer = await this.database.models.Player.create(player)
+                dbPlayer = await this.database.models.Player.create(player)
               }
               let leaguePlayer = await this.database.models.LeaguePlayer.findOne({
                 where: { playerId: dbPlayer.id },
