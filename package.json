@@ -36,7 +36,7 @@
     "body-parser": "^1.18.2",
     "bunyan": "^1.8.12",
     "bunyan-middleware": "^0.8.0",
-    "config": "^1.29.4",
+    "config": "^3.3.8",
     "cors": "^2.8.4",
     "coveralls": "^3.0.0",
     "express": "^4.16.3",
@@ -65,13 +65,13 @@
     "@types/superagent": "^3.5.7",
     "@types/supertest": "^2.0.4",
     "depcheck": "^0.6.8",
-    "jest": "^22.4.0",
+    "jest": "^29.3.1",
     "nock": "^9.1.9",
     "nodemon": "^1.17.2",
     "pre-commit": "^1.2.2",
     "sinon": "^4.4.10",
     "source-map-support": "^0.5.2",
     "supertest": "^3.0.0",
-    "ts-jest": "^22.0.4"
+    "ts-jest": "^29.0.3"
   }
 }
